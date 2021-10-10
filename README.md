@@ -1,2 +1,2 @@
-#GDSC IIIT A Community Website
+# GDSC IIIT A Community Website
 
