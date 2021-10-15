@@ -5,15 +5,15 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Footer from './Components/Footer';
-import Navbar from './Components/Navbar';
-import About from './pages/About';
-import Blogs from './pages/Blogs';
-import Contact from './pages/Contact';
-import Events from './pages/Events';
-import Home from './pages/Home';
-import Projects from './pages/Projects';
-import Team from './pages/Team';
+import Footer from './Components/Footer/index';
+import Navbar from './Components/Navbar/index';
+import About from './pages/About/index';
+import Blogs from './pages/Blogs/index';
+import Contact from './pages/Contact/index';
+import Events from './pages/Events/index';
+import Home from './pages/Home/index';
+import Projects from './pages/Projects/index';
+import Team from './pages/Team/index';
 import ViewportProvider from "./viewport";
 
 function App() {
