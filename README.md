@@ -2,9 +2,9 @@
 
 ## Contribution Guidelines :key:
 
-1. While applying UI Components, let the colors by majorly used be 4 main colors of google symbols.
+1. While applying UI Components, let the colors be majorly 4 main colors of google symbols.
 
-1. Before starting to work on any issue pull latest contents. Before commiting changes to local repo, pull the latest contents, and then commit. Reolve all merge conflicts and then only merge. 
+1. Before starting to work on any issue pull latest commits in repo. Before commiting changes to local repo, pull the latest commits, and then commit. Resolve all merge conflicts and then only merge. 
 
 1. After you are done with the issue work, check if all the features are working as it was before. If not refer to previous code and resolve the error and then only merge in master repo.
 
