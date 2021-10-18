@@ -4,13 +4,13 @@ import React from 'react'
 function Footer() {
     return (
         <div style={{
-            height: '10vh',
+            height: '11vh',
             width: '100%',
-            backgroundColor: '#efefef',
+            backgroundColor: '#292C2F',
             display: "flex",
             flexDirection: 'column',
             justifyContent: 'center',
-            alignItems: 'center'
+            alignItems: 'center',
         }}>
             <Typography>Footer</Typography>
         </div>
