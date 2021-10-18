@@ -1,6 +1,7 @@
 import React from 'react'
 // import {Typography} from '@material-ui/core'
 import About from '../About/index'
+import Contact from '../Contact/index'
 
 function Home() {
     return (
@@ -23,9 +24,9 @@ function Home() {
             }}>
                 Hero
             </section>
-            {/* <section className="about-section"> */}
+            
             <About/>
-            {/* </section> */}
+            <Contact/>
         </section>
     )
 }

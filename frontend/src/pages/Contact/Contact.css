@@ -1,0 +1,57 @@
+.form_container{
+    width:41.28vw;
+}
+
+.contact_form{
+    width:100%;
+}
+
+form input, form textarea, form button{
+    background:transparent;
+    border: 1.2px solid #637282;
+    border-radius:4px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 14px;
+    color: #637282;
+    padding: 10px;
+}
+form input:focus, form textarea:focus{ 
+    border-color:#1B2733;
+    outline:none;
+    color: #1B2733;
+}
+
+.Name_input, .Email_input{
+    height:30px;
+    width:18.47vw;
+}
+.Name_input{
+    margin-right:14px;
+}
+.Message_input{
+    height:125px;
+    width:39.7vw;
+    resize:vertical;
+    min-height: 100px;
+    max-height: 150px;
+    margin-top: 14px;
+}
+
+.Send_btn{
+    background:#156EFF;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+    color: #FFFFFF;
+    height: 50px;
+    width: 150px;
+    border:none;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:16px;
+    cursor: pointer;
+}
