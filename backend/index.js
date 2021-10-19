@@ -4,6 +4,7 @@ const express       =require('express'),
       Event        = require("./models/event");
 
 const eventRoutes = require("./routes/events");
+const blogRoutes = require('./routes/blogs')
 
 
 const app = express();
@@ -31,6 +32,8 @@ mongoose.connect(url, {
 
 
 app.use("/events",eventRoutes);
+app.use("/blogs",blogRoutes)
+
 
 const port = process.env.PORT || 3000;
 
