@@ -7,14 +7,14 @@ import './Contact.css'
 
 function Contact() {
     return (
-        <section style={{
-            height: '100vh',
+        <section 
+            className='Contact_section'
+            style={{
             width:'100%',
             display: 'flex',
             flexDirection: 'column',
             overflow: 'hidden',
             gap:'6.22vh',
-            paddingTop: '10.88vh',
             background: '#ffffff'
         }}>
             
@@ -23,13 +23,7 @@ function Contact() {
                 SmallHeading="Have any queries? We'd love to hear from you!"
             />
 
-            <div 
-                style={{
-                    display: 'flex',
-                    paddingLeft:'9.02%',
-                    paddingRight:'9.02%',
-                    justifyContent: 'space-between',
-                }}>
+            <div className="Contact_form_n_image">
                 <div className="form_container">
                     <form classNamae="contact_form">
                         <input type="text" placeholder="Name" className="Name_input"/>
@@ -46,12 +40,7 @@ function Contact() {
                     </form>
                 </div>
                 <div className="Contact_image">
-                    <img src={Contact_image} alt="Contact_Image"
-                        style={{
-                            height:'23.93vw',
-                            width:'21.73vw'
-
-                        }} />
+                    <img src={Contact_image} alt="Contact_Image"/>
                 </div>
             </div>
 
