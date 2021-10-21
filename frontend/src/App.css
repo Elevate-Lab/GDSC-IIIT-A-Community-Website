@@ -1,3 +1,10 @@
+*{
+  font-family: 'Open Sans','Montserrat', sans-serif;
+}
+p{
+  margin:0;
+  padding:0;
+}
 .App {
   text-align: center;
 }

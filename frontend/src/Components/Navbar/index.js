@@ -10,7 +10,7 @@ function Navbar() {
     return (
         <div>
             <AppBar style={{
-                backgroundColor: '#efefef',
+                backgroundColor: '#ffffff',
                 boxShadow: 'none'
             }} position="static">
                 <Toolbar>
