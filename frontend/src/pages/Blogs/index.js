@@ -1,5 +1,5 @@
 import React from 'react'
-import {Typography} from '@material-ui/core'
+import DSBlogCard from '../../Components/DSBlogCard'
 
 function Blogs() {
     return (
@@ -10,7 +10,13 @@ function Blogs() {
             justifyContent: 'center',
             alignItems: 'center'
         }}>
-            <Typography>Blogs</Typography>
+            <DSBlogCard 
+            title="Learn Microinteraction" 
+            body="Lorem ipsum dolor sit amet, 
+            consectetur adipiscing elit. Ornare 
+            pretium placerat ut platea. Purus 
+            blandit integer sagittis massa vel est hac."
+            date="Monday Jan 20 , 2020" />
         </div>
     )
 }
