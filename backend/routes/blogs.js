@@ -17,7 +17,7 @@ router.get("/",async(req,res)=>{
 router.post("/",async (req,res)=>{
     const {title,author,image,description,bloglink} = req.body;
     if(!title || !author || !image || !description || !bloglink){
-        console.log("PLease Fill all the Area");
+       return console.log("PLease Fill all the Area");
     }
   try {
       const blog =  new Blog({tile,author,image,description,bloglink})
