@@ -60,7 +60,7 @@ router.get("/new",(req,res)=>{
       }
   });
   
-  //delete a blog
+  //delete a member
   
   router.delete("/:id",async (req,res)=>{
       try {
