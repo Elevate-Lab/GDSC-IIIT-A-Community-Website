@@ -1,0 +1,30 @@
+.footer {
+	height: 35vh;
+	color: #fff;
+	background-color: #000;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+.mainContainer {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.copyright {
+	text-align: center;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+}
+
+.icon {
+	padding-top: 0.3em;
+	padding-right: 0.5em;
+}
