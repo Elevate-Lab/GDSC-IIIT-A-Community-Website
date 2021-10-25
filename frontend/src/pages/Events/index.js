@@ -1,5 +1,6 @@
 import React from 'react'
 import {Typography} from '@material-ui/core'
+import Even from "./Even.js"
 
 function Events() {
     return (
@@ -10,7 +11,9 @@ function Events() {
             justifyContent: 'center',
             alignItems: 'center'
         }}>
-            <Typography>Events</Typography>
+            <Typography>
+                <Even />
+            </Typography>
         </div>
     )
 }
