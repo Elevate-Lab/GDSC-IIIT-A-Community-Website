@@ -18,6 +18,7 @@ function Blogs() {
             blandit integer sagittis massa vel est hac."
             date="Monday Jan 20 , 2020" />
         </div>
+        
     )
 }
 
