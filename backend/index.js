@@ -1,13 +1,15 @@
 const express       =require('express'),
       bodyParser    = require('body-parser'),
       mongoose      = require('mongoose'),     
-      Event        = require("./models/event");
-      Blog         = require('./models/blog')
-      Team          = require('./models/team')
+      Event        = require("./models/event"),
+      Blog         = require('./models/blog'),
+      Team          = require('./models/team'),
+      project       =require('./models/project')
 
 const eventRoutes = require("./routes/events");
 const blogRoutes = require('./routes/blogs')
-const teamRoutes = require('./routes/teams')
+const teamRoutes = require('./routes/teams');
+const projectRoutes = require('./routes/projects');
 
 
 const app = express();
@@ -37,6 +39,7 @@ mongoose.connect(url, {
 app.use("/events",eventRoutes);
 app.use("/blogs",blogRoutes);
 app.use("/teams",teamRoutes);
+app.use("/projects",projectRoutes);
 
 const port = process.env.PORT || 3000;
 
