@@ -5,18 +5,20 @@ import DSBtn from '../DSBtn'
 import useViewport from '../../viewport/useViewport'
 
 
-function DSBlogCard({title, data, body}) {
+function DSBlogCard({title, date, body}) {
     const { width } = useViewport()
     
     return (
-        <div>
+        <div style={{
+            margin: '1rem'
+        }}>
             <Paper style={{
                 padding: '1.5rem',
                 borderRadius: 30,
-                width: width > 1440 ? '30rem' : (width > 1000 ? '25rem' : '20rem')
+                width: width > 1440 ? '25vw' : (width > 1000 ? '25vw' : '20rem')
             }}>
                 <img style={{
-                    width: width > 1440 ? '30rem' : (width > 1000 ? '25rem' : '20rem')
+                    width: width > 1440 ? '25vw' : (width > 1000 ? '25vw' : '20rem')
                 }} src={img1} alt="img1" />
                 <Typography style={{
                     fontFamily: 'poppins',
@@ -30,7 +32,7 @@ function DSBlogCard({title, data, body}) {
                     fontWeight: 300,
                     fontSize:  width > 1000 ? '1rem' : '0.8rem',
                     marginTop: '1rem'
-                }}>{data}</Typography>
+                }}>{date}</Typography>
                 <Typography style={{
                     fontFamily: 'poppins',
                     fontSize:  width > 1000 ? '1rem' : '0.8rem',
