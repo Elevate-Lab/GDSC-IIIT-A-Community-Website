@@ -24,7 +24,7 @@ function Navbar() {
                     }}>
                         {
                             navbarContent.map((item, index) => (
-                                <Link key={index} to={`${item}`}><Typography style={{
+                                <Link key={index} to={`${item}`} replace ><Typography style={{
                                     color: '#000',
                                     marginLeft: 10,
                                     marginRight: 10
