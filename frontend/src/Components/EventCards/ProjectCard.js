@@ -7,10 +7,10 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Avatar from "@mui/material/Avatar";
-import "./EventCard.css";
+import "./ProjectCard.css";
 // import Stack from "@mui/material/Stack";
 
-function EventCard() {
+function ProjectCard() {
 	const [admin, setAdmin] = useState(true);
 	return (
 		<Box className="card" sx={{ minWidth: 275 }}>
@@ -58,4 +58,4 @@ function EventCard() {
 	);
 }
 
-export default EventCard;
+export default ProjectCard;

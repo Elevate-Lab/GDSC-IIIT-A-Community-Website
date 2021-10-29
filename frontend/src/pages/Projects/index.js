@@ -1,18 +1,27 @@
-import React from 'react'
-import {Typography} from '@material-ui/core'
+import React from "react";
+import { Typography } from "@material-ui/core";
+import ProjectCard from "../../Components/EventCards/ProjectCard";
 
 function Projects() {
-    return (
-        <div style={{
-            height: '100vh',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center'
-        }}>
-            <Typography>Projects</Typography>
-        </div>
-    )
+	return (
+		<div
+			style={{
+				padding: "9vh 7vw",
+				display: "flex",
+				flexDirection: "row",
+				flexWrap: "wrap",
+				justifyContent: "space-around",
+				alignItems: "center",
+			}}
+		>
+			<ProjectCard />
+			<ProjectCard />
+			<ProjectCard />
+			<ProjectCard />
+			<ProjectCard />
+			<ProjectCard />
+		</div>
+	);
 }
 
-export default Projects
+export default Projects;

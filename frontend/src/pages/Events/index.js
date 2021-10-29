@@ -1,24 +1,18 @@
 import React from "react";
 import { Typography } from "@material-ui/core";
-import EventCard from "../../Components/EventCards/EventCard";
 
 function Events() {
 	return (
 		<div
 			style={{
-				padding: "9vh 7vw",
+				height: "100vh",
 				display: "flex",
-				flexDirection: "row",
-				flexWrap: "wrap",
-				justifyContent: "space-around",
+				flexDirection: "column",
+				justifyContent: "center",
 				alignItems: "center",
 			}}
 		>
-			<EventCard />
-			<EventCard />
-			<EventCard />
-			<EventCard />
-			<EventCard />
+			<Typography>Events</Typography>
 		</div>
 	);
 }
