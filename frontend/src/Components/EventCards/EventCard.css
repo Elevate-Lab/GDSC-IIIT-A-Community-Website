@@ -1,0 +1,26 @@
+.container {
+	display: flex;
+	flex-direction: row;
+	padding-bottom: 1.5%;
+}
+
+.img {
+	padding-right: 3%;
+}
+.text {
+	width: 20vw;
+}
+
+.buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.buttons-admin {
+	display: flex;
+	flex-direction: row;
+	/* justify-content: space-around; */
+}
+.card {
+	padding: 5vh 0;
+}
