@@ -37,8 +37,14 @@
     margin: 0;
     color: #4E4E4E;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 600;
 }
+.navbar_link:hover .navbar_link_txt {
+    color: #156EFF;
+    text-shadow: 0px 1px 1px rgba(21, 110, 255, 0.15);
+    font-weight: bold;
+}
+
 
 .navbar_contact{
     padding: 8px 22px;

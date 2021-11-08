@@ -1,5 +1,6 @@
 import React from 'react'
 // import {Typography} from '@material-ui/core'
+import { Link } from 'react-router-dom'
 import About_DSC_Image from '../../Assets/About_DSC_Image.png'
 import About_DSC_IIITA_Image from '../../Assets/About_DSC_IIITA_Image.png'
 import Headings from '../../Components/Page_headings'
@@ -45,7 +46,9 @@ function About() {
                 <p className="Abt_Heading">About DSC IIITA</p>
                 <p className="Abt_Content">Developer Student Club (DSC) is a Google Developers program for university students to learn mobile and web development skills. The club will be open to any student, ranging from novice developers who are just starting, to advanced developers who want to further their skills. The club is intended as a space for students to try out new ideas and collaborate to solve mobile and web development problems.</p>
                 <button>
-                    Meet the Team
+                    <Link to="/Team" className="Abt_btn_txt" >
+                        Meet the Team
+                    </Link>
                 </button>
             </div>
         </div>
