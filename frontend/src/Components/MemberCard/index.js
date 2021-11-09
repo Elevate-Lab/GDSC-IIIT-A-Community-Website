@@ -1,19 +1,21 @@
 import React from 'react'
 import './MemberCard.css'
 
-function MemberCard({Name,Position,ImageURL,GithubLink,LinkedinLink,MediumLink}) {
+function MemberCard({Name,Position,ImageURL,GithubLink,LinkedinLink,TwitterLink}) {
     return (
-        <div className="MemberCard_container"
-            style={{
-
-            }}
-        >
+        <div className="MemberCard_container">
+            <img className="Member_img" src={ImageURL} alt={Name} />
             <p className="Member_name">{Name}</p>
             <p className="Member_pos">{Position}</p>
-            <p className="Member_img">{ImageURL}</p>
-            <p className="Member_Github">{GithubLink}</p>
-            <p className="Member_linkedin">{LinkedinLink}</p>
-            <p className="Member_Medium">{MediumLink}</p>
+            <a className="Member_Github" href={GithubLink}>
+                
+            </a>
+            <a className="Member_linkedin" href={LinkedinLink}>
+
+            </a>
+            <a className="Member_Medium" href={TwitterLink}>
+
+            </a>
         </div>
     )
 }

@@ -41,10 +41,11 @@
     height: 50px;
     width: 200px;
     background: #08AD5D;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 16px;
     padding: 17px;
     line-height:150%;
+    letter-spacing: 0.02em;
     color: #ffffff;
     outline: none;
     border: none;
@@ -63,6 +64,10 @@
 }
 .About_DSC_IIITA{
     flex-direction: row-reverse;
+}
+.Abt_btn_txt{
+    text-decoration: none;
+    color: #ffffff;
 }
 
 @media only screen and (max-width: 900px) {
