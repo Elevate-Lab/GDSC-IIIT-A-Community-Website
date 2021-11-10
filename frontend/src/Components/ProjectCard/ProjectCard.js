@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 import "./ProjectCard.css";
 
 function ProjectCard() {
-	const [admin, setAdmin] = useState(false);
+	const [admin, setAdmin] = useState(true);
 	return (
 		<div className="card">
 			<div
