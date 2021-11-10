@@ -1,64 +1,68 @@
 import * as React from "react";
 import { useState } from "react";
-import Box from "@mui/material/Box";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import { Button, CardActionArea } from "@mui/material";
+import { Button } from "@mui/material";
 import Typography from "@mui/material/Typography";
-import CardMedia from "@mui/material/CardMedia";
 import "./ProjectCard.css";
-import Headings from "../Page_headings";
 
 function ProjectCard() {
 	const [admin, setAdmin] = useState(true);
 	return (
-		<Card variant="outlined" styles={{ padding: "0" }} className="card">
-			<CardActionArea>
-				<CardMedia
-					component="img"
-					height="140"
-					image="http://www.lacor.info/film/a_la_folie/img/galerie/large/a_la_folie_06.jpg"
-					alt="project image"
-					className="img"
-				/>
+		<div className="card">
+			<div
+				className="img"
+				style={{
+					backgroundImage:
+						"url('https://images.unsplash.com/photo-1635928097900-cf6299f4e8cb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1032&q=80')",
+				}}
+			></div>
 
-				<CardContent>
-					<Typography sx={{ fontSize: 17, fontWeight: "bold", margin: 0 }} color="text.primary" gutterBottom>
-						Project Name
-					</Typography>
-					<Typography
-						sx={{ fontSize: 14, fontStyle: "italic", marginBottom: 2 }}
-						color="text.secondary"
-						gutterBottom
-					>
-						tagline
-					</Typography>
-
-					<Typography variant="body2" className="text">
-						Lorem ipsum dolor sit amet,happy xyx abc hello wo something sad apple consectetur haha he hehe
-						adipiscing elit.
-					</Typography>
-				</CardContent>
-			</CardActionArea>
-			<CardActions className="buttons">
-				<Button size="small" variant="outlined" color="success">
-					Github Link
-				</Button>
-				<Button size="small" variant="contained" disableElevation style={{ backgroundColor: "#34A853" }}>
-					View Project
-				</Button>
-			</CardActions>
-
-			{admin && (
-				<CardActions className=" buttons-admin">
-					<Button size="small">Edit</Button>
-					<Button size="small" disableElevation>
-						Delete
-					</Button>
-				</CardActions>
-			)}
-		</Card>
+			<div className="content">
+				<Typography
+					sx={{
+						fontSize: 20,
+						letterSpacing: ".15rem",
+						fontWeight: "bold",
+						margin: 0,
+						background: "-webkit-linear-gradient(rgb(95, 144, 223) ,rgba(66,133,244, 1), rgba(131,58,180,1))",
+						"-webkit-background-clip": "text",
+						"-webkit-text-fill-color": "transparent",
+					}}
+					color="text.primary"
+					gutterBottom
+				>
+					Project Name
+				</Typography>
+				<Typography
+					sx={{ fontSize: 14, fontStyle: "oblique", letterSpacing: ".1rem", marginBottom: 2 }}
+					color="text.secondary"
+					gutterBottom
+				>
+					tagline
+				</Typography>
+				<Typography variant="body2" className="text">
+					Lorem ipsum dolor sit amet,happy xyx abc hello wo something sad apple consectetur haha he hehe
+					adipiscing elit. Lorem ipsum dolor sit amet,happy xyx abc hello wo something sad apple consectetur
+					haha he hehe adipiscing elit. Lorem ipsum dolor sit amet,happy xyx abc hello wo something sad apple
+					consectetur haha he hehe adipiscing elit.
+				</Typography>
+				<div className="buttons">
+					<a class="custom-btn btn" href="">
+						<span>Github Link</span>
+					</a>
+					<a class="custom-btn btn">
+						<span>View Project</span>
+					</a>
+				</div>
+				{admin && (
+					<div className="buttons-admin">
+						<Button size="small">Edit</Button>
+						<Button size="small" disableElevation>
+							Delete
+						</Button>
+					</div>
+				)}
+			</div>
+		</div>
 	);
 }
 

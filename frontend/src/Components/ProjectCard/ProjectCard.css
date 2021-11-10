@@ -1,27 +1,114 @@
-.img {
-	padding-right: 3%;
-}
-.text {
-	width: 20vw;
-	min-width: 250px;
+.card {
+	display: flex;
+	flex-direction: row;
+	border: solid rgba(136, 136, 136, 0.171) 0.5px;
+	border-radius: 10px;
+	border-top-left-radius: 40px;
+	border-bottom-right-radius: 25px;
+	margin: 20px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
-.buttons {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	margin-bottom: 5px;
-}
-.buttons-admin {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-}
-.card {
-	margin: 5vh 0;
-	border-radius: 10px !important ;
-	padding: 0;
-}
 .card:hover {
-	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.img {
+	background-size: cover;
+	height: auto;
+	border-top-left-radius: 40px;
+}
+.content {
+	padding: 20px 10px;
+}
+.text {
+	padding-bottom: 30px;
+}
+.buttons,
+.buttons-admin {
+	padding: 10px;
+}
+
+.content {
+	max-width: 60vw;
+}
+
+@media (max-width: 550px) {
+	.card {
+		flex-direction: column;
+		border-radius: 10px;
+	}
+	.img {
+		min-height: 200px;
+		border-radius: 10px 10px 0% 0%;
+	}
+}
+@media (min-width: 550px) {
+	.img {
+		width: 60vw;
+	}
+}
+/* /////////////
+button
+///////// */
+
+a {
+	margin: 20px;
+	text-align: center;
+}
+
+.custom-btn {
+	text-decoration: none;
+	color: #fff;
+	font-family: "Lato", sans-serif;
+	font-weight: 500;
+	width: 130px;
+	height: 40px;
+	border-radius: 5px;
+	padding: 10px 25px;
+	background: transparent;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	position: relative;
+	display: inline-block;
+	box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1),
+		4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+	outline: none;
+}
+.btn {
+	width: 130px;
+	height: 40px;
+	line-height: 42px;
+	padding: 0;
+	border: none;
+	background: rgb(66, 133, 244);
+	background: linear-gradient(0deg, rgb(66, 133, 244) 0%, rgb(95, 144, 223) 100%);
+}
+.btn:hover {
+	color: rgb(66, 133, 244);
+	background: transparent;
+	box-shadow: none;
+}
+.btn:before,
+.btn:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 2px;
+	width: 0;
+	background: rgb(66, 133, 244);
+	box-shadow: -1px -1px 5px 0px #fff, 7px 7px 20px 0px #0003, 4px 4px 5px 0px #0002;
+	transition: 400ms ease all;
+}
+.btn:after {
+	right: inherit;
+	top: inherit;
+	left: 0;
+	bottom: 0;
+}
+.btn:hover:before,
+.btn:hover:after {
+	width: 100%;
+	transition: 800ms ease all;
 }
