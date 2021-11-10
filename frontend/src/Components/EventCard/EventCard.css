@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 .container {
     max-width: 75rem;
     margin: auto;
@@ -6,25 +8,30 @@
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
-    gap: 60px;
+    gap: 70px;
     flex-grow: 1;
     flex-basis: 0;
+    font-family: 'Poppins', sans-serif !important;
 }
 
 .container .card {
     display: flex;
     flex-direction: column;
-    min-width: 15rem;
-    max-width: calc(12.5rem + 13vw);
-    background-color: rgba(238, 238, 238, 0.747);
+    /* min-width: 15rem;
+    max-width: calc(12.5rem + 13vw); */
+    width: calc(15rem + 13vw);
+    background-color: rgb(255, 255, 255);
     border-radius: 5px;
     overflow: hidden;
+    -moz-box-shadow: 0 4px 8px #000 5, 0 8px 8px #000 4;
     box-shadow: 0 4px 8px #000 5, 0 8px 8px #000 4;
-    transition: transform 300ms ease;
+    transition: 300ms;
+    /* border: 0.5px solid rgba(4, 0, 255, 0.6); */
 }
 
 .container .card:hover,
 .container .card:focus-within {
+    -moz-box-shadow: 0 4px 8px #000 5;
     box-shadow: 0 4px 8px #000 5;
 }
 
@@ -52,14 +59,29 @@
     font-size: 1rem;
     color: grey;
     margin: 0 !important;
+    display: flex;
+    justify-content: center;
 }
 
-.container .card .event-info .event-text {
+.container .card .event-info .event-description {
     /* padding-inline: 16px; */
     padding-block: 0 10px;
+    line-height: 1.4;
+    font-size: 13px;
+    text-align: center;
+    padding: 0 10px;
+}
+.container .card .event-info .event-organizer {
+    /* padding-inline: 16px; */
     line-height: 1.3;
     text-align: center;
     padding: 0 10px;
+    color: rgba(5, 5, 5, 0.856);
+    color: grey;
+}
+.container .card .event-info .event-organizer span {
+    color: grey;
+    /* color: rgba(87, 35, 35, 0.836); */
 }
 
 .link_buttons {
@@ -72,6 +94,10 @@
     display: flex;
     justify-content: center;
     padding-bottom: 10px;
+}
+.link_buttons > a {
+    color: #fff;
+    background-color: #4285f4;
 }
 .link_buttons > a:hover,
 .link_buttons > a:focus {
