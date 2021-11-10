@@ -12,7 +12,7 @@ function ProjectCard() {
 				className="img"
 				style={{
 					backgroundImage:
-						"url('https://images.unsplash.com/photo-1627676569762-ea59379ed3b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80')",
+						"url('https://images.unsplash.com/photo-1635928097900-cf6299f4e8cb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1032&q=80')",
 				}}
 			></div>
 
@@ -23,7 +23,7 @@ function ProjectCard() {
 						letterSpacing: ".15rem",
 						fontWeight: "bold",
 						margin: 0,
-						background: "-webkit-linear-gradient(rgba(131,58,180,1), rgba(253,29,29,1),rgba(252,176,69,1))",
+						background: "-webkit-linear-gradient(rgb(95, 144, 223) ,rgba(66,133,244, 1), rgba(131,58,180,1))",
 						"-webkit-background-clip": "text",
 						"-webkit-text-fill-color": "transparent",
 					}}

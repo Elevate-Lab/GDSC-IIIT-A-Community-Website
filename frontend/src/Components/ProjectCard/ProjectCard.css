@@ -81,11 +81,11 @@ a {
 	line-height: 42px;
 	padding: 0;
 	border: none;
-	background: rgb(255, 27, 0);
-	background: linear-gradient(0deg, rgba(255, 27, 0, 1) 0%, rgba(251, 75, 2, 1) 100%);
+	background: rgb(66, 133, 244);
+	background: linear-gradient(0deg, rgb(66, 133, 244) 0%, rgb(95, 144, 223) 100%);
 }
 .btn:hover {
-	color: #f0094a;
+	color: rgb(66, 133, 244);
 	background: transparent;
 	box-shadow: none;
 }
@@ -97,7 +97,7 @@ a {
 	right: 0;
 	height: 2px;
 	width: 0;
-	background: #f0094a;
+	background: rgb(66, 133, 244);
 	box-shadow: -1px -1px 5px 0px #fff, 7px 7px 20px 0px #0003, 4px 4px 5px 0px #0002;
 	transition: 400ms ease all;
 }
