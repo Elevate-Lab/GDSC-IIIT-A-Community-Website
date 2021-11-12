@@ -25,7 +25,7 @@ function EventCard() {
                         architecto numquam placeat iusto, obcaecati, vel fugit blanditiis?
                     </p>
                     <p className="event-organizer">
-                        Organized by <span>Sampada maam</span>
+                        Organized by <span>DSC IIIT A</span>
                     </p>
                     <div className="link_buttons">
                         <Button href="#">
