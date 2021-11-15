@@ -61,19 +61,36 @@ function Content() {
 
             <div className={Classes.designConatiner}>
                 <div style={{
-                    width: `calc(100vw/3)`,
+                    width: `31.5rem`,
                     height: `0.4rem`,
                     backgroundColor: `red`
                 }} />
                 <div style={{
-                    width: `calc(100vw/3)`,
+                    width: "31.5rem",
                     height: `0.4rem`,
                     backgroundColor: `blue`
                 }} />
                 <div style={{
-                    width: `calc(100vw/3)`,
+                    width: "31.9rem",
                     height: `0.4rem`,
                     backgroundColor: `yellow`
+                }} />
+            </div>
+            <div className={Classes.designConatiner}>
+                <div style={{
+                    width: `31.5rem`,
+                    height: `0.1rem`,
+                    backgroundColor: `blue`
+                }} />
+                <div style={{
+                    width: "31.5rem",
+                    height: `0.1em`,
+                    backgroundColor: `black`
+                }} />
+                <div style={{
+                    width: "31.9rem",
+                    height: `0.1rem`,
+                    backgroundColor: `red`
                 }} />
             </div>
 
