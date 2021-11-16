@@ -4,41 +4,27 @@ import {
     Switch,
     Route,
   } from "react-router-dom";
-import { Typography } from '@material-ui/core';
 import Headings from '../../Components/Page_headings';
 import EventCards from '../../Components/EventCard/index';
-import newEvent from './newEvent';
+import NewEvent from './newEvent';
+import EditEvent from './editEvent';
 
 
 function Events() {
     return (
         <>
-            {/* <div
-                style={{
-                    height: '100vh',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                }}
-            >
-                <Typography>Events</Typography>
-            </div> */}
-
             <Router>
                 <Switch>
-                {/* <Route path="/newEvent">
-                    <newEvent />
-                </Route> */}
-                <Route exact path="/newEvent" render={() => <newEvent/>} />
-                {/* <Route path="/editEvent">
-                    <editEvent />
-                </Route> */}
+                    <Route exact path="/Events/newEvent" render={() => <NewEvent/>} />
+                    <Route exact path="/Events/editEvent" render={() => <EditEvent/>} />
+                    <Route>
+                        <Headings LargeHeading="Events" SmallHeading="Whats happening..." />
+                        <EventCards />
+                    </Route>
                 </Switch>
+                
             </Router>
 
-            <Headings LargeHeading="Events" SmallHeading="Whats happening..." />
-            <EventCards />
         </>
     );
 }

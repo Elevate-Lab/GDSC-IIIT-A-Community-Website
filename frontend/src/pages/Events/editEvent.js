@@ -3,11 +3,11 @@ import { Typography } from '@material-ui/core';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../CommonCSS/formStyle.css';
 
-function newEvent() {
+function editEvent() {
     return (
     
         <div class="container" id="mainContainer">
-            <h1 class="well" id="formHead">New Event</h1>
+            <h1 class="well" id="formHead">Edit Event</h1>
 
             <form action="" method="">
                 <div class="row">
@@ -54,4 +54,4 @@ function newEvent() {
     );
 }
 
-export default newEvent;
+export default editEvent;
