@@ -1,136 +1,135 @@
-.footer{
-    width: 100%;
-    background-color: #292C2F;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 5vh 0;
+.footer {
+	width: 100%;
+	background-color: #292c2f;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 5vh 0;
 }
 
-.footer_top{
-    width: 90%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:space-between;
+.footer_top {
+	width: 90%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 .footer_top .DSC_logo {
-    height: 15vh;
-    width: 330px;
+	height: 15vh;
+	width: 330px;
 }
-.footer_top .DSC_logo img{
-    width: 100%;
-    height:auto;
+.footer_top .DSC_logo img {
+	width: 100%;
+	height: auto;
 }
-.footer_contact{
-    display:flex;
-    flex-wrap: wrap;
+.footer_contact {
+	display: flex;
+	flex-wrap: wrap;
 }
-.contact_sec_1{
-    margin-right: 6vh;
+.contact_sec_1 {
+	margin-right: 6vh;
 }
-.contact_sec_1 > div{
-    display: flex;
-    gap: 2vh;
-    align-items:center;
-    margin-bottom:2vh;
+.contact_sec_1 > div {
+	display: flex;
+	gap: 2vh;
+	align-items: center;
+	margin-bottom: 2vh;
 }
-.contact_sec_1 > div > div{
-    display:grid;
-    place-items: center;
-    height: 34px;
-    width: 34px;
-    background: rgba(255,255,255,0.15);
-    border-radius:50%; 
+.contact_sec_1 > div > div {
+	display: grid;
+	place-items: center;
+	height: 34px;
+	width: 34px;
+	background: rgba(255, 255, 255, 0.15);
+	border-radius: 50%;
 }
-.contact_sec_1 > div > div > img{
-    height:22px;
-    width:22px;
+.contact_sec_1 > div > div > img {
+	height: 22px;
+	width: 22px;
 }
-.contact_sec_1 > div > p{
-    margin:0;
-    font-size: 2.6vh;
-    color: #ffffff;
+.contact_sec_1 > div > p {
+	margin: 0;
+	font-size: 2.6vh;
+	color: #ffffff;
 }
-.contact_sec_1 > div > p > a{
-    text-decoration: none;
-    color: #ffffff;
+.contact_sec_1 > div > p > a {
+	text-decoration: none;
+	color: #ffffff;
 }
-.contact_sec_1 > div > p > span{
-    text-decoration: none;
-    font-size: 2.25vh;
-    color: rgba(255,255,255,0.8);
+.contact_sec_1 > div > p > span {
+	text-decoration: none;
+	font-size: 2.25vh;
+	color: rgba(255, 255, 255, 0.8);
 }
 
-.contact_sec_2 > p{
-    margin:0;
-    color: #ffffff;
-    font-size: 3vh;
-    font-weight: 600;
-    margin-bottom:2vh;
+.contact_sec_2 > p {
+	margin: 0;
+	color: #ffffff;
+	font-size: 3vh;
+	font-weight: 600;
+	margin-bottom: 2vh;
 }
-.contact_sec_2 > .contact_links{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(2,1fr);
-    gap: 8px;
+.contact_sec_2 > .contact_links {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	gap: 8px;
 }
 
 .contact_links > div {
-    height:34px;
-    width:34px;
-    background: rgba(255,255,255,0.15);
-    display: grid;
-    place-items: center;
-    border-radius:8px;
-    overflow: hidden;
+	height: 34px;
+	width: 34px;
+	background: rgba(255, 255, 255, 0.15);
+	display: grid;
+	place-items: center;
+	border-radius: 8px;
+	overflow: hidden;
 }
-.contact_icon:hover{
-    background: rgba(255,255,255,0.4);
+.contact_icon:hover {
+	background: rgba(255, 255, 255, 0.4);
 }
 .contact_links > div > a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0%;
+	/* height: 100%;
+	width: 100%; */
 }
 
 .contact_links > div > a > img {
-    height: auto;
-    width: 24px;
+	height: auto;
+	width: 24px;
 }
 
-.footer_divider{
-    width: 90%;
-    background: #ffffff;
-    opacity: 0.5;
-    height:1px;
-    margin: 18px 0;
+.footer_divider {
+	width: 90%;
+	background: #ffffff;
+	opacity: 0.5;
+	height: 1px;
+	margin: 18px 0;
 }
-.footer_bot{
-    color: #ffffff;
-    font-size: 2.4vh;
+.footer_bot {
+	color: #ffffff;
+	font-size: 2.4vh;
 }
 
 @media only screen and (max-width: 900px) {
-    
-    .footer_top{
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        align-content:center;
-        justify-content: center;
-    }
-    .footer_top .DSC_logo {
-        height: auto;
-        width: 65%;
-        margin:0 auto;
-        margin-bottom: 3vh;
-    }
-    .footer_contact{
-        width:100%;
-        justify-content: center;
-    }
-
+	.footer_top {
+		width: 90%;
+		display: flex;
+		flex-direction: column;
+		align-content: center;
+		justify-content: center;
+	}
+	.footer_top .DSC_logo {
+		height: auto;
+		width: 65%;
+		margin: 0 auto;
+		margin-bottom: 3vh;
+	}
+	.footer_contact {
+		width: 100%;
+		justify-content: center;
+	}
 }
