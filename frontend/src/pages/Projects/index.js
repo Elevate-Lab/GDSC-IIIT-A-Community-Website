@@ -16,7 +16,7 @@ function Projects() {
 				// flexWrap: "wrap",
 				flexDirection: "column",
 				justifyContent: "space-around",
-				alignItems: "center",
+				// alignItems: "center",
 			}}
 		>
 			<Headings

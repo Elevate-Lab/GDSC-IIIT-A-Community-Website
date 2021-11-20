@@ -23,7 +23,12 @@ function Blogs() {
 				alignContent: "center",
 			}}
 		>
-			<Headings color={{ color: "#34A853" }} LargeHeading="Blogs" SmallHeading="Read our latest blogs" />
+			<Headings
+				className="Heading"
+				color={{ color: "#34A853" }}
+				LargeHeading="Blogs"
+				SmallHeading="Read our latest blogs"
+			/>
 			<Fab style={{ alignSelf: "flex-end", marginRight: "7vw" }} color="primary" aria-label="add">
 				<AddIcon />
 			</Fab>
