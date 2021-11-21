@@ -44,7 +44,7 @@ function DSBlogCard({title, date, body}) {
                     flexDirection: 'row',
                     alignItems: 'center',
                     justifyContent: 'space-between',
-                    marginTop: 50
+                    marginTop: 30
                 }}>
                     <Typography style={{
                         fontFamily: 'poppins',

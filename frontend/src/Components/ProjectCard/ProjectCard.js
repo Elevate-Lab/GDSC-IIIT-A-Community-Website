@@ -20,7 +20,7 @@ function ProjectCard() {
 				<Typography
 					sx={{
 						fontSize: 20,
-						letterSpacing: ".1rem",
+						letterSpacing: ".0.5rem",
 						fontWeight: "bold",
 						margin: 0,
 						background: "-webkit-linear-gradient(rgb(95, 144, 223) ,rgba(66,133,244, 1), rgba(131,58,180,1))",
@@ -33,7 +33,7 @@ function ProjectCard() {
 					Project Name
 				</Typography>
 				<Typography
-					sx={{ fontSize: 14, fontStyle: "oblique", letterSpacing: ".1rem", marginBottom: 1 }}
+					sx={{ fontSize: 14, fontStyle: "oblique", letterSpacing: ".0.5rem", marginBottom: 1 }}
 					color="text.secondary"
 					gutterBottom
 				>
