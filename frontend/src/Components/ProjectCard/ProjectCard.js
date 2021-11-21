@@ -55,7 +55,7 @@ function ProjectCard() {
 				</div>
 				{admin && (
 					<div className="buttons-admin">
-						<Button size="small">Edit</Button>
+						<Button size="small" href="./Projects/EditProject">Edit</Button>
 						<Button size="small" disableElevation>
 							Delete
 						</Button>
