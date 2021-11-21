@@ -8,6 +8,7 @@
     flex-direction: column;
     gap:2px;
     align-items: center;
+    overflow: hidden;
 }
 
 .team-card {
@@ -92,7 +93,7 @@
   
   .team-card:hover .social {
     bottom: -20px;
-    border-radius: 35%;
+    border-radius: 50% 50% 0 0;
   }
   
   .team-card .social li {
@@ -103,9 +104,15 @@
     display: block;
     padding: 10px;
     font-size: 17px;
+    height: 32px;
+    width: 32px;
+    display: grid;
+    place-items: center;
     color: white;
     transition: all 0.3s ease 0s;
     text-decoration: none;
+    border-radius: 50%;
+    padding-top: -1vh;
   }
   
   .team-card .social li a:hover {

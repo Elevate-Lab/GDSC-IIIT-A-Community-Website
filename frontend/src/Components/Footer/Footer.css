@@ -53,6 +53,7 @@
 	color: #ffffff;
 }
 .contact_sec_1 > div > p > a {
+	margin:0;
 	text-decoration: none;
 	color: #ffffff;
 }
