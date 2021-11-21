@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 // import { AppBar, Toolbar, Typography } from '@material-ui/core'
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import Navbar_logo from "../../Assets/DSC-IIITA-Light-Horizontal.svg";
+import Navbar_logo from "../../Assets/DSC-IIITA-Light-Horizontal.png";
 
 const navbarContent = ["About", "Events", "Team", "Projects", "Blogs"];
 
