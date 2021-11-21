@@ -1,0 +1,105 @@
+.About {
+    display: flex;
+    gap: 6.11vw;
+    justify-content: center;
+    width: 100%;
+}   
+.About p{
+    margin: 0;
+    padding: 0;
+}
+.About > img{
+    height: 20.83vw;
+    width:37.99vw;
+    background-repeat: no-repeat;
+    background-size: fit;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+}
+
+.About > div{
+    height:20.83vw;
+    width:37.99vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2.6vw;
+}
+
+.About > div > .Abt_Heading{
+    font-weight: bold;
+    font-size: 2.5vw;
+    line-height: 1.53vw;
+    color: #1B2733;
+}
+.About > div > .Abt_Content {
+    font-weight: normal;
+    font-size: 1.11vw;
+    line-height: 1.53vw;
+    color: #637282;
+}
+.About > div > button {
+    height: 50px;
+    width: 200px;
+    background: #08AD5D;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 17px;
+    line-height:150%;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:16px;
+    margin-top:auto;
+}
+.About > div > button > img {
+    height: 24px;
+    width: 24px;
+    background-size: fit;
+}
+.About_DSC_IIITA{
+    flex-direction: row-reverse;
+}
+.Abt_btn_txt{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+@media only screen and (max-width: 900px) {
+    .About{
+        flex-direction:column;
+        align-items: center;
+        gap: 5vw;
+        height:min-content;
+    }
+    .About_section{
+        align-items: center;
+    }
+    .About > img{
+        width: 70%;
+        height:auto;
+    }
+    .About > div{
+        height:min-content;
+        width: 70%;
+        gap: 3vw;
+    }
+    .About > div > .Abt_Heading{
+        font-size: 4.4vw;
+        line-height: 100%;
+    }
+    .About > div > .Abt_Content {
+        font-size: 1.99vw;
+        line-height: 150%;
+        text-align: justify;
+    }
+    .About > div > button {
+        font-size: 16px;
+        line-height:150%;
+    }
+}

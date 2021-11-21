@@ -1,41 +1,77 @@
-import React from 'react'
-import { AppBar, Toolbar, Typography } from '@material-ui/core'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from "react";
+// import { AppBar, Toolbar, Typography } from '@material-ui/core'
+import { Link } from "react-router-dom";
+import "./Navbar.css";
+import Navbar_logo from "../../Assets/DSC-IIITA-Light-Horizontal.svg";
 
-const navbarContent = [
-    "About", "Events", "Team", "Projects", "Blogs", "Contact"
-]
+const navbarContent = ["About", "Events", "Team", "Projects", "Blogs"];
 
 function Navbar() {
-    return (
-        <div>
-            <AppBar style={{
-                backgroundColor: '#efefef',
-                boxShadow: 'none'
-            }} position="static">
-                <Toolbar>
-                    <Typography style={{
-                        color: '#000',
-                        flexGrow: 1
-                    }}>Navbar</Typography>
-                    <div style={{
-                        display: 'flex',
-                        flexDirection: 'row',
-                    }}>
-                        {
-                            navbarContent.map((item, index) => (
-                                <Link key={index} to={`${item}`}><Typography style={{
-                                    color: '#000',
-                                    marginLeft: 10,
-                                    marginRight: 10
-                                }}>{item}</Typography></Link>
-                            ))
-                        }
-                    </div>
-                </Toolbar>
-            </AppBar>
-        </div>
-    )
+	const [width, setWidth] = useState(window.innerWidth);
+	const [Drawer, setDrawer] = useState("none");
+
+	const handleWindowResize = () => {
+		setWidth(window.innerWidth);
+	};
+
+	useEffect(() => {
+		window.addEventListener("resize", handleWindowResize);
+		return () => window.removeEventListener("resize", handleWindowResize);
+	}, []);
+
+	const ExpandMenu = () => {
+		if (Drawer === "none") {
+			setDrawer("flex");
+		} else {
+			setDrawer("none");
+		}
+	};
+
+	if (width > 900) {
+		return (
+			<div className="navbar">
+				<Link className="navbar_logo" to="/" style={{ width: "340px" }}>
+					<img src={Navbar_logo} alt="logo" />
+				</Link>
+				<div className="navbar_links">
+					{navbarContent.map((item, index) => (
+						<Link className="navbar_link" key={index} to={`${item}`}>
+							<p className="navbar_link_txt">{item}</p>
+						</Link>
+					))}
+					<Link className="navbar_link" to="Contact">
+						<p className="navbar_link_txt navbar_contact">Contact</p>
+					</Link>
+				</div>
+			</div>
+		);
+	} else {
+		return (
+			<div className="navbar">
+				<Link className="navbar_logo" to="/" style={{ width: "300px" }}>
+					<img src={Navbar_logo} alt="logo" />
+				</Link>
+				<div className="navbar_Drawer">
+					<input type="checkbox" value="drawer" onChange={ExpandMenu} unchecked />
+					<div className="navbar_drawer_icon">
+						<p className="drawer_line_1"></p>
+						<p className="drawer_line_2"></p>
+						<p className="drawer_line_3"></p>
+					</div>
+				</div>
+				<div className="navbar_drawer_links" style={{ display: `${Drawer}` }}>
+					{navbarContent.map((item, index) => (
+						<Link className="navbar_link" key={index} to={`${item}`}>
+							<p className="navbar_link_txt">{item}</p>
+						</Link>
+					))}
+					<Link className="navbar_link" to="Contact">
+						<p className="navbar_link_txt navbar_contact">Contact</p>
+					</Link>
+				</div>
+			</div>
+		);
+	}
 }
 
-export default Navbar
+export default Navbar;

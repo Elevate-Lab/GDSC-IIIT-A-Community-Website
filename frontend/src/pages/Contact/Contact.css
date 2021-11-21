@@ -1,0 +1,110 @@
+.Contact_section{
+    padding-top: 10.88vh;
+    padding-bottom: 12vh;
+}
+.Contact_form_n_image{
+    display: flex;
+    padding: 0 9.02%;
+    justify-content: space-between;
+}
+
+.form_container{
+    width:50%;
+}
+
+.contact_form{
+    width:100%;
+}
+
+form input, form textarea, form button{
+    background:rgba(255,255,255,0.4);
+    font-family: 'Open Sans', sans-serif;
+    border: 1.2px solid #637282;
+    border-radius:4px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 14px;
+    color: #637282;
+    padding: 10px;
+}
+form input:focus, form textarea:focus{ 
+    border: 1.4px solid #1B2733;
+    outline:none;
+    color: #1B2733;
+}
+
+.Name_input, .Email_input{
+    height:30px;
+    width:43%;
+}
+.Email_input{
+    float: right;
+}
+.Message_input{
+    height:125px;
+    width: 96%;
+    resize:vertical;
+    min-height: 100px;
+    max-height: 150px;
+    margin-top: 14px;
+}
+
+.Send_btn{
+    background:#156EFF;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+    color: #FFFFFF;
+    height: 50px;
+    width: 150px;
+    border:none;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:16px;
+    cursor: pointer;
+}
+.Contact_image{
+    display: flex;
+    align-items:flex-end;
+}
+.Contact_image > img {
+    height: 23.93vw;
+    width: 21.73vw;
+}
+
+@media only screen and (max-width: 900px) {
+    .Contact_section{
+        align-items: center;
+        padding-top: 12vh;
+    }
+    .Contact_form_n_image{
+        width:70%;
+        padding:0;
+    }
+    .Contact_image > img{
+        height: 260px;
+        width:auto;
+        margin-left:45% ;
+    }
+    .contact_form{
+        width:150%;
+    }
+    .Name_input, .Email_input{
+        height:20px;
+        width:max(340px,120%);
+        margin: 0;        
+        margin-top: 14px;
+        float:none;
+    }
+    .Message_input{
+        height:125px;
+        width:max(340px,120%);
+    }
+    .Send_btn{
+        font-size:16px;
+    }
+
+}

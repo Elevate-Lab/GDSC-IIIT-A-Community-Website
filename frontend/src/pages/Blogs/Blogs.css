@@ -1,0 +1,7 @@
+@media only screen and (max-width: 900px) {
+	.Blogs_section {
+		flex-direction: column;
+		align-items: center;
+		gap: 5vw;
+	}
+}
