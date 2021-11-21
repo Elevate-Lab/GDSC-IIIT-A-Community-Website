@@ -1,0 +1,45 @@
+.techcard-container {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 50px;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.techcard-container > .techcard {
+    display: flex;
+    flex-direction: column;
+    /* min-width: 15rem;
+    max-width: calc(12.5rem + 13vw); */
+    width: calc(10rem + 10vw);
+    background-color: rgb(255, 255, 255);
+    border-radius: 30;
+    overflow: hidden;
+    -moz-box-shadow: 0 4px 8px #000 5, 0 8px 8px #000 4;
+    box-shadow: 0 4px 8px #000 5, 0 8px 8px #000 4;
+    transition: 300ms;
+    /* border: 0.5px solid rgba(4, 0, 255, 0.6); */
+}
+
+.techcard-container .techcard:hover,
+.techcard-container .techcard:focus-within {
+    -moz-box-shadow: 0 4px 8px #000 5;
+    box-shadow: 0 4px 8px #000 5;
+}
+
+.techcard-container .techcard .event-info {
+    color: #0d1f2d;
+}
+
+.techcard-container .techcard .technology-info .technology-description {
+    /* padding-inline: 16px; */
+    padding-block: 0 10px;
+    line-height: 1.4;
+    font-size: 15px;
+    text-align: center;
+    padding: 20px 10px;
+}
