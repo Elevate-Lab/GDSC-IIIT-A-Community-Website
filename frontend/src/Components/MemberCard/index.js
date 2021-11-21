@@ -9,8 +9,8 @@ function MemberCard({Name,Position,ImageURL,GithubLink,LinkedinLink,TwitterLink}
                 <img className="img-fluid" src="https://indianmemetemplates.com/wp-content/uploads/Doge-meme-template.jpg" />
             </div>
             <div className="team-content">
-                <h3 className="name">Mohsin Raza</h3>
-                <h4 className="title">Web Developer</h4>
+                <h3 className="name">{Name}</h3>
+                <h4 className="title">{Position}</h4>
             </div>
             <ul className="social">
                 <li><a href="https://www.facebook.com/mohsin.raza.99/" className="fa fa-facebook" aria-hidden="true" target="_blank"></a></li>

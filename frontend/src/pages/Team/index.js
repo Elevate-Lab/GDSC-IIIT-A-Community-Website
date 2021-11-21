@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from 'react'
+import {Link} from "react-router-dom";
 import Headings from '../../Components/Page_headings/index'
 import CoreTeam from './Teams_field/CoreTeam'
 import WebTeam from './Teams_field/WebTeam'
@@ -11,9 +12,9 @@ import ManagementTeam from './Teams_field/ManagementTeam'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import leftArrow from '../../Assets/Group 66.svg'
-import rightArrow from '../../Assets/Group 65.svg'
-import tempImg from '../../Assets/Images/img_teams.jpg'
+import leftArrow from '../../Assets/Group 66.svg';
+import rightArrow from '../../Assets/Group 65.svg';
+import tempImg from '../../Assets/Images/img_teams.jpg';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import './carousel.css'
@@ -144,7 +145,17 @@ function Team() {
                     </ul>
                 </div>
                 <Fab style={{ alignSelf: "flex-end", marginRight: "7vw" }} color="primary" aria-label="add">
-                    <AddIcon />
+                    <Link to="Team/NewMember"
+						style={{
+							color: "white",
+							height:"100%",
+							width:"100%",
+							margin:"0",
+							display:"grid",
+							placeItems:"center"	
+					}}>
+						<AddIcon/>
+					</Link>
                 </Fab>
                 <div className="Member_cards_container">{FieldPages[showFieldIdx]}</div>
             </section>

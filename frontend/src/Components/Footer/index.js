@@ -1,7 +1,7 @@
 // import { Typography } from '@material-ui/core'
 import React from 'react'
 import './Footer.css'
-import DSC_logo from '../../Assets/DSC-IIITA-Dark-Horizontal.svg'
+import DSC_logo from '../../Assets/DSC-IIITA-Dark-Horizontal.png'
 import mail_icon from '../../Assets/Message.svg'
 import pin_icon from '../../Assets/Location.svg'
 

@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import DSBlogCard from "../../Components/DSBlogCard";
 import Headings from "../../Components/Page_headings";
 import { Grid } from "@material-ui/core";
@@ -30,7 +31,17 @@ function Blogs() {
 				SmallHeading="Read our latest blogs"
 			/>
 			<Fab style={{ alignSelf: "flex-end", marginRight: "7vw" }} color="primary" aria-label="add">
-				<AddIcon />
+				<Link to="Blogs/NewBlog"
+						style={{
+							color: "white",
+							height:"100%",
+							width:"100%",
+							margin:"0",
+							display:"grid",
+							placeItems:"center"	
+					}}>
+						<AddIcon/>
+					</Link>
 			</Fab>
 			<div
 				style={{

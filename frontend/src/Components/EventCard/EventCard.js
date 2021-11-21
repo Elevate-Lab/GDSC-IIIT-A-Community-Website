@@ -38,8 +38,8 @@ function EventCard() {
                     <div className="edit_buttons">
                         {admin && (
                             <div className=" buttons-admin">
-                                <Button href="#" style={{ color: 'green' }}>
-                                    Edit
+                                <Button href="./Events/editEvent" style={{ color: 'green' }}>
+                                        Edit
                                 </Button>
                                 <Button href="#" style={{ color: 'red' }} disableElevation>
                                     Delete
