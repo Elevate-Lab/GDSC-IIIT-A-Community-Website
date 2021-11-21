@@ -1,0 +1,8 @@
+@media only screen and (max-width: 900px) {
+    .Events_section{
+        flex-direction:column;
+        align-items: center;
+        gap: 5vw;
+        height:min-content;
+    }
+}

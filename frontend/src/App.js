@@ -11,9 +11,12 @@ import About from './pages/About/index';
 import Blogs from './pages/Blogs/index';
 import Contact from './pages/Contact/index';
 import Events from './pages/Events/index';
+import EditEvent from './pages/Events/editEvent';
+import NewEvent from './pages/Events/newEvent';
 import Home from './pages/Home/index';
 import Projects from './pages/Projects/index';
 import Team from './pages/Team/index';
+
 import ViewportProvider from "./viewport";
 
 function App() {
@@ -28,7 +31,7 @@ function App() {
           <Route path="/About">
             <About />
           </Route>
-          <Route path="/Events">
+          <Route path="/Events" exact>
             <Events />
           </Route>
           <Route path="/Team">
@@ -42,6 +45,12 @@ function App() {
           </Route>
           <Route path="/Contact">
             <Contact />
+          </Route>
+          <Route path="/Events/newEvent">
+             <NewEvent/>
+          </Route>
+          <Route path="/Events/editEvent">
+             <EditEvent/>
           </Route>
         </Switch>
         <Footer />

@@ -7,7 +7,7 @@ import { ReactComponent as LinkSVG } from '../../Assets/svg_link.svg';
 // import Stack from "@mui/material/Stack";
 
 function EventCard() {
-    const [admin, setAdmin] = useState(false);
+    const [admin, setAdmin] = useState(true);
     return (
         <div className="container">
             <div className="card">
@@ -38,8 +38,8 @@ function EventCard() {
                     <div className="edit_buttons">
                         {admin && (
                             <div className=" buttons-admin">
-                                <Button href="#" style={{ color: 'green' }}>
-                                    Edit
+                                <Button href="./Events/editEvent" style={{ color: 'green' }}>
+                                        Edit
                                 </Button>
                                 <Button href="#" style={{ color: 'red' }} disableElevation>
                                     Delete

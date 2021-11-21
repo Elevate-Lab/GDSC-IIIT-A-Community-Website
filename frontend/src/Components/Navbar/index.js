@@ -29,13 +29,13 @@ function Navbar() {
 
 	if (width > 900) {
 		return (
-			<div className="navbar">
+			<div className="Navbar">
 				<Link className="navbar_logo" to="/" style={{ width: "340px" }}>
 					<img src={Navbar_logo} alt="logo" />
 				</Link>
 				<div className="navbar_links">
 					{navbarContent.map((item, index) => (
-						<Link className="navbar_link" key={index} to={`${item}`}>
+						<Link className="navbar_link" key={index} to={`../${item}`}>
 							<p className="navbar_link_txt">{item}</p>
 						</Link>
 					))}
@@ -47,7 +47,7 @@ function Navbar() {
 		);
 	} else {
 		return (
-			<div className="navbar">
+			<div className="Navbar">
 				<Link className="navbar_logo" to="/" style={{ width: "300px" }}>
 					<img src={Navbar_logo} alt="logo" />
 				</Link>
@@ -61,11 +61,11 @@ function Navbar() {
 				</div>
 				<div className="navbar_drawer_links" style={{ display: `${Drawer}` }}>
 					{navbarContent.map((item, index) => (
-						<Link className="navbar_link" key={index} to={`${item}`}>
+						<Link className="navbar_link" key={index} to={`../${item}`}>
 							<p className="navbar_link_txt">{item}</p>
 						</Link>
 					))}
-					<Link className="navbar_link" to="Contact">
+					<Link className="navbar_link" to="../Contact">
 						<p className="navbar_link_txt navbar_contact">Contact</p>
 					</Link>
 				</div>

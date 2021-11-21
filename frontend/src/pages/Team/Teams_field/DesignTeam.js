@@ -7,7 +7,7 @@ function DesignTeam() {
     return (
         <div id="Design" className="Field_view">
             <MemberCard 
-                Name="Manav"
+                Name="Shreya"
                 Position="Design"
                 ImageURL="../../Assets/Manav.jpg"
                 GithubLink="xyz"
@@ -15,7 +15,7 @@ function DesignTeam() {
                 TwitterLink="xyz"
             />
             <MemberCard 
-                Name="Manav"
+                Name="Shreya"
                 Position="Design"
                 ImageURL="../../Assets/Manav.jpg"
                 GithubLink="xyz"
@@ -23,7 +23,7 @@ function DesignTeam() {
                 TwitterLink="xyz"
             />
             <MemberCard 
-                Name="Manav"
+                Name="Shreya"
                 Position="Design"
                 ImageURL="../../Assets/Manav.jpg"
                 GithubLink="xyz"
@@ -31,7 +31,7 @@ function DesignTeam() {
                 TwitterLink="xyz"
             />
             <MemberCard 
-                Name="Manav"
+                Name="Shreya"
                 Position="Design"
                 ImageURL="../../Assets/Manav.jpg"
                 GithubLink="xyz"
@@ -39,7 +39,7 @@ function DesignTeam() {
                 TwitterLink="xyz"
             />
             <MemberCard 
-                Name="Manav"
+                Name="Shreya"
                 Position="Design"
                 ImageURL="../../Assets/Manav.jpg"
                 GithubLink="xyz"

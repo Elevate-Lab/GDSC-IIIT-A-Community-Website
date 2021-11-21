@@ -1,0 +1,47 @@
+body {
+    /*background-image: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%);*/
+    /*background-image: linear-gradient(to top, #df89b5 0%, #bfd9fe 100%);*/
+}
+
+#mainContainer {
+    border-radius: 1.5%;
+    padding-bottom: 4rem;
+    padding-top: 1rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    background-color: #fdfcfa;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    /*box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;*/
+}
+
+#formHead {
+    color: black;
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 730px;
+    }
+}
+
+.container-narrow>hr {
+    margin: 30px 0;
+}
+
+.jumbotron {
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.jumbotron .btn {
+    padding: 14px 24px;
+    font-size: 21px;
+}
+
+@media screen and (min-width: 768px) {
+    .jumbotron {
+        border-bottom: 0;
+    }
+}

@@ -11,9 +11,9 @@ import ManagementTeam from './Teams_field/ManagementTeam'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import leftArrow from '../../Assets/Group 66.svg'
-import rightArrow from '../../Assets/Group 65.svg'
-import tempImg from '../../Assets/Images/img_teams.jpg'
+import leftArrow from '../../Assets/Group 66.svg';
+import rightArrow from '../../Assets/Group 65.svg';
+import tempImg from '../../Assets/Images/img_teams.jpg';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import './carousel.css'
