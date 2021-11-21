@@ -21,7 +21,7 @@
     max-width: calc(12.5rem + 13vw); */
     width: calc(15rem + 13vw);
     background-color: rgb(255, 255, 255);
-    border-radius: 5px;
+    border-radius: 30;
     overflow: hidden;
     -moz-box-shadow: 0 4px 8px #000 5, 0 8px 8px #000 4;
     box-shadow: 0 4px 8px #000 5, 0 8px 8px #000 4;
