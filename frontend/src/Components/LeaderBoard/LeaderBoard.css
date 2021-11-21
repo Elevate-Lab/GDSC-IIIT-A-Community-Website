@@ -1,0 +1,108 @@
+
+#tableRecord a {
+    background-color:#08AD5D ;  
+    border-radius: 5px;
+    color: white;
+    padding: .5em;
+    text-decoration: none;
+  }
+  
+  #tableRecord a:focus,
+  #tableRecord a:hover {
+    background-color: #099752;
+    color: white;
+  }
+  .leaderBoard{
+    margin-top: 80px;
+  }
+  .leaderBoard h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.4vw;
+    line-height: 4.2vw;                
+    color: #1B2733;
+  }
+  
+  
+    
+  /*Resize the wrap to see the search bar change!*/
+  .wrap{
+    width: 100%;
+  }
+  
+  .search {
+    margin:0 auto;
+    margin-top: 50px;
+    width: 40%;
+    display: flex;
+  }
+  .searchTerm {
+    width: 100%;
+    border: 2px solid #4286F5;
+    border-right: none;
+    padding: 5px;
+    height: 40px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+  }
+  .searchTerm:focus{
+    color: #4286F5;
+  }
+  .searchButton {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #4286F5;
+    background: #4286F5;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+    display: grid;
+    place-items: center;
+  }
+  .searchButton img{
+    height: 24px;
+    width: 24px;
+  }
+  
+  
+  table {
+    border-collapse: collapse;
+    box-shadow: 0 5px 10px #e1e5ee;
+    background-color: white;
+    text-align: left;
+    overflow: hidden;
+    margin: 25px auto;
+    width: 80%;
+  }
+  thead{
+    box-shadow: 0 5px 10px #eeee;
+    width: 100%;
+  }
+  
+  th {
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 0.7rem;
+    font-weight: 900;
+    text-align: justify;
+  }
+  
+  th span{
+    font-weight: bold;
+  }
+  
+  td {
+    padding: 1rem 2rem;
+  }
+  
+  .profile button{
+    color: white;
+    background-color: #08AD5D;
+    border: none;
+    padding: 6px 15px;
+    cursor: pointer;
+    border-radius: 8px;
+   }

@@ -6,6 +6,7 @@ import EventCards from "../../Components/EventCard/index";
 import Fab from "@mui/material/Fab";
 import AddIcon from "@mui/icons-material/Add";
 import './Events.css'
+import LeaderBoard from "../../Components/LeaderBoard/LeaderBoard";
 
 function Events() {
 	return (
@@ -36,6 +37,7 @@ function Events() {
 					</Link>
 				</Fab>
 				<EventCards />
+        <LeaderBoard/>
 			</section>
 	);
 }
