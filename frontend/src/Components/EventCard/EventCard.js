@@ -7,7 +7,7 @@ import { ReactComponent as LinkSVG } from '../../Assets/svg_link.svg';
 // import Stack from "@mui/material/Stack";
 
 function EventCard() {
-    const [admin, setAdmin] = useState(true);
+    const [admin, setAdmin] = useState(false);
     return (
         <div className="container">
             <div className="card">
