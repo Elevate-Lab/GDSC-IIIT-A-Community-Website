@@ -15,6 +15,15 @@ import rightArrow from '../../Assets/Group 65.svg'
 import tempImg from '../../Assets/Images/img_teams.jpg'
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import './carousel.css'
+// import { Swiper, SwiperSlide } from "swiper/react";
+// // import "swiper/css";
+// // import "swiper/css/navigation"
+// import SwiperCore, {
+//     Navigation
+// } from 'swiper';
+
+// SwiperCore.use([Navigation]);
 
 import './Team.css'
 
@@ -26,7 +35,7 @@ const FieldPages = [
 ]
 
 const slider_img = [
-    tempImg,tempImg,tempImg
+    tempImg, tempImg
 ]
 
 function Team() {
@@ -42,45 +51,27 @@ function Team() {
         setshowField(field.replace(/ /g, ""));
         setshowFieldIdx(Fields.indexOf(field));
     }
-    const Left = ({ onClick }) => {
+    const SamplePrevArrow = (props) => {
+
+        const { className, onClick } = props
+
         return (
-            <div style={{
-                position: 'absolute',
-                zINdex: 10,
-                cursor: 'pointer',
-                left: '0%',
-                // top: '50%'
-                marginTop: 'auto',
-                marginBottom: "auto",
-                top: '100%',
-                bottom: '100%'
-            }} onClick={onClick}>
-                {/* <img src={leftArrow} alt="img" /> */}
+            <div className={className} onClick={onClick}>
                 <ChevronLeftIcon style={{
-                    color: "#fff",
-                    fontSize: '5rem'
+                    color: '#fff',
+                    fontSize: '2rem'
                 }} />
             </div>
         )
     }
 
-    const Right = ({ onClick }) => {
+    const SampleNextArrow = (props) => {
+        const { className, onClick } = props
         return (
-            <div style={{
-                position: 'absolute',
-                zIndex: 10,
-                cursor: 'pointer',
-                right: '0%',
-                // top: '50%',
-                marginTop: 'auto',
-                marginBottom: "auto",
-                top: '100%',
-                bottom: '100%'
-            }} onClick={onClick}>
-                {/* <img src={rightArrow} alt="img" /> */}
+            <div className={className} onClick={onClick}>
                 <ChevronRightIcon style={{
-                    color: "#fff",
-                    fontSize: '5rem'
+                    color: '#fff',
+                    fontSize: '2rem'
                 }} />
             </div>
         )
@@ -91,23 +82,37 @@ function Team() {
         slidesToShow: 1,
         centerMode: true,
         centerPadding: 0,
-        nextArrow: <Left />,
-        prevArrow: <Right />
+        nextArrow: <SampleNextArrow />,
+        prevArrow: <SamplePrevArrow />
     };
     return (
         <div>
             <div>
-                <Slider {...settings}>
+                <Slider autoplay {...settings}>
                     {
                         slider_img.map((item, index) => (
-                            <div key={index}>
+                            <div key={index} style={{
+                                textAlign: 'center'
+                            }}>
                                 <img style={{
-                                    width: '100%'
+                                    width: '100%',
+                                    zINdex: -1
                                 }} src={item} alt="img" />
                             </div>
                         ))
                     }
                 </Slider>
+                {/*  <Swiper navigation={true} className="mySwiper">
+                    <SwiperSlide>Slide 1</SwiperSlide>
+                    <SwiperSlide>Slide 2</SwiperSlide>
+                    <SwiperSlide>Slide 3</SwiperSlide>
+                    <SwiperSlide>Slide 4</SwiperSlide>
+                    <SwiperSlide>Slide 5</SwiperSlide>
+                    <SwiperSlide>Slide 6</SwiperSlide>
+                    <SwiperSlide>Slide 7</SwiperSlide>
+                    <SwiperSlide>Slide 8</SwiperSlide>
+                    <SwiperSlide>Slide 9</SwiperSlide>
+                </Swiper> */}
             </div>
             <section className='Team_section'>
                 <Headings
