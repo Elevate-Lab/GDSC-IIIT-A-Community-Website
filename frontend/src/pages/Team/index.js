@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react'
 import Headings from '../../Components/Page_headings/index'
 import CoreTeam from './Teams_field/CoreTeam'
@@ -25,21 +26,28 @@ import './carousel.css'
 
 // SwiperCore.use([Navigation]);
 
-import './Team.css'
 
-const Fields = [
-    "Core Team", "Web", "Design", "ML", "Open Source", "App", "Management"
-]
-const FieldPages = [
-    <CoreTeam />, <WebTeam />, <DesignTeam />, <MLTeam />, <OpenSourceTeam />, <AppTeam />, <ManagementTeam />
-]
+// import {Typography} from '@material-ui/core'
+import Fab from "@mui/material/Fab";
+import AddIcon from "@mui/icons-material/Add";
+import "./Team.css";
 
 const slider_img = [
     tempImg, tempImg
 ]
 
-function Team() {
+const Fields = ["Core Team", "Web", "Design", "ML", "Open Source", "App", "Management"];
+const FieldPages = [
+    <CoreTeam />,
+    <WebTeam />,
+    <DesignTeam />,
+    <MLTeam />,
+    <OpenSourceTeam />,
+    <AppTeam />,
+    <ManagementTeam />,
+];
 
+function Team() {
     const [showField, setshowField] = useState("CoreTeam");
     const [showFieldIdx, setshowFieldIdx] = useState(0);
 
@@ -114,33 +122,34 @@ function Team() {
                     <SwiperSlide>Slide 9</SwiperSlide>
                 </Swiper> */}
             </div>
-            <section className='Team_section'>
+            <section className="Team_section">
                 <Headings
+                    color={{ color: "#FBBC04" }}
                     LargeHeading="Our Team"
                     SmallHeading="The ones, who are making it happen"
                 />
+
                 <div className="Member-field">
                     <ul className="Field-select">
-                        {
-                            Fields.map((item, index) => (
-                                <li key={index} className={`Field-item ${item.replace(/ /g, "") === showField ? "field-selected" : ""}`} >
-                                    <p className="field-link" onClick={UpdateField}>
-                                        {item}
-                                    </p>
-                                </li>
-                            ))
-                        }
+                        {Fields.map((item, index) => (
+                            <li
+                                key={index}
+                                className={`Field-item ${item.replace(/ /g, "") === showField ? "field-selected" : ""}`}
+                            >
+                                <p className="field-link" onClick={UpdateField}>
+                                    {item}
+                                </p>
+                            </li>
+                        ))}
                     </ul>
                 </div>
-                <div className="Member_cards_container">
-                    {
-                        FieldPages[showFieldIdx]
-                    }
-                </div>
+                <Fab style={{ alignSelf: "flex-end", marginRight: "7vw" }} color="primary" aria-label="add">
+                    <AddIcon />
+                </Fab>
+                <div className="Member_cards_container">{FieldPages[showFieldIdx]}</div>
             </section>
         </div>
-
-    )
+	);
 }
 
-export default Team
+export default Team;
