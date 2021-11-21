@@ -7,10 +7,9 @@ import { blue, red, yellow, green } from "@material-ui/core/colors";
 import { findByLabelText } from "@testing-library/react";
 import { Component } from "react";
 import Slider from "react-slick";
-import Carousel from "./Carousel";
 
-
-
+import FourthCarousel from "./Fourth/FourthCarousel";
+import { ReactDOM } from "react";
 const useStyles = makeStyles(theme => ({
 
     eventHeading: {
@@ -18,21 +17,21 @@ const useStyles = makeStyles(theme => ({
         textDecoration: "Bold"
     },
 
-head:{
-    backgroundColor:"blue",
-},
-    
+    head: {
+        backgroundColor: "blue",
+    },
+
     designConatiner: {
-        display: "flex",
+        display: 'flex',
         flexDirection: "row",
     },
     designingConatiner: {
-        display: "flex",
+
         flexDirection: "row",
     }
 }))
 
-
+// ReactDOM.render(<FouthCarousel />, document.getElementById("app"));
 
 function Content() {
     const Classes = useStyles();
@@ -48,113 +47,35 @@ function Content() {
 
 
     return (
-        <div>
+        <div style={{ width: '100%' }}>
             <div className={Classes.head} style={{
-                    width: "100%",
-                    height: "20px",
-                    backgroundColor: `black`
-                }}>
+                width: "100%",
+                height: "1em",
+                backgroundColor: `black`
+            }}>
 
             </div>
-            <h1 className={Classes.eventHeading}>Event</h1>
+            <h1 className={Classes.eventHeading}>Events</h1>
 
+            <div style={{ display: 'flex', justifyContent: 'center', direction: 'row' }}>
+                <div style={{ backgroundColor: 'blue', width: `calc(100vw/3)`, height: '0.4rem' }}>
 
-            <div className={Classes.designConatiner}>
-                <div style={{
-                    width: `31.5rem`,
-                    height: `0.4rem`,
-                    backgroundColor: `red`
-                }} />
-                <div style={{
-                    width: "31.5rem",
-                    height: `0.4rem`,
-                    backgroundColor: `blue`
-                }} />
-                <div style={{
-                    width: "31.9rem",
-                    height: `0.4rem`,
-                    backgroundColor: `yellow`
-                }} />
-            </div>
-            <div className={Classes.designConatiner}>
-                <div style={{
-                    width: `31.5rem`,
-                    height: `0.1rem`,
-                    backgroundColor: `blue`
-                }} />
-                <div style={{
-                    width: "31.5rem",
-                    height: `0.1em`,
-                    backgroundColor: `black`
-                }} />
-                <div style={{
-                    width: "31.9rem",
-                    height: `0.1rem`,
-                    backgroundColor: `red`
-                }} />
+                </div>
+                <div style={{ backgroundColor: 'yellow', width: `calc(100vw/3)`, height: '0.4rem' }}>
+
+                </div>
+                <div style={{ backgroundColor: 'red', width: `calc(100vw/3)`, height: '0.4rem' }}>
+
+                </div>
             </div>
 
 
-<Carousel />
-            {/* <div className={Classes.designingConatiner} sx={{height:'30rem'}}>
-                <Slider {...settings}>
-                    
-                        <div className={Classes.designingConatiner}>
-                            <div style={{
-                                width: `calc(100vw/2)`,
-                            
-                                backgroundColor: `black`
-                            }}>
-                            <h1>Hello.1</h1>
-                            </div>
-                            <div style={{
-                                width: `calc(100vw/2)`,
-                            
-                            }}>
-                                <img src="../public/logo512.png" alt="hell" />
-                            </div>
-                        </div>
-                    
-                
-                        <div className={Classes.designingConatiner}>
-                            <div style={{
-                                width: `calc(100vw/2)`,
-                            
-                                backgroundColor: `red`
-                            }}>
-                                    <h1>Hello.2</h1>
-                            </div>
-                            <div style={{
-                                width: `calc(100vw/2)`,
-                            
-                            }}>
-                                <img src="../public/logo512.png" alt="hell" />
-                            </div>
-                        </div>
-                    
-                
-                        <div className={Classes.designingConatiner}>
-                            <div style={{
-                                width: `calc(100vw/2)`,
-                            
-                                backgroundColor: `yellow`
-                            }}>
-                                <h1>Hello.3</h1>
-                            </div>
-                            <div style={{
-                                width: `calc(100vw/2)`,
-                            
-                            }}>
-                                <img src="../public/logo512.png" alt="hell" />
-                            </div>
-                        </div>
-                    
-                
-                      
-                    
-                </Slider>
 
-            </div> */}
+
+            <div style={{ minHeight: '40rem' }}>
+                <FourthCarousel />
+            </div>
+
         </div>
     )
 }
