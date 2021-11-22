@@ -24,6 +24,7 @@ import EditMember from './pages/Team/editMember';
 import NewMember from './pages/Team/newMember';
 
 import ViewportProvider from "./viewport";
+import LeaderBoard from './Components/LeaderBoard/LeaderBoard';
 
 function App() {
   return (
@@ -57,6 +58,9 @@ function App() {
           </Route>
           <Route path="/Events/EditEvent">
              <EditEvent/>
+          </Route>
+          <Route path="/Events/EventDetails">
+             <LeaderBoard/>
           </Route>
           <Route path="/Blogs/NewBlog">
              <NewBlog/>
