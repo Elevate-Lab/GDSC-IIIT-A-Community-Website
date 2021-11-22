@@ -1,3 +1,34 @@
+.bodyContainer{
+  display: flex;
+}
+.body{
+  max-width: 45%;
+  margin-left: 100px;
+}
+.bodyImage{
+  margin-top: 60px;
+  margin-left: 30px;
+}
+.bodyImage img{
+  height: auto;
+  width: 564px;
+}
+.body h1{
+  font-weight: bold;
+  font-size: 2.8vw;
+  line-height: 4.2vw;                
+  color: #1B2733;
+}
+#para1{
+  margin-bottom: 80px;
+  font-weight: 600;
+  font-size: 1.11vw;
+  line-height: 1.53vw;                       
+  color: #637282;
+}
+#para2{
+  margin-bottom: 30px;
+}
 
 #tableRecord a {
     background-color:#08AD5D ;  
@@ -106,3 +137,72 @@
     cursor: pointer;
     border-radius: 8px;
    }
+   @media screen and (max-width: 850px) {
+    .bodyContainer{
+      padding-top: 30px ;
+      flex-direction: column;
+      align-items: center;
+    }
+    .body{
+      max-width: 80%;
+      margin-left:0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .body h1{
+      font-size: 5.2vw;
+      line-height: 150%;
+    }
+    .body #para1{
+      font-size: 2vw;
+      line-height: 180%;    
+      margin-bottom: 40px;                   
+    }
+    .body #para2{
+      text-align: justify;
+    }
+    .bodyImage{
+      margin: 0;
+      margin-top: 40px;
+      display: grid;
+      place-items: center;
+    }
+    .bodyImage img{
+      width: 86%;
+    }
+    .leaderBoard{
+      margin-top: 80px;
+    }
+    .leaderBoard h1{
+      text-align: center;
+      font-weight: bold;
+      font-size: 5vw;
+      line-height: 150%;                
+      color: #1B2733;
+    }
+    .search {
+      margin-top: 30px;
+      width: 60%;
+      display: flex;
+    } 
+    table {
+      margin: 30px auto;
+      width: 100%;
+      overflow-x: scroll;
+  
+    }
+    thead{
+      box-shadow: 0 5px 10px #eeee;
+      width: 80%;
+    }
+    th,td {
+      padding: 1.2rem 0.6rem;
+      font-size:12px;
+    }
+    tbody:nth-child(2),tbody:nth-child(3){
+      display:none;
+    }
+  }
+  
+  
