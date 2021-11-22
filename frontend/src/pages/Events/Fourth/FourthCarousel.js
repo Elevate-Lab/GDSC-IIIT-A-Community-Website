@@ -21,6 +21,7 @@ import SwiperCore, {
     Autoplay, Navigation, Pagination, Keyboard, Mousewheel
 } from 'swiper';
 import useViewport from "../../../viewport/useViewport";
+import { fontSize } from "@mui/system";
 // install Swiper modules
 SwiperCore.use([Autoplay, Navigation, Pagination, Keyboard, Mousewheel]);
 
@@ -46,16 +47,18 @@ function FouthCarousel() {
             textAlign: "center",
             display: 'flex',
             flexDirection: 'column',
-            backgroundColor: '#000',
+            backgroundColor: '#373937',
+            /*181A18*/ 
             justifyContent: 'center',
-            alignItems: 'center'
+            alignItems: 'center',
+            fontSize: '1.1rem'
         },
         combined: {
             display: 'flex',
             flexDirection: width > 1000 ? 'row' : 'column'
         },
         designtext: {
-            color: '#fff',
+            color: '#f8f8ff',
             width: '90%',
             marginTop: '1rem',
             marginBottom: '1rem'
@@ -73,14 +76,13 @@ function FouthCarousel() {
                         className={Classes.designtext}>Google collabrates with University Students through Student Clubs to grow Google Communities</h4>
                     <h4
                         className={Classes.designtext}>DSC Provides:</h4>
-                    <h4 sx={{fontSize:'0.4rem'}}
+                    <h4  style={{fontSize: '1.2rem'}}  sx={{fontSize:'0.4rem'}}
                         className={Classes.designtext}>1. Oppurtunities to Enhance their technical knowledge.</h4>
-                    <h4 sx={{fontSize:'0.4rem'}}
+                    <h4 style={{fontSize: '1.2rem'}} sx={{fontSize:'0.4rem'}}
                         className={Classes.designtext}>2. Gain Industrial experience by solving Problems using Technology.</h4>
-                    <h4 sx={{fontSize:'0.4rem'}}
+                    <h4 style={{fontSize: '1.2rem'}} sx={{fontSize:'0.4rem'}}
                         className={Classes.designtext}>3. Display prototypes & Solutions for industries and Organizations.</h4>
-                    <h4
-                        className={Classes.designtext}>Google Developers supports and recognizes DSC's but does not own or manage them.</h4>
+                     
                 </div>
                 <div style={{ width: width > 1000 ? `50vw` : ( width> 500 ? '100vw' : '100vw' ) , marginRight: 0 }}>
                     <Swiper spaceBetween={30} centeredSlides={true} loop={true}
