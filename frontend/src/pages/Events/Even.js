@@ -58,13 +58,13 @@ function Content() {
             <h1 className={Classes.eventHeading}>Events</h1>
 
             <div style={{ display: 'flex', justifyContent: 'center', direction: 'row' }}>
-                <div style={{ backgroundColor: 'blue', width: `calc(100vw/3)`, height: '0.4rem' }}>
+                <div style={{ backgroundColor: 'red', width: `calc(100vw/3)`, height: '0.4rem' }}>
 
                 </div>
                 <div style={{ backgroundColor: 'yellow', width: `calc(100vw/3)`, height: '0.4rem' }}>
 
                 </div>
-                <div style={{ backgroundColor: 'red', width: `calc(100vw/3)`, height: '0.4rem' }}>
+                <div style={{ backgroundColor: 'blue', width: `calc(100vw/3)`, height: '0.4rem' }}>
 
                 </div>
             </div>
