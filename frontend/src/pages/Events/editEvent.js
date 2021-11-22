@@ -5,7 +5,7 @@ import '../CommonCSS/formStyle.css';
 
 function EditEvent() {
     return (
-    
+
         <div class="container" id="mainContainer">
             <h1 class="well" id="formHead">Edit Event</h1>
 
@@ -50,7 +50,7 @@ function EditEvent() {
                 <input type="button" class="btn btn-info" value="Submit"></input>
             </form>
         </div>
-    
+
     );
 }
 
