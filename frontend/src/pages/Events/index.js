@@ -7,7 +7,7 @@ import Fab from "@mui/material/Fab";
 import AddIcon from "@mui/icons-material/Add";
 import './Events.css'
 import LeaderBoard from "../../Components/LeaderBoard/LeaderBoard";
-
+import Even from "./Even"
 function Events() {
 	return (
 			<section
@@ -22,6 +22,7 @@ function Events() {
 					paddingBottom: "6vh",
 				}}
 			>
+				<Even />
 				<Headings color={{ color: "#EA4335" }} LargeHeading="Events" SmallHeading="Whats happening..." />
 				<Fab style={{ alignSelf: "flex-end", marginRight: "7vw" }} color="primary" aria-label="add">
 					<Link to="Events/NewEvent"
