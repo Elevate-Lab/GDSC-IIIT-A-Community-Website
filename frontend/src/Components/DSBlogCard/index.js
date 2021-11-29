@@ -1,13 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Typography, Paper } from '@material-ui/core'
 import img1 from '../../Assets/Images/img1.png'
 import DSBtn from '../DSBtn'
 import useViewport from '../../viewport/useViewport'
+import apiContext from '../../ContextApi/ApiContext'
+import { Link } from 'react-router-dom'
 
 
-function DSBlogCard({title, date, body}) {
+function DSBlogCard(props) {
+    const context = useContext(apiContext)
+    const {removeData,previousCardData} = context
+    const {blogs} = props
     const { width } = useViewport()
-    
     return (
         <div style={{
             margin: '1rem'
@@ -25,19 +29,19 @@ function DSBlogCard({title, date, body}) {
                     fontWeight: 500,
                     fontSize: width > 1000 ? '1.5rem' : '1rem',
                     marginTop: '1rem'
-                }}>{title}</Typography>
+                }}>{blogs.title}</Typography>
 
                 <Typography style={{
                     fontFamily: 'poppins',
                     fontWeight: 300,
                     fontSize:  width > 1000 ? '1rem' : '0.8rem',
                     marginTop: '1rem'
-                }}>{date}</Typography>
+                }}>{blogs.date}</Typography>
                 <Typography style={{
                     fontFamily: 'poppins',
                     fontSize:  width > 1000 ? '1rem' : '0.8rem',
                     marginTop: '1rem'
-                }}> {body}
+                }}> {blogs.description}
                 </Typography>
                 <div style={{
                     display: 'flex',
@@ -57,7 +61,8 @@ function DSBlogCard({title, date, body}) {
                         display: 'flex',
                         flexDirection: 'row'
                     }}>
-                        <DSBtn
+                        <Link to="/Blogs/EditBlog" onClick={()=>previousCardData(blogs)}>Edit</Link>
+                        {/* <DSBtn
                             label="Edit"
                             backgroundColor="#f5edff"
                             height='2rem'
@@ -80,11 +85,12 @@ function DSBlogCard({title, date, body}) {
                             style={{
                                 fontSize: '1rem'
                             }}
+                            blogs={blogs}
                             divStyle={{
                                 marginLeft: '0.5rem',
                                 marginRight: '0.5rem'
                             }}
-                        />
+                        /> */}
                     </div>
                 </div>
             </Paper>

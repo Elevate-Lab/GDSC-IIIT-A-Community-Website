@@ -3,15 +3,14 @@ var router       = express.Router();
 var Event        = require("../models/event");
 
 // INDEX-show all events
-router.get("/",function(req,res){
-    Event.find({}, function(err, allEvents){
-       if(err){
-           console.log(err);
-       }else{
-        res.render("events/index",{events: allEvents});   
-       }
-   });
-});
+router.get("/",async (req,res)=>{
+    try {
+        const event = await Event.find({})
+        res.json(event)
+    } catch (error) {
+        console.log(error);
+    }
+})
 
 //create - add new events to DB
 router.post("/", function(req, res){
@@ -34,8 +33,8 @@ router.post("/", function(req, res){
             console.log(err);
         } else {
             //redirect back to events page
-            console.log(newlyCreated);
-            res.redirect("/events");
+            res.json(newlyCreated)
+            // res.redirect("/events");
         }
     });
 });
@@ -73,13 +72,15 @@ router.get("/:id/edit", function(req, res) {
 
 // UPDATE EVENT ROUTE
 router.put("/:id",  function(req, res){
-    Event.findByIdAndUpdate(req.params.id, req.body.event, function(err, event){
+    Event.findByIdAndUpdate(req.params.id, req.body, function(err, event){
         if(err){
             //req.flash("error", err.message);
-            res.redirect("back");
+            // res.redirect("back");
+            console.log(err)
         } else {
             //req.flash("success","Successfully Updated!");
-            res.redirect("/events/" + event._id);
+            // res.redirect("/events/" + event._id);
+            res.json(req.body)
         }
     });
   });
@@ -88,10 +89,8 @@ router.put("/:id",  function(req, res){
 router.delete("/:id", function(req, res) {
     Event.findByIdAndRemove(req.params.id, function(err){
        if(err){
-           res.redirect("/events");
-       } else{
-           res.redirect("/events");
-       }
+           console.log(err);;
+       } 
     });
 });
 
