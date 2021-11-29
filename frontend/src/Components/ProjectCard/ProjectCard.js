@@ -1,20 +1,20 @@
 import * as React from "react";
-import { useState } from "react";
+import { useState,useContext } from "react";
 import { Button } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import "./ProjectCard.css";
-
-function ProjectCard() {
+import { Link } from "react-router-dom";
+import apiContext from "../../ContextApi/ApiContext";
+function ProjectCard(props) {
+	const context = useContext(apiContext)
+    const {removeData,previousCardData} = context
 	const [admin, setAdmin] = useState(false);
+	const {project} = props
 	return (
 		<div className="card">
 			<div
 				className="img"
-				style={{
-					backgroundImage:
-						"url('https://images.unsplash.com/photo-1635928097900-cf6299f4e8cb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1032&q=80')",
-				}}
-			></div>
+			><img src={project.image} alt="" /></div>
 
 			<div className="content">
 				<Typography
@@ -30,7 +30,7 @@ function ProjectCard() {
 					color="text.primary"
 					gutterBottom
 				>
-					Project Name
+					{project.projectname}
 				</Typography>
 				<Typography
 					sx={{ fontSize: 14, fontStyle: "oblique", letterSpacing: ".0.5rem", marginBottom: 1 }}
@@ -40,23 +40,20 @@ function ProjectCard() {
 					tagline
 				</Typography>
 				<Typography variant="body2" className="text">
-					Lorem ipsum dolor sit amet,happy xyx abc hello wo something sad apple consectetur haha he hehe
-					adipiscing elit. Lorem ipsum dolor sit amet,happy xyx abc hello wo something sad apple consectetur
-					haha he hehe adipiscing elit. Lorem ipsum dolor sit amet,happy xyx abc hello wo something sad apple
-					consectetur haha he hehe adipiscing elit.
+					{project.description}
 				</Typography>
 				<div className="buttons">
-					<a class="custom-btn btn" href="">
+					<a class="custom-btn btn" href={project.projectLink}>
 						<span>Github Link</span>
 					</a>
-					<a class="custom-btn btn">
+					<a class="custom-btn btn" href={project.projectLink}>
 						<span>View Project</span>
 					</a>
 				</div>
-				{admin && (
+				{ (
 					<div className="buttons-admin">
-						<Button size="small" href="./Projects/EditProject">Edit</Button>
-						<Button size="small" disableElevation>
+						<Link to="/Projects/EditProject" onClick={()=>previousCardData(project)}>Edit</Link>
+						<Button size="small" disableElevation onClick={()=>removeData(project._id)}>
 							Delete
 						</Button>
 					</div>

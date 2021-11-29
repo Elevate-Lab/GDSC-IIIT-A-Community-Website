@@ -8,7 +8,9 @@ import AddIcon from "@mui/icons-material/Add";
 import './Events.css'
 import LeaderBoard from "../../Components/LeaderBoard/LeaderBoard";
 import Even from "./Even"
+
 function Events() {
+
 	return (
 			<section
             	className="Events_section" 
@@ -41,5 +43,4 @@ function Events() {
 			</section>
 	);
 }
-
 export default Events;

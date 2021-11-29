@@ -25,9 +25,11 @@ import NewMember from './pages/Team/newMember';
 
 import ViewportProvider from "./viewport";
 import LeaderBoard from './Components/LeaderBoard/LeaderBoard';
+import ApiState from './ContextApi/ApiState';
 
 function App() {
   return (
+    <ApiState>
     <ViewportProvider>
       <Router>
         <Navbar />
@@ -84,6 +86,7 @@ function App() {
         <Footer />
       </Router>
     </ViewportProvider>
+    </ApiState>
   );
 }
 

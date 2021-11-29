@@ -1,32 +1,33 @@
 import * as React from 'react';
-import { useState } from 'react';
+import { useState,useContext } from 'react';
 import './EventCard.css';
 import { Button } from '@mui/material';
 import { ReactComponent as LinkSVG } from '../../Assets/svg_link.svg';
 import { Link } from 'react-router-dom';
+import apiContext from '../../ContextApi/ApiContext';
 
 // import Stack from "@mui/material/Stack";
 
-function EventCard() {
-    const [admin, setAdmin] = useState(false);
+function EventCard(props) {
+    const {event} = props
+    const context =useContext(apiContext)
+    const {removeData,previousCardData} = context
+    const [admin, setAdmin] = useState(true);
     return (
         <div className="container">
             <div className="card">
                 <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Sunset_2007-1.jpg/1200px-Sunset_2007-1.jpg"
+                    src={event.image}
                     alt="img"
                 />
                 <div className="event-info">
-                    <h3>Event Heading</h3>
+                    <h3>{event.name}</h3>
 
-                    <p className="event-timing">99th December 2099 - 99th December 2099</p>
+                    <p className="event-timing">{event.startDate} - {event.endDate}</p>
                     <p className="event-description">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat nobis nam quaerat
-                        soluta ipsam repudiandae cumque. Impedit quisquam quidem laboriosam, quam sunt
-                        architecto numquam placeat iusto, obcaecati, vel fugit blanditiis?
-                    </p>
+                       {event.description}</p>
                     <p className="event-organizer">
-                        Organized by <span>DSC IIIT A</span>
+                        Organized by <span>{event.organizer}</span>
                     </p>
                     <div className="link_buttons">
                         <Link to="/Events/EventDetails">
@@ -39,10 +40,10 @@ function EventCard() {
                     <div className="edit_buttons">
                         {admin && (
                             <div className=" buttons-admin">
-                                <Button href="./Events/editEvent" style={{ color: 'green' }}>
+                                <Link onClick={()=>previousCardData(event)} to="/Events/editEvent" style={{ color: 'green' }}>
                                         Edit
-                                </Button>
-                                <Button href="#" style={{ color: 'red' }} disableElevation>
+                                </Link>
+                                <Button onClick={()=>removeData(event._id)}  style={{ color: 'red' }} disableElevation>
                                     Delete
                                 </Button>
                             </div>

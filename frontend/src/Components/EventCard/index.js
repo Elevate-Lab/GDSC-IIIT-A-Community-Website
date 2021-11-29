@@ -1,8 +1,19 @@
-import React from 'react';
+import React,{useEffect,useContext} from 'react';
 import { Typography } from '@material-ui/core';
 import EventCard from './EventCard';
+import apiContext from "../../ContextApi/ApiContext";
+
 
 function EventCards() {
+    const context = useContext(apiContext)
+	const { data, getAllData, getAttribute } = context
+	let attribute = "events";
+	
+	useEffect(() => {
+		getAttribute(attribute)
+		getAllData();
+	}, [data])
+	console.log(data);
     return (
         <div
             style={{
@@ -14,11 +25,11 @@ function EventCards() {
                 alignItems: 'center',
             }}
         >
-            <EventCard />
-            <EventCard />
-            <EventCard />
-            <EventCard />
-            <EventCard />
+            {data && data.map((event)=>{
+             return <EventCard event={event}/>
+            })}
+        
+        
         </div>
     );
 }
