@@ -39,6 +39,19 @@ function Projects() {
 						<AddIcon/>
 					</Link>
 			</Fab>
+			<Fab style={{ alignSelf: "flex-start"}} color="primary" aria-label="add">
+				<Link to="Projects/LoginPage"
+					style={{
+						color: "white",
+						height: "100%",
+						width: "100%",
+						margin: "0",
+						display: "grid",
+						placeItems: "center"
+					}}>
+					<AddIcon />
+				</Link>
+			</Fab>
 			<ProjectCard />
 			<ProjectCard />
 			<ProjectCard />
