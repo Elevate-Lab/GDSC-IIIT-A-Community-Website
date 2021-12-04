@@ -24,9 +24,13 @@ import EditMember from './pages/Team/editMember';
 import NewMember from './pages/Team/newMember';
 import LoginPage from "./pages/Projects/loginPage"
 import ViewportProvider from "./viewport";
+
 // import Loader from "../src/Loader";
 import { useState, useEffect } from 'react';
 import Secondload from './Secondload';
+
+
+import LeaderBoard from './Components/LeaderBoard/LeaderBoard';
 
 
 function App() {
@@ -78,6 +82,9 @@ loading?
           </Route>
           <Route path="/Events/EditEvent">
              <EditEvent/>
+          </Route>
+          <Route path="/Events/EventDetails">
+             <LeaderBoard/>
           </Route>
           <Route path="/Blogs/NewBlog">
              <NewBlog/>

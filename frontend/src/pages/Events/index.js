@@ -38,7 +38,6 @@ function Events() {
 					</Link>
 				</Fab>
 				<EventCards />
-        <LeaderBoard/>
 			</section>
 	);
 }
