@@ -8,7 +8,7 @@ import Fab from "@mui/material/Fab";
 import AddIcon from "@mui/icons-material/Add";
 import './Events.css'
 import LeaderBoard from "../../Components/LeaderBoard/LeaderBoard";
-
+import Even from "./Even"
 function Events() {
 	return (
 			<section
@@ -23,6 +23,7 @@ function Events() {
 					paddingBottom: "6vh",
 				}}
 			>
+				<Even />
 				<Headings 
 					LargeHeading="Events" 
 					SmallHeading="Whats happening..."
@@ -43,7 +44,6 @@ function Events() {
 					</Link>
 				</Fab>
 				<EventCards />
-        <LeaderBoard/>
 			</section>
 	);
 }

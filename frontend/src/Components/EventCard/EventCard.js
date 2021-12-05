@@ -3,6 +3,7 @@ import { useState } from 'react';
 import './EventCard.css';
 import { Button } from '@mui/material';
 import { ReactComponent as LinkSVG } from '../../Assets/svg_link.svg';
+import { Link } from 'react-router-dom';
 
 // import Stack from "@mui/material/Stack";
 
@@ -28,9 +29,9 @@ function EventCard() {
                         Organized by <span>DSC IIIT A</span>
                     </p>
                     <div className="link_buttons">
-                        <Button href="#">
-                            Know More <LinkSVG style={{ width: '15px', paddingLeft: '10px' }} />
-                        </Button>
+                        <Link to="/Events/EventDetails">
+                            Know More <LinkSVG style={{ width: '21px', paddingLeft: '10px' }} />
+                        </Link>
                         {/* <Button href="#">
                             C2A <LinkSVG style={{ width: '15px', paddingLeft: '10px' }} />
                         </Button> */}
