@@ -14,8 +14,22 @@
 
 .contact_form{
     width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
-
+.contact_form > div{
+    display: flex;
+}
+.form_name_inp,.form_email_inp {
+    width: 49%;
+}
+.form_email_inp{
+    float: right;
+}
+.form_message_inp{
+    width: 100%;
+}
 form input, form textarea, form button{
     background:rgba(255,255,255,0.4);
     font-family: 'Open Sans', sans-serif;
@@ -27,23 +41,78 @@ form input, form textarea, form button{
     line-height: 14px;
     color: #637282;
     padding: 10px;
+    position: relative;
 }
-form input:focus, form textarea:focus{ 
+.contact_form > div > input:focus,
+.contact_form > div > textarea:focus{ 
     border: 1.4px solid #1B2733;
     outline:none;
     color: #1B2733;
 }
 
 .Name_input, .Email_input{
-    height:30px;
-    width:43%;
+    height:42px;
+    width:100%;
 }
-.Email_input{
-    float: right;
+.contact_form > div > span{
+    position: relative;
+    margin-left: -100%;
+    z-index: 0;
+}
+.contact_form > div > input ~ span::before{
+    color: #637282;
+    position: absolute;
+    top: 9px;
+    left: 8px;
+    padding: 4px;
+    width:max-content;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 15px;
+    z-index: 0;
+    transition: all 0.3s ease-in-out;
+}
+.Name_inp::before{
+    content: "Name";
+}
+.Email_inp::before{
+    content: "E-mail";
+}
+.Message_inp::before{
+    content: "Message";
+}
+.contact_form > div > input:focus + span::before{
+    color: #1B2733;
+    top: -13px;
+    background:#ffffff;
+    font-size: 12px;
+    font-weight:500;
+}
+.contact_form > div > textarea ~ span::before{
+    color: #637282;
+    position: absolute;
+    top: 21px;
+    left: 8px;
+    padding: 4px;
+    width:max-content;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 15px;
+    z-index: 0;
+    transition: all 0.3s ease-in-out;
+}
+.contact_form > div > textarea:focus ~ span::before{
+    color: #1B2733;
+    top: 1px;
+    background:#ffffff;
+    font-size: 12px;
+    font-weight:500;
 }
 .Message_input{
     height:125px;
-    width: 96%;
+    width: 100%;
     resize:vertical;
     min-height: 100px;
     max-height: 150px;
@@ -89,14 +158,26 @@ form input:focus, form textarea:focus{
         width:auto;
         margin-left:45% ;
     }
+    .form_container{
+        width:200%;
+    }
     .contact_form{
         width:150%;
+        flex-direction: column;
+    }
+    .contact_form>div{
+        width:100%;
+    }
+    .contact_form > div > span{
+        position: relative;
+        margin-left: -150%;
+        z-index: 0;
     }
     .Name_input, .Email_input{
-        height:20px;
+        height:42px;
         width:max(340px,120%);
         margin: 0;        
-        margin-top: 14px;
+        margin-bottom: 14px;
         float:none;
     }
     .Message_input{

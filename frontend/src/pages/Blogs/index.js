@@ -4,6 +4,7 @@ import DSBlogCard from "../../Components/DSBlogCard";
 import Headings from "../../Components/Page_headings";
 import { Grid } from "@material-ui/core";
 import "./Blogs.css";
+import blog_illustration from "../../Assets/Blogs_page_illustration.svg"
 import Fab from "@mui/material/Fab";
 import AddIcon from "@mui/icons-material/Add";
 
@@ -26,9 +27,10 @@ function Blogs() {
 		>
 			<Headings
 				className="Heading"
-				color={{ color: "#34A853" }}
 				LargeHeading="Blogs"
 				SmallHeading="Read our latest blogs"
+				Text="Learning goes hand-in-hand with building new and cool stuff. Lorem ipsum dolor sit amet"
+				PageIllustration={blog_illustration}
 			/>
 			<Fab style={{ alignSelf: "flex-end", marginRight: "7vw" }} color="primary" aria-label="add">
 				<Link to="Blogs/NewBlog"

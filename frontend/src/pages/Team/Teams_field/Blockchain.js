@@ -2,13 +2,13 @@ import React from 'react'
 import MemberCard from '../../../Components/MemberCard/index'
 
 
-function OpenSourceTeam() {
+function BlockchainTeam() {
 
     return (
         <div id="Web" className="Field_view">
             <MemberCard 
                 Name="Supriya"
-                Position="Open Source"
+                Position="Blockchain"
                 ImageURL="../../Assets/Manav.jpg"
                 GithubLink="xyz"
                 LinkedinLink="xyz"
@@ -16,7 +16,7 @@ function OpenSourceTeam() {
             />
             <MemberCard 
                 Name="Supriya"
-                Position="Open Source"
+                Position="Blockchain"
                 ImageURL="../../Assets/Manav.jpg"
                 GithubLink="xyz"
                 LinkedinLink="xyz"
@@ -24,7 +24,7 @@ function OpenSourceTeam() {
             />
             <MemberCard 
                 Name="Supriya"
-                Position="Open Source"
+                Position="Blockchain"
                 ImageURL="../../Assets/Manav.jpg"
                 GithubLink="xyz"
                 LinkedinLink="xyz"
@@ -32,7 +32,7 @@ function OpenSourceTeam() {
             />
             <MemberCard 
                 Name="Supriya"
-                Position="Open Source"
+                Position="Blockchain"
                 ImageURL="../../Assets/Manav.jpg"
                 GithubLink="xyz"
                 LinkedinLink="xyz"
@@ -40,7 +40,7 @@ function OpenSourceTeam() {
             />
             <MemberCard 
                 Name="Supriya"
-                Position="Open Source"
+                Position="Blockchain"
                 ImageURL="../../Assets/Manav.jpg"
                 GithubLink="xyz"
                 LinkedinLink="xyz"
@@ -49,5 +49,5 @@ function OpenSourceTeam() {
         </div>
     )}
 
-export default OpenSourceTeam
+export default BlockchainTeam
 

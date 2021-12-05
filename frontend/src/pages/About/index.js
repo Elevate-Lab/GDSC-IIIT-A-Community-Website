@@ -24,6 +24,8 @@ function About() {
         <Headings 
             LargeHeading="About The Community" 
             SmallHeading="What we do and How we are so good at it... !"
+            Text=""
+            PageIllustration={''}
         />
 
         <div className="About_DSC About"  >
