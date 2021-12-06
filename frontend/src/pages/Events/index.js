@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 import { Typography } from "@material-ui/core";
 import Headings from "../../Components/Page_headings";
 import EventCards from "../../Components/EventCard/index";
+import event_illustration from "../../Assets/Events_page_illustration.svg"
 import Fab from "@mui/material/Fab";
 import AddIcon from "@mui/icons-material/Add";
 import './Events.css'
@@ -23,7 +24,12 @@ function Events() {
 				}}
 			>
 				<Even />
-				<Headings color={{ color: "#EA4335" }} LargeHeading="Events" SmallHeading="Whats happening..." />
+				<Headings 
+					LargeHeading="Events" 
+					SmallHeading="Whats happening..."
+					Text="Here at DSC IIIT Allahabad we put the fun in functions and events. Attend Study Jams/ Hackathons/ Developer Conferences to learn more about the latest technologies."
+					PageIllustration={event_illustration}
+				/>
 				<Fab style={{ alignSelf: "flex-end", marginRight: "7vw" }} color="primary" aria-label="add">
 					<Link to="Events/NewEvent"
 						style={{

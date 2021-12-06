@@ -1,9 +1,11 @@
 // import { Typography } from '@material-ui/core'
-import React from 'react'
+import React,{ useState } from 'react'
 import './Footer.css'
 import DSC_logo from '../../Assets/DSC-IIITA-Dark-Horizontal.png'
 import mail_icon from '../../Assets/Message.svg'
 import pin_icon from '../../Assets/Location.svg'
+
+import login_icon from '../../Assets/LogIn_icon.svg'
 
 import follow_icon_1 from '../../Assets/instagram.svg'
 import follow_icon_2 from '../../Assets/facebook.svg'
@@ -16,6 +18,9 @@ import follow_icon_8 from '../../Assets/discord.png'
 
 
 function Footer() {
+
+    let [admin,setAdmin] = useState('false');
+
     return (
         <div className="footer">
             <div className="footer_top">
@@ -85,7 +90,19 @@ function Footer() {
                 </div>
             </div>
             <p className="footer_divider"></p>
-            <div className="footer_bot">&copy;2021 GDSC IIITA</div>
+            <div className="footer_bot">
+                <p className="Copyright_line">&copy;2021 GDSC IIITA</p>
+                <div className="footer_LogIn">
+                    <div className="Login_Cont">
+                        <div className="LogIn_icon_cont">
+                            <img src={login_icon} alt="LogIn"/>
+                        </div>
+                        <button className="logIn_status">
+                            {admin===true?"Log Out":"Log In"}
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
