@@ -24,10 +24,10 @@ function ProjectCard() {
 						</div>
 						<div className="name">
 							<Typography sx={{ fontSize: 16, fontWeight: "bold" }} color="text.primary" gutterBottom>
-								Event Name
+								Project Name
 							</Typography>
 							<Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-								Event Date/Duration
+								mission
 							</Typography>
 						</div>
 					</div>
