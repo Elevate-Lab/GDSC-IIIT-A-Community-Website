@@ -1,68 +1,64 @@
 import * as React from "react";
 import { useState } from "react";
-import { Button } from "@mui/material";
+import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import Avatar from "@mui/material/Avatar";
 import "./ProjectCard.css";
+import { ReactComponent as ViewProject } from "../../Assets/svg_link.svg";
+import { ReactComponent as Github } from "../../Assets/icons8-github.svg";
+// import Stack from "@mui/material/Stack";
 
 function ProjectCard() {
-	const [admin, setAdmin] = useState(false);
+	const [admin, setAdmin] = useState(true);
 	return (
-		<div className="card">
-			<div
-				className="img"
-				style={{
-					backgroundImage:
-						"url('https://images.unsplash.com/photo-1635928097900-cf6299f4e8cb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1032&q=80')",
-				}}
-			></div>
+		<Box className="card" sx={{ minWidth: 275 }}>
+			<Card variant="outlined">
+				<CardContent>
+					<div className="container">
+						<div className="img">
+							<Avatar src="" sx={{ width: 66, height: 66 }} />
+						</div>
+						<div className="name">
+							<Typography sx={{ fontSize: 16, fontWeight: "bold" }} color="text.primary" gutterBottom>
+								Event Name
+							</Typography>
+							<Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+								Event Date/Duration
+							</Typography>
+						</div>
+					</div>
 
-			<div className="content">
-				<Typography
-					sx={{
-						fontSize: 20,
-						letterSpacing: ".0.5rem",
-						fontWeight: "bold",
-						margin: 0,
-						background: "-webkit-linear-gradient(rgb(95, 144, 223) ,rgba(66,133,244, 1), rgba(131,58,180,1))",
-						"-webkit-background-clip": "text",
-						"-webkit-text-fill-color": "transparent",
-					}}
-					color="text.primary"
-					gutterBottom
-				>
-					Project Name
-				</Typography>
-				<Typography
-					sx={{ fontSize: 14, fontStyle: "oblique", letterSpacing: ".0.5rem", marginBottom: 1 }}
-					color="text.secondary"
-					gutterBottom
-				>
-					tagline
-				</Typography>
-				<Typography variant="body2" className="text">
-					Lorem ipsum dolor sit amet,happy xyx abc hello wo something sad apple consectetur haha he hehe
-					adipiscing elit. Lorem ipsum dolor sit amet,happy xyx abc hello wo something sad apple consectetur
-					haha he hehe adipiscing elit. Lorem ipsum dolor sit amet,happy xyx abc hello wo something sad apple
-					consectetur haha he hehe adipiscing elit.
-				</Typography>
-				<div className="buttons">
-					<a class="custom-btn btn" href="">
-						<span>Github Link</span>
-					</a>
-					<a class="custom-btn btn">
-						<span>View Project</span>
-					</a>
-				</div>
+					<div className="text">
+						<Typography variant="body2" sx={{ margin: 0 }}>
+							Lorem ipsum dolor sit amet,happy xyx abc hello wo something sad apple consectetur haha he hehe
+							adipiscing elit.
+						</Typography>
+					</div>
+				</CardContent>
+				<CardActions className="buttons">
+					<Button size="small" variant="outlined" color="success">
+						<Github className="svg" />
+						Github Link
+					</Button>
+					<Button size="small" variant="contained" disableElevation color="success">
+						<ViewProject className="svg" />
+						View Project
+					</Button>
+				</CardActions>
 				{admin && (
-					<div className="buttons-admin">
-						<Button size="small" href="./Projects/EditProject">Edit</Button>
+					<CardActions className=" buttons-admin">
+						<Button size="small">Edit</Button>
 						<Button size="small" disableElevation>
 							Delete
 						</Button>
-					</div>
+					</CardActions>
 				)}
-			</div>
-		</div>
+			</Card>
+		</Box>
 	);
 }
 
