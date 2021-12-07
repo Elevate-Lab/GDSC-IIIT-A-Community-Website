@@ -5,10 +5,11 @@ import ProjectCard from "../../Components/ProjectCard/ProjectCard";
 import project_illustration from "../../Assets/Projects_page_illustration.svg";
 import Fab from "@mui/material/Fab";
 import AddIcon from "@mui/icons-material/Add";
+import styles from "./Projects.module.css";
 
 function Projects() {
 	return (
-		<div>
+		<div className={styles.hehe}>
 			<div
 				style={{
 					padding: "9vh 0",
@@ -44,6 +45,9 @@ function Projects() {
 					</Link>
 				</Fab>
 			</div>
+			<h2 style={{ paddingLeft: "9.02%", fontWeight: "620" }} className={styles.heading}>
+				Featured Projects
+			</h2>
 			<div
 				style={{
 					padding: "9vh 7vw",

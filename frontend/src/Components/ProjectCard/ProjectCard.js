@@ -7,9 +7,9 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Avatar from "@mui/material/Avatar";
-import "./ProjectCard.css";
+import styles from "./ProjectCard.module.css";
 import { ReactComponent as ViewProject } from "../../Assets/svg_link.svg";
-import { ReactComponent as Github } from "../../Assets/icons8-github.svg";
+import { ReactComponent as Github } from "../../Assets/Vector.svg";
 import { Link } from "react-router-dom";
 // import Stack from "@mui/material/Stack";
 import image1 from "../../Assets/Images/img1.png";
@@ -17,16 +17,16 @@ import image1 from "../../Assets/Images/img1.png";
 function ProjectCard() {
 	const [admin, setAdmin] = useState(true);
 	return (
-		<Box className="card" sx={{ minWidth: 275 }}>
+		<Box className={styles.card} sx={{ minWidth: 275 }}>
 			<Card variant="outlined">
 				<CardContent>
-					<div className="container">
-						<div className="img">
-							<Avatar src={image1} sx={{ width: 66, height: 66 }} />
+					<div className={styles.container}>
+						<div className={styles.img}>
+							<Avatar src={image1} sx={{ width: 76, height: 76 }} />
 						</div>
-						<div className="name">
+						<div className={styles.name}>
 							<Typography
-								sx={{ fontSize: 18, fontWeight: "bold", margin: "0" }}
+								sx={{ fontSize: 20, fontWeight: "bold", margin: "0" }}
 								color="text.primary"
 								gutterBottom
 							>
@@ -38,36 +38,36 @@ function ProjectCard() {
 						</div>
 					</div>
 
-					<div className="text">
+					<div className={styles.text}>
 						<Typography variant="body2" sx={{ margin: 0 }}>
 							Inclusivo is an online platform that makes it easier for people from underprivileged communities
 							to find and get relevant jobs in their respective fields.
 						</Typography>
 					</div>
 				</CardContent>
-				<CardActions className="buttons">
+				<CardActions className={styles.buttons}>
 					<Link to="" style={{ textDecoration: "none" }}>
-						<Button className="btn" size="small" variant="outlined" color="success">
-							<Github className="svg" />
+						<Button className={styles.btn} size="small" variant="outlined" color="success">
+							<Github className={styles.svg} />
 							Github Link
 						</Button>
 					</Link>
 					<Link to="" style={{ textDecoration: "none" }}>
-						<Button className="btn" size="small" variant="contained" disableElevation color="success">
-							<ViewProject className="svg" />
+						<Button className={styles.btn} size="small" variant="contained" disableElevation color="success">
+							<ViewProject className={styles.svg} />
 							View Project
 						</Button>
 					</Link>
 				</CardActions>
 				{admin && (
-					<CardActions className="buttons buttons-admin">
+					<CardActions className={styles.buttonsAdmin}>
 						<Link to="" style={{ textDecoration: "none" }}>
-							<Button className="btn" size="small" variant="contained" disableElevation color="error">
+							<Button className={styles.btn} size="small" variant="contained" disableElevation color="error">
 								Delete
 							</Button>
 						</Link>
 						<Link to="" style={{ textDecoration: "none" }}>
-							<Button className="btn" size="small" variant="outlined" disableElevation>
+							<Button className={styles.btn} size="small" variant="outlined" disableElevation color="success">
 								Edit
 							</Button>
 						</Link>

@@ -1,0 +1,53 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 1.5%;
+}
+
+.img {
+	/* padding-right: 3%; */
+	height: 200px;
+	/* width */
+}
+.text {
+	width: 20vw;
+	min-width: 250px;
+}
+
+.buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.buttonsAdmin {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.btn {
+	width: 120px;
+}
+.RSVPbtn {
+	width: 250px;
+}
+.eventCard {
+	margin: 5vh 0;
+	border-radius: 10px !important ;
+	padding: 0;
+	max-width: 300px;
+	border: 1px solid transparent;
+	transition: 0.5s;
+}
+.eventCard:hover {
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	border: solid grey 1px;
+	transition: 1s;
+}
+.svg {
+	/* padding-right: 5px; */
+	margin-right: 5px;
+}
+.RSVPsvg {
+	padding-right: 5px;
+	margin-right: 5px;
+}

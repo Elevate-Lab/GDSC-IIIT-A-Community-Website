@@ -7,7 +7,8 @@
 }
 
 .img {
-	/* padding-right: 3%; */
+	padding-right: 3%;
+	padding-bottom: 3%;
 }
 .text {
 	width: 360px;
@@ -24,17 +25,18 @@
 	flex-direction: row;
 	justify-content: space-around;
 }
-.buttons-admin {
+.buttonsAdmin {
 	display: flex;
 	flex-direction: row;
-	/* justify-content: space-around; */
+	justify-content: space-around;
+	margin-bottom: 10px;
 }
 .btn {
 	width: 150px;
 }
 .card {
-	/* padding: 5vh 0; */
-	border: 3px solid transparent;
+	border: 1px solid transparent;
+	/* padding: 15px 0; */
 	margin: 5vh 0;
 	width: 400px;
 }
@@ -45,5 +47,7 @@
 
 /* HOVER */
 .card:hover {
-	border: solid blue 3px;
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	border: solid grey 1px;
+	transition: 1s;
 }
