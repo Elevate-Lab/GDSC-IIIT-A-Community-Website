@@ -10,7 +10,9 @@ import Avatar from "@mui/material/Avatar";
 import "./ProjectCard.css";
 import { ReactComponent as ViewProject } from "../../Assets/svg_link.svg";
 import { ReactComponent as Github } from "../../Assets/icons8-github.svg";
+import { Link } from "react-router-dom";
 // import Stack from "@mui/material/Stack";
+import image1 from "../../Assets/Images/img1.png";
 
 function ProjectCard() {
 	const [admin, setAdmin] = useState(true);
@@ -20,41 +22,55 @@ function ProjectCard() {
 				<CardContent>
 					<div className="container">
 						<div className="img">
-							<Avatar src="" sx={{ width: 66, height: 66 }} />
+							<Avatar src={image1} sx={{ width: 66, height: 66 }} />
 						</div>
 						<div className="name">
-							<Typography sx={{ fontSize: 16, fontWeight: "bold" }} color="text.primary" gutterBottom>
-								Project Name
+							<Typography
+								sx={{ fontSize: 18, fontWeight: "bold", margin: "0" }}
+								color="text.primary"
+								gutterBottom
+							>
+								Inclusivo
 							</Typography>
-							<Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-								mission
+							<Typography sx={{ fontSize: 14, margin: "0" }} color="text.secondary" gutterBottom>
+								Jobs for all
 							</Typography>
 						</div>
 					</div>
 
 					<div className="text">
 						<Typography variant="body2" sx={{ margin: 0 }}>
-							Lorem ipsum dolor sit amet,happy xyx abc hello wo something sad apple consectetur haha he hehe
-							adipiscing elit.
+							Inclusivo is an online platform that makes it easier for people from underprivileged communities
+							to find and get relevant jobs in their respective fields.
 						</Typography>
 					</div>
 				</CardContent>
 				<CardActions className="buttons">
-					<Button size="small" variant="outlined" color="success">
-						<Github className="svg" />
-						Github Link
-					</Button>
-					<Button size="small" variant="contained" disableElevation color="success">
-						<ViewProject className="svg" />
-						View Project
-					</Button>
+					<Link to="" style={{ textDecoration: "none" }}>
+						<Button className="btn" size="small" variant="outlined" color="success">
+							<Github className="svg" />
+							Github Link
+						</Button>
+					</Link>
+					<Link to="" style={{ textDecoration: "none" }}>
+						<Button className="btn" size="small" variant="contained" disableElevation color="success">
+							<ViewProject className="svg" />
+							View Project
+						</Button>
+					</Link>
 				</CardActions>
 				{admin && (
-					<CardActions className=" buttons-admin">
-						<Button size="small">Edit</Button>
-						<Button size="small" disableElevation>
-							Delete
-						</Button>
+					<CardActions className="buttons buttons-admin">
+						<Link to="" style={{ textDecoration: "none" }}>
+							<Button className="btn" size="small" variant="contained" disableElevation color="error">
+								Delete
+							</Button>
+						</Link>
+						<Link to="" style={{ textDecoration: "none" }}>
+							<Button className="btn" size="small" variant="outlined" disableElevation>
+								Edit
+							</Button>
+						</Link>
 					</CardActions>
 				)}
 			</Card>
