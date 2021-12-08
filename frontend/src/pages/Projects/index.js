@@ -9,7 +9,7 @@ import styles from "./Projects.module.css";
 
 function Projects() {
 	return (
-		<div className={styles.hehe}>
+		<div className={styles.projectsPage}>
 			<div
 				style={{
 					padding: "9vh 0",

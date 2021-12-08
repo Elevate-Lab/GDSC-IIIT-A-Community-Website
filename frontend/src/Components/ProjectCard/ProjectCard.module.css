@@ -34,8 +34,13 @@
 .btn {
 	width: 150px;
 }
+.greenBtn {
+	color: #08ad5d;
+	background-color: #08ad5d;
+	width: 150px;
+}
 .card {
-	border: 1px solid transparent;
+	/* border: 1px solid transparent; */
 	/* padding: 15px 0; */
 	margin: 5vh 0;
 	width: 400px;
@@ -48,6 +53,6 @@
 /* HOVER */
 .card:hover {
 	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-	border: solid grey 1px;
-	transition: 1s;
+	/* border: solid grey 1px; */
+	/* transition: 1s; */
 }

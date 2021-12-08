@@ -47,13 +47,24 @@ function ProjectCard() {
 				</CardContent>
 				<CardActions className={styles.buttons}>
 					<Link to="" style={{ textDecoration: "none" }}>
-						<Button className={styles.btn} size="small" variant="outlined" color="success">
+						<Button
+							className={styles.btn}
+							size="small"
+							variant="outlined"
+							style={{ color: "#08ad5d", borderColor: "#08ad5d" }}
+						>
 							<Github className={styles.svg} />
 							Github Link
 						</Button>
 					</Link>
 					<Link to="" style={{ textDecoration: "none" }}>
-						<Button className={styles.btn} size="small" variant="contained" disableElevation color="success">
+						<Button
+							className={styles.btn}
+							size="small"
+							variant="contained"
+							disableElevation
+							style={{ backgroundColor: "#08ad5d" }}
+						>
 							<ViewProject className={styles.svg} />
 							View Project
 						</Button>
@@ -62,12 +73,24 @@ function ProjectCard() {
 				{admin && (
 					<CardActions className={styles.buttonsAdmin}>
 						<Link to="" style={{ textDecoration: "none" }}>
-							<Button className={styles.btn} size="small" variant="contained" disableElevation color="error">
+							<Button
+								className={styles.btn}
+								size="small"
+								variant="contained"
+								disableElevation
+								style={{ backgroundColor: "#EA4335" }}
+							>
 								Delete
 							</Button>
 						</Link>
 						<Link to="" style={{ textDecoration: "none" }}>
-							<Button className={styles.btn} size="small" variant="outlined" disableElevation color="success">
+							<Button
+								className={styles.btn}
+								size="small"
+								variant="outlined"
+								disableElevation
+								style={{ color: "#08ad5d", borderColor: "#08ad5d" }}
+							>
 								Edit
 							</Button>
 						</Link>

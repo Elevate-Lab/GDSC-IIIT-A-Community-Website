@@ -35,13 +35,13 @@
 	border-radius: 10px !important ;
 	padding: 0;
 	max-width: 300px;
-	border: 1px solid transparent;
+	/* border: 1px solid transparent; */
 	transition: 0.5s;
 }
 .eventCard:hover {
 	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-	border: solid grey 1px;
-	transition: 1s;
+	/* border: solid grey 1px; */
+	/* transition: 1s; */
 }
 .svg {
 	/* padding-right: 5px; */
@@ -50,4 +50,9 @@
 .RSVPsvg {
 	padding-right: 5px;
 	margin-right: 5px;
+}
+.content {
+	/* border: solid grey 1px; */
+	border-radius: 8px;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }

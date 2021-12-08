@@ -16,22 +16,23 @@ import { ReactComponent as Calendar } from "../../Assets/calendar.svg";
 import { ReactComponent as Clock } from "../../Assets/clock.svg";
 // import Stack from "@mui/material/Stack";
 
-function EventCard() {
+function EventCard(props) {
 	const [admin, setAdmin] = useState(true);
+	const [upcoming, setUpcoming] = useState(props.upcoming);
 	return (
 		// <Box className="card" sx={{ minWidth: 275 }}>
 		<Card variant="outlined" styles={{ padding: "0" }} className={styles.eventCard}>
-			<CardActionArea>
-				{/* <CardMedia component="img" height="140" image="../Assets/About_DSC_Image.png" alt="project image" /> */}
+			{/* <CardMedia component="img" height="140" image="../Assets/About_DSC_Image.png" alt="project image" /> */}
 
-				{/* <CardMedia
+			{/* <CardMedia
 					component="img"
 					height="140"
 					image="http://www.lacor.info/film/a_la_folie/img/galerie/large/a_la_folie_06.jpg"
 					alt="project image"
 					className="img"
 				/> */}
-				<img className={styles.img} src={image1} alt="img" />
+			<img className={styles.img} src={image1} alt="img" />
+			<div className={styles.content}>
 				<CardContent>
 					<div className={styles.container}>
 						<div className={styles.name}>
@@ -57,36 +58,51 @@ function EventCard() {
 						</Typography>
 					</div>
 				</CardContent>
-				<CardActions className={styles.buttons}>
-					<Link to="" style={{ textDecoration: "none" }}>
-						<Button
-							className={styles.RSVPbtn}
-							size="small"
-							variant="contained"
-							disableElevation
-							color="success"
-						>
-							<RSVPsvg className={styles.RSVPsvg} />
-							RSVP Here
-						</Button>
-					</Link>
-				</CardActions>
-			</CardActionArea>
 
-			{admin && (
-				<CardActions className={styles.buttonsAdmin}>
-					<Link to="" style={{ textDecoration: "none" }}>
-						<Button className={styles.btn} size="small" variant="contained" disableElevation color="error">
-							Delete
-						</Button>
-					</Link>
-					<Link to="" style={{ textDecoration: "none" }}>
-						<Button className={styles.btn} size="small" variant="outlined" disableElevation color="success">
-							Edit
-						</Button>
-					</Link>
-				</CardActions>
-			)}
+				{upcoming && (
+					<CardActions className={styles.buttons}>
+						<Link to="" style={{ textDecoration: "none" }}>
+							<Button
+								className={styles.RSVPbtn}
+								size="small"
+								variant="contained"
+								disableElevation
+								style={{ backgroundColor: "#08ad5d" }}
+							>
+								<RSVPsvg className={styles.RSVPsvg} />
+								RSVP Here
+							</Button>
+						</Link>
+					</CardActions>
+				)}
+
+				{admin && (
+					<CardActions className={styles.buttonsAdmin}>
+						<Link to="" style={{ textDecoration: "none" }}>
+							<Button
+								className={styles.btn}
+								size="small"
+								variant="contained"
+								disableElevation
+								style={{ backgroundColor: "#EA4335" }}
+							>
+								Delete
+							</Button>
+						</Link>
+						<Link to="" style={{ textDecoration: "none" }}>
+							<Button
+								className={styles.btn}
+								size="small"
+								variant="outlined"
+								disableElevation
+								style={{ color: "#08ad5d", borderColor: "#08ad5d" }}
+							>
+								Edit
+							</Button>
+						</Link>
+					</CardActions>
+				)}
+			</div>
 		</Card>
 		// </Box>
 	);

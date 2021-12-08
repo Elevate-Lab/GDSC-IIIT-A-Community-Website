@@ -9,6 +9,7 @@ import AddIcon from "@mui/icons-material/Add";
 import "./Events.css";
 import LeaderBoard from "../../Components/LeaderBoard/LeaderBoard";
 import Even from "./Even";
+import styles from "./EventPage.module.css";
 function Events() {
 	return (
 		<section
@@ -45,7 +46,14 @@ function Events() {
 					<AddIcon />
 				</Link>
 			</Fab>
-			<EventCards />
+			<h2 style={{ paddingLeft: "9.02%", fontWeight: "620" }} className={styles.heading}>
+				Upcoming Events
+			</h2>
+			<EventCards upcoming={true} />
+			<h2 style={{ paddingLeft: "9.02%", fontWeight: "620" }} className={styles.heading}>
+				Past Events
+			</h2>
+			<EventCards upcoming={false} />
 		</section>
 	);
 }
