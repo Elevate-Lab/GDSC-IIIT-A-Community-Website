@@ -4,7 +4,7 @@ import './Footer.css'
 import DSC_logo from '../../Assets/DSC-IIITA-Dark-Horizontal.png'
 import mail_icon from '../../Assets/Message.svg'
 import pin_icon from '../../Assets/Location.svg'
-
+import { Link } from "react-router-dom";
 import follow_icon_1 from '../../Assets/instagram.svg'
 import follow_icon_2 from '../../Assets/facebook.svg'
 import follow_icon_3 from '../../Assets/medium.svg'
@@ -13,9 +13,12 @@ import follow_icon_5 from '../../Assets/twitter.svg'
 import follow_icon_6 from '../../Assets/linkedin.svg'
 import follow_icon_7 from '../../Assets/github.svg'
 import follow_icon_8 from '../../Assets/discord.png'
-
+import useViewport from "../../viewport/useViewport"
+import loginperson from "./loginperson_Image.png"
+import LoginPage from '../../pages/Projects/loginPage'
 
 function Footer() {
+    const { width } = useViewport();
     return (
         <div className="footer">
             <div className="footer_top">
@@ -85,8 +88,20 @@ function Footer() {
                 </div>
             </div>
             <p className="footer_divider"></p>
-            <div className="footer_bot">&copy;2021 GDSC IIITA</div>
-        </div>
+            <div style={{display:'flex',width:'100%'}}>
+            <div style={{display:'flex',alignContent:'flex-end',width:'90%',marginLeft:width>10030?'1rem':'-2rem'}} xs={6} className="footer_bot">&copy;2021 GDSC IIITA</div>
+            <div xs={6} style={{width:"10%",marginLeft:'0rem',display:'flex',justifyContent:'center',direction:'row',}}>
+          
+                <div  className="button_login_design" style={{width:'7rem',display:'flex',direction:'row',justifyContent:'center',height:'2rem',borderRadius:'3rem',background:'#70757a'}}>
+                <img  style={{width:'2.2rem',height:'1.95rem',zIndex:'99',marginLeft:'-0.9rem',cursor:"wait"}}src={loginperson} alt="hell" />
+                
+                <a style={{marginTop:'0.1rem',marginLeft:'0rem',width:'4rem',color:'white',cursor:'pointer'}} className="button_login_design_txt" href={LoginPage} >Log Out</a>
+
+                </div>
+              
+            </div>
+            </div>
+                  </div>
     )
 }
 
