@@ -9,6 +9,10 @@
 	height: 200px;
 	/* width */
 }
+.imgContainer {
+	z-index: 1;
+	position: relative;
+}
 .text {
 	width: 20vw;
 	min-width: 250px;
@@ -55,4 +59,9 @@
 	/* border: solid grey 1px; */
 	border-radius: 8px;
 	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+	margin-top: -15px;
+	position: relative;
+	z-index: 10;
+	background-color: white;
+	/* transform: translate(0px, -10px); */
 }

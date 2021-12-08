@@ -31,7 +31,9 @@ function EventCard(props) {
 					alt="project image"
 					className="img"
 				/> */}
-			<img className={styles.img} src={image1} alt="img" />
+			<div className={styles.imgContainer}>
+				<img className={styles.img} src={image1} alt="img" />
+			</div>
 			<div className={styles.content}>
 				<CardContent>
 					<div className={styles.container}>
