@@ -1,10 +1,16 @@
 // import { Typography } from '@material-ui/core'
-import React from 'react'
+import React,{ useState } from 'react'
 import './Footer.css'
 import DSC_logo from '../../Assets/DSC-IIITA-Dark-Horizontal.png'
 import mail_icon from '../../Assets/Message.svg'
 import pin_icon from '../../Assets/Location.svg'
+
 import { Link } from "react-router-dom";
+
+
+import login_icon from '../../Assets/LogIn_icon.svg'
+
+
 import follow_icon_1 from '../../Assets/instagram.svg'
 import follow_icon_2 from '../../Assets/facebook.svg'
 import follow_icon_3 from '../../Assets/medium.svg'
@@ -18,7 +24,13 @@ import loginperson from "./loginperson_Image.png"
 import LoginPage from '../../pages/Projects/loginPage'
 
 function Footer() {
+
     const { width } = useViewport();
+
+
+    let [admin,setAdmin] = useState('false');
+
+
     return (
         <div className="footer">
             <div className="footer_top">
@@ -88,6 +100,7 @@ function Footer() {
                 </div>
             </div>
             <p className="footer_divider"></p>
+
             <div style={{display:'flex',width:'100%'}}>
             <div style={{display:'flex',alignContent:'flex-end',width:'90%',marginLeft:width>10030?'1rem':'-2rem'}} xs={6} className="footer_bot">&copy;2021 GDSC IIITA</div>
             <div xs={6} style={{width:"10%",marginLeft:'0rem',display:'flex',justifyContent:'center',direction:'row',}}>
@@ -102,6 +115,21 @@ function Footer() {
             </div>
             </div>
                   </div>
+   <div className="footer_bot">
+                <p className="Copyright_line">&copy;2021 GDSC IIITA</p>
+                <div className="footer_LogIn">
+                    <div className="Login_Cont">
+                        <div className="LogIn_icon_cont">
+                            <img src={login_icon} alt="LogIn"/>
+                        </div>
+                        <button className="logIn_status">
+                            {admin===true?"Log Out":"Log In"}
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     )
 }
 

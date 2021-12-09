@@ -2,11 +2,12 @@
 import React, { useState, useEffect } from 'react'
 import {Link} from "react-router-dom";
 import Headings from '../../Components/Page_headings/index'
+import team_illustration from "../../Assets/Teams_page_illustration.svg"
 import CoreTeam from './Teams_field/CoreTeam'
 import WebTeam from './Teams_field/WebTeam'
 import DesignTeam from './Teams_field/DesignTeam'
 import MLTeam from './Teams_field/MLTeam'
-import OpenSourceTeam from './Teams_field/OpenSourceTeam'
+import BlockchainTeam from './Teams_field/Blockchain'
 import AppTeam from './Teams_field/AppTeam'
 import ManagementTeam from './Teams_field/ManagementTeam'
 import "slick-carousel/slick/slick.css";
@@ -37,13 +38,13 @@ const slider_img = [
     tempImg, tempImg
 ]
 
-const Fields = ["Core Team", "Web", "Design", "ML", "Open Source", "App", "Management"];
+const Fields = ["Core Team", "Web", "Design", "ML", "Blockchain", "App", "Management"];
 const FieldPages = [
     <CoreTeam />,
     <WebTeam />,
     <DesignTeam />,
     <MLTeam />,
-    <OpenSourceTeam />,
+    <BlockchainTeam />,
     <AppTeam />,
     <ManagementTeam />,
 ];
@@ -96,7 +97,7 @@ function Team() {
     };
     return (
         <div>
-            <div>
+            {/* <div>
                 <Slider autoplay {...settings}>
                     {
                         slider_img.map((item, index) => (
@@ -111,7 +112,7 @@ function Team() {
                         ))
                     }
                 </Slider>
-                {/*  <Swiper navigation={true} className="mySwiper">
+                    <Swiper navigation={true} className="mySwiper">
                     <SwiperSlide>Slide 1</SwiperSlide>
                     <SwiperSlide>Slide 2</SwiperSlide>
                     <SwiperSlide>Slide 3</SwiperSlide>
@@ -121,13 +122,14 @@ function Team() {
                     <SwiperSlide>Slide 7</SwiperSlide>
                     <SwiperSlide>Slide 8</SwiperSlide>
                     <SwiperSlide>Slide 9</SwiperSlide>
-                </Swiper> */}
-            </div>
+                </Swiper>
+            </div> */}
             <section className="Team_section">
                 <Headings
-                    color={{ color: "#FBBC04" }}
                     LargeHeading="Our Team"
                     SmallHeading="The ones, who are making it happen"
+                    Text="Learning goes hand-in-hand with building new and cool stuff. Lorem ipsum dolor sit amet"
+                    PageIllustration={team_illustration}
                 />
 
                 <div className="Member-field">

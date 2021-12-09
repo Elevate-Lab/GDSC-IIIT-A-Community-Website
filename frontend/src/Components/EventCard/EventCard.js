@@ -1,57 +1,113 @@
-import * as React from 'react';
-import { useState } from 'react';
-import './EventCard.css';
-import { Button } from '@mui/material';
-import { ReactComponent as LinkSVG } from '../../Assets/svg_link.svg';
-import { Link } from 'react-router-dom';
-
+import * as React from "react";
+import { useState } from "react";
+import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import { Button, CardActionArea } from "@mui/material";
+import Typography from "@mui/material/Typography";
+import CardMedia from "@mui/material/CardMedia";
+import styles from "./EventCard.module.css";
+import Headings from "../Page_headings";
+import image1 from "../../Assets/Images/img1.png";
+import { Link } from "react-router-dom";
+import { ReactComponent as RSVPsvg } from "../../Assets/svg_link.svg";
+import { ReactComponent as Calendar } from "../../Assets/calendar.svg";
+import { ReactComponent as Clock } from "../../Assets/clock.svg";
 // import Stack from "@mui/material/Stack";
 
-function EventCard() {
-    const [admin, setAdmin] = useState(false);
-    return (
-        <div className="container">
-            <div className="card">
-                <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Sunset_2007-1.jpg/1200px-Sunset_2007-1.jpg"
-                    alt="img"
-                />
-                <div className="event-info">
-                    <h3>Event Heading</h3>
+function EventCard(props) {
+	const [admin, setAdmin] = useState(true);
+	const [upcoming, setUpcoming] = useState(props.upcoming);
+	return (
+		// <Box className="card" sx={{ minWidth: 275 }}>
+		<Card variant="outlined" styles={{ padding: "0" }} className={styles.eventCard}>
+			{/* <CardMedia component="img" height="140" image="../Assets/About_DSC_Image.png" alt="project image" /> */}
 
-                    <p className="event-timing">99th December 2099 - 99th December 2099</p>
-                    <p className="event-description">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat nobis nam quaerat
-                        soluta ipsam repudiandae cumque. Impedit quisquam quidem laboriosam, quam sunt
-                        architecto numquam placeat iusto, obcaecati, vel fugit blanditiis?
-                    </p>
-                    <p className="event-organizer">
-                        Organized by <span>DSC IIIT A</span>
-                    </p>
-                    <div className="link_buttons">
-                        <Link to="/Events/EventDetails">
-                            Know More <LinkSVG style={{ width: '21px', paddingLeft: '10px' }} />
-                        </Link>
-                        {/* <Button href="#">
-                            C2A <LinkSVG style={{ width: '15px', paddingLeft: '10px' }} />
-                        </Button> */}
-                    </div>
-                    <div className="edit_buttons">
-                        {admin && (
-                            <div className=" buttons-admin">
-                                <Button href="./Events/editEvent" style={{ color: 'green' }}>
-                                        Edit
-                                </Button>
-                                <Button href="#" style={{ color: 'red' }} disableElevation>
-                                    Delete
-                                </Button>
-                            </div>
-                        )}
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
+			{/* <CardMedia
+					component="img"
+					height="140"
+					image="http://www.lacor.info/film/a_la_folie/img/galerie/large/a_la_folie_06.jpg"
+					alt="project image"
+					className="img"
+				/> */}
+			<div className={styles.imgContainer}>
+				<img className={styles.img} src={image1} alt="img" />
+			</div>
+			<div className={styles.content}>
+				<CardContent>
+					<div className={styles.container}>
+						<div className={styles.name}>
+							<Typography sx={{ fontSize: 18, fontWeight: "bold" }} color="text.primary" gutterBottom>
+								Event Name
+							</Typography>
+							<Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+								<Calendar className={styles.svg} />
+								Event Date
+							</Typography>
+							<Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+								<Clock className={styles.svg} />
+								Time
+							</Typography>
+						</div>
+					</div>
+					{/* <Headings LargeHeading="Project Name" SmallHeading="tagline" /> */}
+
+					<div className={styles.text}>
+						<Typography variant="body2">
+							The first MLH Fellowship, launched back in May, had nearly 20,000 amazing applicants from around
+							the world.
+						</Typography>
+					</div>
+				</CardContent>
+
+				{upcoming && (
+					<CardActions className={styles.buttons}>
+						<Link to="" style={{ textDecoration: "none" }}>
+							<Button
+								className={styles.RSVPbtn}
+								size="small"
+								variant="contained"
+								disableElevation
+								style={{ backgroundColor: "#08ad5d" }}
+							>
+								<RSVPsvg className={styles.RSVPsvg} />
+								RSVP Here
+							</Button>
+						</Link>
+					</CardActions>
+				)}
+
+				{admin && (
+					<CardActions className={styles.buttonsAdmin}>
+						<Link to="" style={{ textDecoration: "none" }}>
+							<Button
+								className={styles.btn}
+								size="small"
+								variant="contained"
+								disableElevation
+								style={{ backgroundColor: "#EA4335" }}
+							>
+								Delete
+							</Button>
+						</Link>
+						<Link to="" style={{ textDecoration: "none" }}>
+							<Button
+								className={styles.btn}
+								size="small"
+								variant="outlined"
+								disableElevation
+								style={{ color: "#08ad5d", borderColor: "#08ad5d" }}
+							>
+								Edit
+							</Button>
+						</Link>
+					</CardActions>
+				)}
+			</div>
+		</Card>
+		// </Box>
+	);
 }
 
 export default EventCard;
