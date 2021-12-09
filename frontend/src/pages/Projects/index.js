@@ -53,7 +53,6 @@ function Projects() {
 			<ProjectCard />
 			<ProjectCard />
 
-				</Fab>
 			</div>
 			<h2 style={{ paddingLeft: "9.02%", fontWeight: "620" }} className={styles.heading}>
 				Featured Projects

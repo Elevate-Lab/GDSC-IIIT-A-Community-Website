@@ -1,5 +1,5 @@
 // import { Typography } from '@material-ui/core'
-import React,{ useState } from 'react'
+import React, { useState } from 'react'
 import './Footer.css'
 import DSC_logo from '../../Assets/DSC-IIITA-Dark-Horizontal.png'
 import mail_icon from '../../Assets/Message.svg'
@@ -28,7 +28,7 @@ function Footer() {
     const { width } = useViewport();
 
 
-    let [admin,setAdmin] = useState('false');
+    let [admin, setAdmin] = useState('false');
 
 
     return (
@@ -101,20 +101,8 @@ function Footer() {
             </div>
             <p className="footer_divider"></p>
 
-            <div style={{display:'flex',width:'100%'}}>
-            <div style={{display:'flex',alignContent:'flex-end',width:'90%',marginLeft:width>10030?'1rem':'-2rem'}} xs={6} className="footer_bot">&copy;2021 GDSC IIITA</div>
-            <div xs={6} style={{width:"10%",marginLeft:'0rem',display:'flex',justifyContent:'center',direction:'row',}}>
-          
-                <div  className="button_login_design" style={{width:'7rem',display:'flex',direction:'row',justifyContent:'center',height:'2rem',borderRadius:'3rem',background:'#70757a'}}>
-                <img  style={{width:'2.2rem',height:'1.95rem',zIndex:'99',marginLeft:'-0.9rem',cursor:"wait"}}src={loginperson} alt="hell" />
-                
-                <a style={{marginTop:'0.1rem',marginLeft:'0rem',width:'4rem',color:'white',cursor:'pointer'}} className="button_login_design_txt" href={LoginPage} >Log Out</a>
-
-                </div>
-              
-            </div>
-            </div>
-                  </div>
+    
+    
    <div className="footer_bot">
                 <p className="Copyright_line">&copy;2021 GDSC IIITA</p>
                 <div className="footer_LogIn">
@@ -128,7 +116,7 @@ function Footer() {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
 
     )
 }
