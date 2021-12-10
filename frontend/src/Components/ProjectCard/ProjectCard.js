@@ -1,68 +1,103 @@
 import * as React from "react";
 import { useState } from "react";
-import { Button } from "@mui/material";
+import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import "./ProjectCard.css";
+import Avatar from "@mui/material/Avatar";
+import styles from "./ProjectCard.module.css";
+import { ReactComponent as ViewProject } from "../../Assets/svg_link.svg";
+import { ReactComponent as Github } from "../../Assets/Vector.svg";
+import { Link } from "react-router-dom";
+// import Stack from "@mui/material/Stack";
+import image1 from "../../Assets/Images/img1.png";
 
 function ProjectCard() {
-	const [admin, setAdmin] = useState(false);
+	const [admin, setAdmin] = useState(true);
 	return (
-		<div className="card">
-			<div
-				className="img"
-				style={{
-					backgroundImage:
-						"url('https://images.unsplash.com/photo-1635928097900-cf6299f4e8cb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1032&q=80')",
-				}}
-			></div>
-
-			<div className="content">
-				<Typography
-					sx={{
-						fontSize: 20,
-						letterSpacing: ".0.5rem",
-						fontWeight: "bold",
-						margin: 0,
-						background: "-webkit-linear-gradient(rgb(95, 144, 223) ,rgba(66,133,244, 1), rgba(131,58,180,1))",
-						"-webkit-background-clip": "text",
-						"-webkit-text-fill-color": "transparent",
-					}}
-					color="text.primary"
-					gutterBottom
-				>
-					Project Name
-				</Typography>
-				<Typography
-					sx={{ fontSize: 14, fontStyle: "oblique", letterSpacing: ".0.5rem", marginBottom: 1 }}
-					color="text.secondary"
-					gutterBottom
-				>
-					tagline
-				</Typography>
-				<Typography variant="body2" className="text">
-					Lorem ipsum dolor sit amet,happy xyx abc hello wo something sad apple consectetur haha he hehe
-					adipiscing elit. Lorem ipsum dolor sit amet,happy xyx abc hello wo something sad apple consectetur
-					haha he hehe adipiscing elit. Lorem ipsum dolor sit amet,happy xyx abc hello wo something sad apple
-					consectetur haha he hehe adipiscing elit.
-				</Typography>
-				<div className="buttons">
-					<a class="custom-btn btn" href="">
-						<span>Github Link</span>
-					</a>
-					<a class="custom-btn btn">
-						<span>View Project</span>
-					</a>
-				</div>
-				{admin && (
-					<div className="buttons-admin">
-						<Button size="small" href="./Projects/EditProject">Edit</Button>
-						<Button size="small" disableElevation>
-							Delete
-						</Button>
+		<Box className={styles.card} sx={{ minWidth: 275 }}>
+			<Card variant="outlined">
+				<CardContent>
+					<div className={styles.container}>
+						<div className={styles.img}>
+							<Avatar src={image1} sx={{ width: 76, height: 76 }} />
+						</div>
+						<div className={styles.name}>
+							<Typography
+								sx={{ fontSize: 20, fontWeight: "bold", margin: "0" }}
+								color="text.primary"
+								gutterBottom
+							>
+								Inclusivo
+							</Typography>
+							<Typography sx={{ fontSize: 14, margin: "0" }} color="text.secondary" gutterBottom>
+								Jobs for all
+							</Typography>
+						</div>
 					</div>
+
+					<div className={styles.text}>
+						<Typography variant="body2" sx={{ margin: 0 }}>
+							Inclusivo is an online platform that makes it easier for people from underprivileged communities
+							to find and get relevant jobs in their respective fields.
+						</Typography>
+					</div>
+				</CardContent>
+				<CardActions className={styles.buttons}>
+					<Link to="" style={{ textDecoration: "none" }}>
+						<Button
+							className={styles.btn}
+							size="small"
+							variant="outlined"
+							style={{ color: "#08ad5d", borderColor: "#08ad5d" }}
+						>
+							<Github className={styles.svg} />
+							Github Link
+						</Button>
+					</Link>
+					<Link to="" style={{ textDecoration: "none" }}>
+						<Button
+							className={styles.btn}
+							size="small"
+							variant="contained"
+							disableElevation
+							style={{ backgroundColor: "#08ad5d" }}
+						>
+							<ViewProject className={styles.svg} />
+							View Project
+						</Button>
+					</Link>
+				</CardActions>
+				{admin && (
+					<CardActions className={styles.buttonsAdmin}>
+						<Link to="" style={{ textDecoration: "none" }}>
+							<Button
+								className={styles.btn}
+								size="small"
+								variant="contained"
+								disableElevation
+								style={{ backgroundColor: "#EA4335" }}
+							>
+								Delete
+							</Button>
+						</Link>
+						<Link to="" style={{ textDecoration: "none" }}>
+							<Button
+								className={styles.btn}
+								size="small"
+								variant="outlined"
+								disableElevation
+								style={{ color: "#08ad5d", borderColor: "#08ad5d" }}
+							>
+								Edit
+							</Button>
+						</Link>
+					</CardActions>
 				)}
-			</div>
-		</div>
+			</Card>
+		</Box>
 	);
 }
 
