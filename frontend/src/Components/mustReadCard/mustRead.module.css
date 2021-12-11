@@ -1,0 +1,119 @@
+.mustReadCard {
+	width: 80vw;
+	height: 48vh;
+	align-self: center;
+	border-radius: 20px;
+	box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+	display: flex;
+	flex-direction: row;
+}
+.content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/* background-color: white; */
+	border-radius: 20px;
+	z-index: 5;
+	margin-left: -25px;
+	width: 55vw;
+	padding-left: 25px;
+}
+.imgContainer .img {
+	width: 25vw;
+	height: 100%;
+}
+.row {
+	display: flex;
+	flex-direction: row;
+}
+.row2 {
+	padding: 0 16px;
+	justify-content: space-between;
+	display: flex;
+	flex-direction: row;
+}
+.text {
+	margin-bottom: 4vh;
+}
+.writer div p {
+	padding-left: 10px;
+	margin: 0;
+}
+.btn {
+	padding: 10px;
+}
+.writer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.buttonsAdmin {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	/* width: 16vw; */
+	padding: 0;
+	padding-top: 10px;
+}
+
+@media only screen and (max-width: 900px) {
+	.row2 {
+		padding: 0 5px;
+	}
+	.text {
+		padding: 5px;
+	}
+}
+@media only screen and (max-width: 750px) {
+	.mustReadCard {
+		flex-direction: column;
+		width: 60vw;
+		height: 80vh;
+	}
+	.imgContainer .img {
+		width: 60vw;
+		height: 100%;
+		max-height: 200px;
+	}
+	.content {
+		width: 60vw;
+		text-align: center;
+		margin-left: 0px;
+		padding-left: 0px;
+		margin-top: -20px;
+		padding-top: 20px;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.row2 {
+		flex-direction: column;
+		align-items: center;
+	}
+	.buttonsAdmin {
+		width: 200px;
+		justify-content: space-between;
+		padding: 8px 0px !important;
+	}
+	.writer {
+		padding-bottom: 15px;
+	}
+	.mustReadCard {
+		height: 100vh;
+	}
+}
+
+@media only screen and (max-width: 350px) {
+	.mustReadCard {
+		height: 110vh;
+	}
+	.btn {
+		width: 70px !important;
+	}
+	.mediumBtn {
+		width: 150px !important;
+	}
+	.buttonsAdmin {
+		width: 150px !important;
+	}
+}

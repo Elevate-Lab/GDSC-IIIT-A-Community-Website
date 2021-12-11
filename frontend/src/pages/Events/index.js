@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Typography } from "@material-ui/core";
 import Headings from "../../Components/Page_headings";
+import HeadingButton from "../../Components/Heading_button";
 import EventCards from "../../Components/EventCard/index.js";
 import event_illustration from "../../Assets/Events_page_illustration.svg";
 import Fab from "@mui/material/Fab";
@@ -31,28 +32,52 @@ function Events() {
 				Text="Here at DSC IIIT Allahabad we put the fun in functions and events. Attend Study Jams/ Hackathons/ Developer Conferences to learn more about the latest technologies."
 				PageIllustration={event_illustration}
 			/>
-			<Fab style={{ alignSelf: "flex-end", marginRight: "7vw" }} color="primary" aria-label="add">
-				<Link
-					to="Events/NewEvent"
-					style={{
-						color: "white",
-						height: "100%",
-						width: "100%",
-						margin: "0",
-						display: "grid",
-						placeItems: "center",
-					}}
-				>
-					<AddIcon />
-				</Link>
-			</Fab>
-			<h2 style={{ paddingLeft: "9.02%", fontWeight: "620" }} className={styles.heading}>
-				Upcoming Events
-			</h2>
+			<div className="heading_plusBtn">
+				<h2 style={{ fontWeight: "620" }} className="heading">
+					Upcoming Events
+				</h2>
+				<Fab color="primary" aria-label="add">
+					<Link
+						to="Blogs/NewBlog"
+						style={{
+							color: "white",
+							height: "100%",
+							width: "100%",
+							margin: "0",
+							display: "grid",
+							placeItems: "center",
+						}}
+					>
+						<AddIcon />
+					</Link>
+				</Fab>
+			</div>
 			<EventCards upcoming={true} />
-			<h2 style={{ paddingLeft: "9.02%", fontWeight: "620" }} className={styles.heading}>
-				Past Events
-			</h2>
+			<HeadingButton
+				LargeHeading="Interested in being a Speaker at one of our events?"
+				SmallHeading="Just drop us your Proposal."
+				ButtonText="Get In Touch"
+			/>
+			<div className="heading_plusBtn">
+				<h2 style={{ fontWeight: "620" }} className="heading">
+					Past Events
+				</h2>
+				<Fab color="primary" aria-label="add">
+					<Link
+						to="Blogs/NewBlog"
+						style={{
+							color: "white",
+							height: "100%",
+							width: "100%",
+							margin: "0",
+							display: "grid",
+							placeItems: "center",
+						}}
+					>
+						<AddIcon />
+					</Link>
+				</Fab>
+			</div>
 			<EventCards upcoming={false} />
 		</section>
 	);
