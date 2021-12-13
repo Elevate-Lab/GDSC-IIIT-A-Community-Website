@@ -45,13 +45,7 @@ function Projects() {
 					</Link>
 
 			</Fab>
-			
-			<ProjectCard />
-			<ProjectCard />
-			<ProjectCard />
-			<ProjectCard />
-			<ProjectCard />
-			<ProjectCard />
+	
 
 			</div>
 			<h2 style={{ paddingLeft: "9.02%", fontWeight: "620" }} className={styles.heading}>

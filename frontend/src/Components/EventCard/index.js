@@ -12,6 +12,7 @@ function EventCards(props) {
 				flexWrap: "wrap",
 				justifyContent: "space-around",
 				alignItems: "center",
+				zIndex:'0'
 			}}
 		>
 			<EventCard upcoming={props.upcoming} />
