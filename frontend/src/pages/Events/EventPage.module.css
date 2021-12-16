@@ -1,5 +1,32 @@
+/* .heading {
+	padding-left: 9.02%;
+}
+
 @media only screen and (max-width: 900px) {
 	.heading {
 		align-self: center;
+		padding-left: 0;
+	}
+} */
+
+.heading {
+	padding-left: 9.02%;
+}
+
+.heading_plusBtn {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-right: 5vw;
+}
+
+@media only screen and (max-width: 900px) {
+	.heading {
+		align-self: center;
+		padding-left: 0;
+	}
+	.heading_plusBtn {
+		flex-direction: column;
+		align-items: center;
 	}
 }

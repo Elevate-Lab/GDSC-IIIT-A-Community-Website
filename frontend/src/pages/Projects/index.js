@@ -6,6 +6,7 @@ import project_illustration from "../../Assets/Projects_page_illustration.svg";
 import Fab from "@mui/material/Fab";
 import AddIcon from "@mui/icons-material/Add";
 import styles from "./Projects.module.css";
+import HeadingButton from "../../Components/Heading_button";
 
 function Projects() {
 	return (
@@ -29,6 +30,7 @@ function Projects() {
 					Text="Learning goes hand-in-hand with building new and cool stuff. Lorem ipsum dolor sit amet"
 					PageIllustration={project_illustration}
 				/>
+
 				<Fab style={{ alignSelf: "flex-end", marginRight: "7vw" }} color="primary" aria-label="add">
 					<Link
 						to="Projects/NewProject"
@@ -47,10 +49,30 @@ function Projects() {
 			</Fab>
 	
 
+
+				<div className="heading_plusBtn">
+					<h2 style={{ fontWeight: "620" }} className="heading">
+						Featured Projects
+					</h2>
+					<Fab color="primary" aria-label="add">
+						<Link
+							to="Blogs/NewBlog"
+							style={{
+								color: "white",
+								height: "100%",
+								width: "100%",
+								margin: "0",
+								display: "grid",
+								placeItems: "center",
+							}}
+						>
+							<AddIcon />
+						</Link>
+					</Fab>
+				</div>
+
 			</div>
-			<h2 style={{ paddingLeft: "9.02%", fontWeight: "620" }} className={styles.heading}>
-				Featured Projects
-			</h2>
+
 			<div
 				style={{
 					padding: "9vh 7vw",
@@ -68,6 +90,14 @@ function Projects() {
 				<ProjectCard />
 				<ProjectCard />
 			</div>
+
+
+
+			<HeadingButton
+				LargeHeading="Want to get your Project featured under us?"
+				SmallHeading="Just drop us your Proposal."
+				ButtonText="Submit Project"
+			/>
 
 		</div>
 	);
