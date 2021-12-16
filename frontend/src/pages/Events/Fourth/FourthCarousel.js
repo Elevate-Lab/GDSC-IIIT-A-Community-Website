@@ -93,6 +93,7 @@ function FouthCarousel() {
                         pagination={{
                             "clickable": true
                         }} navigation={true} className={Classes.mySwiper} >
+                           
                         <SwiperSlide style={{ backgroundImage: `url(${Images[0].img})`, height: "35rem", width: "100%", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover", justifyContent: 'center', marginRight: 0 }} >
                             Slide 1
                         </SwiperSlide>
