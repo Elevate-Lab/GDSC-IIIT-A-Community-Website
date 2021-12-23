@@ -1,0 +1,51 @@
+.hero-section-left{
+    height: 88vh;
+    z-index: -2;
+    width: 24vw;
+}
+svg{overflow:visible}
+
+#Ellipse_231{
+    animation: rotate 4s ease-in-out infinite;
+}
+#Frame_97{
+    position: relative; 
+}
+#Group_164{
+    position: absolute;
+    transform-origin: 8vw 14vw;
+    animation: rotate 4s ease-in-out infinite;
+}
+#Frame_103{
+    position: relative;
+}
+#Frame_103>#Vector_24{
+    position: absolute;
+    transform-origin: 21% 61%;
+    animation: rotate 2s linear infinite;
+}
+
+#Vector_27{
+    animation: anim1 2s linear infinite;
+}
+
+@media only screen and (max-width: 900px) {
+    #Group_164{
+        transform-origin: 14vw 28vw;
+    }
+    #Frame_103>#Vector_24{
+        transform-origin: 12vw 57.4vw;
+    }
+}
+
+
+@keyframes anim1 {
+    0%{transform: translateY(0);}
+    50%{transform: TranslateY(10%);} 
+    100%{transform: TranslateY(0);} 
+ }
+
+ @keyframes rotate {
+    0%{transform: rotateZ(0deg);}
+    100%{transform: rotateZ(360deg);} 
+ }
