@@ -44,7 +44,7 @@
     background: #08AD5D;
     font-weight: 600;
     font-size: 16px;
-    padding: 17px;
+    /* padding: 17px; */
     line-height:150%;
     letter-spacing: 0.02em;
     color: #ffffff;
@@ -58,7 +58,18 @@
     gap:16px;
     margin-top:auto;
 }
-.About > div > button > img {
+.About > div > button > a{
+    height:100%;
+    width:100%;
+    display: flex;
+    gap:8px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 0;
+}
+.About > div > button > a > img {
     height: 24px;
     width: 24px;
     background-size: fit;
@@ -67,6 +78,11 @@
     flex-direction: row;
 }
 .Abt_btn_txt{
+    text-decoration: none;
+    color: #ffffff;
+    padding: 17px;
+}
+.Abt_btn_txt:hover{
     text-decoration: none;
     color: #ffffff;
 }

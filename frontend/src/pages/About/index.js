@@ -41,8 +41,10 @@ function About() {
                 <p className="Abt_Heading">About DSC</p>
                 <p className="Abt_Content">Developer Student Club (DSC) is a Google Developers program for university students to learn mobile and web development skills. The club will be open to any student, ranging from novice developers who are just starting, to advanced developers who want to further their skills. The club is intended as a space for students to try out new ideas and collaborate to solve mobile and web development problems.</p>
                 <button>
-                    <img src={KnowMore_icon} alt="Know More" />
-                    Know More
+                    <a href="https://developers.google.com/community/gdsc" >
+                        <img src={KnowMore_icon} alt="Know More" />
+                        Know More
+                    </a>
                 </button>
             </div>
             
