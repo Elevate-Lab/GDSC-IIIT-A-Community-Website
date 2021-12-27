@@ -1,4 +1,8 @@
 import * as React from "react";
+
+
+import { useState } from "react";
+
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -12,6 +16,7 @@ import { ReactComponent as Github } from "../../Assets/Vector.svg";
 import { Link } from "react-router-dom";
 // import Stack from "@mui/material/Stack";
 import image1 from "../../Assets/Images/img1.png";
+
 import { useState,useContext } from "react";
 import apiContext from "../../ContextApi/ApiContext";
 
@@ -20,6 +25,11 @@ function ProjectCard(props) {
     const {removeData,previousCardData} = context
 	const [admin, setAdmin] = useState(false);
 	const {project} = props
+
+
+function ProjectCard() {
+	const [admin, setAdmin] = useState(true);
+
 	return (
 		<Box className={styles.card} sx={{ minWidth: 275 }}>
 			<Card variant="outlined">
@@ -34,7 +44,11 @@ function ProjectCard(props) {
 								color="text.primary"
 								gutterBottom
 							>
+
 								{project.projectname}
+
+								Inclusivo
+
 							</Typography>
 							<Typography sx={{ fontSize: 14, margin: "0" }} color="text.secondary" gutterBottom>
 								Jobs for all
@@ -44,7 +58,12 @@ function ProjectCard(props) {
 
 					<div className={styles.text}>
 						<Typography variant="body2" sx={{ margin: 0 }}>
+
 						{project.description}
+
+							Inclusivo is an online platform that makes it easier for people from underprivileged communities
+							to find and get relevant jobs in their respective fields.
+
 						</Typography>
 					</div>
 				</CardContent>
@@ -73,10 +92,17 @@ function ProjectCard(props) {
 						</Button>
 					</Link>
 				</CardActions>
+
 			
 					<CardActions className={styles.buttonsAdmin}>
 							<Button
 							onClick={()=>removeData(project._id)}
+
+				{admin && (
+					<CardActions className={styles.buttonsAdmin}>
+						<Link to="" style={{ textDecoration: "none" }}>
+							<Button
+
 								className={styles.btn}
 								size="small"
 								variant="contained"
@@ -85,8 +111,13 @@ function ProjectCard(props) {
 							>
 								Delete
 							</Button>
+
 					
 						<Link to="/Projects/EditProject" onClick={()=>previousCardData(project)} style={{ textDecoration: "none" }}>
+
+						</Link>
+						<Link to="" style={{ textDecoration: "none" }}>
+
 							<Button
 								className={styles.btn}
 								size="small"
@@ -98,7 +129,11 @@ function ProjectCard(props) {
 							</Button>
 						</Link>
 					</CardActions>
+
 			
+
+				)}
+
 			</Card>
 		</Box>
 	);
