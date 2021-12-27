@@ -116,8 +116,23 @@
 	align-items:center;
 }
 .Copyright_line{
-	width:60%;
+	width:95%;
 	color: #ffffff;
+
+	font-size: 2.4vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-content: center;
+}
+
+.button_login_design:hover .button_login_design_txt {
+    color: #156eff;
+    text-shadow: 0px 1px 1px rgba(21, 110, 255, 0.15);
+
+    /* font-weight: bold; */
+    transition: 0.5s;
+
 	font-weight: 600;
 	text-align: right;
 	margin:0;
@@ -135,6 +150,7 @@
 .Login_Cont:hover{
 	cursor: pointer;
 	background: rgba(255, 255, 255, 0.4);
+
 }
 .LogIn_icon_cont{
 	height:30px;

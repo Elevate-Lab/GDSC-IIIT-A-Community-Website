@@ -1,0 +1,76 @@
+.container {
+	display: flex;
+	flex-direction: row;
+	/* align-items: center;
+	justify-content: center; */
+	/* padding-bottom: 1.5%; */
+}
+
+.img {
+	padding-right: 3%;
+	padding-bottom: 3%;
+}
+.text {
+	width: 360px;
+	margin: 0;
+}
+.name {
+	display: flex;
+	flex-direction: column;
+	/* align-items: center; */
+	justify-content: center;
+}
+.buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.buttonsAdmin {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin-bottom: 10px;
+}
+.btnP {
+	width: 360px;
+}
+.btn {
+	width: 150px;
+}
+.greenBtn {
+	color: #08ad5d;
+	background-color: #08ad5d;
+	width: 150px;
+}
+.card {
+	/* border: 1px solid transparent; */
+	/* padding: 15px 0; */
+	margin: 3vh 0;
+	width: 400px;
+    border-radius: 5rem;
+	
+}
+
+.cardM {
+	/* border: 1px solid transparent; */
+	/* padding: 15px 0; */
+	margin: 4vh 0;
+	width: 400px;
+    border-radius: 5rem;
+	margin-left: 3.5rem;
+	margin-bottom: 10rem;
+	margin-top:1rem;
+	
+
+}
+
+.svg {
+	padding-right: 5px;
+}
+
+/* HOVER */
+.card:hover {
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	/* border: solid grey 1px; */
+	/* transition: 1s; */
+}
