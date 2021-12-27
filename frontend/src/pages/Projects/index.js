@@ -1,11 +1,6 @@
-
 import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import apiContext from "../../ContextApi/ApiContext";
-
-import React from "react";
-import { Link } from "react-router-dom";
-
 import Headings from "../../Components/Page_headings";
 import ProjectCard from "../../Components/ProjectCard/ProjectCard";
 import project_illustration from "../../Assets/Projects_page_illustration.svg";
@@ -49,11 +44,7 @@ function Projects() {
 					</h2>
 					<Fab color="primary" aria-label="add">
 						<Link
-
 							to="Projects/NewProject"
-
-							to="Blogs/NewBlog"
-
 							style={{
 								color: "white",
 								height: "100%",
@@ -79,25 +70,16 @@ function Projects() {
 					alignItems: "center",
 				}}
 			>
-
 					{data && data.map((project) => {
 			  return <ProjectCard project={project}/>
 			})}
-
-				<ProjectCard />
-				<ProjectCard />
-				<ProjectCard />
-				<ProjectCard />
-				<ProjectCard />
-				<ProjectCard />
-
 			</div>
 			<HeadingButton
 				LargeHeading="Want to get your Project featured under us?"
 				SmallHeading="Just drop us your Proposal."
 				ButtonText="Submit Project"
 			/>
-
+			
 		</div>
 	);
 }
