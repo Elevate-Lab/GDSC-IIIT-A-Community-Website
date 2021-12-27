@@ -1,58 +1,117 @@
 import * as React from 'react';
 import { useState,useContext } from 'react';
-import './EventCard.css';
-import { Button } from '@mui/material';
-import { ReactComponent as LinkSVG } from '../../Assets/svg_link.svg';
-import { Link } from 'react-router-dom';
 import apiContext from '../../ContextApi/ApiContext';
-
+import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import { Button, CardActionArea } from "@mui/material";
+import Typography from "@mui/material/Typography";
+import CardMedia from "@mui/material/CardMedia";
+import styles from "./EventCard.module.css";
+import Headings from "../Page_headings";
+import image1 from "../../Assets/Images/img1.png";
+import { Link } from "react-router-dom";
+import { ReactComponent as RSVPsvg } from "../../Assets/svg_link.svg";
+import { ReactComponent as Calendar } from "../../Assets/calendar.svg";
+import { ReactComponent as Clock } from "../../Assets/clock.svg";
 // import Stack from "@mui/material/Stack";
 
 function EventCard(props) {
-    const {event} = props
+	const {event} = props
     const context =useContext(apiContext)
     const {removeData,previousCardData} = context
     const [admin, setAdmin] = useState(true);
-    return (
-        <div className="container">
-            <div className="card">
-                <img
-                    src={event.image}
-                    alt="img"
-                />
-                <div className="event-info">
-                    <h3>{event.name}</h3>
+	const [upcoming, setUpcoming] = useState(props.upcoming);
+	return (
+		// <Box className="card" sx={{ minWidth: 275 }}>
+		<Card variant="outlined" styles={{ padding: "0" }} className={styles.eventCard}>
+			{/* <CardMedia component="img" height="140" image="../Assets/About_DSC_Image.png" alt="project image" /> */}
 
-                    <p className="event-timing">{event.startDate} - {event.endDate}</p>
-                    <p className="event-description">
-                       {event.description}</p>
-                    <p className="event-organizer">
-                        Organized by <span>{event.organizer}</span>
-                    </p>
-                    <div className="link_buttons">
-                        <Link to="/Events/EventDetails">
-                            Know More <LinkSVG style={{ width: '21px', paddingLeft: '10px' }} />
-                        </Link>
-                        {/* <Button href="#">
-                            C2A <LinkSVG style={{ width: '15px', paddingLeft: '10px' }} />
-                        </Button> */}
-                    </div>
-                    <div className="edit_buttons">
-                        {admin && (
-                            <div className=" buttons-admin">
-                                <Link onClick={()=>previousCardData(event)} to="/Events/editEvent" style={{ color: 'green' }}>
-                                        Edit
-                                </Link>
-                                <Button onClick={()=>removeData(event._id)}  style={{ color: 'red' }} disableElevation>
-                                    Delete
-                                </Button>
-                            </div>
-                        )}
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
+			{/* <CardMedia
+					component="img"
+					height="140"
+					image="http://www.lacor.info/film/a_la_folie/img/galerie/large/a_la_folie_06.jpg"
+					alt="project image"
+					className="img"
+				/> */}
+			<div className={styles.imgContainer}>
+				<img className={styles.img} src={event.image} alt="img" />
+			</div>
+			<div className={styles.content}>
+				<CardContent>
+					<div className={styles.container}>
+						<div className={styles.name}>
+							<Typography sx={{ fontSize: 18, fontWeight: "bold" }} color="text.primary" gutterBottom>
+							{event.name}
+							</Typography>
+							<Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+								<Calendar className={styles.svg} />
+								{event.startDate} - {event.endDate}
+							</Typography>
+							<Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+								<Clock className={styles.svg} />
+								Time
+							</Typography>
+						</div>
+					</div>
+					{/* <Headings LargeHeading="Project Name" SmallHeading="tagline" /> */}
+
+					<div className={styles.text}>
+						<Typography variant="body2">
+							{event.description}
+						</Typography>
+					</div>
+				</CardContent>
+
+				{upcoming && (
+					<CardActions className={styles.buttons}>
+						<Link to="" style={{ textDecoration: "none" }}>
+							<Button
+								className={styles.RSVPbtn}
+								size="small"
+								variant="contained"
+								disableElevation
+								style={{ backgroundColor: "#08ad5d" }}
+							>
+								<RSVPsvg className={styles.RSVPsvg} />
+								RSVP Here
+							</Button>
+						</Link>
+					</CardActions>
+				)}
+
+				{admin && (
+					<CardActions className={styles.buttonsAdmin}>
+					
+							<Button
+							onClick={()=>removeData(event._id)}
+								className={styles.btn}
+								size="small"
+								variant="contained"
+								disableElevation
+								style={{ backgroundColor: "#EA4335" }}
+							>
+								Delete
+							</Button>
+	
+						<Link to="Events/EditEvent"  onClick={()=>previousCardData(event)} style={{ textDecoration: "none" }}>
+							<Button
+								className={styles.btn}
+								size="small"
+								variant="outlined"
+								disableElevation
+								style={{ color: "#08ad5d", borderColor: "#08ad5d" }}
+							>
+								Edit
+							</Button>
+						</Link>
+					</CardActions>
+				)}
+			</div>
+		</Card>
+		// </Box>
+	);
 }
 
 export default EventCard;

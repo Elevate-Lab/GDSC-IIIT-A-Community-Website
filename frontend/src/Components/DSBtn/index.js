@@ -1,18 +1,14 @@
-import React,{useContext} from 'react'
+import React from 'react'
 import { makeStyles } from '@material-ui/core'
 import useViewport from '../../viewport/useViewport'
-import apiContext from '../../ContextApi/ApiContext'
-import { Link } from 'react-router-dom'
 
 function WEBBtn(props) {
     const {width} = useViewport()
-    const context = useContext(apiContext)
-    const {removeData,previousCardData} = context
-    const {blogs} = props
+
     const { backgroundColor, height, borderRadius, color, style, label, divStyle } = props
-  
+
     const useStyles = makeStyles({
-        Link: {
+        button: {
             backgroundColor: backgroundColor,
             padding: 10,
             border: 'none',
@@ -33,9 +29,9 @@ function WEBBtn(props) {
 
     return (
         <div style={divStyle}>
-            <Link className={classes.button} style={style} to={label==="Edit"?"/Blogs/EditBlog":"/Blogs"} onClick={(blogs)=>previousCardData()} >
+            <button className={classes.button} style={style}>
                 {label}
-            </Link>
+            </button>
         </div>
     )
 }

@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../CommonCSS/formStyle.css';
 import { useHistory } from 'react-router';
 import apiContext from '../../ContextApi/ApiContext';
-function NewProject() {
+function EditProject() {
     const history = useHistory()
     const context = useContext(apiContext)
     const {previousData,updateData} = context
@@ -49,4 +49,4 @@ function NewProject() {
     );
 }
 
-export default NewProject;
+export default EditProject;

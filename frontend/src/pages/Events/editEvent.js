@@ -22,7 +22,7 @@ function EditEvent() {
     return (
 
         <div class="container" id="mainContainer">
-        <h1 class="well" id="formHead">New Event</h1>
+        <h1 class="well" id="formHead">Edit Event</h1>
 
         <form action="" method="">
             <div class="row">

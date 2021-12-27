@@ -14,8 +14,9 @@ const useStyles = makeStyles(theme => ({
         marginTop:'-3rem',
         marginBottom:'1.7rem',
         fontSize:'4rem',
-        fontFamily:"PT Serif Caption",
-        fontWeight:'bold'
+        fontFamily:"Poppins",
+        /*fontWeight:'bold',*/
+        color: '#EA4335'
     },
 
     head: {
@@ -50,16 +51,16 @@ function Content() {
     return (
         <div style={{ width: '100%' }}>
             
-            <h1 className={Classes.eventHeading}>Events</h1>
+            {/* <h1 className={Classes.eventHeading}>Events</h1> */}
 
             <div style={{ display: 'flex', justifyContent: 'center', direction: 'row' }}>
-                <div style={{ backgroundColor: 'blue', width: `calc(100vw/3)`, height: '0.4rem' }}>
+                <div style={{ backgroundColor: '#4285F4', width: `calc(100vw/3)`, height: '0.4rem' }}>
 
                 </div>
-                <div style={{ backgroundColor: 'yellow', width: `calc(100vw/3)`, height: '0.4rem' }}>
+                <div style={{ backgroundColor: '#FBBC05', width: `calc(100vw/3)`, height: '0.4rem' }}>
 
                 </div>
-                <div style={{ backgroundColor: 'red', width: `calc(100vw/3)`, height: '0.4rem' }}>
+                <div style={{ backgroundColor: '#EA4335', width: `calc(100vw/3)`, height: '0.4rem' }}>
 
                 </div>
             </div>

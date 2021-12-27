@@ -1,5 +1,6 @@
 .About {
     display: flex;
+    flex-direction:row-reverse;
     gap: 6.11vw;
     justify-content: center;
     width: 100%;
@@ -43,7 +44,7 @@
     background: #08AD5D;
     font-weight: 600;
     font-size: 16px;
-    padding: 17px;
+    /* padding: 17px; */
     line-height:150%;
     letter-spacing: 0.02em;
     color: #ffffff;
@@ -57,17 +58,160 @@
     gap:16px;
     margin-top:auto;
 }
-.About > div > button > img {
+.About > div > button > a{
+    height:100%;
+    width:100%;
+    display: flex;
+    gap:8px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 0;
+}
+.About > div > button > a > img {
     height: 24px;
     width: 24px;
     background-size: fit;
 }
 .About_DSC_IIITA{
-    flex-direction: row-reverse;
+    flex-direction: row;
 }
 .Abt_btn_txt{
     text-decoration: none;
     color: #ffffff;
+    padding: 17px;
+}
+.Abt_btn_txt:hover{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.What_we_do{
+    width: 100%;
+    padding:0 8.2vw;
+    display: flex;
+    gap: 4.5vw;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5vw;
+}
+.What_we_do .What_we_do_heading{
+    font-weight: bold;
+    font-size: 2.5vw;
+    line-height: 1.53vw;
+    color: #1B2733;   
+}
+.What_we_do .What_we_do_cards{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    column-gap: 120px;
+    row-gap: 60px;
+}
+.What_we_do .What_we_do_cards > div{
+    display: flex;
+    height: 120px;
+    width: 450px;
+    justify-content:space-between;
+}
+.What_we_do_card_img{
+    display: grid;
+    place-items: center;
+    height: 120px;
+    width: 120px;
+    border-radius:50%;
+}
+.What_we_do_card_text {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+}
+.What_we_do_card_text > .What_we_do_card_head {
+    font-weight: 500;
+    font-size: 1.52vw;
+    line-height: 120%;
+    color: #1D2935;       
+}
+.What_we_do_card_text > .What_we_do_card_desc {
+    font-weight: normal;
+    font-size: 1.11vw;
+    line-height: 1.53vw;
+    color: #637282;     
+}
+
+.What_we_do_card1 > .What_we_do_card_img{
+    background:#FAE4DC;
+}
+.What_we_do_card2 > .What_we_do_card_img{
+    background:#DBE5F4;
+}
+.What_we_do_card3 > .What_we_do_card_img{
+    background:#DBF4E5;
+}
+.What_we_do_card4 > .What_we_do_card_img{
+    background:#FEF9DC;
+}
+
+.Join_the_convo{
+    width: 100%;
+    padding:0 10.02vw;
+    display: flex;
+    gap: 3vw;
+    flex-direction: column;
+    padding-top: 3vw;
+}
+.Join_the_convo .Join_the_convo_heading{
+    font-weight: bold;
+    font-size: 2.5vw;
+    line-height: 1.53vw;
+    color: #1B2733;   
+}
+.Join_the_convo .Join_the_convo_cards{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+.Join_the_convo_cards > div{
+    width: 45%;
+}
+.Join_the_convo_cards > div > p{
+    font-weight: 550;
+    font-size: 1.2vw;
+    line-height: 1.53vw;
+    color: #637282; 
+    padding-bottom:4px;
+}
+.Join_the_convo_cards > div > div{
+    height: 50px;
+    width: 200px;
+    display:grid;
+    place-items:center;
+    outline:none;
+    border:none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.Join_the_convo_cards > div > div > a{
+    margin:0;
+    color:#ffffff;
+    text-decoration:none;
+    font-weight: 600;
+    font-size: 16px;
+    line-height:150%;
+    letter-spacing: 0.02em;
+    z-index: 1;
+}
+.Join_the_convo_cards > div > div > img{
+    height: 100%;
+    width: 100%;
+    position:absolute;
+    top: 0;
+    left: 0;
 }
 
 @media only screen and (max-width: 900px) {
@@ -81,25 +225,67 @@
         align-items: center;
     }
     .About > img{
-        width: 70%;
+        width: 79%;
         height:auto;
     }
     .About > div{
         height:min-content;
-        width: 70%;
+        width: 79%;
         gap: 3vw;
     }
-    .About > div > .Abt_Heading{
+    .What_we_do_cards > div{
+        gap: 16px;
+    }
+    .Join_the_convo{
+        align-items:center;
+    }
+    .About > div > .Abt_Heading,
+    .What_we_do .What_we_do_heading,
+    .Join_the_convo .Join_the_convo_heading {
         font-size: 4.4vw;
         line-height: 100%;
     }
-    .About > div > .Abt_Content {
+    .About > div > .Abt_Content{
         font-size: 1.99vw;
         line-height: 150%;
         text-align: justify;
+    }
+    .What_we_do_card_text > .What_we_do_card_desc{
+        font-size: 1.99vw;
+        line-height: 140%;
+    }
+    .What_we_do_card_text > .What_we_do_card_head {
+        font-size: 2.99vw;
+        line-height: 100%;
     }
     .About > div > button {
         font-size: 16px;
         line-height:150%;
     }
+    .What_we_do{
+        padding:0 10.02vw;
+    }
+    .What_we_do .What_we_do_cards{
+        gap:30px;
+    }
+    .What_we_do .What_we_do_cards > div{
+        justify-content:space-between;
+        width:100%;
+    }
+    .What_we_do_card2 ,
+    .What_we_do_card4 {
+        flex-direction:row-reverse;
+    }
+    .Join_the_convo_cards > div{
+        width: 100%;
+    }
+    .Join_the_convo_cards > div > p{
+        font-size: 2.2vw;
+        line-height: 150%;
+        padding-bottom:0;
+    }
+    .Join_the_convo .Join_the_convo_cards{
+        gap: 40px;
+    }
+    
 }
