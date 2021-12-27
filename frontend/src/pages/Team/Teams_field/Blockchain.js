@@ -49,4 +49,9 @@ function BlockchainTeam() {
         </div>
     )}
 
+
 export default BlockchainTeam
+
+export default BlockchainTeam
+
+

@@ -1,4 +1,8 @@
+
 import React,{useEffect,useContext} from "react";
+
+import React from "react";
+
 import { Link } from "react-router-dom";
 import DSBlogCard from "../../Components/DSBlogCard";
 import Headings from "../../Components/Page_headings";
@@ -8,7 +12,9 @@ import blog_illustration from "../../Assets/Blogs_page_illustration.svg";
 import Fab from "@mui/material/Fab";
 import AddIcon from "@mui/icons-material/Add";
 import MustReadCard from "../../Components/mustReadCard";
+
 import apiContext from "../../ContextApi/ApiContext";
+
 
 function Blogs() {
 	const context = useContext(apiContext)
@@ -112,6 +118,35 @@ function Blogs() {
 							placeItems: "center",
 						}}
 					>
+
+						<DSBlogCard
+							title="Learn Microinteraction"
+							body="Lorem ipsum dolor sit amet, 
+                consectetur adipiscing elit. Ornare 
+                pretium placerat ut platea. Purus 
+                blandit integer sagittis massa vel est hac."
+							date="Monday Jan 20 , 2020"
+						/>
+					</Grid>
+				</Grid>
+			</div>
+			<div className="heading_plusBtn">
+				<h2 style={{ fontWeight: "620" }} className="heading">
+					Featured Blogs
+				</h2>
+				<Fab color="primary" aria-label="add">
+					<Link
+						to="Blogs/NewBlog"
+						style={{
+							color: "white",
+							height: "100%",
+							width: "100%",
+							margin: "0",
+							display: "grid",
+							placeItems: "center",
+						}}
+					>
+
 						<AddIcon />
 					</Link>
 				</Fab>
@@ -134,6 +169,44 @@ function Blogs() {
 					}}
 					container
 				>
+
+					<Grid
+						style={{
+							display: "flex",
+							flexDirection: "row",
+							justifyContent: "center",
+							alignItems: "center",
+						}}
+						item
+					>
+						<DSBlogCard
+							title="Learn Microinteraction"
+							body="Lorem ipsum dolor sit amet, 
+                consectetur adipiscing elit. Ornare 
+                pretium placerat ut platea. Purus 
+                blandit integer sagittis massa vel est hac."
+							date="Monday Jan 20 , 2020"
+						/>
+					</Grid>
+					<Grid
+						style={{
+							display: "flex",
+							flexDirection: "row",
+							justifyContent: "center",
+							alignItems: "center",
+						}}
+						item
+					>
+						<DSBlogCard
+							title="Learn Microinteraction"
+							body="Lorem ipsum dolor sit amet, 
+                consectetur adipiscing elit. Ornare 
+                pretium placerat ut platea. Purus 
+                blandit integer sagittis massa vel est hac."
+							date="Monday Jan 20 , 2020"
+						/>
+					</Grid>
+
 					<Grid
 						style={{
 							display: "flex",
