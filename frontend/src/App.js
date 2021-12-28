@@ -22,14 +22,41 @@ import NewProject from './pages/Projects/newProject';
 import Team from './pages/Team/index';
 import EditMember from './pages/Team/editMember';
 import NewMember from './pages/Team/newMember';
-
+import LoginPage from "./pages/Projects/loginPage"
 import ViewportProvider from "./viewport";
+
+// import Loader from "../src/Loader";
+import { useState, useEffect } from 'react';
+import Secondload from './Secondload';
+
+
 import LeaderBoard from './Components/LeaderBoard/LeaderBoard';
 import ApiState from './ContextApi/ApiState';
 
+
 function App() {
+
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true)
+    setTimeout(()=>{
+setLoading(false);
+    },4500)
+  }, [])
+
   return (
+
+    <React.Fragment>
+      {
+loading?
+<Secondload />
+
+
+:
+
     <ApiState>
+
     <ViewportProvider>
       <Router>
         <Navbar />
@@ -78,7 +105,10 @@ function App() {
           </Route>
           <Route path="/Projects/NewProject">
              <NewProject/>
-          </Route>
+          </Route>  
+           <Route path="/Projects/loginPage">
+                  <LoginPage />
+                </Route>
           <Route path="/Projects/EditProject">
              <EditProject/>
           </Route>
@@ -86,7 +116,12 @@ function App() {
         <Footer />
       </Router>
     </ViewportProvider>
+
+}
+</React.Fragment>
+
     </ApiState>
+
   );
 }
 

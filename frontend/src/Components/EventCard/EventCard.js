@@ -58,8 +58,19 @@ function EventCard(props) {
 					{/* <Headings LargeHeading="Project Name" SmallHeading="tagline" /> */}
 
 					<div className={styles.text}>
+
+						<Typography variant="body2" style={{width:'90%'}}>
+						Create a class Encapsulated TermDay, which applies the principles of data
+encapsulation as an alternative to TermDay. Your modified class should throw
+an exception if an invalid day of the week or week number is specified.
+The use of two int variables to represent the day and the week requires
+64 bits of storage. How many bits are actually required? Adapt<br></br>
+EncapsulatedTermDay class to achieve the same functionality using only one
+member variable of a primitive type. You should justify your choice of type
+
 						<Typography variant="body2">
 							{event.description}
+
 						</Typography>
 					</div>
 				</CardContent>

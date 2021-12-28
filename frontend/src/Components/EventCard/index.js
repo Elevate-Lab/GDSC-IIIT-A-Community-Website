@@ -22,6 +22,7 @@ function EventCards() {
 				flexWrap: "wrap",
 				justifyContent: "space-around",
 				alignItems: "center",
+				zIndex:'0'
 			}}
 		>
 			 {data && data.map((event)=>{

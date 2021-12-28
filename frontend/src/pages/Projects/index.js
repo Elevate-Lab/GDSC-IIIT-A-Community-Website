@@ -38,6 +38,26 @@ function Projects() {
 					Text="Learning goes hand-in-hand with building new and cool stuff. Lorem ipsum dolor sit amet"
 					PageIllustration={project_illustration}
 				/>
+
+				<Fab style={{ alignSelf: "flex-end", marginRight: "7vw" }} color="primary" aria-label="add">
+					<Link
+						to="Projects/NewProject"
+						style={{
+							color: "white",
+							height: "100%",
+							width: "100%",
+							margin: "0",
+							display: "grid",
+							placeItems: "center",
+						}}
+					>
+						<AddIcon />
+					</Link>
+
+			</Fab>
+	
+
+
 				<div className="heading_plusBtn">
 					<h2 style={{ fontWeight: "620" }} className="heading">
 						Featured Projects
@@ -58,6 +78,7 @@ function Projects() {
 						</Link>
 					</Fab>
 				</div>
+
 			</div>
 
 			<div
@@ -74,12 +95,15 @@ function Projects() {
 			  return <ProjectCard project={project}/>
 			})}
 			</div>
+
+
+
 			<HeadingButton
 				LargeHeading="Want to get your Project featured under us?"
 				SmallHeading="Just drop us your Proposal."
 				ButtonText="Submit Project"
 			/>
-			
+
 		</div>
 	);
 }
