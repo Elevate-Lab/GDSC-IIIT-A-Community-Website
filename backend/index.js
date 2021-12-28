@@ -5,6 +5,7 @@ const express       =require('express'),
       Blog         = require('./models/blog'),
       Team          = require('./models/team'),
       project       =require('./models/project')
+      nodemailer    =require('nodemailer')
 
 const eventRoutes = require("./routes/events");
 const blogRoutes = require('./routes/blogs')
@@ -18,7 +19,7 @@ require('dotenv').config();
 app.use(bodyParser.json({limit: "30mb",extended:true}))
 app.use(bodyParser.urlencoded({limit:"30mb",extended:true}))
 
-const url = process.env.MONGODB_URI || 3000;
+const url = process.env.MONGODB_URI || 8000;
 
 /*mongoose.connect(url, {
     useNewUrlParser: true,
@@ -41,9 +42,59 @@ app.use("/blogs",blogRoutes);
 app.use("/teams",teamRoutes);
 app.use("/projects",projectRoutes);
 
-const port = process.env.PORT || 3000;
+
+
+
+let transporter = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    post: 587,
+    security: false,
+    auth:{
+        user: process.env.EMAIL,
+        pass: process.env.PASS
+    }
+})
+
+app.post('/mail',(req,res,next)=>{
+    var message=req.body.message
+    var name=req.body.name
+    var senderEmail=req.body.email
+
+    var mailOptions={
+        from: name,
+        to: 'gdsc@iiita.ac.in',
+        subject: "Message from GDSC IIIT A Community Website's Contact Section",
+        html: `Name: ${name} ${senderEmail} <br> Message: ${message}`
+    }
+
+    transporter.sendMail(mailOptions,(err,data)=>{
+        if(err){
+            res.json({
+                status: err
+            })
+            console.log(err)
+        }else{
+            res.json({
+                status: "success"
+            })
+            console.log("email sent "+data.response)
+        }
+    })
+})
+
+
+transporter.verify(function(err,success){
+    if(err){
+        console.log(err);
+    }else{
+        console.log("server is ready to send emails")
+    }
+
+})
+
+const port = process.env.PORT || 8000;
 
 app.listen(port, process.env.IP, () => {
-    console.log("showing on port 3000.");
+    console.log("showing on port ",port);
 });
 
