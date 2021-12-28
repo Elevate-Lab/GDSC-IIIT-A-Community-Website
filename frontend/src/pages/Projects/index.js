@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
+import apiContext from "../../ContextApi/ApiContext";
 import Headings from "../../Components/Page_headings";
 import ProjectCard from "../../Components/ProjectCard/ProjectCard";
 import project_illustration from "../../Assets/Projects_page_illustration.svg";
@@ -9,6 +10,13 @@ import styles from "./Projects.module.css";
 import HeadingButton from "../../Components/Heading_button";
 
 function Projects() {
+	const context = useContext(apiContext)
+	const { data, getAllData, getAttribute } = context;
+	let attribute = "projects";
+	useEffect(() => {
+		getAttribute(attribute)
+		getAllData();
+	}, [data])
 	return (
 		<div className={styles.projectsPage}>
 			<div
@@ -30,13 +38,33 @@ function Projects() {
 					Text="Learning goes hand-in-hand with building new and cool stuff. Lorem ipsum dolor sit amet"
 					PageIllustration={project_illustration}
 				/>
+
+				<Fab style={{ alignSelf: "flex-end", marginRight: "7vw" }} color="primary" aria-label="add">
+					<Link
+						to="Projects/NewProject"
+						style={{
+							color: "white",
+							height: "100%",
+							width: "100%",
+							margin: "0",
+							display: "grid",
+							placeItems: "center",
+						}}
+					>
+						<AddIcon />
+					</Link>
+
+			</Fab>
+	
+
+
 				<div className="heading_plusBtn">
 					<h2 style={{ fontWeight: "620" }} className="heading">
 						Featured Projects
 					</h2>
 					<Fab color="primary" aria-label="add">
 						<Link
-							to="Blogs/NewBlog"
+							to="Projects/NewProject"
 							style={{
 								color: "white",
 								height: "100%",
@@ -50,6 +78,7 @@ function Projects() {
 						</Link>
 					</Fab>
 				</div>
+
 			</div>
 
 			<div
@@ -62,18 +91,19 @@ function Projects() {
 					alignItems: "center",
 				}}
 			>
-				<ProjectCard />
-				<ProjectCard />
-				<ProjectCard />
-				<ProjectCard />
-				<ProjectCard />
-				<ProjectCard />
+					{data && data.map((project) => {
+			  return <ProjectCard project={project}/>
+			})}
 			</div>
+
+
+
 			<HeadingButton
 				LargeHeading="Want to get your Project featured under us?"
 				SmallHeading="Just drop us your Proposal."
 				ButtonText="Submit Project"
 			/>
+
 		</div>
 	);
 }

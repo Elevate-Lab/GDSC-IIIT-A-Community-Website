@@ -1,11 +1,15 @@
 // import { Typography } from '@material-ui/core'
-import React,{ useState } from 'react'
+import React, { useState } from 'react'
 import './Footer.css'
 import DSC_logo from '../../Assets/DSC-IIITA-Dark-Horizontal.png'
 import mail_icon from '../../Assets/Message.svg'
 import pin_icon from '../../Assets/Location.svg'
 
+import { Link } from "react-router-dom";
+
+
 import login_icon from '../../Assets/LogIn_icon.svg'
+
 
 import follow_icon_1 from '../../Assets/instagram.svg'
 import follow_icon_2 from '../../Assets/facebook.svg'
@@ -15,11 +19,17 @@ import follow_icon_5 from '../../Assets/twitter.svg'
 import follow_icon_6 from '../../Assets/linkedin.svg'
 import follow_icon_7 from '../../Assets/github.svg'
 import follow_icon_8 from '../../Assets/discord.png'
-
+import useViewport from "../../viewport/useViewport"
+import loginperson from "./loginperson_Image.png"
+import LoginPage from '../../pages/Projects/loginPage'
 
 function Footer() {
 
-    let [admin,setAdmin] = useState('false');
+    const { width } = useViewport();
+
+
+    let [admin, setAdmin] = useState('false');
+
 
     return (
         <div className="footer">
@@ -90,7 +100,10 @@ function Footer() {
                 </div>
             </div>
             <p className="footer_divider"></p>
-            <div className="footer_bot">
+
+    
+    
+   <div className="footer_bot">
                 <p className="Copyright_line">&copy;2021 GDSC IIITA</p>
                 <div className="footer_LogIn">
                     <div className="Login_Cont">
@@ -103,7 +116,8 @@ function Footer() {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
+
     )
 }
 

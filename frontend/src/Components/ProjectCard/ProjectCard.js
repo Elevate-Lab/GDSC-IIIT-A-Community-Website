@@ -1,5 +1,4 @@
 import * as React from "react";
-import { useState } from "react";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -13,9 +12,14 @@ import { ReactComponent as Github } from "../../Assets/Vector.svg";
 import { Link } from "react-router-dom";
 // import Stack from "@mui/material/Stack";
 import image1 from "../../Assets/Images/img1.png";
+import { useState,useContext } from "react";
+import apiContext from "../../ContextApi/ApiContext";
 
-function ProjectCard() {
-	const [admin, setAdmin] = useState(true);
+function ProjectCard(props) {
+	const context = useContext(apiContext)
+    const {removeData,previousCardData} = context
+	const [admin, setAdmin] = useState(false);
+	const {project} = props
 	return (
 		<Box className={styles.card} sx={{ minWidth: 275 }}>
 			<Card variant="outlined">
@@ -30,7 +34,7 @@ function ProjectCard() {
 								color="text.primary"
 								gutterBottom
 							>
-								Inclusivo
+								{project.projectname}
 							</Typography>
 							<Typography sx={{ fontSize: 14, margin: "0" }} color="text.secondary" gutterBottom>
 								Jobs for all
@@ -40,8 +44,7 @@ function ProjectCard() {
 
 					<div className={styles.text}>
 						<Typography variant="body2" sx={{ margin: 0 }}>
-							Inclusivo is an online platform that makes it easier for people from underprivileged communities
-							to find and get relevant jobs in their respective fields.
+						{project.description}
 						</Typography>
 					</div>
 				</CardContent>
@@ -70,10 +73,10 @@ function ProjectCard() {
 						</Button>
 					</Link>
 				</CardActions>
-				{admin && (
+			
 					<CardActions className={styles.buttonsAdmin}>
-						<Link to="" style={{ textDecoration: "none" }}>
 							<Button
+							onClick={()=>removeData(project._id)}
 								className={styles.btn}
 								size="small"
 								variant="contained"
@@ -82,8 +85,8 @@ function ProjectCard() {
 							>
 								Delete
 							</Button>
-						</Link>
-						<Link to="" style={{ textDecoration: "none" }}>
+					
+						<Link to="/Projects/EditProject" onClick={()=>previousCardData(project)} style={{ textDecoration: "none" }}>
 							<Button
 								className={styles.btn}
 								size="small"
@@ -95,7 +98,7 @@ function ProjectCard() {
 							</Button>
 						</Link>
 					</CardActions>
-				)}
+			
 			</Card>
 		</Box>
 	);

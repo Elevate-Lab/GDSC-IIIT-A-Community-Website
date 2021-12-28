@@ -38,7 +38,7 @@ function Events() {
 				</h2>
 				<Fab color="primary" aria-label="add">
 					<Link
-						to="Blogs/NewBlog"
+						to="Events/NewEvent"
 						style={{
 							color: "white",
 							height: "100%",
@@ -64,7 +64,7 @@ function Events() {
 				</h2>
 				<Fab color="primary" aria-label="add">
 					<Link
-						to="Blogs/NewBlog"
+						to="Events/NewEvent"
 						style={{
 							color: "white",
 							height: "100%",

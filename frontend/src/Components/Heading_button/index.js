@@ -19,7 +19,7 @@ function HeadingButton({ LargeHeading, SmallHeading, ButtonText }) {
 						size="small"
 						variant="contained"
 						disableElevation
-						style={{ backgroundColor: "#156EFF", padding: "8px 12px" }}
+						style={{ backgroundColor: "#156EFF", padding: "8px 12px", textTransform: "none" }}
 					>
 						{ButtonText}
 					</Button>
