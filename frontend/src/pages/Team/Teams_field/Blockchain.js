@@ -1,53 +1,33 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import MemberCard from '../../../Components/MemberCard/index'
+import apiContext from '../../../ContextApi/ApiContext'
 
 
-function BlockchainTeam() {
-
+function OpenSourceTeam() {
+    const context = useContext(apiContext)
+    const { data, getAllData, getAttribute } = context
+    let attribute = "teams"
+    useEffect(() => {
+        getAttribute(attribute)
+        getAllData();
+    }, [data])
+    const opensourceTeam = data.filter((e) => {
+        if(data){
+        return e.designation === 'Open Source';
+        }
+    })
     return (
-        <div id="Web" className="Field_view">
-            <MemberCard 
-                Name="Supriya"
-                Position="Blockchain"
-                ImageURL="../../Assets/Manav.jpg"
-                GithubLink="xyz"
-                LinkedinLink="xyz"
-                TwitterLink="xyz"
-            />
-            <MemberCard 
-                Name="Supriya"
-                Position="Blockchain"
-                ImageURL="../../Assets/Manav.jpg"
-                GithubLink="xyz"
-                LinkedinLink="xyz"
-                TwitterLink="xyz"
-            />
-            <MemberCard 
-                Name="Supriya"
-                Position="Blockchain"
-                ImageURL="../../Assets/Manav.jpg"
-                GithubLink="xyz"
-                LinkedinLink="xyz"
-                TwitterLink="xyz"
-            />
-            <MemberCard 
-                Name="Supriya"
-                Position="Blockchain"
-                ImageURL="../../Assets/Manav.jpg"
-                GithubLink="xyz"
-                LinkedinLink="xyz"
-                TwitterLink="xyz"
-            />
-            <MemberCard 
-                Name="Supriya"
-                Position="Blockchain"
-                ImageURL="../../Assets/Manav.jpg"
-                GithubLink="xyz"
-                LinkedinLink="xyz"
-                TwitterLink="xyz"
-            />
+        <div id="opensourceTeam" className="Field_view">
+            {opensourceTeam &&
+                opensourceTeam.map((teams) => {
+                    return <MemberCard
+                    key={teams._id}
+                     team={teams}
+                />
+                })
+            }
         </div>
     )}
 
-export default BlockchainTeam
+export default OpenSourceTeam
 

@@ -1,13 +1,18 @@
-import React from 'react'
+
 import { Typography, Paper } from '@material-ui/core'
 import img1 from '../../Assets/Images/img1.png'
 import DSBtn from '../DSBtn'
+import { Button } from "@mui/material";
 import useViewport from '../../viewport/useViewport'
+import React, { useContext } from 'react'
+import apiContext from '../../ContextApi/ApiContext'
+import { Link } from 'react-router-dom'
 
-
-function DSBlogCard({title, date, body}) {
+function DSBlogCard(props) {
     const { width } = useViewport()
-    
+    const context = useContext(apiContext)
+    const {removeData,previousCardData} = context
+    const {blogs} = props
     return (
         <div style={{
             margin: '1rem'
@@ -25,19 +30,19 @@ function DSBlogCard({title, date, body}) {
                     fontWeight: 500,
                     fontSize: width > 1000 ? '1.5rem' : '1rem',
                     marginTop: '1rem'
-                }}>{title}</Typography>
+                }}>{blogs.title}</Typography>
 
                 <Typography style={{
                     fontFamily: 'poppins',
                     fontWeight: 300,
                     fontSize:  width > 1000 ? '1rem' : '0.8rem',
                     marginTop: '1rem'
-                }}>{date}</Typography>
+                }}>{blogs.date}</Typography>
                 <Typography style={{
                     fontFamily: 'poppins',
                     fontSize:  width > 1000 ? '1rem' : '0.8rem',
                     marginTop: '1rem'
-                }}> {body}
+                }}> {blogs.description}
                 </Typography>
                 <div style={{
                     display: 'flex',
@@ -57,7 +62,11 @@ function DSBlogCard({title, date, body}) {
                         display: 'flex',
                         flexDirection: 'row'
                     }}>
-                        <DSBtn
+                         <Link to="/Blogs/EditBlog" onClick={()=>previousCardData(blogs)}>Edit</Link>
+                         <Button size="small" disableElevation onClick={()=>removeData(blogs._id)}>
+							Delete
+						</Button>
+                        {/* <DSBtn
                             label="Edit"
                             backgroundColor="#f5edff"
                             height='2rem'
@@ -84,7 +93,7 @@ function DSBlogCard({title, date, body}) {
                                 marginLeft: '0.5rem',
                                 marginRight: '0.5rem'
                             }}
-                        />
+                        /> */}
                     </div>
                 </div>
             </Paper>
