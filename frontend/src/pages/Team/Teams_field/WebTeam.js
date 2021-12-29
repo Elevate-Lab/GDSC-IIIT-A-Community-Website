@@ -1,31 +1,69 @@
-import React, { useContext, useEffect } from 'react'
+import React from 'react'
 import MemberCard from '../../../Components/MemberCard/index'
-import apiContext from '../../../ContextApi/ApiContext'
+
 
 function WebTeam() {
-    const context = useContext(apiContext)
-    const { data, getAllData, getAttribute } = context
-    let attribute = "teams"
-    useEffect(() => {
-        getAttribute(attribute)
-        getAllData();
-    }, [data])
-    const webTeam = data.filter((e) => {
-        return e.designation === 'Web';
-    })
 
-return (
-    <div id="Web" className="Field_view">
-        {webTeam &&
-            webTeam.map((teams) => {
-                return <MemberCard
-                key={teams._id}
-                 team={teams}
+    return (
+        <div id="Web" className="Field_view">
+            <MemberCard 
+                Name="Manav"
+                Position="Web"
+                ImageURL="../../Assets/Manav.jpg"
+                GithubLink="xyz"
+                LinkedinLink="xyz"
+                TwitterLink="xyz"
             />
-            })
-        }
-    </div>
-)}
+            <MemberCard 
+                Name="Manav"
+                Position="Web"
+                ImageURL="../../Assets/Manav.jpg"
+                GithubLink="xyz"
+                LinkedinLink="xyz"
+                TwitterLink="xyz"
+            />
+            <MemberCard 
+                Name="Manav"
+                Position="Web"
+                ImageURL="../../Assets/Manav.jpg"
+                GithubLink="xyz"
+                LinkedinLink="xyz"
+                TwitterLink="xyz"
+            />
+            <MemberCard 
+                Name="Manav"
+                Position="Web"
+                ImageURL="../../Assets/Manav.jpg"
+                GithubLink="xyz"
+                LinkedinLink="xyz"
+                TwitterLink="xyz"
+            />
+            <MemberCard 
+                Name="Manav"
+                Position="Web"
+                ImageURL="../../Assets/Manav.jpg"
+                GithubLink="xyz"
+                LinkedinLink="xyz"
+                TwitterLink="xyz"
+            />
+            <MemberCard 
+                Name="Manav"
+                Position="Web"
+                ImageURL="../../Assets/Manav.jpg"
+                GithubLink="xyz"
+                LinkedinLink="xyz"
+                TwitterLink="xyz"
+            />
+            <MemberCard 
+                Name="Manav"
+                Position="Web"
+                ImageURL="../../Assets/Manav.jpg"
+                GithubLink="xyz"
+                LinkedinLink="xyz"
+                TwitterLink="xyz"
+            />
+        </div>
+    )}
 
 export default WebTeam
 

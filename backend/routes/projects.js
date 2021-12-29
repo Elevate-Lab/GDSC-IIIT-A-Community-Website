@@ -2,17 +2,6 @@ var express         = require("express");
 var router          = express.Router();
 var Project         = require("../models/project");
 
-
-
-//show project
-router.get("/",async (req,res)=>{
-    try {
-        const projects = await Project.find({})
-        res.json(projects)
-    } catch (error) {
-        console.log(error);
-    }
-})
 //project new
 router.get("/new", (req,res)=>{
     res.render("projects/new"); 
@@ -36,7 +25,7 @@ router.post("/", (req, res) => {
         if (err) {
             console.log(err);
         } else {
-            res.json(newProject)
+            res.redirect("projects");
         }
     });
 });
@@ -53,23 +42,14 @@ router.get("/:project_id/edit", function(req,res){
 });
 
 // project update
-router.put("/:id",async (req,res)=>{
-    const {projectname,description,image,projectLink} = req.body;
-    const newProject = {}
-    if(projectname){newProject.projectname=projectname}
-    if(description){newProject.description=description}
-    if(image){newProject.image=image}
-    if(projectLink){newProject.projectLink=projectLink}
-
-    try {
-    const project = await Project.findById(req.params.id)
-    if(!project){return res.status(401).res("Not Found")}
-    const updatedProject = await Project.findByIdAndUpdate(req.params.id,{$set : newProject},{new:true})
-    res.json(updatedProject)
-    } catch (error) {
-        console.log(error.message)
-        res.status(500).json("Internal server Error")
-    }
+router.put("/:project_id", function(req,res){
+    Project.findByIdAndUpdate(req.params.project_id, req.body.project,(err, updatedProject)=>{
+        if(err){
+            res.redirect("back");    
+        }else{
+            res.redirect("projects");
+        }
+    });
 });
 
 //DESTROY ROUTE

@@ -1,4 +1,4 @@
-import React,{useEffect,useContext} from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import DSBlogCard from "../../Components/DSBlogCard";
 import Headings from "../../Components/Page_headings";
@@ -23,23 +23,11 @@ import { useState } from "react";
 import { ReactComponent as ViewProject } from "../../Assets/svg_link.svg";
 
 import MustReadCard from "../../Components/mustReadCard";
-import apiContext from "../../ContextApi/ApiContext";
 
 
 function Blogs() {
 
-
 	const [admin, setAdmin] = useState(true);
-
-
-	const context = useContext(apiContext)
-	const { data, getAllData, getAttribute } = context
-	let attribute = "blogs";
-	useEffect(() => {
-		getAttribute(attribute)
-		getAllData();
-	}, [data])
-	console.log(data);
 
 	return (
 		<section
@@ -225,10 +213,105 @@ function Blogs() {
 						}}
 						item
 					>
-							{data && data.map((blogs) => {
-							return <DSBlogCard key={blogs._id} blogs={blogs} />
-						})}
-				</Grid>
+						<DSBlogCard
+							title="Learn Microinteraction"
+							body="Lorem ipsum dolor sit amet, 
+                consectetur adipiscing elit. Ornare 
+                pretium placerat ut platea. Purus 
+                blandit integer sagittis massa vel est hac."
+							date="Monday Jan 20 , 2020"
+						/>
+					</Grid>
+					<Grid
+						style={{
+							display: "flex",
+							flexDirection: "row",
+							justifyContent: "center",
+							alignItems: "center",
+						}}
+						item
+					>
+						<DSBlogCard
+							title="Learn Microinteraction"
+							body="Lorem ipsum dolor sit amet, 
+                consectetur adipiscing elit. Ornare 
+                pretium placerat ut platea. Purus 
+                blandit integer sagittis massa vel est hac."
+							date="Monday Jan 20 , 2020"
+						/>
+					</Grid>
+					<Grid
+						style={{
+							display: "flex",
+							flexDirection: "row",
+							justifyContent: "center",
+							alignItems: "center",
+						}}
+						item
+					>
+						<DSBlogCard
+							title="Learn Microinteraction"
+							body="Lorem ipsum dolor sit amet, 
+                consectetur adipiscing elit. Ornare 
+                pretium placerat ut platea. Purus 
+                blandit integer sagittis massa vel est hac."
+							date="Monday Jan 20 , 2020"
+						/>
+					</Grid>
+					<Grid
+						style={{
+							display: "flex",
+							flexDirection: "row",
+							justifyContent: "center",
+							alignItems: "center",
+						}}
+						item
+					>
+						<DSBlogCard
+							title="Learn Microinteraction"
+							body="Lorem ipsum dolor sit amet, 
+                consectetur adipiscing elit. Ornare 
+                pretium placerat ut platea. Purus 
+                blandit integer sagittis massa vel est hac."
+							date="Monday Jan 20 , 2020"
+						/>
+					</Grid>
+					<Grid
+						style={{
+							display: "flex",
+							flexDirection: "row",
+							justifyContent: "center",
+							alignItems: "center",
+						}}
+						item
+					>
+						<DSBlogCard
+							title="Learn Microinteraction"
+							body="Lorem ipsum dolor sit amet, 
+                consectetur adipiscing elit. Ornare 
+                pretium placerat ut platea. Purus 
+                blandit integer sagittis massa vel est hac."
+							date="Monday Jan 20 , 2020"
+						/>
+					</Grid>
+					<Grid
+						style={{
+							display: "flex",
+							flexDirection: "row",
+							justifyContent: "center",
+							alignItems: "center",
+						}}
+						item
+					>
+						<DSBlogCard
+							title="Learn Microinteraction"
+							body="Lorem ipsum dolor sit amet, 
+                consectetur adipiscing elit. Ornare 
+                pretium placerat ut platea. Purus 
+                blandit integer sagittis massa vel est hac."
+							date="Monday Jan 20 , 2020"
+						/>
+					</Grid>
 				</Grid>
 			</div>
 			<div className="heading_plusBtn">
@@ -278,9 +361,50 @@ function Blogs() {
 						}}
 						item
 					>
-						{data && data.map((blogs) => {
-							return <DSBlogCard key={blogs._id} blogs={blogs} />
-						})}
+						<DSBlogCard
+							title="Learn Microinteraction"
+							body="Lorem ipsum dolor sit amet, 
+                consectetur adipiscing elit. Ornare 
+                pretium placerat ut platea. Purus 
+                blandit integer sagittis massa vel est hac."
+							date="Monday Jan 20 , 2020"
+						/>
+					</Grid>
+					<Grid
+						style={{
+							display: "flex",
+							flexDirection: "row",
+							justifyContent: "center",
+							alignItems: "center",
+						}}
+						item
+					>
+						<DSBlogCard
+							title="Learn Microinteraction"
+							body="Lorem ipsum dolor sit amet, 
+                consectetur adipiscing elit. Ornare 
+                pretium placerat ut platea. Purus 
+                blandit integer sagittis massa vel est hac."
+							date="Monday Jan 20 , 2020"
+						/>
+					</Grid>
+					<Grid
+						style={{
+							display: "flex",
+							flexDirection: "row",
+							justifyContent: "center",
+							alignItems: "center",
+						}}
+						item
+					>
+						<DSBlogCard
+							title="Learn Microinteraction"
+							body="Lorem ipsum dolor sit amet, 
+                consectetur adipiscing elit. Ornare 
+                pretium placerat ut platea. Purus 
+                blandit integer sagittis massa vel est hac."
+							date="Monday Jan 20 , 2020"
+						/>
 					</Grid>
 				</Grid> */}
 

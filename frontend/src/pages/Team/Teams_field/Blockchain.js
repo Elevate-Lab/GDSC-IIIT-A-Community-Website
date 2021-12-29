@@ -1,33 +1,53 @@
-import React, { useContext, useEffect } from 'react'
+import React from 'react'
 import MemberCard from '../../../Components/MemberCard/index'
-import apiContext from '../../../ContextApi/ApiContext'
 
 
-function OpenSourceTeam() {
-    const context = useContext(apiContext)
-    const { data, getAllData, getAttribute } = context
-    let attribute = "teams"
-    useEffect(() => {
-        getAttribute(attribute)
-        getAllData();
-    }, [data])
-    const opensourceTeam = data.filter((e) => {
-        if(data){
-        return e.designation === 'Open Source';
-        }
-    })
+function BlockchainTeam() {
+
     return (
-        <div id="opensourceTeam" className="Field_view">
-            {opensourceTeam &&
-                opensourceTeam.map((teams) => {
-                    return <MemberCard
-                    key={teams._id}
-                     team={teams}
-                />
-                })
-            }
+        <div id="Web" className="Field_view">
+            <MemberCard 
+                Name="Supriya"
+                Position="Blockchain"
+                ImageURL="../../Assets/Manav.jpg"
+                GithubLink="xyz"
+                LinkedinLink="xyz"
+                TwitterLink="xyz"
+            />
+            <MemberCard 
+                Name="Supriya"
+                Position="Blockchain"
+                ImageURL="../../Assets/Manav.jpg"
+                GithubLink="xyz"
+                LinkedinLink="xyz"
+                TwitterLink="xyz"
+            />
+            <MemberCard 
+                Name="Supriya"
+                Position="Blockchain"
+                ImageURL="../../Assets/Manav.jpg"
+                GithubLink="xyz"
+                LinkedinLink="xyz"
+                TwitterLink="xyz"
+            />
+            <MemberCard 
+                Name="Supriya"
+                Position="Blockchain"
+                ImageURL="../../Assets/Manav.jpg"
+                GithubLink="xyz"
+                LinkedinLink="xyz"
+                TwitterLink="xyz"
+            />
+            <MemberCard 
+                Name="Supriya"
+                Position="Blockchain"
+                ImageURL="../../Assets/Manav.jpg"
+                GithubLink="xyz"
+                LinkedinLink="xyz"
+                TwitterLink="xyz"
+            />
         </div>
     )}
 
-export default OpenSourceTeam
+export default BlockchainTeam
 

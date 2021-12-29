@@ -31,7 +31,6 @@ import Secondload from './Secondload';
 
 
 import LeaderBoard from './Components/LeaderBoard/LeaderBoard';
-import ApiState from './ContextApi/ApiState';
 
 
 function App() {
@@ -46,7 +45,6 @@ setLoading(false);
   }, [])
 
   return (
-
     <React.Fragment>
       {
 loading?
@@ -54,9 +52,6 @@ loading?
 
 
 :
-
-    <ApiState>
-
     <ViewportProvider>
       <Router>
         <Navbar />
@@ -116,12 +111,8 @@ loading?
         <Footer />
       </Router>
     </ViewportProvider>
-
 }
 </React.Fragment>
-
-    </ApiState>
-
   );
 }
 
