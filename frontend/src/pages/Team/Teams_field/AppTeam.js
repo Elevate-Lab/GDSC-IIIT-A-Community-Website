@@ -29,4 +29,3 @@ function AppTeam() {
     )}
 
 export default AppTeam
-

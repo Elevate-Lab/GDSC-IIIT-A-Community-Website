@@ -29,4 +29,3 @@ return (
 )}
 
 export default WebTeam
-

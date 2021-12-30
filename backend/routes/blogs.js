@@ -6,7 +6,7 @@ const Blog = require('../models/blog');
 router.get("/",async(req,res)=>{
     try {
         const blogs = await Blog.find({})
-        res.json(blogs)
+        res.render("blogs/index",{ blogs })
     } catch (error) {
         console.log(error);
     }
@@ -20,7 +20,7 @@ router.post("/",async (req,res)=>{
        return console.log("PLease Fill all the Area");
     }
   try {
-      const blog =  new Blog({title,author,image,description,bloglink})
+      const blog =  new Blog({tile,author,image,description,bloglink})
       await blog.save();
   } catch (error) {
       console.log(error)
@@ -52,23 +52,12 @@ router.get("/:id/edit",async (req,res)=>{
 //update a blog
 
 router.put("/:id",async (req,res)=>{
-    const {title,author,image,description,bloglink} = req.body;
-    const newBlog = {}
-    if(title){newBlog.title=title}
-    if(description){newBlog.description=description}
-    if(image){newBlog.image=image}
-    if(bloglink){newBlog.bloglink=bloglink}
-    if(author){newBlog.author=author}
- 
-
     try {
-    const blog = await Blog.findById(req.params.id)
-    if(!blog){return res.status(401).res("Not Found")}
-    const updatedBlog = await Blog.findByIdAndUpdate(req.params.id,{$set : newBlog},{new:true})
-    res.json(updatedBlog)
+        const {id} =req.params;
+        const blog = await Blog.findByIdAndUpdate(id,{...req.body.blog})
+        res.redirect("/blogs/"+blog._id)
     } catch (error) {
-        console.log(error.message)
-        res.status(500).json("Internal server Error")
+        console.log(error)
     }
 });
 
@@ -78,7 +67,7 @@ router.delete("/:id",async (req,res)=>{
     try {
         const {id} = req.params;
         const blog = await Blog.findByIdAndDelete(id,req.body);
-        // res.redirect("/blogs");
+        res.redirect("/blogs");
     } catch (error) {
         console.log(error)
     }

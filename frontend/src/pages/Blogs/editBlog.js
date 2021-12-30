@@ -1,24 +1,9 @@
-import React,{useContext,useState} from 'react';
+import React from 'react';
 import { Typography } from '@material-ui/core';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../CommonCSS/formStyle.css';
-import apiContext from '../../ContextApi/ApiContext';
-import { useHistory } from 'react-router';
+
 function EditBlog() {
-    const history = useHistory()
-    const context = useContext(apiContext)
-    const {updateData,previousData} = context
-    console.log(previousData);
-    const [noteValue, setNoteValue] = useState(previousData)
-    const handleClick = (e)=>{
-        e.preventDefault()
-        updateData({...noteValue}) 
-        setNoteValue({title:"",author:"",description:"",image:"",bloglink:""})
-        history.push("/Blogs")
-    }
-    const onChange = (e)=>{
-        setNoteValue({...noteValue,[e.target.name]:e.target.value})
-    }
     return (
     
         <div class="container" id="mainContainer">
@@ -28,27 +13,27 @@ function EditBlog() {
                 <div class="row">
                     <div class="col-sm-6 form-group">
                         <label>Blog Tilte</label>
-                        <input type="text" name="title" value={noteValue.title} placeholder="Blog Title" class="form-control"  onChange={onChange}></input>
+                        <input type="text" name="" placeholder="Blog Title" class="form-control"></input>
                     </div>
                     <div class="col-sm-6 form-group">
                         <label>Author</label>
-                        <input type="text" name="author" value={noteValue.author} placeholder="Author's Name" class="form-control" onChange={onChange}></input>
+                        <input type="text" name="" placeholder="Author's Name" class="form-control"></input>
                     </div>
                 </div>
                 <div class="form-group">
                     <label>Description</label>
-                    <input type="text" name="description" value={noteValue.description} placeholder="Give a short Description about the blog..." rows="3" class="form-control" onChange={onChange}></input>
+                    <input type="text" name="" placeholder="Give a short Description about the blog..." rows="3" class="form-control"></input>
                 </div>
                 <div class="form-group">
                     <label>Image URL</label>
-                    <input type="text" name="image" value={noteValue.image} placeholder="Related image to the blog.." class="form-control" onChange={onChange}></input>
+                    <input type="text" name="" placeholder="Related image to the blog.." class="form-control"></input>
                 </div>
                 <div class="form-group">
                     <label>Blog URL</label>
-                    <input type="email" name="bloglink" value={noteValue.bloglink} placeholder="Provide link to the blog.." class="form-control" onChange={onChange}></input>
+                    <input type="email" name="" placeholder="Provide link to the blog.." class="form-control"></input>
                 </div>
 
-                <button type="button" class="btn btn-info" onClick={handleClick} >Submit</button>
+                <input type="button" class="btn btn-info" value="Submit"></input>
             </form>
         </div>
     

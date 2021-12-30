@@ -5,9 +5,7 @@ const teamSchema =new mongoose.Schema({
     name : String,
     image : String,
     designation : String,
-    linkedinLink : String,
-    facebookLink : String,
-    githubLink : String
+    profilelink : String
 })
 
 module.exports = mongoose.model("Team",teamSchema);

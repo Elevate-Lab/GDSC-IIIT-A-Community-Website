@@ -26,4 +26,3 @@ function CoreTeam() {
     )}
 
 export default CoreTeam
-
