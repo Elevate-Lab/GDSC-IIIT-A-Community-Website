@@ -3,7 +3,7 @@ import apiContext from "../../ContextApi/ApiContext";
 import { Typography } from "@material-ui/core";
 import EventCard from "./EventCard.js";
 
-function EventCards() {
+function EventCards(props) {
 	const context = useContext(apiContext)
 	const { data, getAllData, getAttribute } = context
 	let attribute = "events";
@@ -12,7 +12,7 @@ function EventCards() {
 		getAttribute(attribute)
 		getAllData();
 	}, [data])
-
+	console.log(data);
 	return (
 		<div
 			style={{
@@ -25,8 +25,8 @@ function EventCards() {
 				zIndex:'0'
 			}}
 		>
-			 {data && data.map((event)=>{
-             return <EventCard event={event}/>
+			{data && data.map((event)=>{
+             return <EventCard event={event} upcoming={props.upcoming}/>
             })}
 		</div>
 	);

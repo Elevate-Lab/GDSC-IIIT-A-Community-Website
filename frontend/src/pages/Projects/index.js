@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
-import { Link } from "react-router-dom";
 import apiContext from "../../ContextApi/ApiContext";
+import { Link } from "react-router-dom";
 import Headings from "../../Components/Page_headings";
 import ProjectCard from "../../Components/ProjectCard/ProjectCard";
 import project_illustration from "../../Assets/Projects_page_illustration.svg";
@@ -91,7 +91,7 @@ function Projects() {
 					alignItems: "center",
 				}}
 			>
-					{data && data.map((project) => {
+				{data && data.map((project) => {
 			  return <ProjectCard project={project}/>
 			})}
 			</div>

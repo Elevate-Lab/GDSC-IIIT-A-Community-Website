@@ -10,6 +10,7 @@ function WebTeam() {
         getAttribute(attribute)
         getAllData();
     }, [data])
+    console.log(data);
     const webTeam = data.filter((e) => {
         return e.designation === 'Web';
     })

@@ -3,7 +3,7 @@ import MemberCard from '../../../Components/MemberCard/index'
 import apiContext from '../../../ContextApi/ApiContext'
 
 
-function OpenSourceTeam() {
+function BlockchainTeam() {
     const context = useContext(apiContext)
     const { data, getAllData, getAttribute } = context
     let attribute = "teams"
@@ -13,7 +13,7 @@ function OpenSourceTeam() {
     }, [data])
     const opensourceTeam = data.filter((e) => {
         if(data){
-        return e.designation === 'Open Source';
+        return e.designation === 'Block Chain';
         }
     })
     return (
@@ -29,5 +29,5 @@ function OpenSourceTeam() {
         </div>
     )}
 
-export default OpenSourceTeam
+export default BlockchainTeam
 

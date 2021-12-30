@@ -1,4 +1,4 @@
-import * as React from "react";
+
 import { useState } from "react";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
@@ -16,9 +16,13 @@ import image1 from "../../Assets/Images/img1.png";
 import { flexbox } from "@mui/system";
 import imag from "./thankyou.jpg"
 import {Images} from "./BlogData.js"
-
-function BlogCard() {
+import React, { useContext } from 'react'
+import apiContext from '../../ContextApi/ApiContext'
+function BlogCard(props) {
 	const [admin, setAdmin] = useState(true);
+	const context = useContext(apiContext)
+    const {removeData,previousCardData} = context
+    const {blogs} = props
 	return (
 		<>
 		
@@ -32,14 +36,13 @@ function BlogCard() {
 						<CardContent>
 							<div style={{color:'black',fontWeight:'bold',textAlign:'center'}}>
 								<br></br>
-								Inclusivo Builds Job for Job Seekers
+								{blogs.title}
 								
 							</div>
 							<br></br>
 							<div className={styles.text}>
 								<Typography variant="body2" sx={{ margin: 0 }}>
-									"Inclusivo is an online platform that makes it easier for people from underprivileged communities
-									to find and get relevant jobs in their respective fields"
+									{blogs.description}
 								</Typography>
 							</div>
 
@@ -53,10 +56,10 @@ function BlogCard() {
 										color="text.primary"
 										gutterBottom
 									>
-										Elemento
+										{blogs.author}
 									</Typography>
 									<Typography sx={{ fontSize: 10, margin: "0" }} color="text.secondary" gutterBottom>
-										jan 28 . 8 min read
+										{blogs.date}
 									</Typography>
 								</div>
 							</div>
@@ -66,7 +69,7 @@ function BlogCard() {
 
 						<CardActions className={styles.buttons}>
 
-							<Link to="" style={{ textDecoration: "none" }}>
+							<Link to={blogs.bloglink} style={{ textDecoration: "none" }}>
 								<Button
 									className={styles.btnP}
 									width='20rem'
@@ -82,8 +85,9 @@ function BlogCard() {
 						</CardActions>
 						{admin && (
 							<CardActions className={styles.buttonsAdmin}>
-								<Link to="" style={{ textDecoration: "none" }}>
+								
 									<Button
+									onClick={()=>removeData(blogs._id)}
 										className={styles.btn}
 										size="small"
 										variant="contained"
@@ -92,9 +96,10 @@ function BlogCard() {
 									>
 										Delete
 									</Button>
-								</Link>
-								<Link to="" style={{ textDecoration: "none" }}>
+							
+								<Link to="/Blogs/EditBlog" onClick={()=>previousCardData(blogs)} style={{ textDecoration: "none" }}>
 									<Button
+									
 										className={styles.btn}
 										size="small"
 										variant="outlined"

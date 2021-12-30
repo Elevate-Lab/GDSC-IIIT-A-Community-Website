@@ -24,6 +24,7 @@ import EditMember from './pages/Team/editMember';
 import NewMember from './pages/Team/newMember';
 import LoginPage from "./pages/Projects/loginPage"
 import ViewportProvider from "./viewport";
+import ApiState from './ContextApi/ApiState';
 
 // import Loader from "../src/Loader";
 import { useState, useEffect } from 'react';
@@ -31,7 +32,6 @@ import Secondload from './Secondload';
 
 
 import LeaderBoard from './Components/LeaderBoard/LeaderBoard';
-import ApiState from './ContextApi/ApiState';
 
 
 function App() {
@@ -46,7 +46,6 @@ setLoading(false);
   }, [])
 
   return (
-
     <React.Fragment>
       {
 loading?
@@ -54,9 +53,7 @@ loading?
 
 
 :
-
-    <ApiState>
-
+<ApiState>
     <ViewportProvider>
       <Router>
         <Navbar />
@@ -116,12 +113,9 @@ loading?
         <Footer />
       </Router>
     </ViewportProvider>
-
+    </ApiState>
 }
 </React.Fragment>
-
-    </ApiState>
-
   );
 }
 

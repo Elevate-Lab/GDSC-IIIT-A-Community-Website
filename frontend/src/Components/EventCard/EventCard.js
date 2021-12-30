@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from "react";
 import { useState,useContext } from 'react';
 import apiContext from '../../ContextApi/ApiContext';
 import Box from "@mui/material/Box";
@@ -21,7 +21,7 @@ function EventCard(props) {
 	const {event} = props
     const context =useContext(apiContext)
     const {removeData,previousCardData} = context
-    const [admin, setAdmin] = useState(true);
+	const [admin, setAdmin] = useState(true);
 	const [upcoming, setUpcoming] = useState(props.upcoming);
 	return (
 		// <Box className="card" sx={{ minWidth: 275 }}>
@@ -43,7 +43,7 @@ function EventCard(props) {
 					<div className={styles.container}>
 						<div className={styles.name}>
 							<Typography sx={{ fontSize: 18, fontWeight: "bold" }} color="text.primary" gutterBottom>
-							{event.name}
+								{event.name}
 							</Typography>
 							<Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
 								<Calendar className={styles.svg} />
@@ -58,19 +58,8 @@ function EventCard(props) {
 					{/* <Headings LargeHeading="Project Name" SmallHeading="tagline" /> */}
 
 					<div className={styles.text}>
-
 						<Typography variant="body2" style={{width:'90%'}}>
-						Create a class Encapsulated TermDay, which applies the principles of data
-encapsulation as an alternative to TermDay. Your modified class should throw
-an exception if an invalid day of the week or week number is specified.
-The use of two int variables to represent the day and the week requires
-64 bits of storage. How many bits are actually required? Adapt<br></br>
-EncapsulatedTermDay class to achieve the same functionality using only one
-member variable of a primitive type. You should justify your choice of type
-
-						<Typography variant="body2">
-							{event.description}
-
+						{event.description}
 						</Typography>
 					</div>
 				</CardContent>
@@ -94,9 +83,9 @@ member variable of a primitive type. You should justify your choice of type
 
 				{admin && (
 					<CardActions className={styles.buttonsAdmin}>
-					
+						
 							<Button
-							onClick={()=>removeData(event._id)}
+							 onClick={()=>removeData(event._id)}
 								className={styles.btn}
 								size="small"
 								variant="contained"
@@ -105,8 +94,8 @@ member variable of a primitive type. You should justify your choice of type
 							>
 								Delete
 							</Button>
-	
-						<Link to="Events/EditEvent"  onClick={()=>previousCardData(event)} style={{ textDecoration: "none" }}>
+						
+						<Link onClick={()=>previousCardData(event)} to="/Events/editEvent" style={{ textDecoration: "none" }}>
 							<Button
 								className={styles.btn}
 								size="small"

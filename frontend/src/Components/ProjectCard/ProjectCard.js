@@ -1,4 +1,6 @@
 import * as React from "react";
+import { useState,useContext } from "react";
+import apiContext from "../../ContextApi/ApiContext";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -12,21 +14,19 @@ import { ReactComponent as Github } from "../../Assets/Vector.svg";
 import { Link } from "react-router-dom";
 // import Stack from "@mui/material/Stack";
 import image1 from "../../Assets/Images/img1.png";
-import { useState,useContext } from "react";
-import apiContext from "../../ContextApi/ApiContext";
 
 function ProjectCard(props) {
 	const context = useContext(apiContext)
     const {removeData,previousCardData} = context
-	const [admin, setAdmin] = useState(false);
 	const {project} = props
+	const [admin, setAdmin] = useState(true);
 	return (
 		<Box className={styles.card} sx={{ minWidth: 275 }}>
 			<Card variant="outlined">
 				<CardContent>
 					<div className={styles.container}>
 						<div className={styles.img}>
-							<Avatar src={image1} sx={{ width: 76, height: 76 }} />
+							<Avatar src={project.image}  sx={{ width: 76, height: 76 }} />
 						</div>
 						<div className={styles.name}>
 							<Typography
@@ -60,7 +60,7 @@ function ProjectCard(props) {
 							Github Link
 						</Button>
 					</Link>
-					<Link to="" style={{ textDecoration: "none" }}>
+					<Link to={project.projectLink} style={{ textDecoration: "none" }}>
 						<Button
 							className={styles.btn}
 							size="small"
@@ -73,8 +73,9 @@ function ProjectCard(props) {
 						</Button>
 					</Link>
 				</CardActions>
-			
+				{admin && (
 					<CardActions className={styles.buttonsAdmin}>
+					
 							<Button
 							onClick={()=>removeData(project._id)}
 								className={styles.btn}
@@ -86,7 +87,7 @@ function ProjectCard(props) {
 								Delete
 							</Button>
 					
-						<Link to="/Projects/EditProject" onClick={()=>previousCardData(project)} style={{ textDecoration: "none" }}>
+						<Link  to="/Projects/EditProject" onClick={()=>previousCardData(project)} style={{ textDecoration: "none" }}>
 							<Button
 								className={styles.btn}
 								size="small"
@@ -98,7 +99,7 @@ function ProjectCard(props) {
 							</Button>
 						</Link>
 					</CardActions>
-			
+				)}
 			</Card>
 		</Box>
 	);
