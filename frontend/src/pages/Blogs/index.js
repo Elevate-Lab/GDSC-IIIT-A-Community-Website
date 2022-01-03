@@ -31,9 +31,9 @@ function Blogs() {
 	const { data, getAllData, getAttribute } = context
 	let attribute = "blogs";
 	useEffect(() => {
-		getAttribute(attribute)
-		getAllData();
-	}, [data])
+		//getAttribute(attribute)
+		getAllData(attribute);
+	}, [])
 	const [admin, setAdmin] = useState(true);
 
 	return (

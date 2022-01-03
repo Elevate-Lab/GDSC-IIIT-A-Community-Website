@@ -4,25 +4,25 @@ import api from '../api/baseApi'
 import ApiContext from './ApiContext'
 
 const ApiState = (props) => {
-  const [parameter, setParameter] = useState("teams")
-    const [data, setData] = useState("")
-    const [previousData, setPreviousData] = useState("")
-    const [coreTeam, setCoreTeam] = useState("")
+  const [parameter, setParameter] = useState(null)
+    const [data, setData] = useState(null)
+    const [previousData, setPreviousData] = useState(null)
+    const [coreTeam, setCoreTeam] = useState({})
     const getAttribute = (attribute) => {
         setParameter(attribute);
        }
 
  //BLogs      
 //GET ALL CARDS
-const retrieveData = async () => {
+const retrieveData = async (parameter) => {
     const headers = {
       'Content-Type': 'application/json'
     }
     const response = await api.get(`/${parameter}`, { headers })
     return response.data;
   }
-  const getAllData = async () => {
-    const allDatas = await retrieveData();
+  const getAllData = async (parameter) => {
+    const allDatas = await retrieveData(parameter);
     setData(allDatas);
     if (data) {
       const coreTeams = data.filter((e) => {

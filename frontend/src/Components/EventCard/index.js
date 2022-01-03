@@ -5,13 +5,16 @@ import EventCard from "./EventCard.js";
 
 function EventCards(props) {
 	const context = useContext(apiContext)
-	const { data, getAllData, getAttribute } = context
+	const { data, getAllData, getAttribute } = context;
+	
 	let attribute = "events";
 	
 	useEffect(() => {
-		getAttribute(attribute)
-		getAllData();
-	}, [data])
+		console.log("Event")
+
+		//getAttribute(attribute)
+		getAllData(attribute);
+	}, [])
 	console.log(data);
 	return (
 		<div

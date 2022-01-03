@@ -8,10 +8,14 @@ function CoreTeam() {
     const context = useContext(apiContext)
         const { coreTeam,data, getAllData, getAttribute } = context
         let attribute = "teams"
-        useEffect(() => {
+
+        const helper = ( ) => {
             getAttribute(attribute)
             getAllData();
-        }, [data])
+        }
+        useEffect(() => {
+            helper()
+        }, [])
     return (
             <div id="CoreTeam" className="Field_view">
             {coreTeam &&
