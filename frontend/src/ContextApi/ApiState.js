@@ -14,22 +14,22 @@ const ApiState = (props) => {
 
  //BLogs      
 //GET ALL CARDS
-const retrieveData = async () => {
+const retrieveData = async (parameter) => {
     const headers = {
       'Content-Type': 'application/json'
     }
     const response = await api.get(`/${parameter}`, { headers })
     return response.data;
   }
-  const getAllData = async () => {
-    const allDatas = await retrieveData();
+  const getAllData = async (parameter) => {
+    const allDatas = await retrieveData(parameter);
     setData(allDatas);
-    if (data) {
-      const coreTeams = data.filter((e) => {
-        return e.designation === 'Core Team'
-      })
-      setCoreTeam(coreTeams)
-    }
+    // if (data) {
+    //   const coreTeams = data.filter((e) => {
+    //     return e.designation === 'Core Team'
+    //   })
+    //   setCoreTeam(coreTeams)
+    // }
   }
 
 //post a card

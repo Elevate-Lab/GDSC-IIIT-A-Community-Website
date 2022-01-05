@@ -9,9 +9,9 @@ function EventCards(props) {
 	let attribute = "events";
 	
 	useEffect(() => {
-		getAttribute(attribute)
-		getAllData();
-	}, [data])
+		//getAttribute(attribute)
+		getAllData(attribute);
+	}, [])
 	console.log(data);
 	return (
 		<div

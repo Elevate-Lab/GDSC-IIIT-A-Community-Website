@@ -10,7 +10,7 @@ function BlockchainTeam() {
     useEffect(() => {
         getAttribute(attribute)
         getAllData();
-    }, [data])
+    }, [])
     const opensourceTeam = data.filter((e) => {
         if(data){
         return e.designation === 'Block Chain';

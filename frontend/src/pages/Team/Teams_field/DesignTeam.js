@@ -8,10 +8,10 @@ function DesignTeam() {
     const { data, getAllData, getAttribute } = context
     let attribute = "teams"
     useEffect(() => {
-        getAttribute(attribute)
-        getAllData();
-    }, [data])
-    console.log(data);
+        //getAttribute(attribute)
+        getAllData(attribute);
+    }, [])
+  
     const designTeam = data.filter((e) => {
         return e.designation === 'Design';
     })

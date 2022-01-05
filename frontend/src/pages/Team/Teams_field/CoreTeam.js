@@ -6,16 +6,19 @@ import apiContext from '../../../ContextApi/ApiContext'
 
 function CoreTeam() {
     const context = useContext(apiContext)
-        const { coreTeam,data, getAllData, getAttribute } = context
+        const { data, getAllData, getAttribute } = context
         let attribute = "teams"
         useEffect(() => {
-            getAttribute(attribute)
-            getAllData();
-        }, [data])
+            //getAttribute(attribute)
+            getAllData(attribute);
+        }, [])
+        const coreTeams = data.filter((e) => {
+            return e.designation === 'Core Team'
+          })
     return (
             <div id="CoreTeam" className="Field_view">
-            {coreTeam &&
-                coreTeam.map((teams) => {
+            {coreTeams &&
+                coreTeams.map((teams) => {
                     return <MemberCard
                     key={teams._id}
                      team={teams}

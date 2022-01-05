@@ -14,9 +14,9 @@ function Projects() {
 	const { data, getAllData, getAttribute } = context;
 	let attribute = "projects";
 	useEffect(() => {
-		getAttribute(attribute)
-		getAllData();
-	}, [data])
+		//getAttribute(attribute)
+		getAllData(attribute);
+	}, [])
 	return (
 		<div className={styles.projectsPage}>
 			<div

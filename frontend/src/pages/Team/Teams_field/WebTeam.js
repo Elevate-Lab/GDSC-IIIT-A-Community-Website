@@ -7,10 +7,10 @@ function WebTeam() {
     const { data, getAllData, getAttribute } = context
     let attribute = "teams"
     useEffect(() => {
-        getAttribute(attribute)
-        getAllData();
-    }, [data])
-    console.log(data);
+       // getAttribute(attribute)
+        getAllData(attribute);
+    }, [])
+   
     const webTeam = data.filter((e) => {
         return e.designation === 'Web';
     })
