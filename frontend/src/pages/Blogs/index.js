@@ -34,7 +34,7 @@ function Blogs() {
 		//getAttribute(attribute)
 		//getAllData(attribute);
 		getAllBlogData();
-	}, [])
+	}, [blogs])
 	const [admin, setAdmin] = useState(true);
   console.log(blogs);
 	return (

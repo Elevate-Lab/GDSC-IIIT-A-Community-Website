@@ -11,7 +11,7 @@ function AppTeam() {
         // getAttribute(attribute)
         // getAllData();
         getAllTeamData();
-    }, [teams ])
+    }, [teams])
 
     const appTeam = teams.filter((e) => {
         return e.designation === 'App';

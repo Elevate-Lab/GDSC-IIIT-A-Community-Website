@@ -19,6 +19,7 @@ function Projects() {
 		getAllProjectData();
 	}, [projects])
 	console.log(projects);
+	let projectsArr = Array.from(projects)
 	return (
 		<div className={styles.projectsPage}>
 			<div
@@ -94,8 +95,8 @@ function Projects() {
 				}}
 			>
 			
-				{projects && projects.map((projects) => {
-			  return <ProjectCard project={projects}/>
+				{projectsArr && projectsArr.map((project) => {
+			  return <ProjectCard key={project._id} project={project}/>
 			})}
 			</div>
 

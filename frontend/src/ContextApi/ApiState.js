@@ -54,7 +54,7 @@ const ApiState = (props) => {
     const newData = data.filter((e) => {
       return e.id !== id;
     });
-    setData(newData)
+    setTeams(newData)
   }
   //edit a card
   const previousCardData = (oldData) => {
@@ -64,7 +64,7 @@ const ApiState = (props) => {
     console.log(values);
     const response = await api.put(`/teams/${values._id}`, values)
     const { _id } = response.data;
-    setData(
+    setTeams(data &&
       data.map((value) => {
         return value._id === _id ? { ...response.data } : value
       })
