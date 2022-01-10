@@ -20,7 +20,7 @@ import { ReactComponent as Clock } from "../../Assets/clock.svg";
 function EventCard(props) {
 	const {event} = props
     const context =useContext(apiContext)
-    const {removeData,previousCardData} = context
+    const {removeData,previousCardData,removeEvent} = context
 	const [admin, setAdmin] = useState(true);
 	const [upcoming, setUpcoming] = useState(props.upcoming);
 	return (
@@ -85,7 +85,7 @@ function EventCard(props) {
 					<CardActions className={styles.buttonsAdmin}>
 						
 							<Button
-							 onClick={()=>removeData(event._id)}
+							 onClick={()=>removeEvent(event._id)}
 								className={styles.btn}
 								size="small"
 								variant="contained"

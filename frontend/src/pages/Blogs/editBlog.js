@@ -7,12 +7,12 @@ import { useHistory } from 'react-router';
 function EditBlog() {
     const history = useHistory()
     const context = useContext(apiContext)
-    const {updateData,previousData} = context
+    const {updateData,previousData,updateBlog} = context
     console.log(previousData);
     const [noteValue, setNoteValue] = useState(previousData)
     const handleClick = (e)=>{
         e.preventDefault()
-        updateData({...noteValue}) 
+        updateBlog({...noteValue}) 
         setNoteValue({title:"",author:"",description:"",image:"",bloglink:""})
         history.push("/Blogs")
     }

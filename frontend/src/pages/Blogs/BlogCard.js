@@ -21,7 +21,7 @@ import apiContext from '../../ContextApi/ApiContext'
 function BlogCard(props) {
 	const [admin, setAdmin] = useState(true);
 	const context = useContext(apiContext)
-    const {removeData,previousCardData} = context
+    const {removeData,previousCardData,removeBlog} = context
     const {blogs} = props
 	return (
 		<>
@@ -87,7 +87,7 @@ function BlogCard(props) {
 							<CardActions className={styles.buttonsAdmin}>
 								
 									<Button
-									onClick={()=>removeData(blogs._id)}
+									onClick={()=>removeBlog(blogs._id)}
 										className={styles.btn}
 										size="small"
 										variant="contained"

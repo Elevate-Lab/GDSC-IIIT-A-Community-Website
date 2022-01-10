@@ -5,13 +5,14 @@ import apiContext from '../../../ContextApi/ApiContext'
 
 function BlockchainTeam() {
     const context = useContext(apiContext)
-    const { data, getAllData, getAttribute } = context
+    const { data, getAllData, getAttribute,getAllTeamData ,teams } = context
     let attribute = "teams"
     useEffect(() => {
-        getAttribute(attribute)
-        getAllData();
-    }, [])
-    const opensourceTeam = data.filter((e) => {
+        // getAttribute(attribute)
+        // getAllData();
+        getAllTeamData();
+    }, [teams])
+    const opensourceTeam = teams.filter((e) => {
         if(data){
         return e.designation === 'Block Chain';
         }

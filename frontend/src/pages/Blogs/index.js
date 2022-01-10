@@ -28,14 +28,15 @@ import MustReadCard from "../../Components/mustReadCard";
 
 function Blogs() {
 	const context = useContext(apiContext)
-	const { data, getAllData, getAttribute } = context
+	const { data, getAllData, getAttribute ,blogs,getAllBlogData,addBlogCard} = context
 	let attribute = "blogs";
 	useEffect(() => {
 		//getAttribute(attribute)
-		getAllData(attribute);
+		//getAllData(attribute);
+		getAllBlogData();
 	}, [])
 	const [admin, setAdmin] = useState(true);
-
+  console.log(blogs);
 	return (
 		<section
 			className="Blogs_section"
@@ -196,8 +197,8 @@ function Blogs() {
 				}}
 			>
 				
-				{data && data.map((blogs) => {
-							return <BlogCard key={blogs._id} blogs={blogs} />
+				{blogs && blogs.map((blog) => {
+							return <BlogCard key={blog._id} blogs={blog} />
 						})}
 			</div>
 

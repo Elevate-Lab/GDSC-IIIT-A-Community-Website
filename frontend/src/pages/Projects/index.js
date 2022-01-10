@@ -11,12 +11,14 @@ import HeadingButton from "../../Components/Heading_button";
 
 function Projects() {
 	const context = useContext(apiContext)
-	const { data, getAllData, getAttribute } = context;
+	const { data, getAllData, getAttribute,getAllProjectData,projects } = context;
 	let attribute = "projects";
 	useEffect(() => {
 		//getAttribute(attribute)
-		getAllData(attribute);
-	}, [])
+		//getAllData(attribute);
+		getAllProjectData();
+	}, [projects])
+	console.log(projects);
 	return (
 		<div className={styles.projectsPage}>
 			<div
@@ -91,8 +93,9 @@ function Projects() {
 					alignItems: "center",
 				}}
 			>
-				{data && data.map((project) => {
-			  return <ProjectCard project={project}/>
+			
+				{projects && projects.map((projects) => {
+			  return <ProjectCard project={projects}/>
 			})}
 			</div>
 

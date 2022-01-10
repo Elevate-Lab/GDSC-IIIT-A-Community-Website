@@ -17,7 +17,7 @@ import image1 from "../../Assets/Images/img1.png";
 
 function ProjectCard(props) {
 	const context = useContext(apiContext)
-    const {removeData,previousCardData} = context
+    const {removeData,previousCardData,removeProject} = context
 	const {project} = props
 	const [admin, setAdmin] = useState(true);
 	return (
@@ -77,7 +77,7 @@ function ProjectCard(props) {
 					<CardActions className={styles.buttonsAdmin}>
 					
 							<Button
-							onClick={()=>removeData(project._id)}
+							onClick={()=>removeProject(project._id)}
 								className={styles.btn}
 								size="small"
 								variant="contained"

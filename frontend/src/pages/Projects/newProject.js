@@ -7,11 +7,11 @@ import apiContext from '../../ContextApi/ApiContext';
 function NewProject() {
     const history = useHistory()
     const context = useContext(apiContext)
-    const {addACard} = context
+    const {addACard,addProjectCard} = context
     const [noteValue, setNoteValue] = useState({projectname:"",description:"",image:"",projectLink:""})
     const handleClick = (e)=>{
         e.preventDefault()
-        addACard({...noteValue}) 
+        addProjectCard({...noteValue}) 
         setNoteValue({projectname:"",description:"",image:"",projectLink:""})
         history.push("/Projects")
     }

@@ -7,11 +7,11 @@ import { useHistory } from 'react-router';
 function NewMember() {
     const history = useHistory()
     const context = useContext(apiContext)
-    const {updateData,previousData} = context
+    const {updateData,previousData,updateTeam} = context
     const [noteValue, setNoteValue] = useState(previousData)
     const handleClick = (e)=>{
          e.preventDefault()
-        updateData({...noteValue}) 
+        updateTeam({...noteValue}) 
         setNoteValue({name:"",image:"",designation:"",linkedinLink:"",githubLink:"",facebookLink:""})
         history.push("/Team")
     }

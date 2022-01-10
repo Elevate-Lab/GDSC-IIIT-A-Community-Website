@@ -9,7 +9,7 @@ import Button from "@mui/material/Button";
 function MemberCard(props) {
 	const {team} = props
     const context = useContext(apiContext)
-    const {removeData , previousCardData} =context
+    const {removeData , previousCardData,removeTeam} =context
 	const [admin, setAdmin] = useState(true);
 	return (
 		<div className="MemberCard_container">
@@ -44,7 +44,7 @@ function MemberCard(props) {
 				<div className="buttonsAdmin">
 					
 						<Button
-						onClick={()=>removeData(team._id)}
+						onClick={()=>removeTeam(team._id)}
 							className="btn"
 							size="small"
 							variant="contained"

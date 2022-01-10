@@ -5,14 +5,15 @@ import EventCard from "./EventCard.js";
 
 function EventCards(props) {
 	const context = useContext(apiContext)
-	const { data, getAllData, getAttribute } = context
+	const { data, getAllData, getAttribute,getAllEventData,events } = context
 	let attribute = "events";
 	
 	useEffect(() => {
 		//getAttribute(attribute)
-		getAllData(attribute);
+		//getAllData(attribute);
+		getAllEventData();
 	}, [])
-	console.log(data);
+
 	return (
 		<div
 			style={{
@@ -25,7 +26,7 @@ function EventCards(props) {
 				zIndex:'0'
 			}}
 		>
-			{data && data.map((event)=>{
+			{events && events.map((event)=>{
              return <EventCard event={event} upcoming={props.upcoming}/>
             })}
 		</div>

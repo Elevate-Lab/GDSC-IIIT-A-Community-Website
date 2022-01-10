@@ -8,11 +8,11 @@ import { useHistory } from 'react-router';
 function EditEvent() {
     const history = useHistory()
     const context = useContext(apiContext)
-    const {updateData,previousData} = context
+    const {updateData,previousData,updateEvent} = context
     const [noteValue, setNoteValue] = useState(previousData)
     const handleClick = (e)=>{
         e.preventDefault()
-        updateData({...noteValue}) 
+        updateEvent({...noteValue}) 
         setNoteValue({name:"",organizer:"",description:"",image:"",eventLink:"",startDate:"",endDate:"",platform:""})
         history.push("/Events")
     }

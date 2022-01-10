@@ -8,11 +8,11 @@ import { useHistory } from 'react-router';
 function NewEvent() {
     const history = useHistory()
     const context = useContext(apiContext)
-    const {addACard} = context
+    const {addACard,addEventCard} = context
     const [noteValue, setNoteValue] = useState({name:"",organizer:"",description:"",image:"",eventLink:"",startDate:"",endDate:"",platform:""})
     const handleClick = (e)=>{
         e.preventDefault()
-        addACard({...noteValue}) 
+        addEventCard({...noteValue}) 
         setNoteValue({name:"",organizer:"",description:"",image:"",eventLink:"",startDate:"",endDate:"",platform:""})
         history.push("/Events")
     }

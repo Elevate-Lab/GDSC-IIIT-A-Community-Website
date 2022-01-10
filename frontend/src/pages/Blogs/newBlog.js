@@ -8,11 +8,11 @@ import { useHistory } from 'react-router';
 function NewBlog() {
     const history = useHistory()
     const context = useContext(apiContext)
-    const {addACard} = context
+    const {addACard,addBlogCard} = context
     const [noteValue, setNoteValue] = useState({title:"",author:"",description:"",image:"",bloglink:""})
     const handleClick = (e)=>{
         e.preventDefault()
-        addACard({...noteValue}) 
+        addBlogCard({...noteValue}) 
         setNoteValue({title:"",author:"",description:"",image:"",bloglink:""})
         history.push("/Blogs")
     }
