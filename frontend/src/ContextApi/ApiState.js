@@ -111,7 +111,7 @@ const addBlogCard = async (values) => {
    console.log(values);
    const response = await api.put(`/blogs/${values._id}`, values)
    const { _id } = response.data;
-   setBlogs(
+   setBlogs(data &&
      data.map((value) => {
        return value._id === _id ? { ...response.data } : value
      })

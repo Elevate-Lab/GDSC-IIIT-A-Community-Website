@@ -28,7 +28,7 @@ function BlogCard(props) {
 		
 		<div>
 			<div style={{ marginBottom: '-2.6rem', zIndex: "0" }} >
-				<img src={imag} style={{ width: '25rem', height: '17rem',cursor:'not-allowed' }} />
+				<img src={blogs.image} style={{ width: '25rem', height: '17rem',cursor:'not-allowed' }} />
 			</div>
 			<div style={{ zIndex: "1" }}>
 				<Box className={styles.card} sx={{ minWidth: 275 }}>
