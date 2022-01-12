@@ -46,15 +46,31 @@ function DSBlogCard({title, date, body}) {
                     justifyContent: 'space-between',
                     marginTop: 50
                 }}>
+                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The poin
+                    t of using Lorem Ipsum is that it has a
+                     more-or-less normal distribution of letters, 
+                     as opposed to using
                     <Typography style={{
                         fontFamily: 'poppins',
                         fontSize: '1rem',
+                       /* It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout
+        
+                        . The point of using Lorem Ipsum is that it has a more-or-less normal distribut
+                        ion of letters, as opposed to using*/
                         fontWeight: 600,
                     }}>
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout
+                        . The point of using Lorem Ipsum is that it has
+                         a more-or-less normal distribution of let
+                         ters, as opposed to using
                         Read Full Blog
                     </Typography>
                     <div style={{
                         display: 'flex',
+                        /* It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout
+        
+                        . The point of using Lorem Ipsum is that it has a more-or-less normal distribut
+                        ion of letters, as opposed to using*/
                         flexDirection: 'row'
                     }}>
                         <DSBtn
@@ -62,6 +78,10 @@ function DSBlogCard({title, date, body}) {
                             backgroundColor="#f5edff"
                             height='2rem'
                             borderRadius={5}
+                            /* It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout
+        
+                        . The point of using Lorem Ipsum is that it has a more-or-less normal distribut
+                        ion of letters, as opposed to using*/
                             color="#AF48FF"
                             style={{
                                 fontSize: '1rem'
