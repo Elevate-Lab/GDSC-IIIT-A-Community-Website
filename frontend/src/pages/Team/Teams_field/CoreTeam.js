@@ -1,51 +1,30 @@
-import React from 'react'
+import React, { useContext, useEffect,useState } from 'react'
 import MemberCard from '../../../Components/MemberCard/index'
+import apiContext from '../../../ContextApi/ApiContext'
+
 
 
 function CoreTeam() {
-
+    const context = useContext(apiContext)
+    const {coreTeam, data, getAllData, getAttribute,getAllTeamData ,teams } = context
+    let attribute = "teams"
+    useEffect(() => {
+        // getAttribute(attribute)
+        // getAllData();
+        getAllTeamData();
+    }, [teams])
+    console.log(teams);
+    console.log(coreTeam);
     return (
-        <div id="CoreTeam" className="Field_view">
-            <MemberCard 
-                Name="Tejas Mane"
-                Position="Core Team"
-                ImageURL="../../Assets/TejasMane.jpg"
-                GithubLink="xyz"
-                LinkedinLink="xyz"
-                TwitterLink="xyz"
-            />
-            <MemberCard 
-                Name="Tejas Mane"
-                Position="Core Team"
-                ImageURL="../../Assets/TejasMane.jpg"
-                GithubLink="xyz"
-                LinkedinLink="xyz"
-                TwitterLink="xyz"
-            />
-            <MemberCard 
-                Name="Tejas Mane"
-                Position="Core Team"
-                ImageURL="../../Assets/TejasMane.jpg"
-                GithubLink="xyz"
-                LinkedinLink="xyz"
-                TwitterLink="xyz"
-            />
-            <MemberCard 
-                Name="Tejas Mane"
-                Position="Core Team"
-                ImageURL="../../Assets/TejasMane.jpg"
-                GithubLink="xyz"
-                LinkedinLink="xyz"
-                TwitterLink="xyz"
-            />
-            <MemberCard 
-                Name="Tejas Mane"
-                Position="Core Team"
-                ImageURL="../../Assets/TejasMane.jpg"
-                GithubLink="xyz"
-                LinkedinLink="xyz"
-                TwitterLink="xyz"
-            />
+            <div id="CoreTeam" className="Field_view">
+            {coreTeam &&
+                coreTeam.map((teams) => {
+                    return <MemberCard
+                    key={teams._id}
+                     team={teams}
+                />
+                })
+            }
         </div>
     )}
 

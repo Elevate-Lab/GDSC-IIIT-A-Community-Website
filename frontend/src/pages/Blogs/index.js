@@ -1,4 +1,5 @@
-import React from "react";
+import React,{useEffect,useContext} from "react";
+import apiContext from "../../ContextApi/ApiContext";
 import { Link } from "react-router-dom";
 import DSBlogCard from "../../Components/DSBlogCard";
 import Headings from "../../Components/Page_headings";
@@ -26,9 +27,16 @@ import MustReadCard from "../../Components/mustReadCard";
 
 
 function Blogs() {
-
+	const context = useContext(apiContext)
+	const { data, getAllData, getAttribute ,blogs,getAllBlogData,addBlogCard} = context
+	let attribute = "blogs";
+	useEffect(() => {
+		//getAttribute(attribute)
+		//getAllData(attribute);
+		getAllBlogData();
+	}, [blogs])
 	const [admin, setAdmin] = useState(true);
-
+  console.log(blogs);
 	return (
 		<section
 			className="Blogs_section"
@@ -188,11 +196,10 @@ function Blogs() {
 					marginLeft: '2rem'
 				}}
 			>
-				<BlogCard />
-				<BlogCard />
-				<BlogCard />
-				<BlogCard />
-				<BlogCard />
+				
+				{blogs && blogs.map((blog) => {
+							return <BlogCard key={blog._id} blogs={blog} />
+						})}
 			</div>
 
 			{/* <Grid

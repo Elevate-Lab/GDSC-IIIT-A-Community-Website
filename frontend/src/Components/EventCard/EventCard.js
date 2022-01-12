@@ -1,5 +1,6 @@
 import * as React from "react";
-import { useState } from "react";
+import { useState,useContext } from 'react';
+import apiContext from '../../ContextApi/ApiContext';
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -17,6 +18,9 @@ import { ReactComponent as Clock } from "../../Assets/clock.svg";
 // import Stack from "@mui/material/Stack";
 
 function EventCard(props) {
+	const {event} = props
+    const context =useContext(apiContext)
+    const {removeData,previousCardData,removeEvent} = context
 	const [admin, setAdmin] = useState(true);
 	const [upcoming, setUpcoming] = useState(props.upcoming);
 	return (
@@ -32,18 +36,18 @@ function EventCard(props) {
 					className="img"
 				/> */}
 			<div className={styles.imgContainer}>
-				<img className={styles.img} src={image1} alt="img" />
+				<img className={styles.img} src={event.image} alt="img" />
 			</div>
 			<div className={styles.content}>
 				<CardContent>
 					<div className={styles.container}>
 						<div className={styles.name}>
 							<Typography sx={{ fontSize: 18, fontWeight: "bold" }} color="text.primary" gutterBottom>
-								Event Name
+								{event.name}
 							</Typography>
 							<Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
 								<Calendar className={styles.svg} />
-								Event Date
+								{event.startDate} - {event.endDate}
 							</Typography>
 							<Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
 								<Clock className={styles.svg} />
@@ -55,13 +59,7 @@ function EventCard(props) {
 
 					<div className={styles.text}>
 						<Typography variant="body2" style={{width:'90%'}}>
-						Create a class Encapsulated TermDay, which applies the principles of data
-encapsulation as an alternative to TermDay. Your modified class should throw
-an exception if an invalid day of the week or week number is specified.
-The use of two int variables to represent the day and the week requires
-64 bits of storage. How many bits are actually required? Adapt<br></br>
-EncapsulatedTermDay class to achieve the same functionality using only one
-member variable of a primitive type. You should justify your choice of type
+						{event.description}
 						</Typography>
 					</div>
 				</CardContent>
@@ -85,8 +83,9 @@ member variable of a primitive type. You should justify your choice of type
 
 				{admin && (
 					<CardActions className={styles.buttonsAdmin}>
-						<Link to="" style={{ textDecoration: "none" }}>
+						
 							<Button
+							 onClick={()=>removeEvent(event._id)}
 								className={styles.btn}
 								size="small"
 								variant="contained"
@@ -95,8 +94,8 @@ member variable of a primitive type. You should justify your choice of type
 							>
 								Delete
 							</Button>
-						</Link>
-						<Link to="" style={{ textDecoration: "none" }}>
+						
+						<Link onClick={()=>previousCardData(event)} to="/Events/editEvent" style={{ textDecoration: "none" }}>
 							<Button
 								className={styles.btn}
 								size="small"

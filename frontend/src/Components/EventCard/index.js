@@ -1,8 +1,20 @@
-import React from "react";
+import React,{useEffect,useContext} from 'react';
+import apiContext from "../../ContextApi/ApiContext";
 import { Typography } from "@material-ui/core";
 import EventCard from "./EventCard.js";
 
 function EventCards(props) {
+	const context = useContext(apiContext)
+	const { data, getAllData, getAttribute,getAllEventData,events} = context
+	let attribute = "events";
+	
+	useEffect(() => {
+		//getAttribute(attribute)
+		//getAllData(attribute);
+		getAllEventData();
+	}, [events])
+console.log(events);
+let eventsArr = Array.from(events)
 	return (
 		<div
 			style={{
@@ -15,12 +27,9 @@ function EventCards(props) {
 				zIndex:'0'
 			}}
 		>
-			<EventCard upcoming={props.upcoming} />
-			<EventCard upcoming={props.upcoming} />
-			<EventCard upcoming={props.upcoming} />
-			<EventCard upcoming={props.upcoming} />
-			<EventCard upcoming={props.upcoming} />
-			<EventCard upcoming={props.upcoming} />
+			{eventsArr && eventsArr.map((event)=>{
+             return <EventCard key={event._id} event={event} upcoming={props.upcoming}/>
+            })}
 		</div>
 	);
 }
