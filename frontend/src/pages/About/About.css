@@ -8,6 +8,7 @@
 .About p{
     margin: 0;
     padding: 0;
+    font-family: "Open Sans";
 }
 .About > img{
     height: 20.83vw;
@@ -31,12 +32,14 @@
     font-size: 2.5vw;
     line-height: 1.53vw;
     color: #1B2733;
+    font-family: "Open Sans";
 }
 .About > div > .Abt_Content {
     font-weight: normal;
     font-size: 1.11vw;
     line-height: 1.53vw;
     color: #637282;
+    font-family: "Open Sans";
 }
 .About > div > button {
     width:max-content;
@@ -56,6 +59,7 @@
     gap:2vh;
     margin-top:auto;
     padding: 0;
+    font-family: "Open Sans";
 }
 .About > div > button > a{
     display: flex;
@@ -69,6 +73,7 @@
     padding: 1.1vw 2.8vw;
     border-radius: 0.6vh;
     transition: 0.75s;
+    font-family: "Open Sans";
 }
 .About > div > button :hover{
     background:#06d471;
@@ -86,6 +91,7 @@
     text-decoration: none;
     color: #ffffff;
     padding: 1.2vw;
+    font-family: "Open Sans";
 }
 .What_we_do{
     width: 100%;
@@ -100,7 +106,8 @@
     font-weight: bold;
     font-size: 2.5vw;
     line-height: 1.53vw;
-    color: #1B2733;   
+    color: #1B2733; 
+    font-family: "Open Sans";  
 }
 .What_we_do .What_we_do_cards{
     width: 100%;
@@ -134,18 +141,21 @@
     flex-direction: column;
     justify-content: center;
     width: 23vw;
+    font-family: "Open Sans";
 }
 .What_we_do_card_text > .What_we_do_card_head {
     font-weight: 500;
     font-size: 1.52vw;
     line-height: 120%;
-    color: #1D2935;       
+    color: #1D2935;
+    font-family: "Open Sans";      
 }
 .What_we_do_card_text > .What_we_do_card_desc {
     font-weight: normal;
     font-size: 1.11vw;
     line-height: 1.53vw;
-    color: #637282;     
+    color: #637282;  
+    font-family: "Open Sans";   
 }
 
 .What_we_do_card1 > .What_we_do_card_img{
@@ -173,7 +183,8 @@
     font-weight: bold;
     font-size: 2.5vw;
     line-height: 1.53vw;
-    color: #1B2733;   
+    color: #1B2733;  
+    font-family: "Open Sans";
 }
 .Join_the_convo .Join_the_convo_cards{
     display:flex;
@@ -189,6 +200,7 @@
     line-height: 1.53vw;
     color: #637282; 
     padding-bottom:0.6vh;
+    font-family: "Open Sans";
 }
 .Join_the_convo_cards > div > div{
     height: max-content;
@@ -216,6 +228,7 @@
     padding: 1.4vw 2.4vw;
     letter-spacing: 0.02em;
     z-index: 1;
+    font-family: "Open Sans";
 }
 .Join_the_convo_cards > div > div > img{
     height: 100%;

@@ -77,14 +77,17 @@ form input, form textarea, form button{
 .Name_inp::before,
 .name_filled::before{
     content: "Name";
+    font-family: "Open Sans";
 }
 .Email_inp::before,
 .email_filled::before{
     content: "E-mail";
+    font-family: "Open Sans";
 }
 .Message_inp::before,
 .message_filled::before{
     content: "Message";
+    font-family: "Open Sans";
 }
 .contact_form > div > input:focus + .Name_inp::before ,
 .contact_form > div > input:focus + .Email_inp::before ,
@@ -137,6 +140,7 @@ form input, form textarea, form button{
     min-height: 20vh;
     max-height: 30vh;
     margin-top: 2vh;
+    font-family: "Open Sans";
 }
 
 .Send_btn{
@@ -148,6 +152,7 @@ form input, form textarea, form button{
     color: #FFFFFF;
     /* height: 50px;
     width: 150px; */
+    font-family: "Open Sans";
     border:none;
     margin-top: 8vh;
     padding: 2vh 4vh;

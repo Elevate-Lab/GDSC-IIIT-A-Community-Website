@@ -15,6 +15,7 @@
 .Headings_Button_Container .Section_Headings > p {
 	margin: 0;
 	padding: 0;
+	font-family: "Open Sans";
 }
 .Headings_Button_Container .Section_Headings .large_heading {
 	width: max-content;
@@ -49,6 +50,7 @@
     cursor: pointer;
     transition: 0.75s;
     z-index: 1;
+	font-family: "Open Sans";
 }
 
 .Headings_Button_Container .Button > a:hover{
