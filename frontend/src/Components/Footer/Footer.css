@@ -16,7 +16,7 @@
 }
 .footer_top .DSC_logo {
 	height: 15vh;
-	width: 330px;
+	width: 30vw;
 }
 .footer_top .DSC_logo img {
 	width: 100%;
@@ -38,19 +38,21 @@
 .contact_sec_1 > div > div {
 	display: grid;
 	place-items: center;
-	height: 34px;
-	width: 34px;
+	height: 7vh;
+	width: 7vh;
 	background: rgba(255, 255, 255, 0.15);
 	border-radius: 50%;
 }
 .contact_sec_1 > div > div > img {
-	height: 22px;
-	width: 22px;
+	height: 4vh;
+	width: 4vh;
 }
 .contact_sec_1 > div > p {
 	margin: 0;
 	font-size: 2.6vh;
+	line-height: 100%;
 	color: #ffffff;
+	font-family: "Open Sans";
 }
 .contact_sec_1 > div > p > a {
 	margin:0;
@@ -59,13 +61,15 @@
 }
 .contact_sec_1 > div > p > span {
 	text-decoration: none;
-	font-size: 2.25vh;
+	font-size: 2vh;
+	line-height:150%;
 	color: rgba(255, 255, 255, 0.8);
 }
 
 .contact_sec_2 > p {
 	margin: 0;
 	color: #ffffff;
+	font-family: "Open Sans";
 	font-size: 3vh;
 	font-weight: 600;
 	margin-bottom: 2vh;
@@ -74,16 +78,16 @@
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: repeat(2, 1fr);
-	gap: 8px;
+	gap: 0.8vh;
 }
 
 .contact_links > div {
-	height: 34px;
-	width: 34px;
+	height: 6.4vh;
+	width: 6.4vh;
 	background: rgba(255, 255, 255, 0.15);
 	display: grid;
 	place-items: center;
-	border-radius: 8px;
+	border-radius: 1vh;
 	overflow: hidden;
 }
 .contact_icon:hover {
@@ -100,39 +104,41 @@
 
 .contact_links > div > a > img {
 	height: auto;
-	width: 24px;
+	width: 4vh;
 }
 
 .footer_divider {
 	width: 90%;
 	background: #ffffff;
 	opacity: 0.5;
-	height: 1px;
-	margin: 18px 0;
+	height: 0.1vh;
+	margin: 4vh 0;
 }
 .footer_bot {
 	display: flex;
 	width: 90%;
-	align-items:center;
+	align-items:flex-end;
 }
 .Copyright_line{
 	width:95%;
 	color: #ffffff;
-
+	font-family: "Open Sans";
 	font-size: 2.4vh;
+	margin:0;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	align-content: center;
+	align-content: flex-end;
 }
 
 .button_login_design:hover .button_login_design_txt {
-    color: #156eff;
+	color: #156eff;
     text-shadow: 0px 1px 1px rgba(21, 110, 255, 0.15);
-
+	
     /* font-weight: bold; */
     transition: 0.5s;
-
+	font-family: "Open Sans";
+	
 	font-weight: 600;
 	text-align: right;
 	margin:0;
@@ -145,28 +151,32 @@
 	display: flex;
 	background: rgba(255, 255, 255, 0.25);
 	width:max-content;
-	border-radius: 100px;
+	border-radius: 100vh;
 }
 .Login_Cont:hover{
 	cursor: pointer;
 	background: rgba(255, 255, 255, 0.4);
-
+	
 }
 .LogIn_icon_cont{
-	height:30px;
-	width:30px;
+	height:5.4vh;
+	width:5.4vh;
 	background: rgba(255, 255, 255, 0.3);
 	display:grid;
 	place-items: center;
 	border-radius:50%;
+}
+.LogIn_icon_cont>img{
+	height:3vh;
+	width:3vh;
 }
 .logIn_status{
 	background:none;
 	outline: none;
 	border:none;
 	color:#ffffff;
-	padding:0 16px 0 12px;
-	font-size: 14px;
+	padding:0 4vh 0 2vh;
+	font-size: 2.4vh;
 	font-weight:600;
 }
 
@@ -181,9 +191,9 @@
 	}
 	.footer_top .DSC_logo {
 		height: auto;
-		width: 65%;
+		width: 70%;
 		margin: 0 auto;
-		margin-bottom: 3vh;
+		margin-bottom: 6vh;
 	}
 	.footer_contact {
 		width: 100%;

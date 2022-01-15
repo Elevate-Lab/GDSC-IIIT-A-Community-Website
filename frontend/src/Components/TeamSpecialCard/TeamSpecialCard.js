@@ -25,26 +25,26 @@ function TeamSpecialCard() {
                     <CardContent>
                         <div className={styles.container}>
                             <div className={styles.img}>
-                                <Avatar src={person} sx={{ width: 158, height: 158 }} />
+                                <Avatar src={person} sx={{ width: 140, height: 140 }} />
                             </div>
                             <div className={styles.name}>
                                 <Typography
-                                    sx={{ fontSize: 20, fontWeight: 'bold', margin: '0' }}
-                                    color="text.primary"
+                                    sx={{ lineHeight:"110%", margin: '0' , marginBottom: '0.4vh',fontSize: 20 ,fontFamily:"OpenSans" ,fontWeight: '600'}}
+                                    color="#1B2733"
                                     gutterBottom
                                 >
                                     Tejas Mane
                                 </Typography>
                                 <Typography
-                                    sx={{ fontSize: 16, margin: '0' }}
-                                    color="text.secondary"
+                                    sx={{ fontSize: 16, margin: '0', marginBottom: '1vh',fontFamily:"OpenSans"}}
+                                    color="#637282"
                                     gutterBottom
                                 >
                                     GDSC Lead IIITA
                                 </Typography>
                                 <Typography
-                                    sx={{ fontSize: 12, margin: '0', paddingTop: '10px' }}
-                                    color="text.secondary"
+                                    sx={{ fontSize: 12, margin: '0', paddingTop: '10px' ,fontFamily:"OpenSans" }}
+                                    color="#637282"
                                     gutterTop
                                 >
                                     About....... Lorem Ipsum
@@ -70,26 +70,26 @@ function TeamSpecialCard() {
                     <CardContent>
                         <div className={styles.container}>
                             <div className={styles.img}>
-                                <Avatar src={person} sx={{ width: 158, height: 158 }} />
+                                <Avatar src={person} sx={{ width: 140, height: 140 }} />
                             </div>
                             <div className={styles.name}>
                                 <Typography
-                                    sx={{ fontSize: 20, fontWeight: 'bold', margin: '0' }}
-                                    color="text.primary"
+                                    sx={{ lineHeight:"110%", margin: '0' , marginBottom: '0.4vh',fontSize: 20 ,fontFamily:"OpenSans" ,fontWeight: '600'}}
+                                    color="#1B2733"
                                     gutterBottom
                                 >
                                     Dr. Mohammed Javed
                                 </Typography>
                                 <Typography
-                                    sx={{ fontSize: 16, margin: '0' }}
-                                    color="text.secondary"
+                                    sx={{ fontSize: 16, margin: '0', marginBottom: '1vh',fontFamily:"OpenSans"}}
+                                    color="#637282"
                                     gutterBottom
                                 >
                                     Faculty Advisor
                                 </Typography>
                                 <Typography
-                                    sx={{ fontSize: 12, margin: '0', paddingTop: '10px' }}
-                                    color="text.secondary"
+                                    sx={{ fontSize: 12, margin: '0', paddingTop: '10px' ,fontFamily:"OpenSans" }}
+                                    color="#637282"
                                     gutterTop
                                 >
                                     About....... Lorem Ipsum

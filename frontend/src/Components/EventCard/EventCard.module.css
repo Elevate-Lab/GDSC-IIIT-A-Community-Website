@@ -2,11 +2,12 @@
 	display: flex;
 	flex-direction: column;
 	padding-bottom: 1.5%;
+	background:#FAFAFA;
 }
 
 .img {
 	/* padding-right: 3%; */
-	height: 200px;
+	min-height: 200px;
 	/* width */
 }
 .imgContainer {
@@ -21,12 +22,14 @@
 .buttons {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: space-between;
+	align-items: flex-end;
 }
 .buttonsAdmin {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: space-between;
+	align-items: flex-end;
 }
 .btn {
 	width: 120px;
@@ -40,10 +43,10 @@
 	padding: 0;
 	max-width: 300px;
 	/* border: 1px solid transparent; */
-	transition: 0.5s;
+	transition: 0.75s;
 }
 .eventCard:hover {
-	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 16px;
 	/* border: solid grey 1px; */
 	/* transition: 1s; */
 }
@@ -58,7 +61,7 @@
 .content {
 	/* border: solid grey 1px; */
 	border-radius: 8px;
-	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px -1px 4px;
 	/* margin-top: -15px; */
 	position: relative;
 	z-index: 5;

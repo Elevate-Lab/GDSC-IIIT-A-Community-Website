@@ -16,12 +16,12 @@ function Events() {
 		<section
 			className="Events_section"
 			style={{
-				// height: "100vh",
+				// width: "100vw",
+				overflowX: "hidden",
 				display: "flex",
 				flexDirection: "column",
 				justifyContent: "center",
 				// alignItems: "center",
-				paddingTop: "10.88vh",
 				paddingBottom: "6vh",
 			}}
 		>
@@ -33,7 +33,7 @@ function Events() {
 				PageIllustration={event_illustration}
 			/>
 			<div className="heading_plusBtn">
-				<h2 style={{ fontWeight: "620" }} className="heading">
+				<h2 style={{ fontWeight: "600", fontFamily: "OpenSans", color: "#1b2733" }} className="heading">
 					Upcoming Events
 				</h2>
 				<Fab color="primary" aria-label="add">
@@ -59,7 +59,7 @@ function Events() {
 				ButtonText="Get In Touch"
 			/>
 			<div className="heading_plusBtn">
-				<h2 style={{ fontWeight: "620" }} className="heading">
+				<h2 style={{ fontWeight: "600", fontFamily: "OpenSans", color: "#1b2733" }} className="heading">
 					Past Events
 				</h2>
 				<Fab color="primary" aria-label="add">

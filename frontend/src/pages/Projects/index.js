@@ -41,28 +41,9 @@ function Projects() {
 					Text="Learning goes hand-in-hand with building new and cool stuff. Lorem ipsum dolor sit amet"
 					PageIllustration={project_illustration}
 				/>
-
-				<Fab style={{ alignSelf: "flex-end", marginRight: "7vw" }} color="primary" aria-label="add">
-					<Link
-						to="Projects/NewProject"
-						style={{
-							color: "white",
-							height: "100%",
-							width: "100%",
-							margin: "0",
-							display: "grid",
-							placeItems: "center",
-						}}
-					>
-						<AddIcon />
-					</Link>
-
-			</Fab>
-	
-
-
+				
 				<div className="heading_plusBtn">
-					<h2 style={{ fontWeight: "620" }} className="heading">
+					<h2 style={{ fontWeight: "600", fontFamily: "OpenSans", color: "#1b2733" }} className="heading">
 						Featured Projects
 					</h2>
 					<Fab color="primary" aria-label="add">
@@ -86,7 +67,7 @@ function Projects() {
 
 			<div
 				style={{
-					padding: "9vh 7vw",
+					padding: "2vh 7vw 9vh 7vw",
 					display: "flex",
 					flexDirection: "row",
 					flexWrap: "wrap",
@@ -94,7 +75,6 @@ function Projects() {
 					alignItems: "center",
 				}}
 			>
-			
 				{projectsArr && projectsArr.map((project) => {
 			  return <ProjectCard key={project._id} project={project}/>
 			})}

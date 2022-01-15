@@ -6,7 +6,7 @@
 .Section_Headings {
 	display: flex;
 	flex-direction: column;
-	gap: 2px;
+	gap: 0.2vh;
 	align-items: left;
 	padding-left: 9.02%;
 	width:45vw;
@@ -14,26 +14,27 @@
 .Section_Headings > p {
 	margin: 0;
 	padding: 0;
+	font-family: "Open Sans";
 }
 .Section_Headings .large_heading {
 	width: max-content;
 	font-weight: bold;
-	font-size: 3.33vw;
+	font-size: 3.63vw;
 	line-height: 4.79vw;
 	color: #1b2733;
 }
 .Section_Headings .small_heading {
 	width: max-content;
 	font-weight: 600;
-	font-size: 1.11vw;
+	font-size: 1.3vw;
 	line-height: 1.53vw;
 	color: #637282;
 }
 .Section_Headings .Heading_text {
 	font-weight: 500;
-	margin-top: 2vw;
-	font-size: 0.96vw;
-	line-height: 1.53vw;
+	margin-top: 2.6vh;
+	font-size: 1.11vw;
+	line-height: 1.43vw;
 	color: rgba(0, 0, 0,0.6);
 }
 .Page_Image{
@@ -55,25 +56,25 @@
 	.Section_Headings {
 		width: 80%;
 		padding-left: 0;
-		gap: 4px;
+		gap: 0.4vh;
 		align-items: center;
 	}
 	.Section_Headings .large_heading {
-		font-size: 7.5vw;
+		font-size: 7.4vh;
 		line-height: 120%;
 	}
 	.Section_Headings .small_heading {
-		font-size: 3.5vw;
+		font-size: 3.5vh;
 		line-height: 150%;
 	}
 	.Section_Headings .Heading_text {
-		font-size: 2.2vw;
+		font-size: 2.4vh;
 		line-height: 150%;
 		text-align: justify;
 	}
 	.Page_Image{
 		height: 5vw;
-		width: 90%;
+		width: 80%;
 	}
 	.Page_Image > img{
 		height: auto;

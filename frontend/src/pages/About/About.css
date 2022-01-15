@@ -39,39 +39,44 @@
     color: #637282;
 }
 .About > div > button {
-    height: 50px;
-    width: 200px;
+    width:max-content;
     background: #08AD5D;
     font-weight: 600;
-    font-size: 16px;
-    /* padding: 17px; */
+    font-size: 1.3vw;
     line-height:150%;
     letter-spacing: 0.02em;
     color: #ffffff;
     outline: none;
     border: none;
-    border-radius: 4px;
+    border-radius: 0.6vh;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap:16px;
+    gap:2vh;
     margin-top:auto;
+    padding: 0;
 }
 .About > div > button > a{
-    height:100%;
-    width:100%;
     display: flex;
-    gap:8px;
+    background: #08AD5D;
+    gap:1vh;
     align-items: center;
     justify-content: center;
     text-decoration: none;
     color: #ffffff;
-    padding: 0;
+    font-size: 1.2vw;
+    padding: 1.1vw 2.8vw;
+    border-radius: 0.6vh;
+    transition: 0.75s;
+}
+.About > div > button :hover{
+    background:#06d471;
+    box-shadow: 0px 1px 12px 0 rgba(0, 0, 0, 0.4);
 }
 .About > div > button > a > img {
-    height: 24px;
-    width: 24px;
+    height: 1.6vw;
+    width: 1.6vw;
     background-size: fit;
 }
 .About_DSC_IIITA{
@@ -80,13 +85,8 @@
 .Abt_btn_txt{
     text-decoration: none;
     color: #ffffff;
-    padding: 17px;
+    padding: 1.2vw;
 }
-.Abt_btn_txt:hover{
-    text-decoration: none;
-    color: #ffffff;
-}
-
 .What_we_do{
     width: 100%;
     padding:0 8.2vw;
@@ -107,27 +107,33 @@
     display: flex;
     flex-wrap: wrap;
     justify-content:center;
-    column-gap: 120px;
-    row-gap: 60px;
+    column-gap: 8vw;
+    row-gap: 8vh;
 }
 .What_we_do .What_we_do_cards > div{
     display: flex;
-    height: 120px;
-    width: 450px;
+    height: 20vh;
+    width: 34vw;
     justify-content:space-between;
+    gap: 2vw;
 }
 .What_we_do_card_img{
     display: grid;
     place-items: center;
-    height: 120px;
-    width: 120px;
+    height: 20vh;
+    width: 20vh;
     border-radius:50%;
+    flex:none;
+}
+.What_we_do_card_img > img{
+    height: 10vh;
+    width: 10vh;
 }
 .What_we_do_card_text {
     display:flex;
     flex-direction: column;
     justify-content: center;
-    width: 300px;
+    width: 23vw;
 }
 .What_we_do_card_text > .What_we_do_card_head {
     font-weight: 500;
@@ -157,7 +163,7 @@
 
 .Join_the_convo{
     width: 100%;
-    padding:0 10.02vw;
+    padding:0 9.02%;
     display: flex;
     gap: 3vw;
     flex-direction: column;
@@ -178,37 +184,42 @@
     width: 45%;
 }
 .Join_the_convo_cards > div > p{
-    font-weight: 550;
+    font-weight: 500;
     font-size: 1.2vw;
     line-height: 1.53vw;
     color: #637282; 
-    padding-bottom:4px;
+    padding-bottom:0.6vh;
 }
 .Join_the_convo_cards > div > div{
-    height: 50px;
-    width: 200px;
+    height: max-content;
+    width: max-content;
+    transition:0.75s;
     display:grid;
     place-items:center;
     outline:none;
     border:none;
-    border-radius: 4px;
+    border-radius: 0.6vh;
     cursor: pointer;
     position: relative;
     overflow: hidden;
+}
+.Join_the_convo_cards > div > div:hover{
+    box-shadow: 0px 1px 12px 0 rgba(0, 0, 0, 0.4);
 }
 .Join_the_convo_cards > div > div > a{
     margin:0;
     color:#ffffff;
     text-decoration:none;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 1.2vw;
     line-height:150%;
+    padding: 1.4vw 2.4vw;
     letter-spacing: 0.02em;
     z-index: 1;
 }
 .Join_the_convo_cards > div > div > img{
     height: 100%;
-    width: 100%;
+    width: auto;
     position:absolute;
     top: 0;
     left: 0;
@@ -234,7 +245,7 @@
         gap: 3vw;
     }
     .What_we_do_cards > div{
-        gap: 16px;
+        gap:10vh;
     }
     .Join_the_convo{
         align-items:center;
@@ -259,14 +270,22 @@
         line-height: 100%;
     }
     .About > div > button {
-        font-size: 16px;
+        font-size: 2vw;
         line-height:150%;
+    }
+    .About > div > button > a{
+        font-size: 2vw;
+        padding: 2vw 3vw;
+    }
+    .About > div > button > a > img {
+        height: 2.4vw;
+        width: 2.4vw;
     }
     .What_we_do{
         padding:0 10.02vw;
     }
     .What_we_do .What_we_do_cards{
-        gap:30px;
+        gap:8vh;
     }
     .What_we_do .What_we_do_cards > div{
         justify-content:space-between;
@@ -275,6 +294,9 @@
     .What_we_do_card2 ,
     .What_we_do_card4 {
         flex-direction:row-reverse;
+    }
+    .What_we_do_card_text {
+        width: 40vw;
     }
     .Join_the_convo_cards > div{
         width: 100%;
@@ -285,7 +307,10 @@
         padding-bottom:0;
     }
     .Join_the_convo .Join_the_convo_cards{
-        gap: 40px;
+        gap: 2vw;
     }
-    
+    .Join_the_convo_cards > div > div > a{
+        font-size: 2vw;
+        padding: 2vw 4vw;
+    }
 }

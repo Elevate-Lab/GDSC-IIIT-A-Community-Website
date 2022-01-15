@@ -13,10 +13,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50vw;
-    gap: 32px;
+    width: 52vw;
+    gap: 8vh;
     height:100%;
-    background: linear-gradient(90deg, rgba(255,255,255, 0) 0%, #ffffff 20%, #ffffff 80%, rgba(255,255,255, 0) 100%);
+    background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, #FFFFFF 80%, rgba(255, 255, 255, 0) 100%);
 }
 .hero-section-center img{
     width: 70%;
@@ -25,43 +25,72 @@
 }
 .hero-section-center .hero-join-us a{
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1.3vw;
     font-weight: 500;
     padding: 1.2vw 3.2vw;
     background:#156EFF;
     color:#ffffff;
-    border-radius: 4px;
+    border-radius: 0.6vh;
     cursor: pointer;
+    transition: 0.75s;
     z-index: 1;
+}
+.hero-section-center .hero-join-us a:hover{
+    background:#3f88ff;
+    box-shadow: 0px 1px 12px 0 rgba(0, 0, 0, 0.2);
 }
 
 .hero-explore{
     margin: auto 0 5vh 0;
     display: flex;
-    /* flex:1; */
-    gap: 8px;
+    gap: 1vh;
     align-items: center;
     cursor: default;
 }
 .hero-explore p{
-    font-size: 14px;
+    font-size: 1.11vw;
     color: #1D2935;
     margin:0;
     font-weight: 500;
 }
 .hero-explore img{
-    height: 24px;
-    width: 24px;
+    height: 1.6vw;
+    width: 1.6vw;
     margin:0;
 }
 
 @media only screen and (max-width: 900px) {
     .hero-section-center > img{
-        width: 100%;
+        width: 90%;
+        margin-top: 30%;
+    }
+    .hero-section-center .hero-join-us a{
+        font-size: 2vw;
+        padding: 1.8vw 3vw;
+    }
+    .hero-explore p{
+        font-size: 1.3vw;
+    }
+    .hero-explore img{
+        height: 2vw;
+        width: 2vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .hero-section-center > img{
+        width: 90%;
         margin-top: 50%;
     }
     .hero-section-center .hero-join-us a{
-        font-size: 14px;
+        font-size: 2.8vw;
         padding: 2vw 4vw;
+    }
+    .hero-explore p{
+        font-size: 2vw;
+    }
+    .hero-explore img{
+        height: 2.2vw;
+        width: 2.2vw;
     }
 }

@@ -1,6 +1,4 @@
 import React from 'react';
-// import {Typography} from '@material-ui/core'
-// import Heroleft './Heroleft';
 import './Hero.css';
 import Herologo from '../../Assets/DSC-IIITA-Light-Vertical.png'
 import ExploreIcon from '../../Assets/chevrons-down.svg'

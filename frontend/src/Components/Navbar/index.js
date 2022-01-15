@@ -30,7 +30,7 @@ function Navbar() {
 	if (width > 900) {
 		return (
 			<div className="Navbar">
-				<Link className="navbar_logo" to="/" style={{ width: "340px" }}>
+				<Link className="navbar_logo" to="/" style={{ width: "24vw" }}>
 					<img src={Navbar_logo} alt="logo" />
 				</Link>
 				<div className="navbar_links">
@@ -48,7 +48,7 @@ function Navbar() {
 	} else {
 		return (
 			<div className="Navbar">
-				<Link className="navbar_logo" to="/" style={{ width: "300px" }}>
+				<Link className="navbar_logo" to="/" style={{ width: "44vw" }}>
 					<img src={Navbar_logo} alt="logo" />
 				</Link>
 				<div className="navbar_Drawer">
