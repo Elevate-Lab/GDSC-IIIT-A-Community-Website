@@ -93,7 +93,7 @@ function BlogCard(props) {
 										Delete
 									</Button>
 							
-								<Link to="/Blogs/EditBlog" onClick={()=>previousCardData(blogs)} style={{ textDecoration: "none" }}>
+								<Link to="../blogs/edit_blog" onClick={()=>previousCardData(blogs)} style={{ textDecoration: "none" }}>
 									<Button
 									
 										className={styles.btn}

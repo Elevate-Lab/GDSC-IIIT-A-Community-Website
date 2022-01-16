@@ -7,7 +7,7 @@
 
 .img {
 	/* padding-right: 3%; */
-	min-height: 200px;
+	height: 200px;
 	/* width */
 }
 .imgContainer {
@@ -22,7 +22,7 @@
 .buttons {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: flex-end;
 }
 .buttonsAdmin {
@@ -32,7 +32,7 @@
 	align-items: flex-end;
 }
 .btn {
-	width: 120px;
+	width: 130px;
 }
 .RSVPbtn {
 	width: 250px;
@@ -61,7 +61,7 @@
 .content {
 	/* border: solid grey 1px; */
 	border-radius: 8px;
-	box-shadow: rgba(0, 0, 0, 0.16) 0px -1px 4px;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px -2px 4px;
 	/* margin-top: -15px; */
 	position: relative;
 	z-index: 5;

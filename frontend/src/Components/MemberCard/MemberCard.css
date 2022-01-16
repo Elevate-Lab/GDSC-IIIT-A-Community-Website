@@ -27,12 +27,12 @@
 	text-align: center;
 	color: #1B2733;
 	font-size: 20px;
-	font-family: "Open Sans";
+	font-family: 'Open Sans',sans-serif;
 	font-weight: 700;
 }
 .title {
 	text-align: center;
-	font-family: "Open Sans";
+	font-family: 'Open Sans',sans-serif;
 	color: #637282;
 	font-size: 14px;
 	font-weight: 400;

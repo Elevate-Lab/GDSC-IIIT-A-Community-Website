@@ -156,7 +156,7 @@ function Blogs() {
 				</h2>
 				<Fab color="primary" aria-label="add">
 					<Link
-						to="Blogs/NewBlog"
+						to="../blogs/new_blog"
 						style={{
 							color: "white",
 							height: "100%",

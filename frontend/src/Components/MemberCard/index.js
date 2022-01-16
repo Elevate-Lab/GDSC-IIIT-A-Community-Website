@@ -59,7 +59,7 @@ function MemberCard(props) {
 							Delete
 						</Button>
 				
-					<Link onClick={()=>previousCardData(team)} to="/Team/EditMember" style={{ textDecoration: "none" }}>
+					<Link onClick={()=>previousCardData(team)} to="../team/edit_member" style={{ textDecoration: "none" }}>
 						<Button
 							className="btn"
 							size="small"

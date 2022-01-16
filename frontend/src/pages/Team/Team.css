@@ -68,7 +68,6 @@
 @media only screen and (max-width: 900px) {
     .Team_section{
         align-items: center;
-        padding-top: 12vh;
     }
     .Member-field{
         width: 94%;

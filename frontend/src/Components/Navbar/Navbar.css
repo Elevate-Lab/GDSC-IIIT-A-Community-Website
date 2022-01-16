@@ -39,7 +39,7 @@
     margin: 0;
     color: #4e4e4e;
     font-size: 1.11vw;
-	font-family: "Open Sans";
+	font-family: 'Open Sans','Poppins',sans-serif;
     font-weight: 600;
 }
 .navbar_link:hover{
@@ -52,6 +52,10 @@
     /* font-weight: bold; */
     transition: 0.75s;
 }
+.active_nav_link .navbar_link_txt{
+    color: #156eff;
+    text-shadow: 0px 1px 1px rgba(21, 110, 255, 0.15);
+}
 
 .navbar_contact {
     padding: 0.6vw 1.6vw;
@@ -62,6 +66,11 @@
 }
 
 .navbar_contact:hover {
+    background: #3f88ff;
+    color: #fff !important;
+    box-shadow: 0px 1px 12px 0 rgba(0, 0, 0, 0.3);
+}
+.active_contact_link>p{
     background: #3f88ff;
     color: #fff !important;
     box-shadow: 0px 1px 12px 0 rgba(0, 0, 0, 0.3);

@@ -42,14 +42,14 @@ function EventCard(props) {
 				<CardContent>
 					<div className={styles.container}>
 						<div className={styles.name}>
-							<Typography sx={{ fontSize: 18, fontFamily:"OpenSans", fontWeight: "600" }} color="#1B2733" gutterBottom>
+							<Typography sx={{ fontSize: 18, fontFamily:"Open Sans,sans-serif", fontWeight: "600" }} color="#1B2733" gutterBottom>
 								{event.name}
 							</Typography>
-							<Typography sx={{ fontSize: 14, fontFamily:"OpenSans" }} color="#637282" gutterBottom>
+							<Typography sx={{ fontSize: 14, fontFamily:"Open Sans,sans-serif" }} color="#637282" gutterBottom>
 								<Calendar className={styles.svg} />
 								{event.startDate} - {event.endDate}
 							</Typography>
-							<Typography sx={{ fontSize: 14, fontFamily:"OpenSans"}} color="#637282" gutterBottom>
+							<Typography sx={{ fontSize: 14, fontFamily:"Open Sans,sans-serif"}} color="#637282" gutterBottom>
 								<Clock className={styles.svg} />
 								Time
 							</Typography>
@@ -58,7 +58,7 @@ function EventCard(props) {
 					{/* <Headings LargeHeading="Project Name" SmallHeading="tagline" /> */}
 
 					<div className={styles.text}>
-						<Typography variant="body2" style={{width:'100%', fontSize: 15, fontFamily:"OpenSans"}} color="#435156">
+						<Typography variant="body2" style={{width:'100%', fontSize: 15, fontFamily:"Open Sans,sans-serif"}} color="#435156">
 						{event.description}
 						</Typography>
 					</div>
@@ -72,7 +72,7 @@ function EventCard(props) {
 								// size="small"
 								variant="contained"
 								disableElevation
-								style={{ backgroundColor: "#0F9D58", width: "100%", padding: "8px 80px", fontFamily:"OpenSans", fontSize: 14, fontWeight: "600"}}
+								style={{ backgroundColor: "#0F9D58", width: "100%", padding: "8px 90px", fontFamily:"Open Sans,sans-serif", fontSize: 14, fontWeight: "600"}}
 							>
 								<RSVPsvg className={styles.RSVPsvg} />
 								RSVP Here
@@ -90,18 +90,18 @@ function EventCard(props) {
 								// size="small"
 								variant="contained"
 								disableElevation
-								style={{ backgroundColor: "#EA4235", padding: "10px 20px", fontFamily:"OpenSans", fontSize: 14, fontWeight: "600"  }}
+								style={{ backgroundColor: "#EA4235", padding: "10px 30px", fontFamily:"Open Sans,sans-serif, sans serif", fontSize: 14, fontWeight: "600"  }}
 							>
 								Delete
 							</Button>
 						
-						<Link onClick={()=>previousCardData(event)} to="/Events/editEvent" style={{ textDecoration: "none"}}>
+						<Link onClick={()=>previousCardData(event)} to="../events/edit_event" style={{ textDecoration: "none"}}>
 							<Button
 								className={styles.btn}
 								// size="small"
 								variant="outlined"
 								disableElevation
-								style={{ color: "#0F9D58", border: "2px solid #0F9D58", padding: "6px 20px" ,fontFamily:"OpenSans", fontSize: 14, fontWeight: "600"  }}
+								style={{ color: "#0F9D58", border: "2px solid #0F9D58", padding: "6px 30px" ,fontFamily:"Open Sans,sans-serif", fontSize: 14, fontWeight: "600"  }}
 							>
 								Edit
 							</Button>

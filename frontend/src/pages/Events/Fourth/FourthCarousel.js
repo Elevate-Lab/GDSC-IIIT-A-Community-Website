@@ -56,7 +56,7 @@ function FouthCarousel() {
         },
         designtext: {
             color: '#ffffff',
-            fontFamily: 'Open-Sans',
+            fontFamily: 'Open Sans,Poppins,sans serif',
             fontWeight: '400',
             width: '86%',
             marginTop: '2vh',

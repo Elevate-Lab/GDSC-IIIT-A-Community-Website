@@ -60,11 +60,13 @@
 		align-items: center;
 	}
 	.Section_Headings .large_heading {
-		font-size: 7.4vh;
+		font-size: 6.4vh;
+		width: 100%;
 		line-height: 120%;
 	}
 	.Section_Headings .small_heading {
-		font-size: 3.5vh;
+		font-size: 3.1vh;
+		width: 100%;
 		line-height: 150%;
 	}
 	.Section_Headings .Heading_text {

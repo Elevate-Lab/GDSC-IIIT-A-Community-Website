@@ -30,20 +30,20 @@ function ProjectCard(props) {
 						</div>
 						<div className={styles.name}>
 							<Typography
-								sx={{ fontSize: 24, fontWeight: "600", margin: "0" , fontFamily: "OpenSans"}}
+								sx={{ fontSize: 24, fontWeight: "600", margin: "0" , fontFamily: "Open Sans,sans-serif"}}
 								color="#1b2733"
 								gutterBottom
 							>
 								{project.projectname}
 							</Typography>
-							<Typography sx={{ fontSize: 15, fontWeight:"500", margin: "0", fontFamily: "OpenSans"}} color="#637282" gutterBottom>
+							<Typography sx={{ fontSize: 15, fontWeight:"500", margin: "0", fontFamily: "Open Sans,sans-serif"}} color="#637282" gutterBottom>
 								Jobs for all
 							</Typography>
 						</div>
 					</div>
 
 					<div className={styles.text}>
-						<Typography variant="body2" sx={{fontSize:14,width:"100%", margin: 0, fontFamily: "OpenSans" }} color="#435156" >
+						<Typography variant="body2" sx={{fontSize:14,width:"100%", margin: 0, fontFamily: "Open Sans,sans-serif" }} color="#435156" >
 						{project.description}
 						</Typography>
 					</div>
@@ -54,7 +54,7 @@ function ProjectCard(props) {
 							className={styles.btn}
 							size="small"
 							variant="outlined"
-							style={{ color: "#0F9D58", border: "2px solid #0F9D58", fontFamily: "OpenSans", padding: "8px 20px", fontSize:14, fontWeight:"600"}}
+							style={{ color: "#0F9D58", border: "2px solid #0F9D58", fontFamily: "Open Sans,sans-serif", padding: "8px 20px", fontSize:14, fontWeight:"600"}}
 						>
 							<Github className={styles.svg} />
 							Github Link
@@ -66,7 +66,7 @@ function ProjectCard(props) {
 							size="small"
 							variant="contained"
 							disableElevation
-							style={{ backgroundColor: "#0F9D58", fontFamily: "OpenSans", padding: "10px 20px",fontSize:14, fontWeight:"600"}}
+							style={{ backgroundColor: "#0F9D58", fontFamily: "Open Sans,sans-serif", padding: "10px 20px",fontSize:14, fontWeight:"600"}}
 						>
 							<ViewProject className={styles.svg} />
 							View Project
@@ -82,7 +82,7 @@ function ProjectCard(props) {
 								size="small"
 								variant="contained"
 								disableElevation
-								style={{ backgroundColor: "#EA4235", fontFamily: "OpenSans", padding: "10px 20px",fontSize:14, fontWeight:"600" }}
+								style={{ backgroundColor: "#EA4235", fontFamily: "Open Sans,sans-serif", padding: "10px 20px",fontSize:14, fontWeight:"600" }}
 							>
 								Delete
 							</Button>
@@ -93,7 +93,7 @@ function ProjectCard(props) {
 								size="small"
 								variant="outlined"
 								disableElevation
-								style={{ color: "#0F9D58", border: "2px solid #0F9D58", fontFamily: "OpenSans", padding: "8px 20px",fontSize:14, fontWeight:"600"  }}
+								style={{ color: "#0F9D58", border: "2px solid #0F9D58", fontFamily: "Open Sans,sans-serif", padding: "8px 20px",fontSize:14, fontWeight:"600"  }}
 							>
 								Edit
 							</Button>
