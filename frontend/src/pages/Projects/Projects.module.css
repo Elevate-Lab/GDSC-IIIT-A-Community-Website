@@ -21,6 +21,7 @@
 	flex-direction: row;
 	justify-content: space-between;
 	padding-right: 5vw;
+	width: 100%;
 }
 
 @media only screen and (max-width: 900px) {

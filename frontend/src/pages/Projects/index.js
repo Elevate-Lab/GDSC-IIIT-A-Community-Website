@@ -29,7 +29,7 @@ function Projects() {
 				PageIllustration={project_illustration}
 			/>
 			<div className="heading_plusBtn">
-				<h2 style={{ fontWeight: "600", fontFamily: "OpenSans", color: "#1b2733" }} className="heading">
+				<h2 style={{ fontWeight: "bold", color: "#1b2733" }} className="heading">
 					Featured Projects
 				</h2>
 				<Fab color="primary" aria-label="add">
