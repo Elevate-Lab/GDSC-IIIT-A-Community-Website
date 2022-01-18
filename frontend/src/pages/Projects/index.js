@@ -56,6 +56,7 @@ function Projects() {
 					flexWrap: "wrap",
 					justifyContent: "space-around",
 					alignItems: "center",
+					width:"100%",
 				}}
 			>
 				{projectsArr && projectsArr.map((project) => {

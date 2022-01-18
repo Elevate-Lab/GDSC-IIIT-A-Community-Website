@@ -1,7 +1,7 @@
 .Page_Headings{
 	display: flex;
 	width:100%;
-	padding-bottom: 2vw;
+	padding-bottom: 8vh;
 }
 .Section_Headings {
 	display: flex;
@@ -57,7 +57,7 @@
 		width: 80%;
 		padding-left: 0;
 		gap: 0.4vh;
-		align-items: center;
+		align-items: left;
 	}
 	.Section_Headings .large_heading {
 		font-size: 6.4vh;
@@ -71,15 +71,31 @@
 	}
 	.Section_Headings .Heading_text {
 		font-size: 2.4vh;
-		line-height: 150%;
-		text-align: justify;
+		line-height: 130%;
+		text-align: left;
+		
 	}
 	.Page_Image{
 		height: 5vw;
-		width: 80%;
+		width: 70%;
 	}
 	.Page_Image > img{
 		height: auto;
 		width: 100%;
+	}
+}
+@media only screen and (max-width: 450px) {
+	.Section_Headings .large_heading {
+		font-size: 32px;
+	}
+	.Section_Headings .small_heading {
+		font-size: 20px;
+	}
+	.Section_Headings .Heading_text {
+		font-size: 14px;
+	}
+	.Page_Image{
+		height: 5vw;
+		width: 60%;
 	}
 }

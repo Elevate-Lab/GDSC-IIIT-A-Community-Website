@@ -70,13 +70,13 @@
         align-items: center;
     }
     .Member-field{
-        width: 94%;
+        width: 96%;
     }
     .Field-item{
-        padding: 1.8vh 2vh;
+        padding: 1.8vw 2vw;
     }
     .field-link{
-        font-size: 2vw;
+        font-size: 14px;
         text-align: center;
     }
     .Member_cards_container{
@@ -85,5 +85,21 @@
     .Field_view{
         gap: 4vw;
         justify-content: center;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .Member-field{
+        width: 80%;
+    }
+    .Field-select{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2vh;
+    }
+    .Field-item{
+        padding: 2.4vw 3vw;
+    }
+    .Field_view{
+        gap: 6vh;
     }
 }

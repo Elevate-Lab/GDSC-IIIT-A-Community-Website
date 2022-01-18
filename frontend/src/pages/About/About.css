@@ -4,6 +4,7 @@
     gap: 6.11vw;
     justify-content: center;
     width: 100%;
+    margin-bottom: 10vh;
 }   
 .About p{
     margin: 0;
@@ -100,7 +101,8 @@
     gap: 4.5vw;
     flex-direction: column;
     align-items: center;
-    padding-top: 5vw;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
 }
 .What_we_do .What_we_do_heading{
     font-weight: bold;
@@ -295,10 +297,10 @@
         width: 2.4vw;
     }
     .What_we_do{
-        padding:0 10.02vw;
+        padding:8vh 10.02vw;
     }
     .What_we_do .What_we_do_cards{
-        gap:8vh;
+        gap:8vw;
     }
     .What_we_do .What_we_do_cards > div{
         justify-content:space-between;
@@ -324,6 +326,70 @@
     }
     .Join_the_convo_cards > div > div > a{
         font-size: 2vw;
+        padding: 2vw 4vw;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .About{
+        gap: 3vh;
+        padding-bottom: 8vh;
+    }
+    .About > div > .Abt_Heading,
+    .What_we_do .What_we_do_heading,
+    .Join_the_convo .Join_the_convo_heading {
+        font-size: 5.4vw;
+    }
+    .About > div > .Abt_Content{
+        font-size: 2.8vw;
+        line-height: 130%;
+    }
+    .What_we_do_card_text > .What_we_do_card_desc{
+        font-size: 2.8vw;
+    }
+    .What_we_do_card_text > .What_we_do_card_head {
+        font-size: 4.8vw;
+    }
+    .About > div > button {
+        font-size: 3.6vw;
+        line-height:150%;
+    }
+    .About > div > button > a{
+        font-size: 3vw;
+        padding: 3vw 4.8vw;
+    }
+    .About > div > button > a > img {
+        height: 4vw;
+        width: 4vw;
+    }
+    .What_we_do{
+        padding:6vh 10.02vw;
+        gap: 5vh;
+    }
+    .What_we_do .What_we_do_cards{
+        gap:6vh;
+    }
+    .What_we_do .What_we_do_cards > div{
+        height: 14vh;
+        justify-content:space-between;
+        width:100%;
+    }
+    .What_we_do_card_img > img{
+        height: 7vh;
+        width: 7vh;
+    }
+    .What_we_do_card_img {
+        height: 14vh;
+        width: 14vh;
+    }
+    .Join_the_convo_cards > div > p{
+        font-size: 3vw;
+        line-height: 130%;
+    }
+    .Join_the_convo .Join_the_convo_cards{
+        gap: 4vh;
+    }
+    .Join_the_convo_cards > div > div > a{
+        font-size: 3vw;
         padding: 2vw 4vw;
     }
 }

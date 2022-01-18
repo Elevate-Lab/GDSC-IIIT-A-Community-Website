@@ -33,15 +33,15 @@
 	/* margin-bottom: 10px; */
 }
 .btnP {
-	width: 320px;
+	width: 100%;
 }
 .btn {
-	width: 155px;
+	width: 100%;
 }
 .greenBtn {
 	color: #0F9D58;
 	background-color: #0F9D58;
-	width: 155px;
+	width: 100%;
 }
 .card {
 	/* border: 1px solid transparent; */
@@ -77,4 +77,13 @@
 	box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 16px;
 	/* border: solid grey 1px; */
 	/* transition: 1s; */
+}
+
+@media only screen and (max-width: 450px) {
+    .btnP {
+		width: 200px;
+	}
+	.btn {
+		width: 100px;
+	}
 }

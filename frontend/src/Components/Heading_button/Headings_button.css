@@ -90,11 +90,15 @@
         padding: 1.8vw 3vw;
 	}
 }
-/* @media only screen and (max-width: 450px) {
+@media only screen and (max-width: 450px) {
 	.Headings_Button_Container .Section_Headings .large_heading {
-		font-size: 4vw;
+		font-size: 28px;
 	}
 	.Headings_Button_Container .Section_Headings .small_heading {
-		font-size: 2vw;
+		font-size: 16px;
 	}
-} */
+	.Headings_Button_Container .Button a{
+		font-size: 4vw;
+        padding: 2.4vw 3.6vw;
+	}
+}

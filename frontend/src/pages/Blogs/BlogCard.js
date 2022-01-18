@@ -69,7 +69,7 @@ function BlogCard(props) {
 							<Link to={blogs.bloglink} style={{ textDecoration: "none" }}>
 								<Button
 									className={styles.btnP}
-									width='100%'
+									// width='100%'
 									variant="contained"
 									disableElevation
 									style={{ backgroundColor: "#0F9D58", fontSize: 14, padding: "10px 60px", margin: "0", textAlign:'left', fontFamily:"OpenSans", fontWeight: "600"}}

@@ -25,23 +25,29 @@
 .buttons {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items:flex-end;
+	gap:2vw;
 }
 .buttonsAdmin {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items:flex-end;
+	gap:2vw;
 	margin-bottom: 10px;
 }
+.buttons >a,
+.buttonsAdmin > a {
+	width: 100%;
+}
 .btn {
-	width: 200px;
+	width: 100%;
 }
 .greenBtn {
 	color: #08ad5d;
 	background-color: #08ad5d;
-	width: 200px;
+	width: 100%;
 }
 .card {
 	/* border: 1px solid transparent; */
@@ -57,9 +63,17 @@
 	margin-right: 10px;
 }
 
+
 /* HOVER */
 .card:hover {
 	box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 16px;
 	/* border: solid grey 1px; */
 	/* transition: 1s; */
+}
+@media only screen and (max-width: 450px) {
+	.svg {
+		height: 16px;
+		width: 16px;
+		margin-right: 8px;
+	}
 }

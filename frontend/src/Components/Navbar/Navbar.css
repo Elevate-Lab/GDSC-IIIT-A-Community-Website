@@ -165,3 +165,18 @@
 .navbar_drawer_links .navbar_contact {
     padding: 1.8vw 4vw;
 }
+@media only screen and (max-width: 450px) {
+    
+    .navbar_logo > img {
+        height: auto;
+        width: 50vw;
+    }
+    .navbar_drawer_links .navbar_link_txt {
+        font-size: 4.4vw;
+    }
+    
+    .navbar_drawer_links .navbar_contact {
+        padding: 3vw 4.8vw;
+    }
+
+}

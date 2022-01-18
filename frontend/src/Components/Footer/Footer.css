@@ -204,3 +204,37 @@
 		justify-content: center;
 	}
 }
+
+@media only screen and (max-width: 450px) {
+	.footer_top .DSC_logo {
+		width: 100%;
+	}
+	.footer_contact {
+		gap: 2vh;
+	}
+	.Copyright_line{
+		justify-content: start;
+		font-size: 12px;
+	}
+	.footer_bot {
+		align-items:center;
+	}
+	.contact_sec_1 > div > div {
+		height: 48px;
+		width: 48px;
+	}
+	.contact_sec_1 > div > div > img {
+		height: 36px;
+		width: 36px;
+	}
+	.contact_sec_1 > div > p {
+		font-size: 18px;
+	}
+	.contact_sec_1 > div > p > span {
+		font-size: 12px;
+	}
+	.contact_sec_2 > p {
+		font-size: 24px;
+		text-align: center;
+	}
+}

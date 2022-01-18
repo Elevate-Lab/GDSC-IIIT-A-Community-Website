@@ -222,3 +222,34 @@ form input, form textarea, form button{
     }
 
 }
+@media only screen and (max-width: 450px) {
+    
+    .Name_input, .Email_input{
+        margin-bottom: 18px;
+    }
+    .Name_inp::before ,
+    .Email_inp::before {
+        font-size: 16px;
+        line-height: 2.6vh;
+    }
+    .contact_form > div > input:focus + .Name_inp::before ,
+    .contact_form > div > input:focus + .Email_inp::before ,
+    .name_filled::before ,
+    .email_filled::before {
+        font-size: 10px;
+        line-height: 2vh;
+    }
+    .Message_inp::before{
+        font-size: 16px;
+        line-height: 1.6vh;
+    }
+    .contact_form > div > textarea:focus ~ .Message_inp::before ,
+    .message_filled::before {
+        font-size: 10px;
+        line-height: 2vh;
+    }
+    form input, form textarea, form button{
+        font-size: 16px;
+        line-height: 2.6vh;
+    }
+}

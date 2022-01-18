@@ -26,9 +26,9 @@ let eventsArr = Array.from(events)
 				alignItems: "center",
 				zIndex:'0'
 			}}
-		>
+			>
 			{eventsArr && eventsArr.map((event)=>{
-             return <EventCard key={event._id} event={event} upcoming={props.upcoming}/>
+			return <EventCard key={event._id} event={event} upcoming={props.upcoming}/>
             })}
 		</div>
 	);

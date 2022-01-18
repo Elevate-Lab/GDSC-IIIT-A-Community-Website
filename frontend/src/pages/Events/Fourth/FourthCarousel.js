@@ -72,21 +72,21 @@ function FouthCarousel() {
                 <div className={Classes.textUs}>
                     <h2 
                         className={Classes.designtext}
-                        style={{fontSize:'6.8vh', fontWeight:'600', marginTop: '8vh', marginBottom: '5vh'}}
+                        style={{fontSize:'6.8vw', fontWeight:'600', marginTop: '8vh', marginBottom: '5vh'}}
                     >What we Teach in Workshops</h2>
                     <h4
                         className={Classes.designtext}
-                        style={{fontSize:'3.4vh', marginBottom: '1vh'}}
+                        style={{fontSize:'3.4vw', marginBottom: '1vh'}}
                     >Google collabrates with University Students through Student Clubs to grow Google Communities</h4>
                     <h4
                         className={Classes.designtext}
-                        style={{fontSize:'3.4vh', marginTop: '1vh'}}
+                        style={{fontSize:'3.4vw', marginTop: '1vh'}}
                     >DSC Provides:</h4>
-                    <h4  style={{fontSize: '2.6vh', marginTop: '2vh'}}  sx={{fontSize:'0.4rem'}}
+                    <h4  style={{fontSize: '2.6vw', marginTop: '2vh'}}  sx={{fontSize:'0.4rem'}}
                         className={Classes.designtext}>1. Oppurtunities to Enhance their technical knowledge.</h4>
-                    <h4 style={{fontSize: '2.6vh', marginTop: '0'}} sx={{fontSize:'4vh'}}
+                    <h4 style={{fontSize: '2.6vw', marginTop: '0'}} sx={{fontSize:'4vh'}}
                         className={Classes.designtext}>2. Gain Industrial experience by solving Problems using Technology.</h4>
-                    <h4 style={{fontSize: '2.6vh', marginTop: '0', marginBottom: '8vh'}} sx={{fontSize:'4vh'}}
+                    <h4 style={{fontSize: '2.6vw', marginTop: '0', marginBottom: '8vh'}} sx={{fontSize:'4vh'}}
                         className={Classes.designtext}>3. Display prototypes & Solutions for industries and Organizations.</h4>
                      
                 </div>

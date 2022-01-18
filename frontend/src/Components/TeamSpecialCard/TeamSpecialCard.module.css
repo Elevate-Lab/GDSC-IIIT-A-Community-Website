@@ -45,8 +45,40 @@
     filter: grayscale(0%);
 }
 
-@media only screen and (max-width: 908px) {
+@media only screen and (max-width: 900px) {
     .cards_container {
         flex-direction: column;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .card {
+        margin: 2vh 0;
+        width: 350px;
+    }
+    .card>div>div {
+        padding: 8px
+    }
+    
+    .card>div>div>div {
+        padding: 12px
+    }
+    
+    .img {
+        height: 70px;
+        width: 70px;
+    }
+    
+    .img>div {
+        height: 70px;
+        width: 70px;
+    }
+    .social_icons {
+        height: 24px;
+        width: 24px;
+        gap: 8px;
+    }
+    .social_icons>a>svg {
+        height: 16px;
+        width: 16px;
     }
 }

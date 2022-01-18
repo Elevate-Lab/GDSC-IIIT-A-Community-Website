@@ -12,11 +12,13 @@ function Hero() {
         <section className="hero-section">
             <HeroLeft/>
             <div className="hero-section-center">
-                <img src={Herologo} alt="Hero Logo"/>
-                <div className="hero-join-us">
-                    <a href="https://gdsc.community.dev/indian-institute-of-information-technology-allahabad-prayagraj/" target="_blank" rel="noopener noreferrer">
-                        Join Us
-                    </a>
+                <div className="hero-section-main">
+                    <img src={Herologo} alt="Hero Logo"/>
+                    <div className="hero-join-us">
+                        <a href="https://gdsc.community.dev/indian-institute-of-information-technology-allahabad-prayagraj/" target="_blank" rel="noopener noreferrer">
+                            Join Us
+                        </a>
+                    </div>
                 </div>
                 <div class="hero-explore">
                     <p>Explore</p>
