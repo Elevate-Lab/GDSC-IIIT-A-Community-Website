@@ -65,6 +65,7 @@ function EventCard(props) {
 
 					<div className={styles.text}>
 						<Typography variant="body2" style={{width:'90%'}}>
+
 						{shorten(event.description)}
 						</Typography>
 					</div>
