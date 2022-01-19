@@ -13,7 +13,7 @@ function EventCards(props) {
 		//getAllData(attribute);
 		getAllEventData();
 	}, [events])
-console.log(events);
+
 let eventsArr = Array.from(events)
 	return (
 		<div

@@ -36,7 +36,6 @@ function Blogs() {
 		getAllBlogData();
 	}, [blogs])
 	const [admin, setAdmin] = useState(true);
-  console.log(blogs);
 	return (
 		<section
 			className="Blogs_section"

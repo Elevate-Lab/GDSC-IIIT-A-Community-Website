@@ -28,11 +28,11 @@ const ApiState = (props) => {
   const getAllTeamData = async () => {
     const allDatas = await retrieveTeamData();
     setTeams(allDatas);
-    if (data) {
-      const coreTeams = data.filter((e) => {
+    if (teams) {
+      const coreTeams = teams.filter((e) => {
         return e.designation === 'Core Team'
       })
-      setCoreTeam(coreTeams)
+      setCoreTeam(coreTeams);
     }
   }
 

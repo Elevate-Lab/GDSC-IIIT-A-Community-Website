@@ -11,16 +11,14 @@ function BlockchainTeam() {
         // getAttribute(attribute)
         // getAllData();
         getAllTeamData();
-    }, [teams])
-    const opensourceTeam = teams.filter((e) => {
-        if(data){
-        return e.designation === 'Block Chain';
-        }
+    }, [teams]);
+    const blockChain = teams.filter((e) => {
+        return e.designation === 'BlockChain';
     })
     return (
-        <div id="opensourceTeam" className="Field_view">
-            {opensourceTeam &&
-                opensourceTeam.map((teams) => {
+        <div id="Blockchain" className="Field_view">
+            {blockChain &&
+                blockChain.map((teams) => {
                     return <MemberCard
                     key={teams._id}
                      team={teams}

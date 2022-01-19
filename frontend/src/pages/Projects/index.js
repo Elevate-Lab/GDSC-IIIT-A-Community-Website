@@ -18,7 +18,7 @@ function Projects() {
 		//getAllData(attribute);
 		getAllProjectData();
 	}, [projects])
-	console.log(projects);
+
 	let projectsArr = Array.from(projects)
 	return (
 		<div className={styles.projectsPage}>
