@@ -21,7 +21,7 @@ function TeamSpecialCard() {
     return (
         <div className={styles.cards_container}>
             <Box className={styles.card} sx={{ minWidth: 275 }}>
-                <Card variant="outlined">
+                <Card variant="outlined" style={{borderRadius:20}}>
                     <CardContent>
                         <div className={styles.container}>
                             <div className={styles.img}>
@@ -66,7 +66,7 @@ function TeamSpecialCard() {
                 </Card>
             </Box>
             <Box className={styles.card} sx={{ minWidth: 275 }}>
-                <Card variant="outlined">
+                <Card variant="outlined" style={{borderRadius:20}}>
                     <CardContent>
                         <div className={styles.container}>
                             <div className={styles.img}>

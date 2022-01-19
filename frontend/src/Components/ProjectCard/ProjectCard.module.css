@@ -1,6 +1,7 @@
 .container {
 	display: flex;
 	flex-direction: row;
+	border-radius: 20px;
 	/* align-items: center;
 	justify-content: center; */
 	/* padding-bottom: 1.5%; */

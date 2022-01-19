@@ -25,7 +25,7 @@ function EventCard(props) {
 	const [upcoming, setUpcoming] = useState(props.upcoming);
 	return (
 		// <Box className="card" sx={{ minWidth: 275 }}>
-		<Card variant="outlined" styles={{ padding: "0" }} className={styles.eventCard}>
+		<Card variant="outlined" styles={{ padding: "0", borderRadius:"20px", overflow: "hidden" }} className={styles.eventCard}>
 			{/* <CardMedia component="img" height="140" image="../Assets/About_DSC_Image.png" alt="project image" /> */}
 
 			{/* <CardMedia
@@ -65,14 +65,14 @@ function EventCard(props) {
 				</CardContent>
 
 				{upcoming && (
-					<CardActions className={styles.buttons}>
-						<Link to="" style={{ textDecoration: "none" }}>
+					<CardActions className={styles.buttons} style={{padding:"5px 20px", width: "100%"}}>
+						<Link to="" style={{ textDecoration: "none",width: "100%"}}>
 							<Button
 								className={styles.RSVPbtn}
 								// size="small"
 								variant="contained"
 								disableElevation
-								style={{ backgroundColor: "#0F9D58", width: "100%", padding: "8px 90px", fontFamily:"Open Sans,sans-serif", fontSize: 14, fontWeight: "600"}}
+								style={{ backgroundColor: "#0F9D58", width: "100%", padding: "8px 0", fontFamily:"Open Sans,sans-serif", fontSize: 14, fontWeight: "600"}}
 							>
 								<RSVPsvg className={styles.RSVPsvg} />
 								RSVP Here
@@ -82,7 +82,7 @@ function EventCard(props) {
 				)}
 
 				{admin && (
-					<CardActions className={styles.buttonsAdmin}>
+					<CardActions className={styles.buttonsAdmin} style={{padding:"5px 20px", width: "100%", gap:8}}>
 						
 							<Button
 							 onClick={()=>removeEvent(event._id)}
@@ -90,18 +90,18 @@ function EventCard(props) {
 								// size="small"
 								variant="contained"
 								disableElevation
-								style={{ backgroundColor: "#EA4235", padding: "10px 30px", fontFamily:"Open Sans,sans-serif, sans serif", fontSize: 14, fontWeight: "600"  }}
+								style={{ backgroundColor: "#EA4235", width: "100%", padding: "8px 0", fontFamily:"Open Sans,sans-serif, sans serif", fontSize: 14, fontWeight: "600"  }}
 							>
 								Delete
 							</Button>
 						
-						<Link onClick={()=>previousCardData(event)} to="../events/edit_event" style={{ textDecoration: "none"}}>
+						<Link onClick={()=>previousCardData(event)} to="../events/edit_event" style={{ textDecoration: "none", width: "100%"}}>
 							<Button
 								className={styles.btn}
 								// size="small"
 								variant="outlined"
 								disableElevation
-								style={{ color: "#0F9D58", border: "2px solid #0F9D58", padding: "6px 30px" ,fontFamily:"Open Sans,sans-serif", fontSize: 14, fontWeight: "600"  }}
+								style={{ color: "#0F9D58", width: "100%" ,border: "2px solid #0F9D58", padding: "6px 0" ,fontFamily:"Open Sans,sans-serif", fontSize: 14, fontWeight: "600"  }}
 							>
 								Edit
 							</Button>

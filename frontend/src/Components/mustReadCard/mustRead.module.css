@@ -25,6 +25,8 @@
 .imgContainer .img {
 	width: 25vw;
 	height: 100%;
+	border-radius: 20px;
+	overflow: hidden;
 }
 .row {
 	display: flex;

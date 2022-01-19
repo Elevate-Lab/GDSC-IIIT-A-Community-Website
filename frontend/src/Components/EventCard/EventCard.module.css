@@ -13,6 +13,8 @@
 .imgContainer {
 	z-index: 1;
 	position: relative;
+	border-radius: 20px;
+	overflow: hidden;
 }
 .text {
 	width: 20vw;
@@ -32,14 +34,14 @@
 	align-items: flex-end;
 }
 .btn {
-	width: 130px;
+	width: 100%;
 }
 .RSVPbtn {
-	width: 250px;
+	width: 100%;
 }
 .eventCard {
 	margin: 5vh 0;
-	border-radius: 10px !important ;
+	border-radius: 20px !important ;
 	padding: 0;
 	max-width: 300px;
 	/* border: 1px solid transparent; */
@@ -60,7 +62,7 @@
 }
 .content {
 	/* border: solid grey 1px; */
-	border-radius: 8px;
+	border-radius: 20px;
 	box-shadow: rgba(0, 0, 0, 0.16) 0px -2px 4px;
 	/* margin-top: -15px; */
 	position: relative;

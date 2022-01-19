@@ -151,7 +151,7 @@ function Blogs() {
 			</div> */}
 
 			<div className="heading_plusBtn">
-				<h2 style={{fontWeight: "600", fontFamily: "OpenSans", color: "#1b2733" }} className="heading">
+				<h2 style={{fontWeight: "600", fontFamily: "Open Sans,Poppins,sans-serif", color: "#1b2733" }} className="heading">
 					Must Read
 				</h2>
 				<Fab color="primary" aria-label="add">
