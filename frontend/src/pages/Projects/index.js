@@ -59,12 +59,6 @@ function Projects() {
 					width:"100%",
 				}}
 			>
-				<ProjectCard key={1} project={1}/>
-				<ProjectCard key={1} project={1}/>
-				<ProjectCard key={1} project={1}/>
-				<ProjectCard key={1} project={1}/>
-				<ProjectCard key={1} project={1}/>
-				<ProjectCard key={1} project={1}/>
 				{projectsArr && projectsArr.map((project) => {
 			  return <ProjectCard key={project._id} project={project}/>
 			})}

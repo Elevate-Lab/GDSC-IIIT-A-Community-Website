@@ -182,11 +182,6 @@ function Blogs() {
 					alignItems: "center"
 				}}
 			>
-				<BlogCard key={1} blogs={2} />
-				<BlogCard key={1} blogs={2} />
-				<BlogCard key={1} blogs={2} />
-				<BlogCard key={1} blogs={2} />
-				<BlogCard key={1} blogs={2} />
 				{blogs && blogs.map((blog) => {
 							return <BlogCard key={blog._id} blogs={blog} />
 						})}
