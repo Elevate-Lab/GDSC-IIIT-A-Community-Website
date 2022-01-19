@@ -29,21 +29,21 @@ function TeamSpecialCard() {
                             </div>
                             <div className={styles.name}>
                                 <Typography
-                                    sx={{ lineHeight:"110%", margin: '0' , marginBottom: '0.4vh',fontSize: 20 ,fontFamily:"OpenSans" ,fontWeight: '600'}}
+                                    sx={{ lineHeight:"110%", margin: '0' , marginBottom: '0.4vh',fontSize: 20 ,fontFamily:"Open Sans,sans-serif" ,fontWeight: '600'}}
                                     color="#1B2733"
                                     gutterBottom
                                 >
                                     Tejas Mane
                                 </Typography>
                                 <Typography
-                                    sx={{ fontSize: 16, margin: '0', marginBottom: '1vh',fontFamily:"OpenSans"}}
+                                    sx={{ fontSize: 16, margin: '0', marginBottom: '1vh',fontFamily:"Open Sans,sans-serif"}}
                                     color="#637282"
                                     gutterBottom
                                 >
                                     GDSC Lead IIITA
                                 </Typography>
                                 <Typography
-                                    sx={{ fontSize: 12, margin: '0', paddingTop: '10px' ,fontFamily:"OpenSans" }}
+                                    sx={{ fontSize: 12, margin: '0', paddingTop: '10px' ,fontFamily:"Open Sans,sans-serif" }}
                                     color="#637282"
                                     gutterTop
                                 >
@@ -74,21 +74,21 @@ function TeamSpecialCard() {
                             </div>
                             <div className={styles.name}>
                                 <Typography
-                                    sx={{ lineHeight:"110%", margin: '0' , marginBottom: '0.4vh',fontSize: 20 ,fontFamily:"OpenSans" ,fontWeight: '600'}}
+                                    sx={{ lineHeight:"110%", margin: '0' , marginBottom: '0.4vh',fontSize: 20 ,fontFamily:"Open Sans,sans-serif" ,fontWeight: '600'}}
                                     color="#1B2733"
                                     gutterBottom
                                 >
                                     Dr. Mohammed Javed
                                 </Typography>
                                 <Typography
-                                    sx={{ fontSize: 16, margin: '0', marginBottom: '1vh',fontFamily:"OpenSans"}}
+                                    sx={{ fontSize: 16, margin: '0', marginBottom: '1vh',fontFamily:"Open Sans,sans-serif"}}
                                     color="#637282"
                                     gutterBottom
                                 >
                                     Faculty Advisor
                                 </Typography>
                                 <Typography
-                                    sx={{ fontSize: 12, margin: '0', paddingTop: '10px' ,fontFamily:"OpenSans" }}
+                                    sx={{ fontSize: 12, margin: '0', paddingTop: '10px' ,fontFamily:"Open Sans,sans-serif" }}
                                     color="#637282"
                                     gutterTop
                                 >

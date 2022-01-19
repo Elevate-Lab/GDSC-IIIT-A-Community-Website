@@ -26,19 +26,19 @@ function BlogCard(props) {
 	return (
 		<>
 		
-		<div style={{width: '350px', height:'max-content', display: 'flex', flexDirection: 'column'}}>
+		<div style={{width: '320px', height:'max-content', display: 'flex', flexDirection: 'column'}}>
 			<div style={{zIndex: "0", background:"#FAFAFA", borderRadius:'20px 20px 0 0' }} >
-				<img src={image1} style={{ width: '350px', height: '250px'}} alt="img" />
+				<img src={image1} style={{ width: '320px', height: '220px'}} alt="img" />
 			</div>
 			<div style={{ zIndex: "5",paddingBottom:'20px'}}>
 				<Box className={styles.card} sx={{ background:"#FAFAFA", overflow:"hidden" }}>
 					<Card variant="outlined" sx={{ paddingBottom:'10px'}}>
-						<CardContent>
-							<div style={{paddingTop: '20px',color:'#1B2733',fontWeight:'600',textAlign:'left', fontSize: 24, fontFamily:"OpenSans"}}>
+						<CardContent style={{padding:"5px 20px 30px 20px"}}>
+							<div style={{paddingTop: '20px',color:'#1B2733',fontWeight:'600',textAlign:'left', fontSize: 24, fontFamily:"Open Sans,sans-serif"}}>
 								{blogs.title}
 							</div>
 							<div className={styles.text}>
-								<Typography variant="body2" sx={{ margin: 0, marginTop: '10px', color:'#637282',fontWeight:'500', fontSize: 14, fontFamily:"OpenSans"}}>
+								<Typography variant="body2" sx={{ margin: 0, marginTop: '10px', color:'#637282',fontWeight:'500', fontSize: 14, fontFamily:"Open Sans,sans-serif"}}>
 									{blogs.description}
 								</Typography>
 							</div>
@@ -49,13 +49,13 @@ function BlogCard(props) {
 								</div>
 								<div className={styles.name}>
 									<Typography
-										sx={{ margin: "0", color:'#435156',fontWeight:'600',textAlign:'left', fontSize: 14, fontFamily:"OpenSans"}}
+										sx={{ margin: "0", color:'#435156',fontWeight:'600',textAlign:'left', fontSize: 14, fontFamily:"Open Sans,sans-serif"}}
 										color="#435156"
 										gutterBottom
 									>
 										{blogs.author}
 									</Typography>
-									<Typography sx={{ fontSize: 11, margin: "0", textAlign:'left', fontFamily:"OpenSans" }} color="#435156" gutterBottom>
+									<Typography sx={{ fontSize: 11, margin: "0", textAlign:'left', fontFamily:"Open Sans,sans-serif" }} color="#435156" gutterBottom>
 										{blogs.date}
 									</Typography>
 								</div>
@@ -64,15 +64,16 @@ function BlogCard(props) {
 
 
 
-						<CardActions className={styles.buttons}>
+						<CardActions className={styles.buttons} style={{padding:"5px 20px"}}>
 
 							<Link to={blogs.bloglink} style={{ textDecoration: "none" }}>
 								<Button
 									className={styles.btnP}
-									// width='100%'
+									width='100%'
+									size='small'
 									variant="contained"
 									disableElevation
-									style={{ backgroundColor: "#0F9D58", fontSize: 14, padding: "10px 60px", margin: "0", textAlign:'left', fontFamily:"OpenSans", fontWeight: "600"}}
+									style={{ backgroundColor: "#0F9D58", fontSize: 13, padding: "10px 0", margin: "0", textAlign:'left', fontFamily:"Open Sans,sans-serif", fontWeight: "600"}}
 								>
 									<ViewProject className={styles.svg} style={{ height:"20px" , width:"20px" }}/>
 									Read on Medium
@@ -80,7 +81,7 @@ function BlogCard(props) {
 							</Link>
 						</CardActions>
 						{admin && (
-							<CardActions className={styles.buttonsAdmin}>
+							<CardActions className={styles.buttonsAdmin} style={{padding:"5px 20px"}}>
 								
 									<Button
 									onClick={()=>removeBlog(blogs._id)}
@@ -88,7 +89,7 @@ function BlogCard(props) {
 										// size="small"
 										variant="contained"
 										disableElevation
-										style={{backgroundColor: "#EA4235", padding: "7px 20px", fontFamily:"OpenSans", fontSize: 14, fontWeight: "600"  }}
+										style={{backgroundColor: "#EA4235", padding: "10px 0", fontFamily:"Open Sans,sans-serif", fontSize: 13, fontWeight: "600"  }}
 									>
 										Delete
 									</Button>
@@ -100,7 +101,7 @@ function BlogCard(props) {
 										// size="small"
 										variant="outlined"
 										disableElevation
-										style={{color: "#0F9D58", border: "2px solid #0F9D58", padding: "5px 20px" ,fontFamily:"OpenSans", fontSize: 14, fontWeight: "600" }}
+										style={{color: "#0F9D58", border: "2px solid #0F9D58", padding: "8px 0" ,fontFamily:"Open Sans,sans-serif", fontSize: 13, fontWeight: "600" }}
 									>
 										Edit
 									</Button>

@@ -174,7 +174,7 @@ function Blogs() {
 
 			<div
 				style={{
-					padding: "2vh 7vw 9vh 7vw",
+					padding: "2vh 5vw 9vh 5vw",
 					display: "flex",
 					flexDirection: "row",
 					flexWrap: "wrap",
@@ -182,6 +182,11 @@ function Blogs() {
 					alignItems: "center"
 				}}
 			>
+				<BlogCard key={1} blogs={2} />
+				<BlogCard key={1} blogs={2} />
+				<BlogCard key={1} blogs={2} />
+				<BlogCard key={1} blogs={2} />
+				<BlogCard key={1} blogs={2} />
 				{blogs && blogs.map((blog) => {
 							return <BlogCard key={blog._id} blogs={blog} />
 						})}

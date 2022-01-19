@@ -54,6 +54,7 @@ function MemberCard(props) {
 								borderColor: "#EA4235",
 								border: "1.5px solid #EA4235",
 								fontWeight: "600",
+								fontFamily:"Open Sans,sans-serif",
 							}}
 						>
 							Delete
@@ -65,7 +66,7 @@ function MemberCard(props) {
 							size="small"
 							variant="outlined"
 							disableElevation
-							style={{ color: "#0F9D58", borderColor: "#0F9D58", border: "1.5px solid", fontWeight: "600" }}
+							style={{ color: "#0F9D58", borderColor: "#0F9D58", border: "1.5px solid", fontWeight: "600", fontFamily:"Open Sans,sans-serif"}}
 						>
 							Edit
 						</Button>

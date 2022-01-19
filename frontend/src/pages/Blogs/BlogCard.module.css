@@ -24,18 +24,24 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+	padding: 20px;
+}
+.buttons>a{
+	width: 100%;
 }
 .buttonsAdmin {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+	gap: 8px;
 	align-items: flex-end;
 	/* margin-bottom: 10px; */
 }
 .btnP {
 	width: 100%;
 }
-.btn {
+.buttonsAdmin .btn,
+.buttonsAdmin > a {
 	width: 100%;
 }
 .greenBtn {
@@ -44,10 +50,8 @@
 	width: 100%;
 }
 .card {
-	/* border: 1px solid transparent; */
-	/* padding: 15px 0; */
 	margin:0 0 3vh 0;
-	width: 350px;
+	width: 320px;
     border-radius: 20px;
 	transition: 0.75s;
 	z-index: 1;
@@ -61,7 +65,7 @@
 	/* padding: 15px 0; */
 	margin: 4vh 0;
 	z-index: 5;
-	width: 350px;
+	width: 320px;
 	margin-left: 3.5rem;
 	margin-bottom: 10rem;
 	margin-top:1rem;
@@ -81,9 +85,10 @@
 
 @media only screen and (max-width: 450px) {
     .btnP {
-		width: 200px;
+		width: 100%;
 	}
-	.btn {
-		width: 100px;
+	.buttonsAdmin>.btn,
+	.buttonsAdmin>.a {
+		width: 100%;
 	}
 }

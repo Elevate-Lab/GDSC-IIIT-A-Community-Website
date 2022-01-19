@@ -27,14 +27,14 @@
 	flex-direction: row;
 	justify-content: space-between;
 	align-items:flex-end;
-	gap:2vw;
+	gap:16px;
 }
 .buttonsAdmin {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items:flex-end;
-	gap:2vw;
+	gap:16px;
 	margin-bottom: 10px;
 }
 .buttons >a,
@@ -58,8 +58,8 @@
 }
 
 .svg {
-	height: 24px;
-	width: 24px;
+	height: 20px;
+	width: 20px;
 	margin-right: 10px;
 }
 
@@ -75,5 +75,11 @@
 		height: 16px;
 		width: 16px;
 		margin-right: 8px;
+	}
+	.buttons {
+		gap:8px;
+	}
+	.buttonsAdmin {
+		gap:8px;
 	}
 }

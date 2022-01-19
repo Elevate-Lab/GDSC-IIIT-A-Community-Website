@@ -52,39 +52,39 @@ function MustReadCard(props) {
 							<p style={{fontSize: 14, fontFamily:"Open Sans,sans-serif", fontWeight: "500", color: "#435156"}}>date . time</p>
 						</div>
 					</div>
-					<div className="buttons" style={{ display: 'flex', flexDirection: 'column', alignItems:'center'}}>
-						<Link to="" style={{ textDecoration: "none" }}>
+					<div className={`${styles.buttons}`} style={{display: 'flex', flexDirection: 'column', alignItems:'center'}}>
+						<Link to="" style={{ textDecoration: "none", width: "100%"}}>
 							<Button
 								className={`${styles.btn} ${styles.mediumBtn}`}
 								// size="small"
 								variant="contained"
 								disableElevation
-								style={{ backgroundColor: "#0F9D58", width: "300px", padding: "10px 20px",fontSize: 13, fontFamily:"Open Sans,sans-serif", fontWeight: "600",}}
+								style={{ backgroundColor: "#0F9D58", width: "100%", padding: "10px 16px",fontSize: 13, fontFamily:"Open Sans,sans-serif", fontWeight: "600",}}
 							>
 								<ViewProject className={styles.svg} style={{ paddingRight: "3px", marginRight: "7px", height:'24px', width:'24px' }} />{" "}
 								Read on Medium
 							</Button>
 						</Link>
 						{admin && (
-							<CardActions className={styles.buttonsAdmin}>
-								<Link to="" style={{ textDecoration: "none" }}>
+							<CardActions className={styles.buttonsAdmin} style={{padding: "10px 0"}}>
+								<Link to="" style={{ textDecoration: "none", width: "100%"}}>
 									<Button
 										className={styles.btn}
 										// size="small"
 										variant="contained"
 										disableElevation
-										style={{ backgroundColor: "#EA4335", width: "145px", padding: "10px 16px", fontSize: 13, fontFamily:"Open Sans,sans-serif", fontWeight: "600"}}
+										style={{ backgroundColor: "#EA4335", padding: "10px 0", width: "100%", fontSize: 13, fontFamily:"Open Sans,sans-serif", fontWeight: "600"}}
 									>
 										Delete
 									</Button>
 								</Link>
-								<Link to="" style={{ textDecoration: "none" }}>
+								<Link to="" style={{ textDecoration: "none",  width: "100%" }}>
 									<Button
 										className={styles.btn}
 										// size="small"
 										variant="outlined"
 										disableElevation
-										style={{ color: "#0F9D58", border: "2px solid #0F9D58", padding: "8px 16px", width: "145px", fontSize: 13, fontFamily:"Open Sans,sans-serif", fontWeight: "600" }}
+										style={{ color: "#0F9D58", border: "2px solid #0F9D58", width: "100%", padding: "8px 0", fontSize: 13, fontFamily:"Open Sans,sans-serif", fontWeight: "600" }}
 									>
 										Edit
 									</Button>
