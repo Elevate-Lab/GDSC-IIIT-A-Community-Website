@@ -9,15 +9,16 @@ import AddIcon from "@mui/icons-material/Add";
 import styles from "./Projects.module.css";
 import HeadingButton from "../../Components/Heading_button";
 
+
 function Projects() {
 	const context = useContext(apiContext)
-	const { data, getAllData, getAttribute,getAllProjectData,projects } = context;
+	const { data, getAllData, getAttribute,getAllProjectData,projects,parameter} = context;
 	let attribute = "projects";
 	useEffect(() => {
-		//getAttribute(attribute)
+		getAttribute(null)
 		//getAllData(attribute);
 		getAllProjectData();
-	}, [projects])
+	}, [parameter])
 	let projectsArr = Array.from(projects)
 	return (
 		<div className={styles.projectsPage}>

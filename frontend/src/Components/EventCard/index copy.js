@@ -1,20 +1,20 @@
-import React, { useEffect, useContext, useState } from 'react';
+import React,{useEffect,useContext} from 'react';
 import apiContext from "../../ContextApi/ApiContext";
 import { Typography } from "@material-ui/core";
 import EventCard from "./EventCard.js";
-import moment from 'moment';
-function EventCards(props) {
-	const context = useContext(apiContext)
-	const { upcoming } = props;
-	const { data, getAllData, getAttribute, getAllEventData, events, parameter ,upcomingEvents} = context
-	let attribute = "events";
 
+function EventCards2(props) {
+	const context = useContext(apiContext)
+	const { data, getAllData, getAttribute,getAllEventData,events,parameter,pastEvents} = context
+	let attribute = "events";
+	
 	useEffect(() => {
 		getAttribute(null)
 		//getAllData(attribute);
 		getAllEventData();
 	}, [parameter])
-	let eventsArr = Array.from(upcomingEvents)
+
+let eventsArr = Array.from(pastEvents)
 	return (
 		<div
 			style={{
@@ -24,14 +24,14 @@ function EventCards(props) {
 				flexWrap: "wrap",
 				justifyContent: "space-around",
 				alignItems: "center",
-				zIndex: '0'
+				zIndex:'0'
 			}}
 		>
-			{eventsArr && eventsArr.map((event) => {
-				return <EventCard key={event._id} event={event} upcoming={upcoming} />
-			})}
+			{eventsArr && eventsArr.map((event)=>{
+             return <EventCard key={event._id} event={event} upcoming={props.upcoming}/>
+            })}
 		</div>
 	);
 }
 
-export default EventCards;
+export default EventCards2;

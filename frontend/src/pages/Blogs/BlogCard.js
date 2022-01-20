@@ -20,9 +20,19 @@ import React, { useContext } from 'react'
 import apiContext from '../../ContextApi/ApiContext'
 function BlogCard(props) {
 	const [admin, setAdmin] = useState(true);
-	const context = useContext(apiContext)
-    const {removeData,previousCardData,removeBlog} = context
+	const context = useContext(apiContext);
+    const {removeData,previousCardData,removeBlog,getAttribute} = context
     const {blogs} = props
+	const handleClick = ()=>{
+		getAttribute(blogs);
+		removeBlog(blogs._id);
+	}
+	function shorten(str, separator = ' ') {
+		if(str){
+		if (str.length <= 100) return str;
+		return `${str.substr(0, str.lastIndexOf(separator, 100))}...`;
+		}
+	  }
 	return (
 		<>
 		
@@ -42,7 +52,7 @@ function BlogCard(props) {
 							<br></br>
 							<div className={styles.text}>
 								<Typography variant="body2" sx={{ margin: 0 }}>
-									{blogs.description}
+									{shorten(blogs.description)}
 								</Typography>
 							</div>
 
@@ -87,7 +97,7 @@ function BlogCard(props) {
 							<CardActions className={styles.buttonsAdmin}>
 								
 									<Button
-									onClick={()=>removeBlog(blogs._id)}
+									onClick={handleClick}
 										className={styles.btn}
 										size="small"
 										variant="contained"

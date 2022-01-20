@@ -5,13 +5,13 @@ import apiContext from '../../../ContextApi/ApiContext'
 
 function AppTeam() {
     const context = useContext(apiContext)
-    const { data, getAllData, getAttribute,getAllTeamData,teams } = context
+    const { data, getAllData, getAttribute,getAllTeamData,teams,parameter} = context
     let attribute = "teams"
     useEffect(() => {
-        // getAttribute(attribute)
+        getAttribute(null)
         // getAllData();
         getAllTeamData();
-    }, [teams])
+    }, [parameter])
 
     const appTeam = teams.filter((e) => {
         return e.designation === 'App';

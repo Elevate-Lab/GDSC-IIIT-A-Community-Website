@@ -21,14 +21,24 @@ import moment from 'moment';
 function EventCard(props) {
 	const {event} = props
     const context =useContext(apiContext)
-    const {removeData,previousCardData,removeEvent} = context
+    const {removeData,previousCardData,removeEvent,getAttribute} = context
 	const [admin, setAdmin] = useState(true);
 	const [upcoming, setUpcoming] = useState(props.upcoming);
-
+    const handleClick = ()=>{
+		getAttribute(event);
+		removeEvent(event._id);
+	}
 	function shorten(str, separator = ' ') {
+		if(str){
 		if (str.length <= 100) return str;
 		return `${str.substr(0, str.lastIndexOf(separator, 100))}...`;
+		}
 	  }
+	//   const currentDate = new Date();
+	//   const eventDate = new Date(event.startDate);
+	//   if(currentDate.getTime() >= eventDate.getTime() ){
+	// 	  setUpcoming(true);
+	//   }
 	return (
 		// <Box className="card" sx={{ minWidth: 275 }}>
 		<Card variant="outlined" styles={{ padding: "0" }} className={styles.eventCard}>
@@ -53,11 +63,11 @@ function EventCard(props) {
 							</Typography>
 							<Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
 								<Calendar className={styles.svg} />
-								{moment(`${event.startDate}`).format("Do MMM YYYY")} to {moment(`${event.endDate}`).format("Do MMM YYYY")}
+								{moment(`${event.startDate}`).format("Do MMM YYYY")} 
 							</Typography>
 							<Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-								<Clock className={styles.svg} />
-								{moment(event.startDate).format('h:mm:ss a')}
+							
+								
 							</Typography>
 						</div>
 					</div>
@@ -92,7 +102,7 @@ function EventCard(props) {
 					<CardActions className={styles.buttonsAdmin}>
 						
 							<Button
-							 onClick={()=>removeEvent(event._id)}
+							 onClick={handleClick}
 								className={styles.btn}
 								size="small"
 								variant="contained"

@@ -6,13 +6,13 @@ import apiContext from '../../../ContextApi/ApiContext'
 
 function CoreTeam() {
     const context = useContext(apiContext)
-    const {coreTeam, data, getAllData, getAttribute,getAllTeamData ,teams } = context
+    const { coreTeam,data, getAllData, getAttribute,getAllTeamData,teams,parameter} = context
     let attribute = "teams"
     useEffect(() => {
-        // getAttribute(attribute)
+        getAttribute(null)
         // getAllData();
         getAllTeamData();
-    }, [teams])
+    }, [parameter])
     return (
             <div id="CoreTeam" className="Field_view">
             {coreTeam &&

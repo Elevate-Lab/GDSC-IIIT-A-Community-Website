@@ -28,13 +28,14 @@ import MustReadCard from "../../Components/mustReadCard";
 
 function Blogs() {
 	const context = useContext(apiContext)
-	const { data, getAllData, getAttribute ,blogs,getAllBlogData,addBlogCard} = context
+	const { data, getAllData, getAttribute ,blogs,getAllBlogData,addBlogCard,parameter} = context
 	let attribute = "blogs";
 	useEffect(() => {
-		//getAttribute(attribute)
 		//getAllData(attribute);
 		getAllBlogData();
-	}, [blogs])
+		getAttribute(null);
+	}, [parameter])
+	console.log(parameter);
 	const [admin, setAdmin] = useState(true);
 	return (
 		<section
