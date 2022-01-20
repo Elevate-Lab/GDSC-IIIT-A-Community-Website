@@ -61,52 +61,52 @@ loading?
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/About">
+          <Route path="/about">
             <About />
           </Route>
-          <Route path="/Events" exact>
+          <Route path="/events" exact>
             <Events />
           </Route>
-          <Route path="/Team" exact>
+          <Route path="/team" exact>
             <Team />
           </Route>
-          <Route path="/Projects" exact>
+          <Route path="/projects" exact>
             <Projects />
           </Route>
-          <Route path="/Blogs" exact>
+          <Route path="/blogs" exact>
             <Blogs />
           </Route>
-          <Route path="/Contact">
+          <Route path="/contact">
             <Contact />
           </Route>
-          <Route path="/Events/NewEvent">
+          <Route path="/events/new_event">
              <NewEvent/>
           </Route>
-          <Route path="/Events/EditEvent">
+          <Route path="/events/edit_event">
              <EditEvent/>
           </Route>
-          <Route path="/Events/EventDetails">
+          <Route path="/events/event_details">
              <LeaderBoard/>
           </Route>
-          <Route path="/Blogs/NewBlog">
+          <Route path="/blogs/new_blog">
              <NewBlog/>
           </Route>
-          <Route path="/Blogs/EditBlog">
+          <Route path="/blogs/edit_blog">
              <EditBlog/>
           </Route>
-          <Route path="/Team/NewMember">
+          <Route path="/team/new_member">
              <NewMember/>
           </Route>
-          <Route path="/Team/EditMember">
+          <Route path="/team/edit_member">
              <EditMember/>
           </Route>
-          <Route path="/Projects/NewProject">
+          <Route path="/projects/new_project">
              <NewProject/>
           </Route>  
-           <Route path="/Projects/loginPage">
+           <Route path="/projects/login_page">
                   <LoginPage />
                 </Route>
-          <Route path="/Projects/EditProject">
+          <Route path="/projects/edit_project">
              <EditProject/>
           </Route>
         </Switch>

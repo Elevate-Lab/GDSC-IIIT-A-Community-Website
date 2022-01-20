@@ -49,7 +49,7 @@ function Footer() {
                             <div className="contact_pin_icon">
                                 <img src={pin_icon} alt="pin"/>
                             </div>
-                            <p>Google Developer Student's Club <br/><span>IIITA,Prayagraj, Uttar Pradesh, 211015</span></p>
+                            <p>Google Developer Students Club <br/><span>IIITA,Prayagraj, Uttar Pradesh, 211015</span></p>
                         </div>
                     </div>
                     <div className="contact_sec_2">

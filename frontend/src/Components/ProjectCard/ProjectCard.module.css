@@ -1,6 +1,7 @@
 .container {
 	display: flex;
 	flex-direction: row;
+	border-radius: 20px;
 	/* align-items: center;
 	justify-content: center; */
 	/* padding-bottom: 1.5%; */
@@ -9,10 +10,12 @@
 .img {
 	padding-right: 3%;
 	padding-bottom: 3%;
+	filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.1));
 }
 .text {
-	width: 360px;
-	margin: 0;
+	width: calc(100%-20px);
+	margin: 0 10px;
+	text-align: justify;
 }
 .name {
 	display: flex;
@@ -23,36 +26,61 @@
 .buttons {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: space-between;
+	align-items:flex-end;
+	gap:16px;
 }
 .buttonsAdmin {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: space-between;
+	align-items:flex-end;
+	gap:16px;
 	margin-bottom: 10px;
 }
+.buttons >a,
+.buttonsAdmin > a {
+	width: 100%;
+}
 .btn {
-	width: 150px;
+	width: 100%;
 }
 .greenBtn {
 	color: #08ad5d;
 	background-color: #08ad5d;
-	width: 150px;
+	width: 100%;
 }
 .card {
 	/* border: 1px solid transparent; */
 	/* padding: 15px 0; */
 	margin: 5vh 0;
-	width: 400px;
+	width: 450px;
+	transition: 0.75s;
 }
 
 .svg {
-	padding-right: 5px;
+	height: 20px;
+	width: 20px;
+	margin-right: 10px;
 }
+
 
 /* HOVER */
 .card:hover {
-	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 16px;
 	/* border: solid grey 1px; */
 	/* transition: 1s; */
+}
+@media only screen and (max-width: 450px) {
+	.svg {
+		height: 16px;
+		width: 16px;
+		margin-right: 8px;
+	}
+	.buttons {
+		gap:8px;
+	}
+	.buttonsAdmin {
+		gap:8px;
+	}
 }

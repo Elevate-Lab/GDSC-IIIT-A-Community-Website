@@ -4,10 +4,12 @@
     gap: 6.11vw;
     justify-content: center;
     width: 100%;
+    margin-bottom: 10vh;
 }   
 .About p{
     margin: 0;
     padding: 0;
+    font-family: "Open Sans";
 }
 .About > img{
     height: 20.83vw;
@@ -31,47 +33,56 @@
     font-size: 2.5vw;
     line-height: 1.53vw;
     color: #1B2733;
+    font-family: "Open Sans";
 }
 .About > div > .Abt_Content {
     font-weight: normal;
     font-size: 1.11vw;
     line-height: 1.53vw;
     color: #637282;
+    font-family: "Open Sans";
 }
 .About > div > button {
-    height: 50px;
-    width: 200px;
+    width:max-content;
     background: #08AD5D;
     font-weight: 600;
-    font-size: 16px;
-    /* padding: 17px; */
+    font-size: 1.3vw;
     line-height:150%;
     letter-spacing: 0.02em;
     color: #ffffff;
     outline: none;
     border: none;
-    border-radius: 4px;
+    border-radius: 0.6vh;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap:16px;
+    gap:2vh;
     margin-top:auto;
+    padding: 0;
+    font-family: "Open Sans";
 }
 .About > div > button > a{
-    height:100%;
-    width:100%;
     display: flex;
-    gap:8px;
+    background: #08AD5D;
+    gap:1vh;
     align-items: center;
     justify-content: center;
     text-decoration: none;
     color: #ffffff;
-    padding: 0;
+    font-size: 1.2vw;
+    padding: 1.1vw 2.8vw;
+    border-radius: 0.6vh;
+    transition: 0.75s;
+    font-family: "Open Sans";
+}
+.About > div > button :hover{
+    background:#06d471;
+    box-shadow: 0px 1px 12px 0 rgba(0, 0, 0, 0.4);
 }
 .About > div > button > a > img {
-    height: 24px;
-    width: 24px;
+    height: 1.6vw;
+    width: 1.6vw;
     background-size: fit;
 }
 .About_DSC_IIITA{
@@ -80,13 +91,9 @@
 .Abt_btn_txt{
     text-decoration: none;
     color: #ffffff;
-    padding: 17px;
+    padding: 1.2vw;
+    font-family: "Open Sans";
 }
-.Abt_btn_txt:hover{
-    text-decoration: none;
-    color: #ffffff;
-}
-
 .What_we_do{
     width: 100%;
     padding:0 8.2vw;
@@ -94,52 +101,63 @@
     gap: 4.5vw;
     flex-direction: column;
     align-items: center;
-    padding-top: 5vw;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
 }
 .What_we_do .What_we_do_heading{
     font-weight: bold;
     font-size: 2.5vw;
     line-height: 1.53vw;
-    color: #1B2733;   
+    color: #1B2733; 
+    font-family: "Open Sans";  
 }
 .What_we_do .What_we_do_cards{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content:center;
-    column-gap: 120px;
-    row-gap: 60px;
+    column-gap: 8vw;
+    row-gap: 8vh;
 }
 .What_we_do .What_we_do_cards > div{
     display: flex;
-    height: 120px;
-    width: 450px;
+    height: 20vh;
+    width: 34vw;
     justify-content:space-between;
+    gap: 2vw;
 }
 .What_we_do_card_img{
     display: grid;
     place-items: center;
-    height: 120px;
-    width: 120px;
+    height: 20vh;
+    width: 20vh;
     border-radius:50%;
+    flex:none;
+}
+.What_we_do_card_img > img{
+    height: 10vh;
+    width: 10vh;
 }
 .What_we_do_card_text {
     display:flex;
     flex-direction: column;
     justify-content: center;
-    width: 300px;
+    width: 23vw;
+    font-family: "Open Sans";
 }
 .What_we_do_card_text > .What_we_do_card_head {
     font-weight: 500;
     font-size: 1.52vw;
     line-height: 120%;
-    color: #1D2935;       
+    color: #1D2935;
+    font-family: "Open Sans";      
 }
 .What_we_do_card_text > .What_we_do_card_desc {
     font-weight: normal;
     font-size: 1.11vw;
     line-height: 1.53vw;
-    color: #637282;     
+    color: #637282;  
+    font-family: "Open Sans";   
 }
 
 .What_we_do_card1 > .What_we_do_card_img{
@@ -157,7 +175,7 @@
 
 .Join_the_convo{
     width: 100%;
-    padding:0 10.02vw;
+    padding:0 9.02%;
     display: flex;
     gap: 3vw;
     flex-direction: column;
@@ -167,7 +185,8 @@
     font-weight: bold;
     font-size: 2.5vw;
     line-height: 1.53vw;
-    color: #1B2733;   
+    color: #1B2733;  
+    font-family: "Open Sans";
 }
 .Join_the_convo .Join_the_convo_cards{
     display:flex;
@@ -178,37 +197,44 @@
     width: 45%;
 }
 .Join_the_convo_cards > div > p{
-    font-weight: 550;
+    font-weight: 500;
     font-size: 1.2vw;
     line-height: 1.53vw;
     color: #637282; 
-    padding-bottom:4px;
+    padding-bottom:0.6vh;
+    font-family: "Open Sans";
 }
 .Join_the_convo_cards > div > div{
-    height: 50px;
-    width: 200px;
+    height: max-content;
+    width: max-content;
+    transition:0.75s;
     display:grid;
     place-items:center;
     outline:none;
     border:none;
-    border-radius: 4px;
+    border-radius: 0.6vh;
     cursor: pointer;
     position: relative;
     overflow: hidden;
+}
+.Join_the_convo_cards > div > div:hover{
+    box-shadow: 0px 1px 12px 0 rgba(0, 0, 0, 0.4);
 }
 .Join_the_convo_cards > div > div > a{
     margin:0;
     color:#ffffff;
     text-decoration:none;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 1.2vw;
     line-height:150%;
+    padding: 1.4vw 2.4vw;
     letter-spacing: 0.02em;
     z-index: 1;
+    font-family: "Open Sans";
 }
 .Join_the_convo_cards > div > div > img{
     height: 100%;
-    width: 100%;
+    width: auto;
     position:absolute;
     top: 0;
     left: 0;
@@ -234,7 +260,7 @@
         gap: 3vw;
     }
     .What_we_do_cards > div{
-        gap: 16px;
+        gap:10vh;
     }
     .Join_the_convo{
         align-items:center;
@@ -259,14 +285,22 @@
         line-height: 100%;
     }
     .About > div > button {
-        font-size: 16px;
+        font-size: 2vw;
         line-height:150%;
     }
+    .About > div > button > a{
+        font-size: 2vw;
+        padding: 2vw 3vw;
+    }
+    .About > div > button > a > img {
+        height: 2.4vw;
+        width: 2.4vw;
+    }
     .What_we_do{
-        padding:0 10.02vw;
+        padding:8vh 10.02vw;
     }
     .What_we_do .What_we_do_cards{
-        gap:30px;
+        gap:8vw;
     }
     .What_we_do .What_we_do_cards > div{
         justify-content:space-between;
@@ -275,6 +309,9 @@
     .What_we_do_card2 ,
     .What_we_do_card4 {
         flex-direction:row-reverse;
+    }
+    .What_we_do_card_text {
+        width: 40vw;
     }
     .Join_the_convo_cards > div{
         width: 100%;
@@ -285,7 +322,74 @@
         padding-bottom:0;
     }
     .Join_the_convo .Join_the_convo_cards{
-        gap: 40px;
+        gap: 2vw;
     }
-    
+    .Join_the_convo_cards > div > div > a{
+        font-size: 2vw;
+        padding: 2vw 4vw;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .About{
+        gap: 3vh;
+        padding-bottom: 8vh;
+    }
+    .About > div > .Abt_Heading,
+    .What_we_do .What_we_do_heading,
+    .Join_the_convo .Join_the_convo_heading {
+        font-size: 5.4vw;
+    }
+    .About > div > .Abt_Content{
+        font-size: 2.8vw;
+        line-height: 130%;
+    }
+    .What_we_do_card_text > .What_we_do_card_desc{
+        font-size: 2.8vw;
+    }
+    .What_we_do_card_text > .What_we_do_card_head {
+        font-size: 4.8vw;
+    }
+    .About > div > button {
+        font-size: 3.6vw;
+        line-height:150%;
+    }
+    .About > div > button > a{
+        font-size: 3vw;
+        padding: 3vw 4.8vw;
+    }
+    .About > div > button > a > img {
+        height: 4vw;
+        width: 4vw;
+    }
+    .What_we_do{
+        padding:6vh 10.02vw;
+        gap: 5vh;
+    }
+    .What_we_do .What_we_do_cards{
+        gap:6vh;
+    }
+    .What_we_do .What_we_do_cards > div{
+        height: 14vh;
+        justify-content:space-between;
+        width:100%;
+    }
+    .What_we_do_card_img > img{
+        height: 7vh;
+        width: 7vh;
+    }
+    .What_we_do_card_img {
+        height: 14vh;
+        width: 14vh;
+    }
+    .Join_the_convo_cards > div > p{
+        font-size: 3vw;
+        line-height: 130%;
+    }
+    .Join_the_convo .Join_the_convo_cards{
+        gap: 4vh;
+    }
+    .Join_the_convo_cards > div > div > a{
+        font-size: 3vw;
+        padding: 2vw 4vw;
+    }
 }

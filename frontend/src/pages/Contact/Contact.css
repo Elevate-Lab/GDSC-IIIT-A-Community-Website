@@ -33,25 +33,25 @@
 form input, form textarea, form button{
     background:rgba(255,255,255,0.4);
     font-family: 'Open Sans', sans-serif;
-    border: 1.2px solid #637282;
-    border-radius:4px;
+    border: 0.1vh solid #637282;
+    border-radius:0.6vh;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 14px;
+    font-size: 2.6vh;
+    line-height: 100%;
     color: #637282;
-    padding: 10px;
+    padding: 2.4vh;
     position: relative;
 }
 .contact_form > div > input:focus,
 .contact_form > div > textarea:focus{ 
-    border: 1.4px solid #1B2733;
+    border: 0.2vh solid #1B2733;
     outline:none;
     color: #1B2733;
 }
 
 .Name_input, .Email_input{
-    height:42px;
+    height:7.4vh;
     width:100%;
 }
 .contact_form > div > span{
@@ -59,81 +59,112 @@ form input, form textarea, form button{
     margin-left: -100%;
     z-index: 0;
 }
-.contact_form > div > input ~ span::before{
+.Name_inp::before ,
+.Email_inp::before {
     color: #637282;
     position: absolute;
-    top: 9px;
-    left: 8px;
-    padding: 4px;
+    top: 1.9vh;
+    left: 1.9vh;
+    padding: 0.4vh;
     width:max-content;
     font-style: normal;
     font-weight: normal;
-    font-size: 15px;
-    line-height: 15px;
+    font-size: 2.6vh;
+    line-height: 100%;
     z-index: 0;
     transition: all 0.3s ease-in-out;
 }
-.Name_inp::before{
+.Name_inp::before,
+.name_filled::before{
     content: "Name";
+    font-family: "Open Sans";
 }
-.Email_inp::before{
+.Email_inp::before,
+.email_filled::before{
     content: "E-mail";
+    font-family: "Open Sans";
+}
+.Message_inp::before,
+.message_filled::before{
+    content: "Message";
+    font-family: "Open Sans";
+}
+.contact_form > div > input:focus + .Name_inp::before ,
+.contact_form > div > input:focus + .Email_inp::before ,
+.name_filled::before ,
+.email_filled::before {
+    position: absolute;
+    color: #1B2733;
+    background:#ffffff;
+    top: -1.6vh;
+    left: 1.4vh;
+    padding: 0.4vh;
+    font-size: 2vh;
+    line-height: 100%;
+    font-weight:500;
+    width:max-content;
+    transition: all 0.3s ease-in-out;
 }
 .Message_inp::before{
-    content: "Message";
-}
-.contact_form > div > input:focus + span::before{
-    color: #1B2733;
-    top: -13px;
-    background:#ffffff;
-    font-size: 12px;
-    font-weight:500;
-}
-.contact_form > div > textarea ~ span::before{
     color: #637282;
+    top: 3.6vh;
+    left: 1.9vh;
+    padding: 0.4vh;
     position: absolute;
-    top: 21px;
-    left: 8px;
-    padding: 4px;
     width:max-content;
     font-style: normal;
     font-weight: normal;
-    font-size: 15px;
-    line-height: 15px;
+    font-size: 2.6vh;
+    line-height: 100%;
     z-index: 0;
     transition: all 0.3s ease-in-out;
 }
-.contact_form > div > textarea:focus ~ span::before{
+.contact_form > div > textarea:focus ~ .Message_inp::before ,
+.message_filled::before {
+    position: absolute;
     color: #1B2733;
-    top: 1px;
     background:#ffffff;
-    font-size: 12px;
+    top: 0.6vh;
+    left: 1.4vh;
+    padding: 0.4vh;
+    font-size: 2vh;
+    line-height: 100%;
     font-weight:500;
+    width:max-content;
+    transition: all 0.3s ease-in-out;
 }
 .Message_input{
-    height:125px;
+    height:25vh;
     width: 100%;
     resize:vertical;
-    min-height: 100px;
-    max-height: 150px;
-    margin-top: 14px;
+    min-height: 20vh;
+    max-height: 30vh;
+    margin-top: 2vh;
+    font-family: "Open Sans";
 }
 
 .Send_btn{
     background:#156EFF;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 26px;
+    font-weight: 600;
+    font-size: 2.4vh;
+    line-height: 1.5vh;
+    transition:0.75s;
     color: #FFFFFF;
-    height: 50px;
-    width: 150px;
+    /* height: 50px;
+    width: 150px; */
+    font-family: "Open Sans";
     border:none;
-    margin-top: 50px;
+    margin-top: 8vh;
+    padding: 2vh 4vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap:16px;
+    gap:2vh;
     cursor: pointer;
+}
+.Send_btn:hover{
+    background:#3f88ff;
+    box-shadow: 0px 1px 12px 0 rgba(0, 0, 0, 0.3);
 }
 .Contact_image{
     display: flex;
@@ -150,42 +181,75 @@ form input, form textarea, form button{
         padding-top: 12vh;
     }
     .Contact_form_n_image{
-        width:70%;
+        width:80%;
         padding:0;
     }
     .Contact_image > img{
-        height: 260px;
+        height: 45vh;
         width:auto;
-        margin-left:45% ;
+        margin-left:-8vh;
     }
     .form_container{
-        width:200%;
+        width:60vw;
     }
     .contact_form{
-        width:150%;
+        width:60vw;
         flex-direction: column;
     }
     .contact_form>div{
-        width:100%;
+        width:60vw;
     }
     .contact_form > div > span{
         position: relative;
-        margin-left: -150%;
+        margin-left: -100%;
         z-index: 0;
     }
     .Name_input, .Email_input{
-        height:42px;
-        width:max(340px,120%);
+        height:7.4vh;
+        width:100%;
         margin: 0;        
         margin-bottom: 14px;
         float:none;
     }
     .Message_input{
-        height:125px;
-        width:max(340px,120%);
+        height:20vh;
+        width:100%;
     }
     .Send_btn{
-        font-size:16px;
+        width:max-content;
+        padding: 2vh 5vh;
+        font-size:3vh;
     }
 
+}
+@media only screen and (max-width: 450px) {
+    
+    .Name_input, .Email_input{
+        margin-bottom: 18px;
+    }
+    .Name_inp::before ,
+    .Email_inp::before {
+        font-size: 16px;
+        line-height: 2.6vh;
+    }
+    .contact_form > div > input:focus + .Name_inp::before ,
+    .contact_form > div > input:focus + .Email_inp::before ,
+    .name_filled::before ,
+    .email_filled::before {
+        font-size: 10px;
+        line-height: 2vh;
+    }
+    .Message_inp::before{
+        font-size: 16px;
+        line-height: 1.6vh;
+    }
+    .contact_form > div > textarea:focus ~ .Message_inp::before ,
+    .message_filled::before {
+        font-size: 10px;
+        line-height: 2vh;
+    }
+    form input, form textarea, form button{
+        font-size: 16px;
+        line-height: 2.6vh;
+    }
 }

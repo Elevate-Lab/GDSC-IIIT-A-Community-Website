@@ -18,7 +18,7 @@ function EventCards(props) {
 	return (
 		<div
 			style={{
-				padding: "9vh 7vw",
+				padding: "2vh 7vw 9vh 7vw",
 				display: "flex",
 				flexDirection: "row",
 				flexWrap: "wrap",
@@ -30,6 +30,7 @@ function EventCards(props) {
 			{eventsArr && eventsArr.map((event) => {
 				return <EventCard key={event._id} event={event} upcoming={upcoming} />
 			})}
+
 		</div>
 	);
 }

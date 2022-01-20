@@ -36,39 +36,37 @@ function BlogCard(props) {
 	return (
 		<>
 		
-		<div>
-			<div style={{ marginBottom: '-2.6rem', zIndex: "0" }} >
-				<img src={blogs.image} style={{ width: '25rem', height: '17rem',cursor:'not-allowed' }} />
+		<div style={{width: '320px', height:'max-content', display: 'flex', flexDirection: 'column'}}>
+			<div style={{zIndex: "0", background:"#FAFAFA", borderRadius:'20px 20px 0 0' }} >
+				<img src={image1} style={{ width: '320px', height: '220px'}} alt="img" />
 			</div>
-			<div style={{ zIndex: "1" }}>
-				<Box className={styles.card} sx={{ minWidth: 275 }}>
-					<Card variant="outlined">
-						<CardContent>
-							<div style={{color:'black',fontWeight:'bold',textAlign:'center'}}>
-								<br></br>
+			<div style={{ zIndex: "5",paddingBottom:'20px'}}>
+				<Box className={styles.card} sx={{ background:"#FAFAFA", overflow:"hidden" }}>
+					<Card variant="outlined" sx={{ paddingBottom:'10px'}}>
+						<CardContent style={{padding:"5px 20px 30px 20px"}}>
+							<div style={{paddingTop: '20px',color:'#1B2733',fontWeight:'600',textAlign:'left', fontSize: 24, fontFamily:"Open Sans,sans-serif"}}>
 								{blogs.title}
-								
 							</div>
-							<br></br>
 							<div className={styles.text}>
-								<Typography variant="body2" sx={{ margin: 0 }}>
+
+								<Typography variant="body2" sx={{ margin: 0, marginTop: '10px', color:'#637282',fontWeight:'500', fontSize: 14, fontFamily:"Open Sans,sans-serif" }}>
 									{shorten(blogs.description)}
 								</Typography>
 							</div>
 
-							<div className={styles.container} style={{ marginTop: '2rem' }}>
+							<div className={styles.container} style={{ marginTop: '20px' }}>
 								<div className={styles.img} style={{ marginBottom: '-0.5rem' }}>
-									<Avatar src={image1} sx={{ width: 28, height: 28 }} />
+									<Avatar src={image1} sx={{ width: 40, height: 40 }} />
 								</div>
 								<div className={styles.name}>
 									<Typography
-										sx={{ fontSize: 14, margin: "0" }}
-										color="text.primary"
+										sx={{ margin: "0", color:'#435156',fontWeight:'600',textAlign:'left', fontSize: 14, fontFamily:"Open Sans,sans-serif"}}
+										color="#435156"
 										gutterBottom
 									>
 										{blogs.author}
 									</Typography>
-									<Typography sx={{ fontSize: 10, margin: "0" }} color="text.secondary" gutterBottom>
+									<Typography sx={{ fontSize: 11, margin: "0", textAlign:'left', fontFamily:"Open Sans,sans-serif" }} color="#435156" gutterBottom>
 										{blogs.date}
 									</Typography>
 								</div>
@@ -77,44 +75,44 @@ function BlogCard(props) {
 
 
 
-						<CardActions className={styles.buttons}>
+						<CardActions className={styles.buttons} style={{padding:"5px 20px"}}>
 
 							<Link to={blogs.bloglink} style={{ textDecoration: "none" }}>
 								<Button
 									className={styles.btnP}
-									width='20rem'
-
+									width='100%'
+									size='small'
 									variant="contained"
 									disableElevation
-									style={{ backgroundColor: "#08ad5d" }}
+									style={{ backgroundColor: "#0F9D58", fontSize: 13, padding: "10px 0", margin: "0", textAlign:'left', fontFamily:"Open Sans,sans-serif", fontWeight: "600"}}
 								>
-									<ViewProject className={styles.svg} />
+									<ViewProject className={styles.svg} style={{ height:"20px" , width:"20px" }}/>
 									Read on Medium
 								</Button>
 							</Link>
 						</CardActions>
 						{admin && (
-							<CardActions className={styles.buttonsAdmin}>
+							<CardActions className={styles.buttonsAdmin} style={{padding:"5px 20px"}}>
 								
 									<Button
 									onClick={handleClick}
 										className={styles.btn}
-										size="small"
+										// size="small"
 										variant="contained"
 										disableElevation
-										style={{ backgroundColor: "#EA4335" }}
+										style={{backgroundColor: "#EA4235", padding: "10px 0", fontFamily:"Open Sans,sans-serif", fontSize: 13, fontWeight: "600"  }}
 									>
 										Delete
 									</Button>
 							
-								<Link to="/Blogs/EditBlog" onClick={()=>previousCardData(blogs)} style={{ textDecoration: "none" }}>
+								<Link to="../blogs/edit_blog" onClick={()=>previousCardData(blogs)} style={{ textDecoration: "none" }}>
 									<Button
 									
 										className={styles.btn}
-										size="small"
+										// size="small"
 										variant="outlined"
 										disableElevation
-										style={{ color: "#08ad5d", borderColor: "#08ad5d" }}
+										style={{color: "#0F9D58", border: "2px solid #0F9D58", padding: "8px 0" ,fontFamily:"Open Sans,sans-serif", fontSize: 13, fontWeight: "600" }}
 									>
 										Edit
 									</Button>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 // import { AppBar, Toolbar, Typography } from '@material-ui/core'
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import Navbar_logo from "../../Assets/DSC-IIITA-Light-Horizontal.png";
 
@@ -26,31 +26,35 @@ function Navbar() {
 			setDrawer("none");
 		}
 	};
+	const UpdateActivePage = (e) => {
+		console.log(e.target.innerText)
+		// setActivePage("about");
+	};
 
 	if (width > 900) {
 		return (
 			<div className="Navbar">
-				<Link className="navbar_logo" to="/" style={{ width: "340px" }}>
+				<NavLink className="navbar_logo" to="/" style={{ width: "24vw" }}>
 					<img src={Navbar_logo} alt="logo" />
-				</Link>
+				</NavLink>
 				<div className="navbar_links">
 					{navbarContent.map((item, index) => (
-						<Link className="navbar_link" key={index} to={`../${item}`}>
+						<NavLink activeClassName="active_nav_link" className="navbar_link" key={index} to={`../${item.toLowerCase()}`} onClick={UpdateActivePage}>
 							<p className="navbar_link_txt">{item}</p>
-						</Link>
+						</NavLink>
 					))}
-					<Link className="navbar_link" to="Contact">
+					<NavLink activeClassName="active_contact_link" className="navbar_link" to="../contact">
 						<p className="navbar_link_txt navbar_contact">Contact</p>
-					</Link>
+					</NavLink>
 				</div>
 			</div>
 		);
 	} else {
 		return (
 			<div className="Navbar">
-				<Link className="navbar_logo" to="/" style={{ width: "300px" }}>
+				<NavLink className="navbar_logo" to="/" style={{ width: "44vw" }}>
 					<img src={Navbar_logo} alt="logo" />
-				</Link>
+				</NavLink>
 				<div className="navbar_Drawer">
 					<input type="checkbox" value="drawer" onChange={ExpandMenu} unchecked />
 					<div className="navbar_drawer_icon">
@@ -61,13 +65,13 @@ function Navbar() {
 				</div>
 				<div className="navbar_drawer_links" style={{ display: `${Drawer}` }}>
 					{navbarContent.map((item, index) => (
-						<Link className="navbar_link" key={index} to={`../${item}`}>
+						<NavLink activeClassName="active_nav_link" className="navbar_link" key={index} to={`../${item.toLowerCase()}`}>
 							<p className="navbar_link_txt">{item}</p>
-						</Link>
+						</NavLink>
 					))}
-					<Link className="navbar_link" to="../Contact">
+					<NavLink activeClassName="active_contact_link" className="navbar_link" to="../contact">
 						<p className="navbar_link_txt navbar_contact">Contact</p>
-					</Link>
+					</NavLink>
 				</div>
 			</div>
 		);

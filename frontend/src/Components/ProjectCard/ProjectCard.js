@@ -32,7 +32,7 @@ function ProjectCard(props) {
 	  }
 	return (
 		<Box className={styles.card} sx={{ minWidth: 275 }}>
-			<Card variant="outlined">
+			<Card variant="outlined" style={{borderRadius:20, overflow: 'hidden'}}>
 				<CardContent>
 					<div className={styles.container}>
 						<div className={styles.img}>
@@ -40,43 +40,45 @@ function ProjectCard(props) {
 						</div>
 						<div className={styles.name}>
 							<Typography
-								sx={{ fontSize: 20, fontWeight: "bold", margin: "0" }}
-								color="text.primary"
+								sx={{ fontSize: 24, fontWeight: "600", margin: "0" , fontFamily: "Open Sans,Poppins,sans-serif"}}
+								color="#1b2733"
 								gutterBottom
 							>
 								{project.projectname}
 							</Typography>
-							<Typography sx={{ fontSize: 14, margin: "0" }} color="text.secondary" gutterBottom>
+							<Typography sx={{ fontSize: 15, fontWeight:"500", margin: "0", fontFamily: "Open Sans,Poppins,sans-serif"}} color="#637282" gutterBottom>
 								Jobs for all
 							</Typography>
 						</div>
 					</div>
 
 					<div className={styles.text}>
-						<Typography variant="body2" sx={{ margin: 0 }}>
+
+						<Typography variant="body2" sx={{fontSize:14,width:"100%", margin: 0, fontFamily: "Open Sans,Poppins,sans-serif" }} color="#435156" >
 						{shorten(project.description)}
 						</Typography>
 					</div>
 				</CardContent>
-				<CardActions className={styles.buttons}>
-					<Link to={project.githubLink} style={{ textDecoration: "none" }}>
+				<CardActions className={styles.buttons} style={{padding:"5px 20px"}}>
+					<Link to="project.githubLink" style={{ textDecoration: "none" }}>
+
 						<Button
 							className={styles.btn}
 							size="small"
 							variant="outlined"
-							style={{ color: "#08ad5d", borderColor: "#08ad5d" }}
+							style={{ color: "#0F9D58", border: "2px solid #0F9D58", fontFamily: "Open Sans,Poppins,sans-serif", padding: "10px 0", fontSize:12, fontWeight:"600"}}
 						>
 							<Github className={styles.svg} />
 							Github Link
 						</Button>
 					</Link>
-					<Link to={project.projectLink} style={{ textDecoration: "none" }}>
+					<Link to={project.projectLink} style={{ textDecoration: "none", marginLeft:"0" }}>
 						<Button
 							className={styles.btn}
 							size="small"
 							variant="contained"
 							disableElevation
-							style={{ backgroundColor: "#08ad5d" }}
+							style={{ backgroundColor: "#0F9D58", fontFamily: "Open Sans,Poppins,sans-serif",  padding: "12px 0",fontSize:12, fontWeight:"600"}}
 						>
 							<ViewProject className={styles.svg} />
 							View Project
@@ -84,7 +86,7 @@ function ProjectCard(props) {
 					</Link>
 				</CardActions>
 				{admin && (
-					<CardActions className={styles.buttonsAdmin}>
+					<CardActions className={styles.buttonsAdmin} style={{padding:"5px 20px"}}>
 					
 							<Button
 							onClick={handleClick}
@@ -92,7 +94,7 @@ function ProjectCard(props) {
 								size="small"
 								variant="contained"
 								disableElevation
-								style={{ backgroundColor: "#EA4335" }}
+								style={{ backgroundColor: "#EA4235", fontFamily: "Open Sans,Poppins,sans-serif",  padding: "12px 0",fontSize:12, fontWeight:"600" }}
 							>
 								Delete
 							</Button>
@@ -103,7 +105,7 @@ function ProjectCard(props) {
 								size="small"
 								variant="outlined"
 								disableElevation
-								style={{ color: "#08ad5d", borderColor: "#08ad5d" }}
+								style={{ color: "#0F9D58", border: "2px solid #0F9D58", fontFamily: "Open Sans,Poppins,sans-serif",  padding: "10px 0",fontSize:12, fontWeight:"600"  }}
 							>
 								Edit
 							</Button>

@@ -29,13 +29,13 @@ function MustReadCard(props) {
 				<CardContent>
 					<div className={styles.container}>
 						<div className={styles.name}>
-							<h3>Dive into StreamBuilder in Flutter</h3>
+							<h3 style={{fontSize: 24, fontFamily:"Open Sans,sans-serif", fontWeight: "600", color: "#1B2733"}}>Dive into StreamBuilder in Flutter</h3>
 						</div>
 					</div>
 					{/* <Headings LargeHeading="Project Name" SmallHeading="tagline" /> */}
 
 					<div className={styles.text}>
-						<Typography variant="body2">
+						<Typography variant="body2" sx={{fontSize: 14, fontFamily:"Open Sans,sans-serif", fontWeight: "500", color: "#637282"}}>
 							In this article, we will be Diving into StreamBuilder In Flutter. We will implement a demo
 							program through which you will get to know how to use StreamBuilder in your flutter
 							applications.
@@ -48,43 +48,43 @@ function MustReadCard(props) {
 							<Avatar sx={{ width: 56, height: 56 }} />
 						</div>
 						<div>
-							<p>Kunal Kaushik</p>
-							<p>date . time</p>
+							<p style={{fontSize: 14, fontFamily:"Open Sans,sans-serif", fontWeight: "500", color: "#435156"}}>Kunal Kaushik</p>
+							<p style={{fontSize: 14, fontFamily:"Open Sans,sans-serif", fontWeight: "500", color: "#435156"}}>date . time</p>
 						</div>
 					</div>
-					<div className="buttons">
-						<Link to="" style={{ textDecoration: "none" }}>
+					<div className={`${styles.buttons}`} style={{display: 'flex', flexDirection: 'column', alignItems:'center'}}>
+						<Link to="" style={{ textDecoration: "none", width: "100%"}}>
 							<Button
 								className={`${styles.btn} ${styles.mediumBtn}`}
-								size="small"
+								// size="small"
 								variant="contained"
 								disableElevation
-								style={{ backgroundColor: "#08ad5d", width: "200px" }}
+								style={{ backgroundColor: "#0F9D58", width: "100%", padding: "10px 16px",fontSize: 13, fontFamily:"Open Sans,sans-serif", fontWeight: "600",}}
 							>
-								<ViewProject className={styles.svg} style={{ paddingRight: "3px", marginRight: "7px" }} />{" "}
+								<ViewProject className={styles.svg} style={{ paddingRight: "3px", marginRight: "7px", height:'24px', width:'24px' }} />{" "}
 								Read on Medium
 							</Button>
 						</Link>
 						{admin && (
-							<CardActions className={styles.buttonsAdmin}>
-								<Link to="" style={{ textDecoration: "none" }}>
+							<CardActions className={styles.buttonsAdmin} style={{padding: "10px 0"}}>
+								<Link to="" style={{ textDecoration: "none", width: "100%"}}>
 									<Button
 										className={styles.btn}
-										size="small"
+										// size="small"
 										variant="contained"
 										disableElevation
-										style={{ backgroundColor: "#EA4335", width: "90px" }}
+										style={{ backgroundColor: "#EA4335", padding: "10px 0", width: "100%", fontSize: 13, fontFamily:"Open Sans,sans-serif", fontWeight: "600"}}
 									>
 										Delete
 									</Button>
 								</Link>
-								<Link to="" style={{ textDecoration: "none" }}>
+								<Link to="" style={{ textDecoration: "none",  width: "100%" }}>
 									<Button
 										className={styles.btn}
-										size="small"
+										// size="small"
 										variant="outlined"
 										disableElevation
-										style={{ color: "#08ad5d", borderColor: "#08ad5d", width: "90px" }}
+										style={{ color: "#0F9D58", border: "2px solid #0F9D58", width: "100%", padding: "8px 0", fontSize: 13, fontFamily:"Open Sans,sans-serif", fontWeight: "600" }}
 									>
 										Edit
 									</Button>

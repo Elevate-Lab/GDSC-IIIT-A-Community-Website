@@ -41,7 +41,7 @@ function EventCard(props) {
 	//   }
 	return (
 		// <Box className="card" sx={{ minWidth: 275 }}>
-		<Card variant="outlined" styles={{ padding: "0" }} className={styles.eventCard}>
+		<Card variant="outlined" styles={{ padding: "0", borderRadius:"20px", overflow: "hidden" }} className={styles.eventCard}>
 			{/* <CardMedia component="img" height="140" image="../Assets/About_DSC_Image.png" alt="project image" /> */}
 
 			{/* <CardMedia
@@ -58,38 +58,36 @@ function EventCard(props) {
 				<CardContent>
 					<div className={styles.container}>
 						<div className={styles.name}>
-							<Typography sx={{ fontSize: 18, fontWeight: "bold" }} color="text.primary" gutterBottom>
+							<Typography sx={{ fontSize: 18, fontFamily:"Open Sans,sans-serif", fontWeight: "600" }} color="#1B2733" gutterBottom>
 								{event.name}
 							</Typography>
-							<Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+							<Typography sx={{ fontSize: 14, fontFamily:"Open Sans,sans-serif" }} color="#637282" gutterBottom>
 								<Calendar className={styles.svg} />
 								{moment(`${event.startDate}`).format("Do MMM YYYY")} 
 							</Typography>
+
 							<Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-							
-								
 							</Typography>
 						</div>
 					</div>
 					{/* <Headings LargeHeading="Project Name" SmallHeading="tagline" /> */}
 
 					<div className={styles.text}>
-						<Typography variant="body2" style={{width:'90%'}}>
-
+						<Typography variant="body2" style={{width:'100%', fontSize: 15, fontFamily:"Open Sans,sans-serif"}} color="#435156">
 						{shorten(event.description)}
 						</Typography>
 					</div>
 				</CardContent>
 
 				{upcoming && (
-					<CardActions className={styles.buttons}>
-						<Link to="" style={{ textDecoration: "none" }}>
+					<CardActions className={styles.buttons} style={{padding:"5px 20px", width: "100%"}}>
+						<Link to="" style={{ textDecoration: "none",width: "100%"}}>
 							<Button
 								className={styles.RSVPbtn}
-								size="small"
+								// size="small"
 								variant="contained"
 								disableElevation
-								style={{ backgroundColor: "#08ad5d" }}
+								style={{ backgroundColor: "#0F9D58", width: "100%", padding: "8px 0", fontFamily:"Open Sans,sans-serif", fontSize: 14, fontWeight: "600"}}
 							>
 								<RSVPsvg className={styles.RSVPsvg} />
 								RSVP Here
@@ -99,26 +97,26 @@ function EventCard(props) {
 				)}
 
 				{admin && (
-					<CardActions className={styles.buttonsAdmin}>
+					<CardActions className={styles.buttonsAdmin} style={{padding:"5px 20px", width: "100%", gap:8}}>
 						
 							<Button
 							 onClick={handleClick}
 								className={styles.btn}
-								size="small"
+								// size="small"
 								variant="contained"
 								disableElevation
-								style={{ backgroundColor: "#EA4335" }}
+								style={{ backgroundColor: "#EA4235", width: "100%", padding: "8px 0", fontFamily:"Open Sans,sans-serif, sans serif", fontSize: 14, fontWeight: "600"  }}
 							>
 								Delete
 							</Button>
 						
-						<Link onClick={()=>previousCardData(event)} to="/Events/editEvent" style={{ textDecoration: "none" }}>
+						<Link onClick={()=>previousCardData(event)} to="../events/edit_event" style={{ textDecoration: "none", width: "100%"}}>
 							<Button
 								className={styles.btn}
-								size="small"
+								// size="small"
 								variant="outlined"
 								disableElevation
-								style={{ color: "#08ad5d", borderColor: "#08ad5d" }}
+								style={{ color: "#0F9D58", width: "100%" ,border: "2px solid #0F9D58", padding: "6px 0" ,fontFamily:"Open Sans,sans-serif", fontSize: 14, fontWeight: "600"  }}
 							>
 								Edit
 							</Button>
