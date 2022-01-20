@@ -11,15 +11,25 @@ import Avatar from "@mui/material/Avatar";
 import styles from "./ProjectCard.module.css";
 import { ReactComponent as ViewProject } from "../../Assets/svg_link.svg";
 import { ReactComponent as Github } from "../../Assets/Vector.svg";
-import { Link } from "react-router-dom";
+import { Link ,useHistory} from "react-router-dom";
 // import Stack from "@mui/material/Stack";
 import image1 from "../../Assets/Images/img1.png";
 
 function ProjectCard(props) {
 	const context = useContext(apiContext)
-    const {removeData,previousCardData,removeProject} = context
+    const {removeData,previousCardData,removeProject,getAttribute} = context
 	const {project} = props
 	const [admin, setAdmin] = useState(true);
+	const handleClick = () =>{
+		getAttribute(project)
+		removeProject(project._id);	
+	}
+	function shorten(str, separator = ' ') {
+		if(str){
+		if (str.length <= 100) return str;
+		return `${str.substr(0, str.lastIndexOf(separator, 100))}...`;
+		}
+	  }
 	return (
 		<Box className={styles.card} sx={{ minWidth: 275 }}>
 			<Card variant="outlined" style={{borderRadius:20, overflow: 'hidden'}}>
@@ -43,13 +53,15 @@ function ProjectCard(props) {
 					</div>
 
 					<div className={styles.text}>
+
 						<Typography variant="body2" sx={{fontSize:14,width:"100%", margin: 0, fontFamily: "Open Sans,Poppins,sans-serif" }} color="#435156" >
-						{project.description}
+						{shorten(project.description)}
 						</Typography>
 					</div>
 				</CardContent>
 				<CardActions className={styles.buttons} style={{padding:"5px 20px"}}>
-					<Link to="" style={{ textDecoration: "none" }}>
+					<Link to="project.githubLink" style={{ textDecoration: "none" }}>
+
 						<Button
 							className={styles.btn}
 							size="small"
@@ -77,7 +89,7 @@ function ProjectCard(props) {
 					<CardActions className={styles.buttonsAdmin} style={{padding:"5px 20px"}}>
 					
 							<Button
-							onClick={()=>removeProject(project._id)}
+							onClick={handleClick}
 								className={styles.btn}
 								size="small"
 								variant="contained"

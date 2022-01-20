@@ -8,11 +8,11 @@ function NewProject() {
     const history = useHistory()
     const context = useContext(apiContext)
     const {addACard,addProjectCard} = context
-    const [noteValue, setNoteValue] = useState({projectname:"",description:"",image:"",projectLink:""})
+    const [noteValue, setNoteValue] = useState({projectname:"",description:"",image:"",projectLink:"",githubLink:""})
     const handleClick = (e)=>{
         e.preventDefault()
         addProjectCard({...noteValue}) 
-        setNoteValue({projectname:"",description:"",image:"",projectLink:""})
+        setNoteValue({projectname:"",description:"",image:"",projectLink:"",githubLink:""})
         history.push("/Projects")
     }
     const onChange = (e)=>{
@@ -41,6 +41,10 @@ function NewProject() {
                 <div class="form-group">
                     <label>Project URL</label>
                     <input type="text" name="projectLink" placeholder="Link to the Github Repo or Deployed url" class="form-control" value={noteValue.projectLink} onChange={onChange}></input>
+                </div>
+                <div class="form-group">
+                    <label>Github URL</label>
+                    <input type="text" name="githubLink" placeholder="Link to the Github Repo or Deployed url" class="form-control" value={noteValue.githubLink} onChange={onChange}></input>
                 </div>
 
                 <button type="button" class="btn btn-info" onClick={handleClick} >Submit</button>

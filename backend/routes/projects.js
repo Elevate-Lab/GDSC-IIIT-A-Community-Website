@@ -29,7 +29,8 @@ router.post("/", (req, res) => {
         projectname: projectname,
         description: description,
         image: image,
-        projectLink: projectLink
+        projectLink: projectLink,
+        githubLink : githubLink
     };
 
     Project.create(newProject, (err, newlyCreated) => {
@@ -60,6 +61,7 @@ router.put("/:id",async (req,res)=>{
     if(description){newProject.description=description}
     if(image){newProject.image=image}
     if(projectLink){newProject.projectLink=projectLink}
+    if(githubLink){newProject.githubLink=githubLink}
 
     try {
     const project = await Project.findById(req.params.id)
