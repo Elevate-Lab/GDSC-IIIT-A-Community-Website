@@ -79,22 +79,22 @@ function Contact() {
                     <form className="contact_form" >
                         <div className="form_name_inp">
                             <input type="text"  className="Name_input"  onChange={(event)=>{handleNameChange(event)}} id="name" name="name"/>
-                            <span className="Name_inp"></span>
+                            <span className={`${name===''?'Name_inp':'name_filled'}`}></span>
                         </div>
                         <div className="form_email_inp">
                             <input type="text"  className="Email_input"  onChange={(event)=>{handleEmailChange(event)}} id="email" name="email" />
-                            <span className="Email_inp"></span>
+                            <span className={`${email===''?'Email_inp':'email_filled'}`}></span>
                         </div>
                         <div className="form_message_inp">
                             <textarea type="text" className="Message_input" onChange={(event)=>{handleMessageChange(event)}} id="message" name="message" />
-                            <span className="Message_inp"></span>
+                            <span className={`${message===''?'Message_inp':'message_filled'}`}></span>
                         </div>
                         <button type="submit" className="Send_btn" onClick={(event)=>handleRequest(event)}>
                             Send
                             <img src={Send_icon} alt="Send"
                                 style={{
-                                    height: '24px',
-                                    width: '24px',
+                                    height: '4vh',
+                                    width: '4vh',
                                 }} />
                         </button>
                     </form>

@@ -21,7 +21,6 @@ function About() {
             width:'100%',
             display: 'flex',
             flexDirection:'column',
-            gap:'10vh',
             paddingTop: '10.88vh',
             paddingBottom: '6vh',
             background: '#ffffff'

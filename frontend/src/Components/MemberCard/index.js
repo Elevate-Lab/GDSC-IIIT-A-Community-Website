@@ -33,7 +33,7 @@ function MemberCard(props) {
 
 				<a href={team.githubLink} className="fa" aria-hidden="true" target="_blank">
 					{" "}
-					<Github className="fa" />
+					<Github className="fa"  />
 				</a>
 
 				<a
@@ -54,22 +54,23 @@ function MemberCard(props) {
 							variant="contained"
 							disableElevation
 							style={{
-								backgroundColor: "#EA4335",
-								borderColor: "#EA4335",
-								border: "1.5px solid #EA4335",
+								backgroundColor: "#EA4235",
+								borderColor: "#EA4235",
+								border: "1.5px solid #EA4235",
 								fontWeight: "600",
+								fontFamily:"Open Sans,sans-serif",
 							}}
 						>
 							Delete
 						</Button>
 				
-					<Link onClick={()=>previousCardData(team)} to="/Team/EditMember" style={{ textDecoration: "none" }}>
+					<Link onClick={()=>previousCardData(team)} to="../team/edit_member" style={{ textDecoration: "none" }}>
 						<Button
 							className="btn"
 							size="small"
 							variant="outlined"
 							disableElevation
-							style={{ color: "#08ad5d", borderColor: "#08ad5d", border: "1.5px solid", fontWeight: "600" }}
+							style={{ color: "#0F9D58", borderColor: "#0F9D58", border: "1.5px solid", fontWeight: "600", fontFamily:"Open Sans,sans-serif"}}
 						>
 							Edit
 						</Button>

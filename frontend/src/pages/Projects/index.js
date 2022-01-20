@@ -22,29 +22,19 @@ function Projects() {
 	let projectsArr = Array.from(projects)
 	return (
 		<div className={styles.projectsPage}>
-			<div
-				style={{
-					padding: "9vh 0",
-					paddingTop: "10.88vh",
-					paddingBottom: "6vh",
-					display: "flex",
-					// flexDirection: "row",
-					// flexWrap: "wrap",
-					flexDirection: "column",
-					justifyContent: "space-around",
-					// alignItems: "center",
-				}}
-			>
-				<Headings
-					LargeHeading="Projects"
-					SmallHeading="Checkout our Projects"
-					Text="Learning goes hand-in-hand with building new and cool stuff. Lorem ipsum dolor sit amet"
-					PageIllustration={project_illustration}
-				/>
-
-				<Fab style={{ alignSelf: "flex-end", marginRight: "7vw" }} color="primary" aria-label="add">
+			<Headings
+				LargeHeading="Projects"
+				SmallHeading="Checkout our Projects"
+				Text="Learning goes hand-in-hand with building new and cool stuff. Lorem ipsum dolor sit amet"
+				PageIllustration={project_illustration}
+			/>
+			<div className="heading_plusBtn">
+				<h2 style={{ fontWeight: "bold", color: "#1b2733" }} className="heading">
+					Featured Projects
+				</h2>
+				<Fab color="primary" aria-label="add">
 					<Link
-						to="Projects/NewProject"
+						to="../projects/new_project"
 						style={{
 							color: "white",
 							height: "100%",
@@ -56,45 +46,19 @@ function Projects() {
 					>
 						<AddIcon />
 					</Link>
-
-			</Fab>
-	
-
-
-				<div className="heading_plusBtn">
-					<h2 style={{ fontWeight: "620" }} className="heading">
-						Featured Projects
-					</h2>
-					<Fab color="primary" aria-label="add">
-						<Link
-							to="Projects/NewProject"
-							style={{
-								color: "white",
-								height: "100%",
-								width: "100%",
-								margin: "0",
-								display: "grid",
-								placeItems: "center",
-							}}
-						>
-							<AddIcon />
-						</Link>
-					</Fab>
-				</div>
-
+				</Fab>
 			</div>
-
 			<div
 				style={{
-					padding: "9vh 7vw",
+					padding: "2vh 7vw 9vh 7vw",
 					display: "flex",
 					flexDirection: "row",
 					flexWrap: "wrap",
 					justifyContent: "space-around",
 					alignItems: "center",
+					width:"100%",
 				}}
 			>
-			
 				{projectsArr && projectsArr.map((project) => {
 			  return <ProjectCard key={project._id} project={project}/>
 			})}

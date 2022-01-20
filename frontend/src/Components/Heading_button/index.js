@@ -14,15 +14,7 @@ function HeadingButton({ LargeHeading, SmallHeading, ButtonText }) {
 
 			<div className="Button">
 				<Link to="" style={{ textDecoration: "none" }}>
-					<Button
-						// className={styles.btn}
-						size="small"
-						variant="contained"
-						disableElevation
-						style={{ backgroundColor: "#156EFF", padding: "8px 12px", textTransform: "none" }}
-					>
-						{ButtonText}
-					</Button>
+					{ButtonText}
 				</Link>
 			</div>
 		</div>

@@ -2,16 +2,20 @@
 	width: 229px;
 	min-height: 300px;
 	background: #fafafa;
+	transition:0.75s;
 	/* box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.12); */
 	/* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
-	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-	border-radius: 8px;
+	/* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; */
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 12px -2px;
+	border-radius: 20px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 }
-
+.MemberCard_container:hover{
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
 .img-fluid {
 	border-radius: 50%;
 	height: 110px;
@@ -21,11 +25,16 @@
 
 .name {
 	text-align: center;
+	color: #1B2733;
+	font-size: 20px;
+	font-family: 'Open Sans','Poppins',sans-serif;
+	font-weight: 700;
 }
 .title {
 	text-align: center;
+	font-family: 'Open Sans','Poppins',sans-serif;
 	color: #637282;
-	font-size: 15px;
+	font-size: 14px;
 	font-weight: 400;
 }
 
@@ -39,20 +48,30 @@
 	justify-content: space-around;
 	align-items: center;
 }
-.fa {
+.fa, .social>a{
 	font-size: 28px;
-	color: #5e6b79a9;
+	cursor: pointer;
+	transition:0.75s;
+	color: rgba(0, 0, 0, 0.4);;
 }
-
-a:hover {
+.fa>svg>path{
+	transition:0.75s;
+	fill: black;
+	fill-opacity: 0.4;
+}
+.fa:hover {
 	text-decoration: none;
-	color: #5e6b79a9;
+	color: rgba(0, 0, 0, 0.8);;
+}
+.fa:hover>svg>path{
+	fill: black;
+	fill-opacity: 0.8;
 }
 
 .buttonsAdmin {
 	display: flex;
 	flex-direction: column;
-	padding: 15px;
+	padding: 16px;
 	/* margin: 7px; */
 }
 .btn {

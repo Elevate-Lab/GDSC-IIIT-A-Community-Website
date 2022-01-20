@@ -132,7 +132,7 @@ function Team() {
                 />
                 <Fab style={{ alignSelf: 'flex-end', marginRight: '7vw' }} color="primary" aria-label="add">
                     <Link
-                        to="Team/NewMember"
+                        to="../team/new_member"
                         style={{
                             color: 'white',
                             height: '100%',

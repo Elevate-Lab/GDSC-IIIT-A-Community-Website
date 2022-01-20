@@ -61,19 +61,6 @@ function Blogs() {
 				PageIllustration={blog_illustration}
 			/>
 
-			<Fab style={{ alignSelf: "flex-end", marginRight: "7vw" }} color="primary" aria-label="add">
-				<Link to="Blogs/NewBlog"
-					style={{
-						color: "white",
-						height: "100%",
-						width: "100%",
-						margin: "0",
-						display: "grid",
-						placeItems: "center"
-					}}>
-					<AddIcon />
-				</Link>
-			</Fab>
 			{/* <div container style={{ width: '90%', height: '22rem', backgroundColor: '#f7f4f2', marginBottom: '4rem', display: 'flex', direction: 'row', justifyContent: 'center', alignContent: 'center' }}>
 
 				<div style={{ display: 'flex', width: '35%' }}><img src={imag} style={{ width: '45rem', height: '22rem', cursor: 'not-allowed' }} /></div>
@@ -164,12 +151,12 @@ function Blogs() {
 			</div> */}
 
 			<div className="heading_plusBtn">
-				<h2 style={{ fontWeight: "620" }} className="heading">
+				<h2 style={{fontWeight: "600", fontFamily: "Open Sans,Poppins,sans-serif", color: "#1b2733" }} className="heading">
 					Must Read
 				</h2>
 				<Fab color="primary" aria-label="add">
 					<Link
-						to="Blogs/NewBlog"
+						to="../blogs/new_blog"
 						style={{
 							color: "white",
 							height: "100%",
@@ -187,16 +174,14 @@ function Blogs() {
 
 			<div
 				style={{
-					padding: "9vh 7vw",
+					padding: "2vh 5vw 9vh 5vw",
 					display: "flex",
 					flexDirection: "row",
 					flexWrap: "wrap",
 					justifyContent: "space-around",
-					alignItems: "center",
-					marginLeft: '2rem'
+					alignItems: "center"
 				}}
 			>
-				
 				{blogs && blogs.map((blog) => {
 							return <BlogCard key={blog._id} blogs={blog} />
 						})}
