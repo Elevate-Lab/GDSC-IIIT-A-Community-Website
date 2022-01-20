@@ -23,22 +23,21 @@ function MustReadCard(props) {
 	return (
 		<div variant="outlined" styles={{ padding: "0" }} className={`${styles.mustReadCard}`}>
 			<div className={styles.imgContainer}>
-				<img className={styles.img} src={image1} alt="img" />
+				<img className={styles.img} src="https://miro.medium.com/max/854/1*UQ5WPmF6qtG2DfA9xnlQww.png" alt="img" />
 			</div>
 			<div className={styles.content}>
 				<CardContent>
 					<div className={styles.container}>
 						<div className={styles.name}>
-							<h3>Dive into StreamBuilder in Flutter</h3>
+							<h3>Coroutines in Kotlin</h3>
 						</div>
 					</div>
 					{/* <Headings LargeHeading="Project Name" SmallHeading="tagline" /> */}
 
 					<div className={styles.text}>
 						<Typography variant="body2">
-							In this article, we will be Diving into StreamBuilder In Flutter. We will implement a demo
-							program through which you will get to know how to use StreamBuilder in your flutter
-							applications.
+						In this article, we will be discussing the use of Coroutines in Kotlin by responding
+						 to the three must-answer questions: What? Why? How? How coroutines is a better alternative for managing asynchronous tasks?
 						</Typography>
 					</div>
 				</CardContent>
@@ -48,49 +47,25 @@ function MustReadCard(props) {
 							<Avatar sx={{ width: 56, height: 56 }} />
 						</div>
 						<div>
-							<p>Kunal Kaushik</p>
-							<p>date . time</p>
+							<p>Tanushree</p>
+							<p>OCT 21, 2021</p>
 						</div>
 					</div>
 					<div className="buttons">
-						<Link to="" style={{ textDecoration: "none" }}>
+						
 							<Button
 								className={`${styles.btn} ${styles.mediumBtn}`}
 								size="small"
 								variant="contained"
 								disableElevation
 								style={{ backgroundColor: "#08ad5d", width: "200px" }}
+								target="_blank"
+								href="https://medium.com/developer-student-clubs-iiit-allahabad/coroutines-in-kotlin-44d6578ff08d"
 							>
 								<ViewProject className={styles.svg} style={{ paddingRight: "3px", marginRight: "7px" }} />{" "}
 								Read on Medium
 							</Button>
-						</Link>
-						{admin && (
-							<CardActions className={styles.buttonsAdmin}>
-								<Link to="" style={{ textDecoration: "none" }}>
-									<Button
-										className={styles.btn}
-										size="small"
-										variant="contained"
-										disableElevation
-										style={{ backgroundColor: "#EA4335", width: "90px" }}
-									>
-										Delete
-									</Button>
-								</Link>
-								<Link to="" style={{ textDecoration: "none" }}>
-									<Button
-										className={styles.btn}
-										size="small"
-										variant="outlined"
-										disableElevation
-										style={{ color: "#08ad5d", borderColor: "#08ad5d", width: "90px" }}
-									>
-										Edit
-									</Button>
-								</Link>
-							</CardActions>
-						)}
+						
 					</div>
 				</div>
 			</div>

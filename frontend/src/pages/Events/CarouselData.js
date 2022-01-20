@@ -1,17 +1,28 @@
+import img1 from "../../Assets/Images/456.jfif"
+import img2 from "../../Assets/Images/222.jfif"
+import img3 from "../../Assets/Images/3432.jfif"
+import img4 from "../../Assets/Images/9890.jfif"
+
 export const Images=[
     {
-title:"Image 1",
-subtitle:"city on the world",
-img:"https://images.unsplash.com/photo-1635195034081-53609dc13f52?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxN3x8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-    },
+        title:"Image 1",
+        subtitle:"city on the world",
+        img: img1
+    },      
     {
         title:"Image 2",
         subtitle:"city on the erath",
-        img:"https://images.unsplash.com/photo-1593642532871-8b12e02d091c?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxMXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            },
-            {
-                title:"Image 3",
-                subtitle:"city on the beech",
-                img:"https://images.unsplash.com/photo-1553272725-086100aecf5e?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwyMXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                    }
+        img: img2
+    },
+    {
+        title:"Image 3",
+        subtitle:"city on the beech",
+        img:img3
+    },
+    {
+        title:"Image 3",
+        subtitle:"city on the beech",
+        img:img4
+    }
+
 ];

@@ -37,8 +37,8 @@ function Projects() {
 			>
 				<Headings
 					LargeHeading="Projects"
-					SmallHeading="Checkout our Projects"
-					Text="Learning goes hand-in-hand with building new and cool stuff. Lorem ipsum dolor sit amet"
+					SmallHeading="Checkout our Projects..."
+					Text="Here at GDSC IIIT A we have developed and still working on projects that solve some social problem or on that ease day-to-day things. We are also open to project collaboration and new ideas!"
 					PageIllustration={project_illustration}
 				/>
 
