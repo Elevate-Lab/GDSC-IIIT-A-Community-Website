@@ -30,8 +30,8 @@ function EventCard(props) {
 	}
 	function shorten(str, separator = ' ') {
 		if(str){
-		if (str.length <= 100) return str;
-		return `${str.substr(0, str.lastIndexOf(separator, 100))}...`;
+		if (str.length <= 150) return str;
+		return `${str.substr(0, str.lastIndexOf(separator, 150))}...`;
 		}
 	  }
 	//   const currentDate = new Date();
@@ -83,7 +83,7 @@ function EventCard(props) {
 
 				{upcoming && (
 					<CardActions className={styles.buttons}>
-						<Link to="" style={{ textDecoration: "none" }}>
+						<Link to={event.eventLink} style={{ textDecoration: "none" }}>
 							<Button
 								className={styles.RSVPbtn}
 								size="small"

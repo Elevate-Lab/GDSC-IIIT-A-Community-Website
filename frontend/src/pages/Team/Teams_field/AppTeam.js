@@ -13,7 +13,7 @@ function AppTeam() {
         getAllTeamData();
     }, [parameter])
 
-    const appTeam = teams.filter((e) => {
+    const appTeam =teams && teams.filter((e) => {
         return e.designation === 'App';
     })
     return (

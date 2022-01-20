@@ -12,7 +12,7 @@ function WebTeam() {
         getAllTeamData();
     }, [parameter])
    
-    const webTeam = teams.filter((e) => {
+    const webTeam =teams && teams.filter((e) => {
         return e.designation === 'Web';
     })
 

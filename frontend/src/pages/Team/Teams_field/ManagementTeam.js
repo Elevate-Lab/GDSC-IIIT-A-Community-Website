@@ -13,7 +13,7 @@ function ManagementTeam() {
         getAllTeamData();
     }, [parameter])
   
-    const managementTeam =teams.filter((e) => {
+    const managementTeam =teams && teams.filter((e) => {
         return e.designation === 'Management';
     })
     return (

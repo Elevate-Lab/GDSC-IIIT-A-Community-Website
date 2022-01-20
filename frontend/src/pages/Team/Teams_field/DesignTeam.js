@@ -13,7 +13,7 @@ function DesignTeam() {
         getAllTeamData();
     }, [parameter])
   
-    const designTeam = teams.filter((e) => {
+    const designTeam = teams && teams.filter((e) => {
         return e.designation === 'Design';
     })
   

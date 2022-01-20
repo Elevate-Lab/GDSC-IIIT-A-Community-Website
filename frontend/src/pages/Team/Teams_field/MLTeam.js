@@ -13,7 +13,7 @@ function MLTeam() {
         getAllTeamData();
     }, [parameter])
  
-    const MLTeam = teams.filter((e) => {
+    const MLTeam =teams && teams.filter((e) => {
         return e.designation === 'ML';
     })
     return (
