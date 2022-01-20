@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from "react";
 import api from '../api/baseApi'
 import ApiContext from './ApiContext'
-
+import moment from 'moment';
 const ApiState = (props) => {
   const [parameter, setParameter] = useState("")
   const [data, setData] = useState("")
@@ -12,6 +12,8 @@ const ApiState = (props) => {
   const [events,setEvents] = useState("")
   const [previousData, setPreviousData] = useState("")
   const [coreTeam, setCoreTeam] = useState("")
+  const [upcomingEvents, setUpcomingEvents] = useState('');
+  const [pastEvents, setPastEvents] = useState('');
   const getAttribute = (attribute) => {
     setParameter(attribute);
   }
@@ -54,7 +56,7 @@ const ApiState = (props) => {
     const newData = data.filter((e) => {
       return e.id !== id;
     });
-    setTeams(newData)
+    setTeams(newData);
   }
   //edit a card
   const previousCardData = (oldData) => {
@@ -88,7 +90,6 @@ const ApiState = (props) => {
 
 //post a card
 const addBlogCard = async (values) => {
-  console.log(values)
   const request = {
     ...values
   }
@@ -104,7 +105,7 @@ const addBlogCard = async (values) => {
    const newData = data.filter((e) => {
      return e.id !== id;
    });
-   setBlogs(newData)
+   setBlogs(newData);
  }
 
  const updateBlog = async (values) => {
@@ -130,6 +131,7 @@ const addBlogCard = async (values) => {
   const getAllProjectData = async () => {
     const allDatas = await retrieveProjectData();
     setProjects(allDatas);
+
   }
 
 
@@ -177,12 +179,33 @@ const addProjectCard = async (values) => {
   const getAllEventData = async () => {
     const allDatas = await retrieveEventData();
     setEvents(allDatas);
+    if (allDatas) {
+      const upcomingEvent = allDatas.filter((e) => {
+        let todayDate = new Date();
+        let Date1 = moment(`${todayDate}`).format('YYYY,MM,DD')
+        let Date2 = moment(`${e.startDate}`).format("YYYY,MM,DD");
+        let currentDate = new Date(`${Date1}`);
+        let eventDate = new Date(`${Date2}`)
+        if(currentDate.getTime() <= eventDate.getTime()) return e;
+      })
+      setUpcomingEvents(upcomingEvent);
+    }
+    if (allDatas) {
+      const pastEvent = allDatas.filter((e) => {
+        let todayDate = new Date();
+        let Date1 = moment(`${todayDate}`).format('YYYY,MM,DD')
+        let Date2 = moment(`${e.startDate}`).format("YYYY,MM,DD");
+        let currentDate = new Date(`${Date1}`);
+        let eventDate = new Date(`${Date2}`)
+        if(currentDate.getTime() > eventDate.getTime()) return e;
+      })
+      setPastEvents(pastEvent);
+    }
   }
 
 
 //post a card
 const addEventCard = async (values) => {
-  console.log(values)
   const request = {
     ...values
   }
@@ -215,7 +238,7 @@ const addEventCard = async (values) => {
 
 
 return (
-  <ApiContext.Provider value={{ coreTeam, data,  previousData, previousCardData,getAllBlogData,addBlogCard,blogs,removeBlog,updateBlog,getAllProjectData,addProjectCard,projects,updateProject,removeProject ,getAllEventData,addEventCard,events,updateEvent,removeEvent,getAllTeamData,addTeamCard,teams,updateTeam,removeTeam}}>
+  <ApiContext.Provider value={{ coreTeam, data,  previousData, previousCardData,getAllBlogData,addBlogCard,blogs,removeBlog,updateBlog,getAllProjectData,addProjectCard,projects,updateProject,removeProject ,getAllEventData,addEventCard,events,updateEvent,removeEvent,getAllTeamData,addTeamCard,teams,updateTeam,removeTeam,parameter,getAttribute,upcomingEvents,pastEvents}}>
     {props.children}
   </ApiContext.Provider>
 )

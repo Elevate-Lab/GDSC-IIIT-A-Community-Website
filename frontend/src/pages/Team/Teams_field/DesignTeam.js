@@ -5,18 +5,18 @@ import apiContext from '../../../ContextApi/ApiContext'
 
 function DesignTeam() {
     const context = useContext(apiContext)
-    const { data, getAllData, getAttribute,getAllTeamData,teams  } = context
+    const { data, getAllData, getAttribute,getAllTeamData,teams,parameter} = context
     let attribute = "teams"
     useEffect(() => {
-        // getAttribute(attribute)
+        getAttribute(null)
         // getAllData();
         getAllTeamData();
-    }, [teams ])
+    }, [parameter])
   
     const designTeam = teams.filter((e) => {
         return e.designation === 'Design';
     })
-    console.log(designTeam);
+  
     return (
         <div id="Design" className="Field_view">
         {designTeam &&

@@ -11,6 +11,7 @@ import "./Events.css";
 import LeaderBoard from "../../Components/LeaderBoard/LeaderBoard";
 import Even from "./Even";
 import styles from "./EventPage.module.css";
+import EventCards2 from "../../Components/EventCard/index copy";
 function Events() {
 	return (
 		<section
@@ -78,7 +79,7 @@ function Events() {
 					</Link>
 				</Fab>
 			</div>
-			<EventCards upcoming={false} />
+			<EventCards2 upcoming={false} />
 		</section>
 	);
 }
