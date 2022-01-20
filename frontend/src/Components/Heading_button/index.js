@@ -13,7 +13,7 @@ function HeadingButton({ LargeHeading, SmallHeading, ButtonText }) {
 			</div>
 
 			<div className="Button">
-				<Link to="/contact" style={{ textDecoration: "none" }}>
+				<Link to="" style={{ textDecoration: "none" }}>
 					<Button
 						// className={styles.btn}
 						size="small"
