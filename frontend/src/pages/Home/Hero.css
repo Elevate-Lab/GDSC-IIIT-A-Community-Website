@@ -2,7 +2,6 @@
     height: 88vh;
     width: 100%;
     display: flex;
-    /* flex-direction: column; */
     justify-content: space-between;
     align-items: center;
     /* background: '#C4C4C4', */
@@ -64,6 +63,15 @@
     width: 1.6vw;
     margin:0;
 }
+.hero-section-left,
+.hero-section-right{
+    width: 24vw;
+    height: 100%;
+}
+.hero-section-left object,
+.hero-section-right object{
+    height: 100%;
+}
 
 @media only screen and (max-width: 900px) {
     .hero-section-center > img{
@@ -84,6 +92,30 @@
 }
 
 @media only screen and (max-width: 600px) {
+    .hero-section{
+        flex-direction: column;
+        overflow: hidden;
+        justify-content: flex-start;
+    }
+    .hero-section-center{
+        width: 100%;
+        height: 88vh;
+        background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 40%, rgba(255,255,255,0.8) 60%, rgba(255, 255, 255, 0) 100%);
+    }
+    .hero-section-left,
+    .hero-section-right{
+        width: 100%;
+        height: 1px;
+        /* overflow: hidden; */
+    }
+    .hero-section-right{
+        display: none;
+    }
+    .hero-section-left object,
+    .hero-section-right object{
+        width: 100%;
+        height: auto;
+    }
     .hero-section-center > img{
         width: 90%;
         margin-top: 50%;

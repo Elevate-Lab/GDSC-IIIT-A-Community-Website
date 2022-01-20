@@ -6,15 +6,12 @@ function HeroRight() {
         <div
             className="hero-section-right" 
             style={{
-                position: 'relative',
-                height: '100%',
-                width: '24vw'
+                position: 'relative'
             }}>
         <object 
             type="image/svg+xml" 
             data={heroright} 
             style={{ 
-                height: '88vh',
                 zIndex: '-2',
                 position: 'absolute',
                 top:'0',
