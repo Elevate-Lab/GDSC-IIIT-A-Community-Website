@@ -12,7 +12,7 @@ function BlockchainTeam() {
         // getAllData();
         getAllTeamData();
     }, [parameter])
-    const blockChain = teams.filter((e) => {
+    const blockChain =teams && teams.filter((e) => {
         return e.designation === 'BlockChain';
     })
     return (

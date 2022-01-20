@@ -29,8 +29,8 @@ function BlogCard(props) {
 	}
 	function shorten(str, separator = ' ') {
 		if(str){
-		if (str.length <= 100) return str;
-		return `${str.substr(0, str.lastIndexOf(separator, 100))}...`;
+		if (str.length <= 200) return str;
+		return `${str.substr(0, str.lastIndexOf(separator, 200))}...`;
 		}
 	  }
 	return (
