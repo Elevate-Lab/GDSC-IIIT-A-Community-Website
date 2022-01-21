@@ -57,7 +57,9 @@ function Blogs() {
 				className="Heading"
 				LargeHeading="Blogs"
 				SmallHeading="Read our latest blogs"
-				Text="Learning goes hand-in-hand with building new and cool stuff. Lorem ipsum dolor sit amet"
+				Text="Our inspiring young developers and learners have a piece of knowledge to share with you. 
+				A collection of blogs based on varied domains including Flutter and Kotlin Development, Blockchain, 
+				Web Development and NFT's. ... Do give a it a read!"
 				PageIllustration={blog_illustration}
 			/>
 

@@ -23,22 +23,21 @@ function MustReadCard(props) {
 	return (
 		<div variant="outlined" styles={{ padding: "0" }} className={`${styles.mustReadCard}`}>
 			<div className={styles.imgContainer}>
-				<img className={styles.img} src={image1} alt="img" />
+				<img className={styles.img} src="https://miro.medium.com/max/854/1*UQ5WPmF6qtG2DfA9xnlQww.png" alt="img" />
 			</div>
 			<div className={styles.content}>
 				<CardContent>
 					<div className={styles.container}>
 						<div className={styles.name}>
-							<h3 style={{fontSize: 24, fontFamily:"Open Sans,sans-serif", fontWeight: "600", color: "#1B2733"}}>Dive into StreamBuilder in Flutter</h3>
+							<h3 style={{fontSize: 24, fontFamily:"Open Sans,sans-serif", fontWeight: "600", color: "#1B2733"}}>Coroutines in Kotlin</h3>
 						</div>
 					</div>
 					{/* <Headings LargeHeading="Project Name" SmallHeading="tagline" /> */}
 
 					<div className={styles.text}>
 						<Typography variant="body2" sx={{fontSize: 14, fontFamily:"Open Sans,sans-serif", fontWeight: "500", color: "#637282"}}>
-							In this article, we will be Diving into StreamBuilder In Flutter. We will implement a demo
-							program through which you will get to know how to use StreamBuilder in your flutter
-							applications.
+						In this article, we will be discussing the use of Coroutines in Kotlin by responding
+						 to the three must-answer questions: What? Why? How? How coroutines is a better alternative for managing asynchronous tasks?
 						</Typography>
 					</div>
 				</CardContent>
@@ -48,49 +47,25 @@ function MustReadCard(props) {
 							<Avatar sx={{ width: 56, height: 56 }} />
 						</div>
 						<div>
-							<p style={{fontSize: 14, fontFamily:"Open Sans,sans-serif", fontWeight: "500", color: "#435156"}}>Kunal Kaushik</p>
-							<p style={{fontSize: 14, fontFamily:"Open Sans,sans-serif", fontWeight: "500", color: "#435156"}}>date . time</p>
+							<p style={{fontSize: 14, fontFamily:"Open Sans,sans-serif", fontWeight: "500", color: "#435156"}}>Tanushree</p>
+							<p style={{fontSize: 14, fontFamily:"Open Sans,sans-serif", fontWeight: "500", color: "#435156"}}>OCT 21, 2021</p>
 						</div>
 					</div>
 					<div className={`${styles.buttons}`} style={{display: 'flex', flexDirection: 'column', alignItems:'center'}}>
-						<Link to="" style={{ textDecoration: "none", width: "100%"}}>
+						
 							<Button
 								className={`${styles.btn} ${styles.mediumBtn}`}
 								// size="small"
 								variant="contained"
 								disableElevation
 								style={{ backgroundColor: "#0F9D58", width: "100%", padding: "10px 16px",fontSize: 13, fontFamily:"Open Sans,sans-serif", fontWeight: "600",}}
+								target="_blank"
+								href="https://medium.com/developer-student-clubs-iiit-allahabad/coroutines-in-kotlin-44d6578ff08d"
 							>
 								<ViewProject className={styles.svg} style={{ paddingRight: "3px", marginRight: "7px", height:'24px', width:'24px' }} />{" "}
 								Read on Medium
 							</Button>
-						</Link>
-						{admin && (
-							<CardActions className={styles.buttonsAdmin} style={{padding: "10px 0"}}>
-								<Link to="" style={{ textDecoration: "none", width: "100%"}}>
-									<Button
-										className={styles.btn}
-										// size="small"
-										variant="contained"
-										disableElevation
-										style={{ backgroundColor: "#EA4335", padding: "10px 0", width: "100%", fontSize: 13, fontFamily:"Open Sans,sans-serif", fontWeight: "600"}}
-									>
-										Delete
-									</Button>
-								</Link>
-								<Link to="" style={{ textDecoration: "none",  width: "100%" }}>
-									<Button
-										className={styles.btn}
-										// size="small"
-										variant="outlined"
-										disableElevation
-										style={{ color: "#0F9D58", border: "2px solid #0F9D58", width: "100%", padding: "8px 0", fontSize: 13, fontFamily:"Open Sans,sans-serif", fontWeight: "600" }}
-									>
-										Edit
-									</Button>
-								</Link>
-							</CardActions>
-						)}
+						
 					</div>
 				</div>
 			</div>

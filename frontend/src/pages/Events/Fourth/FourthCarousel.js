@@ -46,7 +46,7 @@ function FouthCarousel() {
             textAlign: "center",
             display: 'flex',
             flexDirection: 'column',
-            backgroundColor: '#4e4e4e',
+            backgroundColor: '#3F3F3E',
             justifyContent: 'center',
             alignItems: 'center'
         },

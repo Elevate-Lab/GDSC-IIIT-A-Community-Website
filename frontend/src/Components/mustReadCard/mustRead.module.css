@@ -3,7 +3,7 @@
 	height: max-content;
 	align-self: center;
 	border-radius: 20px;
-	box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 4px 12px;
 	display: flex;
 	flex-direction: row;
 	transition:0.75s;
@@ -16,6 +16,7 @@
 	flex-direction: column;
 	justify-content: center;
 	background-color: #fafafa;
+	box-shadow:  -4px 0px 4px rgba(0, 0, 0, 0.16);
 	border-radius: 20px;
 	z-index: 5;
 	margin-left: -25px;
