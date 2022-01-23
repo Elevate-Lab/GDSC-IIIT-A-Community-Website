@@ -21,43 +21,63 @@ function TeamSpecialCard() {
     return (
         <div className={styles.cards_container}>
             <Box className={styles.card} sx={{ minWidth: 275 }}>
-                <Card variant="outlined" style={{borderRadius:20}}>
+                <Card variant="outlined" style={{ borderRadius: 20 }}>
                     <CardContent>
                         <div className={styles.container}>
                             <div className={styles.img}>
-                                <Avatar src={person} sx={{ width: 140, height: 140 }} />
+                                <Avatar
+                                    src="https://media-exp1.licdn.com/dms/image/C5103AQHRo5EX0T9unQ/profile-displayphoto-shrink_400_400/0/1583138193142?e=1648684800&v=beta&t=HcTJZAuE0F2duMOnxWcW4SkJzcg8U5npYTRRM92bOxw"
+                                    sx={{ width: 140, height: 140 }}
+                                />
                             </div>
                             <div className={styles.name}>
                                 <Typography
-                                    sx={{ lineHeight:"110%", margin: '0' , marginBottom: '0.4vh',fontSize: 20 ,fontFamily:"Open Sans,sans-serif" ,fontWeight: '600'}}
+                                    sx={{
+                                        lineHeight: '110%',
+                                        margin: '0',
+                                        marginBottom: '0.4vh',
+                                        fontSize: 20,
+                                        fontFamily: 'Open Sans,sans-serif',
+                                        fontWeight: '600',
+                                    }}
                                     color="#1B2733"
                                     gutterBottom
                                 >
                                     Tejas Mane
                                 </Typography>
                                 <Typography
-                                    sx={{ fontSize: 16, margin: '0', marginBottom: '1vh',fontFamily:"Open Sans,sans-serif"}}
+                                    sx={{
+                                        fontSize: 16,
+                                        margin: '0',
+                                        marginBottom: '1vh',
+                                        fontFamily: 'Open Sans,sans-serif',
+                                    }}
                                     color="#637282"
                                     gutterBottom
                                 >
                                     GDSC Lead IIITA
                                 </Typography>
                                 <Typography
-                                    sx={{ fontSize: 12, margin: '0', paddingTop: '10px' ,fontFamily:"Open Sans,sans-serif" }}
+                                    sx={{
+                                        fontSize: 12,
+                                        margin: '0',
+                                        paddingTop: '10px',
+                                        fontFamily: 'Open Sans,sans-serif',
+                                    }}
                                     color="#637282"
                                     gutterTop
                                 >
-                                    About....... Lorem Ipsum
+                                    Technical Undergraduate Intern at Cisco | Android Developer
                                 </Typography>
                             </div>
                             <div className={styles.social_icons}>
                                 <a href="www.twitter.com">
                                     <Twitter width="25px" />
                                 </a>
-                                <a href="www.github.com">
+                                <a href="https://github.com/tejma17">
                                     <Github width="25px" />
                                 </a>
-                                <a href="www.linkedin.com">
+                                <a href="https://www.linkedin.com/in/tejas-mane/">
                                     <Linkedin width="25px" />
                                 </a>
                             </div>
@@ -66,37 +86,55 @@ function TeamSpecialCard() {
                 </Card>
             </Box>
             <Box className={styles.card} sx={{ minWidth: 275 }}>
-                <Card variant="outlined" style={{borderRadius:20}}>
+                <Card variant="outlined" style={{ borderRadius: 20 }}>
                     <CardContent>
                         <div className={styles.container}>
                             <div className={styles.img}>
-                                <Avatar src={person} sx={{ width: 140, height: 140 }} />
+                                <Avatar
+                                    src="https://lh3.googleusercontent.com/a-/AOh14GhmfMmyuuFyOaa3KdvWFBX9qgCMiw8gN20B67tx8A=s400-p-k-no"
+                                    sx={{ width: 140, height: 140 }}
+                                />
                             </div>
                             <div className={styles.name}>
                                 <Typography
-                                    sx={{ lineHeight:"110%", margin: '0' , marginBottom: '0.4vh',fontSize: 20 ,fontFamily:"Open Sans,sans-serif" ,fontWeight: '600'}}
+                                    sx={{
+                                        lineHeight: '110%',
+                                        margin: '0',
+                                        marginBottom: '0.4vh',
+                                        fontSize: 20,
+                                        fontFamily: 'Open Sans,sans-serif',
+                                        fontWeight: '600',
+                                    }}
                                     color="#1B2733"
                                     gutterBottom
                                 >
                                     Dr. Mohammed Javed
                                 </Typography>
                                 <Typography
-                                    sx={{ fontSize: 16, margin: '0', marginBottom: '1vh',fontFamily:"Open Sans,sans-serif"}}
+                                    sx={{
+                                        fontSize: 16,
+                                        margin: '0',
+                                        marginBottom: '1vh',
+                                        fontFamily: 'Open Sans,sans-serif',
+                                    }}
                                     color="#637282"
                                     gutterBottom
                                 >
                                     Faculty Advisor
                                 </Typography>
                                 <Typography
-                                    sx={{ fontSize: 12, margin: '0', paddingTop: '10px' ,fontFamily:"Open Sans,sans-serif" }}
+                                    sx={{
+                                        fontSize: 12,
+                                        margin: '0',
+                                        paddingTop: '10px',
+                                        fontFamily: 'Open Sans,sans-serif',
+                                    }}
                                     color="#637282"
                                     gutterTop
-                                >
-                                    About....... Lorem Ipsum
-                                </Typography>
+                                ></Typography>
                             </div>
                             <div className={styles.social_icons}>
-                                <a href="www.twitter.com">
+                                {/* <a href="www.twitter.com">
                                     <Twitter width="25px" />
                                 </a>
                                 <a href="www.github.com">
@@ -104,7 +142,7 @@ function TeamSpecialCard() {
                                 </a>
                                 <a href="www.linkedin.com">
                                     <Linkedin width="25px" />
-                                </a>
+                                </a> */}
                             </div>
                         </div>
                     </CardContent>
