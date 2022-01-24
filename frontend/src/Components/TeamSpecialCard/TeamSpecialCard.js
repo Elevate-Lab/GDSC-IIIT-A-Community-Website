@@ -71,7 +71,7 @@ function TeamSpecialCard() {
                                 </Typography>
                             </div>
                             <div className={styles.social_icons}>
-                                <a href="www.twitter.com">
+                                <a href="https://twitter.com/TejasMMane">
                                     <Twitter width="25px" />
                                 </a>
                                 <a href="https://github.com/tejma17">
