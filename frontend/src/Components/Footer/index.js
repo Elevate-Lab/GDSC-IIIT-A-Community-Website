@@ -104,7 +104,7 @@ function Footer() {
     
     
    <div className="footer_bot">
-                <p className="Copyright_line">&copy;2021 GDSC IIITA</p>
+                <p className="Copyright_line">&copy;2022 GDSC IIITA</p>
                 <div className="footer_LogIn">
                     <div className="Login_Cont">
                         <div className="LogIn_icon_cont">
