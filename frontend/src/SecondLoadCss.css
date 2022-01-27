@@ -38,7 +38,7 @@ footer {
       margin: 0;
       top: 10%; } */
 
-      /* footer .content .bottom .beat {
+/* footer .content .bottom .beat {
         color: red;
         animation: beat .30s infinite alternate; }
     footer .content .top {
@@ -68,7 +68,8 @@ footer {
 .noselect {
   user-select: none; } */
 
-  .artboard {
+/* OLD LOADER */
+/* .artboard {
     width: 100%;
     height: 100%;
     display: flex;
@@ -153,4 +154,12 @@ footer {
       opacity: 1; }
     26.10%, 33.33%, 100% {
       opacity: 0; } }
-  
+   */
+
+.newLoader {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
