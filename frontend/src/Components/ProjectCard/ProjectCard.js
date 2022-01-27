@@ -138,7 +138,7 @@ function ProjectCard(props) {
                         </Button>
 
                         <Link
-                            to="/Projects/EditProject"
+                            to="/projects/edit_project"
                             onClick={() => previousCardData(project)}
                             style={{ textDecoration: 'none' }}
                         >

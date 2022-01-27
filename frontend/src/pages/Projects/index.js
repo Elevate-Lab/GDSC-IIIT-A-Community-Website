@@ -66,7 +66,6 @@ function Projects() {
 					})}
 			</div>
 
-			<ProjectCard key={1} project={"lala"} />
 
 			<HeadingButton
 				LargeHeading="Want to get your Project featured under us?"

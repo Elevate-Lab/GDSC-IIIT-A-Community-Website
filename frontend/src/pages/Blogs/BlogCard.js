@@ -36,7 +36,7 @@ function BlogCard(props) {
         <>
             <div style={{ width: '320px', height: 'max-content', display: 'flex', flexDirection: 'column' }}>
                 <div style={{ zIndex: '0', background: '#FAFAFA', borderRadius: '20px 20px 0 0' }}>
-                    <img src={image1} style={{ width: '320px', height: '220px' }} alt="img" />
+                    <img src={blogs.image} style={{ width: '320px', height: '220px' }} alt="img" />
                 </div>
                 <div style={{ zIndex: '5', paddingBottom: '20px' }}>
                     <Box className={styles.card} sx={{ background: '#FAFAFA', overflow: 'hidden' }}>
