@@ -9,17 +9,16 @@ import AddIcon from "@mui/icons-material/Add";
 import styles from "./Projects.module.css";
 import HeadingButton from "../../Components/Heading_button";
 
-
 function Projects() {
-	const context = useContext(apiContext)
-	const { data, getAllData, getAttribute,getAllProjectData,projects,parameter} = context;
+	const context = useContext(apiContext);
+	const { data, getAllData, getAttribute, getAllProjectData, projects, parameter } = context;
 	let attribute = "projects";
 	useEffect(() => {
-		getAttribute(null)
+		getAttribute(null);
 		//getAllData(attribute);
 		getAllProjectData();
-	}, [parameter])
-	let projectsArr = Array.from(projects)
+	}, [parameter]);
+	let projectsArr = Array.from(projects);
 	return (
 		<div className={styles.projectsPage}>
 			<Headings
@@ -58,22 +57,22 @@ function Projects() {
 					flexWrap: "wrap",
 					justifyContent: "space-around",
 					alignItems: "center",
-					width:"100%",
+					width: "100%",
 				}}
 			>
-				{projectsArr && projectsArr.map((project) => {
-			  return <ProjectCard key={project._id} project={project}/>
-			})}
+				{projectsArr &&
+					projectsArr.map(project => {
+						return <ProjectCard key={project._id} project={project} />;
+					})}
 			</div>
 
-
+			<ProjectCard key={1} project={"lala"} />
 
 			<HeadingButton
 				LargeHeading="Want to get your Project featured under us?"
 				SmallHeading="Just drop us your Proposal."
 				ButtonText="Submit Project"
 			/>
-
 		</div>
 	);
 }
