@@ -16,9 +16,9 @@ router.get('/',async (req,res)=>{
 
 // make a new member card
 router.post('/',async(req,res)=>{
-    const {name,image,designation,linkedLink,githubLink,facebookLink} = req.body;
+    const {name,image,designation,linkedinLink,githubLink,facebookLink} = req.body;
     try {
-        const team = new Team({name,image,designation,linkedLink,githubLink,facebookLink});
+        const team = new Team({name,image,designation,linkedinLink,githubLink,facebookLink});
         await team.save();
     } catch (error) {
         console.log(error)
@@ -49,14 +49,14 @@ router.get("/new",(req,res)=>{
   //update a member info
   
 router.put("/:id",async (req,res)=>{
-    const {name,image,designation,facebookLink,githubLink,linkedLink} = req.body;
+    const {name,image,designation,facebookLink,githubLink,linkedinLink} = req.body;
     const newMember = {}
     if(name){newMember.name=name}
     if(designation){newMember.designation=designation}
     if(image){newMember.image=image}
     if(facebookLink){newMember.facebookLink=facebookLink}
     if(githubLink){newMember.githubLink=githubLink}
-    if(linkedLink){newMember.linkedLink=linkedLink}
+    if(linkedinLink){newMember.linkedinLink=linkedinLink}
  
 
     try {

@@ -14,7 +14,7 @@
 
 .navbar_logo {
     height: 90%;
-    width: 340px;
+    width: 20vw;
     display: grid;
     place-items: center;
     margin: 1vh 0 0 0;
@@ -38,7 +38,8 @@
 .navbar_link_txt {
     margin: 0;
     color: #4e4e4e;
-    font-size: 14px;
+    font-size: 1.11vw;
+	font-family: 'Open Sans','Poppins',sans-serif;
     font-weight: 600;
 }
 .navbar_link:hover{
@@ -51,19 +52,28 @@
     /* font-weight: bold; */
     transition: 0.75s;
 }
+.active_nav_link .navbar_link_txt{
+    color: #156eff;
+    text-shadow: 0px 1px 1px rgba(21, 110, 255, 0.15);
+}
 
 .navbar_contact {
-    padding: 8px 22px;
-    border-radius: 100px;
+    padding: 0.6vw 1.6vw;
+    border-radius: 100vh;
     color: #ffffff;
     transition: 0.75s;
     background: #156EFF;
 }
 
 .navbar_contact:hover {
-    background: #2D6ACC;
+    background: #3f88ff;
     color: #fff !important;
-    box-shadow: 0px 1px 12px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 12px 0 rgba(0, 0, 0, 0.3);
+}
+.active_contact_link>p{
+    background: #3f88ff;
+    color: #fff !important;
+    box-shadow: 0px 1px 12px 0 rgba(0, 0, 0, 0.3);
 }
 
 .navbar_Drawer {
@@ -142,12 +152,31 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-    padding: 26px 0;
-    box-shadow: 0px 2px 8px 0 rgba(0, 0, 0, 0.1);
+    gap: 4vh;
+    padding: 6vh 0 10vh 0;
+    box-shadow: 0px 8px 8px 0 rgba(0, 0, 0, 0.1);
     transition: all 0.4 ease-in-out;
 }
 
 .navbar_drawer_links .navbar_link_txt {
-    font-size: 16px;
+    font-size: 2.8vw;
+}
+
+.navbar_drawer_links .navbar_contact {
+    padding: 1.8vw 4vw;
+}
+@media only screen and (max-width: 450px) {
+    
+    .navbar_logo > img {
+        height: auto;
+        width: 50vw;
+    }
+    .navbar_drawer_links .navbar_link_txt {
+        font-size: 14px;
+    }
+    
+    .navbar_drawer_links .navbar_contact {
+        padding: 3vw 4.8vw;
+    }
+
 }

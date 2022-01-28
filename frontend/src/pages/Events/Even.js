@@ -6,15 +6,15 @@ import { Box } from "@material-ui/core";
 import { blue, red, yellow, green } from "@material-ui/core/colors";
 import FouthCarousel from "./Fourth/FourthCarousel";
 import { ReactDOM } from "react";
+
 const useStyles = makeStyles(theme => ({
 
     eventHeading: {
         textAlign: "center",
-        textDecoration: "Bold",
+        fontWeight: "600",
         marginTop:'-3rem',
         marginBottom:'1.7rem',
         fontSize:'4rem',
-        fontFamily:"Poppins",
         /*fontWeight:'bold',*/
         color: '#EA4335'
     },
@@ -54,13 +54,16 @@ function Content() {
             {/* <h1 className={Classes.eventHeading}>Events</h1> */}
 
             <div style={{ display: 'flex', justifyContent: 'center', direction: 'row' }}>
-                <div style={{ backgroundColor: '#4285F4', width: `calc(100vw/3)`, height: '0.4rem' }}>
+                <div style={{ backgroundColor: '#156EFF', width: `calc(100vw/4)`, height: '1vh' }}>
 
                 </div>
-                <div style={{ backgroundColor: '#FBBC05', width: `calc(100vw/3)`, height: '0.4rem' }}>
+                <div style={{ backgroundColor: '#FBBC04', width: `calc(100vw/4)`, height: '1vh' }}>
 
                 </div>
-                <div style={{ backgroundColor: '#EA4335', width: `calc(100vw/3)`, height: '0.4rem' }}>
+                <div style={{ backgroundColor: '#EA4235', width: `calc(100vw/4)`, height: '1vh' }}>
+
+                </div>
+                <div style={{ backgroundColor: '#0F9D58', width: `calc(100vw/4)`, height: '1vh' }}>
 
                 </div>
             </div>
@@ -68,7 +71,7 @@ function Content() {
 
 
        
-            <div style={{ minHeight: '40rem' }}>
+            <div style={{ minHeight: '100vh' }}>
                 <FouthCarousel />
             </div>
 

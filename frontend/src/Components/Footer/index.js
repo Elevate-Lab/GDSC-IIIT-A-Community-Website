@@ -49,7 +49,7 @@ function Footer() {
                             <div className="contact_pin_icon">
                                 <img src={pin_icon} alt="pin"/>
                             </div>
-                            <p>Google Developer Student's Club <br/><span>IIITA,Prayagraj, Uttar Pradesh, 211015</span></p>
+                            <p>Google Developer Students Club <br/><span>IIITA,Prayagraj, Uttar Pradesh, 211015</span></p>
                         </div>
                     </div>
                     <div className="contact_sec_2">
@@ -104,7 +104,7 @@ function Footer() {
     
     
    <div className="footer_bot">
-                <p className="Copyright_line">&copy;2021 GDSC IIITA</p>
+                <p className="Copyright_line">&copy;2022 GDSC IIITA</p>
                 <div className="footer_LogIn">
                     <div className="Login_Cont">
                         <div className="LogIn_icon_cont">

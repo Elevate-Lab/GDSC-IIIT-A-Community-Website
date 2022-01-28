@@ -33,35 +33,35 @@ function FouthCarousel() {
     const { width } = useViewport();
     const useStyles = makeStyles(theme => ({
         mySwiper: {
-            backgroundColor: 'skywhite',
+            backgroundColor: '#ffffff',
             display: 'flex',
             // textAlign: 'center',
             // justifyContent: 'center',
             fontSize: '.000002rem',
-            height: '35rem',
-            display: 'flex',
+            height: '87vh',
             direction: 'left'
         },
         textUs: {
-            width: width > 1000 ? "50%" : '100vw',
+            width: width > 900 ? "50%" : '100%',
             textAlign: "center",
             display: 'flex',
             flexDirection: 'column',
-            backgroundColor: '#373937',
-            /*181A18*/ 
+            backgroundColor: '#3F3F3E',
             justifyContent: 'center',
-            alignItems: 'center',
-            fontSize: '1.1rem'
+            alignItems: 'center'
         },
         combined: {
             display: 'flex',
-            flexDirection: width > 1000 ? 'row' : 'column'
+            flexDirection: width > 900 ? 'row' : 'column'
         },
         designtext: {
-            color: '#f8f8ff',
-            width: '90%',
-            marginTop: '1rem',
-            marginBottom: '1rem'
+            color: '#ffffff',
+            fontFamily: 'Open Sans,Poppins,sans serif',
+            fontWeight: '400',
+            width: '86%',
+            marginTop: '2vh',
+            marginBottom: '2vh',
+            textAlign: 'left'
         }
 
     }))
@@ -71,20 +71,26 @@ function FouthCarousel() {
             <div className={Classes.combined}>
                 <div className={Classes.textUs}>
                     <h2 
-                        className={Classes.designtext}>What we Teach in Workshops</h2>
+                        className={Classes.designtext}
+                        style={{fontSize:'6.8vh', fontWeight:'600', marginTop: '8vh', marginBottom: '5vh'}}
+                    >What we Teach in Workshops</h2>
                     <h4
-                        className={Classes.designtext}>Google collabrates with University Students through Student Clubs to grow Google Communities</h4>
+                        className={Classes.designtext}
+                        style={{fontSize:'3.4vh', marginBottom: '1vh'}}
+                    >Google collabrates with University Students through Student Clubs to grow Google Communities</h4>
                     <h4
-                        className={Classes.designtext}>DSC Provides:</h4>
-                    <h4  style={{fontSize: '1.2rem'}}  sx={{fontSize:'0.4rem'}}
+                        className={Classes.designtext}
+                        style={{fontSize:'3.4vh', marginTop: '1vh'}}
+                    >DSC Provides:</h4>
+                    <h4  style={{fontSize: '2.6vh', marginTop: '2vh'}}  sx={{fontSize:'0.4rem'}}
                         className={Classes.designtext}>1. Oppurtunities to Enhance their technical knowledge.</h4>
-                    <h4 style={{fontSize: '1.2rem'}} sx={{fontSize:'0.4rem'}}
+                    <h4 style={{fontSize: '2.6vh', marginTop: '0'}} sx={{fontSize:'4vh'}}
                         className={Classes.designtext}>2. Gain Industrial experience by solving Problems using Technology.</h4>
-                    <h4 style={{fontSize: '1.2rem'}} sx={{fontSize:'0.4rem'}}
+                    <h4 style={{fontSize: '2.6vh', marginTop: '0', marginBottom: '8vh'}} sx={{fontSize:'4vh'}}
                         className={Classes.designtext}>3. Display prototypes & Solutions for industries and Organizations.</h4>
                      
                 </div>
-                <div style={{ width: width > 1000 ? `50vw` : ( width> 500 ? '100vw' : '100vw' ) , marginRight: 0 }}>
+                <div style={{ width: width > 900 ? `50%` : ( width> 500 ? '100%' : '100%' ) , marginRight: 0 }}>
                     <Swiper spaceBetween={30} centeredSlides={true} loop={true}
                         autoplay={{
                             "delay": 2500,
@@ -94,14 +100,14 @@ function FouthCarousel() {
                             "clickable": true
                         }} navigation={true} className={Classes.mySwiper} >
                            
-                        <SwiperSlide style={{ backgroundImage: `url(${Images[0].img})`, height: "35rem", width: "100%", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover", justifyContent: 'center', marginRight: 0 }} >
+                        <SwiperSlide style={{ backgroundImage: `url(${Images[0].img})`, height: "100%", width: "100%", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover", justifyContent: 'center', marginRight: 0 }} >
                             Slide 1
                         </SwiperSlide>
-                        <SwiperSlide style={{ backgroundImage: `url(${Images[1].img})`, height: "35rem", width: "100%", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover", justifyContent: 'center', marginRight: 0 }}>
+                        <SwiperSlide style={{ backgroundImage: `url(${Images[1].img})`, height: "100%", width: "100%", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover", justifyContent: 'center', marginRight: 0 }}>
                             Slide 2</SwiperSlide>
-                        <SwiperSlide style={{ backgroundImage: `url(${Images[2].img})`, height: "35rem", width: "100%", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover", justifyContent: 'center', marginRight: 0 }}>Slide 3</SwiperSlide>
-                        <SwiperSlide style={{ backgroundImage: `url(${Images[0].img})`, height: "35rem", width: "100%", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover", justifyContent: 'center', marginRight: 0 }}>Slide 4</SwiperSlide>
-                        <SwiperSlide style={{ backgroundImage: `url(${Images[1].img})`, height: "35rem", width: "100%", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover", justifyContent: 'center', marginRight: 0 }} >Slide 5</SwiperSlide>
+                        <SwiperSlide style={{ backgroundImage: `url(${Images[2].img})`, height: "100%", width: "100%", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover", justifyContent: 'center', marginRight: 0 }}>Slide 3</SwiperSlide>
+                        <SwiperSlide style={{ backgroundImage: `url(${Images[0].img})`, height: "100%", width: "100%", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover", justifyContent: 'center', marginRight: 0 }}>Slide 4</SwiperSlide>
+                        <SwiperSlide style={{ backgroundImage: `url(${Images[1].img})`, height: "100%", width: "100%", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover", justifyContent: 'center', marginRight: 0 }} >Slide 5</SwiperSlide>
 
                     </Swiper>
                 </div>

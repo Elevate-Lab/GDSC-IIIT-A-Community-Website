@@ -1,122 +1,184 @@
-
-import { useState } from "react";
-import Box from "@mui/material/Box";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
-import Avatar from "@mui/material/Avatar";
-import styles from "./BlogCard.module.css";
-import { ReactComponent as ViewProject } from "../../Assets/svg_link.svg";
-import { ReactComponent as Github } from "../../Assets/Vector.svg";
-import { Link } from "react-router-dom";
+import { useState } from 'react';
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import Avatar from '@mui/material/Avatar';
+import styles from './BlogCard.module.css';
+import { ReactComponent as ViewProject } from '../../Assets/svg_link.svg';
+import { ReactComponent as Github } from '../../Assets/Vector.svg';
+import { Link } from 'react-router-dom';
 // import Stack from "@mui/material/Stack";
-import image1 from "../../Assets/Images/img1.png";
-import { flexbox } from "@mui/system";
-import imag from "./thankyou.jpg"
-import {Images} from "./BlogData.js"
-import React, { useContext } from 'react'
-import apiContext from '../../ContextApi/ApiContext'
+import image1 from '../../Assets/Images/img1.png';
+import { flexbox } from '@mui/system';
+import imag from './thankyou.jpg';
+import { Images } from './BlogData.js';
+import React, { useContext } from 'react';
+import apiContext from '../../ContextApi/ApiContext';
 function BlogCard(props) {
-	const [admin, setAdmin] = useState(true);
-	const context = useContext(apiContext)
-    const {removeData,previousCardData,removeBlog} = context
-    const {blogs} = props
-	return (
-		<>
-		
-		<div>
-			<div style={{ marginBottom: '-2.6rem', zIndex: "0" }} >
-				<img src={blogs.image} style={{ width: '25rem', height: '17rem',cursor:'not-allowed' }} />
-			</div>
-			<div style={{ zIndex: "1" }}>
-				<Box className={styles.card} sx={{ minWidth: 275 }}>
-					<Card variant="outlined">
-						<CardContent>
-							<div style={{color:'black',fontWeight:'bold',textAlign:'center'}}>
-								<br></br>
-								{blogs.title}
-								
-							</div>
-							<br></br>
-							<div className={styles.text}>
-								<Typography variant="body2" sx={{ margin: 0 }}>
-									{blogs.description}
-								</Typography>
-							</div>
+    const [admin, setAdmin] = useState(true);
+    const context = useContext(apiContext);
+    const { removeData, previousCardData, removeBlog, getAttribute } = context;
+    const { blogs } = props;
+    const handleClick = () => {
+        getAttribute(blogs);
+        removeBlog(blogs._id);
+    };
+    function shorten(str, separator = ' ') {
+        if (str) {
+            if (str.length <= 200) return str;
+            return `${str.substr(0, str.lastIndexOf(separator, 200))}...`;
+        }
+    }
+    return (
+        <>
+            <div style={{ width: '320px', height: 'max-content', display: 'flex', flexDirection: 'column' }}>
+                <div style={{ zIndex: '0', background: '#FAFAFA', borderRadius: '20px 20px 0 0' }}>
+                    <img src={blogs.image} style={{ width: '320px', height: '220px' }} alt="img" />
+                </div>
+                <div style={{ zIndex: '5', paddingBottom: '20px' }}>
+                    <Box className={styles.card} sx={{ background: '#FAFAFA', overflow: 'hidden' }}>
+                        <Card variant="outlined" sx={{ paddingBottom: '10px' }}>
+                            <CardContent style={{ padding: '5px 20px 30px 20px' }}>
+                                <div
+                                    style={{
+                                        paddingTop: '20px',
+                                        color: '#1B2733',
+                                        fontWeight: '600',
+                                        textAlign: 'left',
+                                        fontSize: 24,
+                                        fontFamily: 'Open Sans,sans-serif',
+                                    }}
+                                >
+                                    {blogs.title}
+                                </div>
+                                <div className={styles.text}>
+                                    <Typography
+                                        variant="body2"
+                                        sx={{
+                                            margin: 0,
+                                            marginTop: '10px',
+                                            color: '#637282',
+                                            fontWeight: '500',
+                                            fontSize: 14,
+                                            fontFamily: 'Open Sans,sans-serif',
+                                        }}
+                                    >
+                                        {shorten(blogs.description)}
+                                    </Typography>
+                                </div>
 
-							<div className={styles.container} style={{ marginTop: '2rem' }}>
-								<div className={styles.img} style={{ marginBottom: '-0.5rem' }}>
-									<Avatar src={image1} sx={{ width: 28, height: 28 }} />
-								</div>
-								<div className={styles.name}>
-									<Typography
-										sx={{ fontSize: 14, margin: "0" }}
-										color="text.primary"
-										gutterBottom
-									>
-										{blogs.author}
-									</Typography>
-									<Typography sx={{ fontSize: 10, margin: "0" }} color="text.secondary" gutterBottom>
-										{blogs.date}
-									</Typography>
-								</div>
-							</div>
-						</CardContent>
+                                <div className={styles.container} style={{ marginTop: '20px' }}>
+                                    <div className={styles.img} style={{ marginBottom: '-0.5rem' }}>
+                                        <Avatar src={image1} sx={{ width: 40, height: 40 }} />
+                                    </div>
+                                    <div className={styles.name}>
+                                        <Typography
+                                            sx={{
+                                                margin: '0',
+                                                color: '#435156',
+                                                fontWeight: '600',
+                                                textAlign: 'left',
+                                                fontSize: 14,
+                                                fontFamily: 'Open Sans,sans-serif',
+                                            }}
+                                            color="#435156"
+                                            gutterBottom
+                                        >
+                                            {blogs.author}
+                                        </Typography>
+                                        <Typography
+                                            sx={{
+                                                fontSize: 11,
+                                                margin: '0',
+                                                textAlign: 'left',
+                                                fontFamily: 'Open Sans,sans-serif',
+                                            }}
+                                            color="#435156"
+                                            gutterBottom
+                                        >
+                                            {blogs.date}
+                                        </Typography>
+                                    </div>
+                                </div>
+                            </CardContent>
 
+                            <CardActions className={styles.buttons} style={{ padding: '5px 20px' }}>
+                                <Button
+                                    className={styles.btnP}
+                                    width="100%"
+                                    size="small"
+                                    variant="contained"
+                                    disableElevation
+                                    style={{
+                                        backgroundColor: '#0F9D58',
+                                        fontSize: 13,
+                                        padding: '10px 0',
+                                        margin: '0',
+                                        textAlign: 'left',
+                                        fontFamily: 'Open Sans,sans-serif',
+                                        fontWeight: '600',
+                                    }}
+                                    href={blogs.bloglink}
+                                >
+                                    <ViewProject
+                                        className={styles.svg}
+                                        style={{ height: '20px', width: '20px' }}
+                                    />
+                                    Read on Medium
+                                </Button>
+                            </CardActions>
+                            {admin && (
+                                <CardActions className={styles.buttonsAdmin} style={{ padding: '5px 20px' }}>
+                                    <Button
+                                        onClick={handleClick}
+                                        className={styles.btn}
+                                        // size="small"
+                                        variant="contained"
+                                        disableElevation
+                                        style={{
+                                            backgroundColor: '#EA4235',
+                                            padding: '10px 0',
+                                            fontFamily: 'Open Sans,sans-serif',
+                                            fontSize: 13,
+                                            fontWeight: '600',
+                                        }}
+                                    >
+                                        Delete
+                                    </Button>
 
-
-						<CardActions className={styles.buttons}>
-
-							<Link to={blogs.bloglink} style={{ textDecoration: "none" }}>
-								<Button
-									className={styles.btnP}
-									width='20rem'
-
-									variant="contained"
-									disableElevation
-									style={{ backgroundColor: "#08ad5d" }}
-								>
-									<ViewProject className={styles.svg} />
-									Read on Medium
-								</Button>
-							</Link>
-						</CardActions>
-						{admin && (
-							<CardActions className={styles.buttonsAdmin}>
-								
-									<Button
-									onClick={()=>removeBlog(blogs._id)}
-										className={styles.btn}
-										size="small"
-										variant="contained"
-										disableElevation
-										style={{ backgroundColor: "#EA4335" }}
-									>
-										Delete
-									</Button>
-							
-								<Link to="/Blogs/EditBlog" onClick={()=>previousCardData(blogs)} style={{ textDecoration: "none" }}>
-									<Button
-									
-										className={styles.btn}
-										size="small"
-										variant="outlined"
-										disableElevation
-										style={{ color: "#08ad5d", borderColor: "#08ad5d" }}
-									>
-										Edit
-									</Button>
-								</Link>
-							</CardActions>
-						)}
-					</Card>
-				</Box>
-			</div>
-		</div>
-		</>
-	);
+                                    <Link
+                                        to="../blogs/edit_blog"
+                                        onClick={() => previousCardData(blogs)}
+                                        style={{ textDecoration: 'none' }}
+                                    >
+                                        <Button
+                                            className={styles.btn}
+                                            // size="small"
+                                            variant="outlined"
+                                            disableElevation
+                                            style={{
+                                                color: '#0F9D58',
+                                                border: '2px solid #0F9D58',
+                                                padding: '8px 0',
+                                                fontFamily: 'Open Sans,sans-serif',
+                                                fontSize: 13,
+                                                fontWeight: '600',
+                                            }}
+                                        >
+                                            Edit
+                                        </Button>
+                                    </Link>
+                                </CardActions>
+                            )}
+                        </Card>
+                    </Box>
+                </div>
+            </div>
+        </>
+    );
 }
 
 export default BlogCard;

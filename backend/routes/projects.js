@@ -24,12 +24,13 @@ router.post("/", (req, res) => {
     var description = req.body.description;
     var image = req.body.image;
     var projectLink = req.body.projectLink;
-    
+    var githubLink = req.body.githubLink;
     var newProject = {
         projectname: projectname,
         description: description,
         image: image,
-        projectLink: projectLink
+        projectLink: projectLink,
+        githubLink : githubLink
     };
 
     Project.create(newProject, (err, newlyCreated) => {
@@ -54,12 +55,13 @@ router.get("/:project_id/edit", function(req,res){
 
 // project update
 router.put("/:id",async (req,res)=>{
-    const {projectname,description,image,projectLink} = req.body;
+    const {projectname,description,image,projectLink,githubLink} = req.body;
     const newProject = {}
     if(projectname){newProject.projectname=projectname}
     if(description){newProject.description=description}
     if(image){newProject.image=image}
     if(projectLink){newProject.projectLink=projectLink}
+    if(githubLink){newProject.githubLink=githubLink}
 
     try {
     const project = await Project.findById(req.params.id)

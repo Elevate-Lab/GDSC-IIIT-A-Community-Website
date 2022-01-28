@@ -13,7 +13,7 @@
     width: 81.96%;
     margin:0 auto;
     background:#F5F5F5;
-    filter: drop-shadow(0px 1px 8px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(0px 2px 10px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
 }
 
@@ -27,7 +27,7 @@
 .Field-item{
     width:max-content;
     text-decoration: none;
-    padding: 18px 32px;
+    padding: 3vh 6vh;
 }
 .field-link{
     margin: 0;
@@ -40,7 +40,7 @@
     line-height:110%;
 }
 .field-selected{
-    background:#176FFF;
+    background:#156EFF;
     border-radius: 4px;
     filter: drop-shadow(1px 0px 4px rgba(0, 0, 0, 0.15));
 }
@@ -68,16 +68,15 @@
 @media only screen and (max-width: 900px) {
     .Team_section{
         align-items: center;
-        padding-top: 12vh;
     }
     .Member-field{
-        width: 94%;
+        width: 96%;
     }
     .Field-item{
-        padding: 1.6vw 14px;
+        padding: 1.8vw 2vw;
     }
     .field-link{
-        font-size: 2vw;
+        font-size: 14px;
         text-align: center;
     }
     .Member_cards_container{
@@ -86,5 +85,21 @@
     .Field_view{
         gap: 4vw;
         justify-content: center;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .Member-field{
+        width: 80%;
+    }
+    .Field-select{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2vh;
+    }
+    .Field-item{
+        padding: 2.4vw 3vw;
+    }
+    .Field_view{
+        gap: 6vh;
     }
 }

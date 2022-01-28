@@ -126,13 +126,14 @@ function Team() {
             <section className="Team_section">
                 <Headings
                     LargeHeading="Our Team"
-                    SmallHeading="The ones, who are making it happen"
-                    Text="Learning goes hand-in-hand with building new and cool stuff. Lorem ipsum dolor sit amet"
+                    SmallHeading="The ones, who are making it happen..."
+                    Text="Learning goes hand-in-hand with building new and cool stuff.
+                     With our incredible team we aim to solve numerous problems in day-to-day life, and explore new heights in Technology!"
                     PageIllustration={team_illustration}
                 />
                 <Fab style={{ alignSelf: 'flex-end', marginRight: '7vw' }} color="primary" aria-label="add">
                     <Link
-                        to="Team/NewMember"
+                        to="../team/new_member"
                         style={{
                             color: 'white',
                             height: '100%',
