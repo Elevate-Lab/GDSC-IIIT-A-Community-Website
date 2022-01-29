@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Blog = require('../models/blog');
+const { requireSignin } = require('../common-middleware');
 
 //get all events
 router.get("/",async(req,res)=>{
