@@ -72,9 +72,10 @@ function Contact() {
                 SmallHeading="Have any queries? We'd love to hear from you!"
                 Text=""
                 PageIllustration={''}
+                style={{paddingBottom: 0}}
             />
 {/* onSubmit={(e)=>handleRequest(e)} method="POST" id="name" name="name" */}
-            <div className="Contact_form_n_image">
+            <div className="Contact_form_n_image" style={{marginTop: '-10vh'}}>
                 <div className="form_container">
                     <form className="contact_form" >
                         <div className="form_name_inp">

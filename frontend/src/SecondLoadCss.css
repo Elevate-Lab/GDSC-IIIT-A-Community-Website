@@ -157,9 +157,16 @@ footer {
    */
 
 .newLoader {
+  padding-top: 13rem;
 	width: 100%;
 	height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.loaderimg{
+  height: 200px;
+  width:200px;
+  align-items: center;
 }

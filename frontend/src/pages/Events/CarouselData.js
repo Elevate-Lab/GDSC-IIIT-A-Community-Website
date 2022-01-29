@@ -1,7 +1,8 @@
-import img1 from "../../Assets/Images/456.jfif"
-import img2 from "../../Assets/Images/222.jfif"
-import img3 from "../../Assets/Images/3432.jfif"
-import img4 from "../../Assets/Images/9890.jfif"
+import img1 from "../../Assets/Images/mlh2.jpg"
+import img2 from "../../Assets/Images/mlh_info.jpg"
+import img3 from "../../Assets/Images/gc.png"
+import img4 from "../../Assets/Images/3432.jfif"
+import img5 from "../../Assets/Images/222.jfif"
 
 export const Images=[
     {
@@ -20,8 +21,13 @@ export const Images=[
         img:img3
     },
     {
-        title:"Image 3",
+        title:"Image 4",
         subtitle:"city on the beech",
         img:img4
+    },
+    {
+        title:"Image 5",
+        subtitle:"city on the beech",
+        img:img5
     }
 ];

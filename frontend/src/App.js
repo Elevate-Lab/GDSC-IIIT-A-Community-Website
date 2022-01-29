@@ -61,8 +61,8 @@ loading?
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/about">
-            <About />
+          <Route path="/Home">
+            <Home />
           </Route>
           <Route path="/events" exact>
             <Events />

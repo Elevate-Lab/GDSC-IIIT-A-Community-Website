@@ -6,14 +6,16 @@
 }
 
 .img {
+	object-fit: cover;
 	/* padding-right: 3%; */
-	height: 200px;
+	height: 169px;
+	width: 300px;
 	/* width */
 }
 .imgContainer {
 	z-index: 1;
 	position: relative;
-	border-radius: 20px;
+	/*border-radius: 20px;*/
 	overflow: hidden;
 }
 .text {
@@ -39,18 +41,27 @@
 .RSVPbtn {
 	width: 100%;
 }
+.RSVPbtn:hover{
+	color: #fff;
+	font-size: 16px !important;
+}
 .eventCard {
 	margin: 5vh 0;
-	border-radius: 20px !important ;
+	/*border-radius: 20px !important ;*/
 	padding: 0;
 	max-width: 300px;
 	/* border: 1px solid transparent; */
 	transition: 0.75s;
 }
 .eventCard:hover {
-	box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 16px;
+	box-shadow: rgb(144, 202, 249, 0.75) 4px 4px 16px 4px;
+	overflow: hidden;
+	transition: 0.75s;
 	/* border: solid grey 1px; */
 	/* transition: 1s; */
+}
+.content:hover{
+	/*box-shadow: rgb(225, 225, 130, 1) 0px 4px 16px;*/
 }
 .svg {
 	/* padding-right: 5px; */
@@ -62,11 +73,12 @@
 }
 .content {
 	/* border: solid grey 1px; */
-	border-radius: 20px;
+	border-radius: 18px;
 	box-shadow: rgba(0, 0, 0, 0.16) 0px -2px 4px;
 	/* margin-top: -15px; */
 	position: relative;
 	z-index: 5;
-	background-color: white;
+	background-color: #fff;
 	transform: translate(0px, -10px);
 }
+

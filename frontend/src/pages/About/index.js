@@ -38,14 +38,14 @@ function About() {
 			<div className="About_DSC About">
 				<img src={aboutdsc} alt="aboutdsc.jpg" style={{ boxShadow: "0px 0px 0px #ffe" }} />
 				<div>
-					<p className="Abt_Heading">About GDSC</p>
+					<p className="Abt_Heading">What's GDSC?</p>
 					<p className="Abt_Content">
 						Google collaborates with university students who are passionate about growing developer
-						communities. GDSC is one of the communities of Google where they provide resources to empower
-						students and developers to understand technologies and build solutions for real-world problems.
-						Here one can organize various Workshops, Hackathons, Study jam sessions, Bootcamps,
-						Project-Building activities etc. you can hone your skills by helping the local community resolve
-						their daily difficulties.
+						communities. GDSC is an Organisation for university students who want to bring about a
+						 change through technology. We are focused upon building technical and non-technical skills,
+						  which would help students to build a better community.<br></br><br></br>
+							# Lets Learn, Grow and Innovate together.
+						
 					</p>
 					<button>
 						<a href="https://developers.google.com/community/gdsc">
@@ -56,13 +56,13 @@ function About() {
 				</div>
 			</div>
 			<div className="About About_DSC_IIITA">
-				<img src={dsciiita} alt="dsciiita.jpg" />
+				<img src={dsciiita} alt="dsciiita.jpg" target="_blank" />
 				<div>
 					<p className="Abt_Heading">About GDSC IIITA</p>
 					<p className="Abt_Content">
-						Google Developer Students Club IIITA is a community for the students of Indian Institute of
-						Information Technology, Allahabad to help fine-tune their skills and build applications that solve
-						various campus and local problmes. <br></br>
+					GDSC's primary aim lies in empowering students with development skills and other technical 
+					abilities for growth and advancement. We believe in innovation and evolution. 
+					For students to grow their skills to tackle problems and to bring about change. <br></br>
 						<br></br>
 						The club is intended as a space for students to try out new ideas and collaborate to solve mobile,
 						web development problems and as well as discover new heights in AI, ML, Designing and much more.
@@ -95,7 +95,7 @@ function About() {
 						</div>
 						<div className="What_we_do_card_text">
 							<p className="What_we_do_card_head">Seminars</p>
-							<p className="What_we_do_card_desc">Get updated with the latest news and announcements.</p>
+							<p className="What_we_do_card_desc">Get updated with the latest Events and Hackathons.</p>
 						</div>
 					</div>
 					<div className="What_we_do_card3">
@@ -123,7 +123,7 @@ function About() {
 				<p className="Join_the_convo_heading">Join the Conversation</p>
 				<div className="Join_the_convo_cards">
 					<div className="Join_youtube_card">
-						<p>Subscribe our Youtube channel for regular updates regarding Events and ... </p>
+						<p>Subscribe our Youtube channel for regular updates regarding Events and Speaker Sessions... </p>
 						<div className="Join_youtube" style={{ background: "#FF4444" }}>
 							<img src={join_the_convo_img_1} alt="Youtube" />
 							<a
@@ -136,7 +136,7 @@ function About() {
 						</div>
 					</div>
 					<div className="Join_discord_card">
-						<p>Join our Discord Server to know more about the Activities, Sessions and other fun stuff</p>
+						<p>Join our Discord Server to know more about the Activities, Sessions and other fun stuff...</p>
 						<div className="Join_discord" style={{ background: "#586AEA" }}>
 							<img src={join_the_convo_img_2} alt="Discord" />
 							<a href="https://discord.com/invite/gv9zzDcQUH" target="_blank" rel="noopener noreferrer">

@@ -30,14 +30,14 @@ function Events() {
 			<Headings
 				LargeHeading="Events"
 				SmallHeading="Whats happening..."
-				Text="Here at GDSC IIIT Allahabad we put the fun in functions and events. Attend Study Jams/ Hackathons/ Developer Conferences to learn more about the latest technologies."
+				Text="GDSC IIITA also provides with Events, Workshops, Seminars. May it be Android Study Jams or Google Cloud Month we have it all..."
 				PageIllustration={event_illustration}
 			/>
 			<div className="heading_plusBtn">
 				<h2 style={{ fontWeight: "600", fontFamily: "Open Sans,Poppins,sans-serif", color: "#1b2733" }} className="heading">
 					Upcoming Events
 				</h2>
-				<Fab color="primary" aria-label="add">
+				{/* <Fab color="primary" aria-label="add">
 					<Link
 						to="../events/new_event"
 						style={{
@@ -51,7 +51,7 @@ function Events() {
 					>
 						<AddIcon />
 					</Link>
-				</Fab>
+				</Fab> */}
 			</div>
 			<EventCards upcoming={true} />
 			<HeadingButton
@@ -63,7 +63,7 @@ function Events() {
 				<h2 style={{ fontWeight: "600", fontFamily: "Open Sans,Poppins,sans-serif", color: "#1b2733" }} className="heading">
 					Past Events
 				</h2>
-				<Fab color="primary" aria-label="add">
+				{/* <Fab color="primary" aria-label="add">
 					<Link
 						to="../events/new_event"
 						style={{
@@ -77,7 +77,7 @@ function Events() {
 					>
 						<AddIcon />
 					</Link>
-				</Fab>
+				</Fab> */}
 			</div>
 			<EventCards2 upcoming={false} />
 		</section>

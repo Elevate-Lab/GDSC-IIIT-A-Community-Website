@@ -21,7 +21,7 @@ function TeamSpecialCard() {
     return (
         <div className={styles.cards_container}>
             <Box className={styles.card} sx={{ minWidth: 275 }}>
-                <Card variant="outlined" style={{ borderRadius: 20 }}>
+                <Card variant="outlined" style={{ borderRadius: 15 }}>
                     <CardContent>
                         <div className={styles.container}>
                             <div className={styles.img}>
@@ -55,7 +55,7 @@ function TeamSpecialCard() {
                                     color="#637282"
                                     gutterBottom
                                 >
-                                    GDSC Lead IIITA
+                                    GDSC IIITA Lead
                                 </Typography>
                                 <Typography
                                     sx={{
@@ -71,13 +71,14 @@ function TeamSpecialCard() {
                                 </Typography>
                             </div>
                             <div className={styles.social_icons}>
-                                <a href="https://twitter.com/TejasMMane">
+                                <a href="https://twitter.com/TejasMMane" target="_blank">
                                     <Twitter width="25px" />
                                 </a>
-                                <a href="https://github.com/tejma17">
+                                {/* <a href="" className="fa fa-facebook" aria-hidden="true" target="_blank" width="px"></a> */}
+                                <a href="https://github.com/tejma17" target="_blank">
                                     <Github width="25px" />
                                 </a>
-                                <a href="https://www.linkedin.com/in/tejas-mane/">
+                                <a href="https://www.linkedin.com/in/tejas-mane/" target="_blank">
                                     <Linkedin width="25px" />
                                 </a>
                             </div>
@@ -86,7 +87,7 @@ function TeamSpecialCard() {
                 </Card>
             </Box>
             <Box className={styles.card} sx={{ minWidth: 275 }}>
-                <Card variant="outlined" style={{ borderRadius: 20 }}>
+                <Card variant="outlined" style={{ borderRadius: 15 }}>
                     <CardContent>
                         <div className={styles.container}>
                             <div className={styles.img}>
@@ -131,7 +132,9 @@ function TeamSpecialCard() {
                                     }}
                                     color="#637282"
                                     gutterTop
-                                ></Typography>
+                                >
+                                    Assistant Professor, Ph.D. Department of IT, IIIT Allahabad
+                                </Typography>
                             </div>
                             <div className={styles.social_icons}>
                                 {/* <a href="www.twitter.com">

@@ -153,10 +153,10 @@ function Blogs() {
 			</div> */}
 
 			<div className="heading_plusBtn">
-				<h2 style={{fontWeight: "600", fontFamily: "Open Sans,Poppins,sans-serif", color: "#1b2733" }} className="heading">
+				<h2 style={{fontWeight: "600", fontFamily: "Open Sans,Poppins,sans-serif", color: "#1b2733", marginTop: '-10vh' }} className="heading">
 					Must Read
 				</h2>
-				<Fab color="primary" aria-label="add">
+				{/* <Fab color="primary" aria-label="add">
 					<Link
 						to="../blogs/new_blog"
 						style={{
@@ -170,7 +170,7 @@ function Blogs() {
 					>
 						<AddIcon />
 					</Link>
-				</Fab>
+				</Fab> */}
 			</div>
 			<MustReadCard />
 
@@ -181,7 +181,6 @@ function Blogs() {
 					flexDirection: "row",
 					flexWrap: "wrap",
 					justifyContent: "space-around",
-					alignItems: "center"
 				}}
 			>
 				{blogs && blogs.map((blog) => {

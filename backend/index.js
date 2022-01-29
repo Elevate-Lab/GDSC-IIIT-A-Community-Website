@@ -71,8 +71,9 @@ app.post('/mail',(req,res,next)=>{
     var mailOptions={
         from: name,
         to: 'gdsc@iiita.ac.in',
-        subject: "Message from GDSC IIIT A Community Website's Contact Section",
-        html: `Name: ${name} ${senderEmail} <br> Message: ${message}`
+        subject: "Website Contact Message from "+name,
+        replyTo: senderEmail,
+        html: `${message} <br><br> From:${senderEmail}`
     }
 
     transporter.sendMail(mailOptions,(err,data)=>{

@@ -14,7 +14,7 @@ import login_icon from '../../Assets/LogIn_icon.svg'
 import follow_icon_1 from '../../Assets/instagram.svg'
 import follow_icon_2 from '../../Assets/facebook.svg'
 import follow_icon_3 from '../../Assets/medium.svg'
-import follow_icon_4 from '../../Assets/youtube.svg'
+import follow_icon_4 from '../../Assets/Images/youtube-light.svg'
 import follow_icon_5 from '../../Assets/twitter.svg'
 import follow_icon_6 from '../../Assets/linkedin.svg'
 import follow_icon_7 from '../../Assets/github.svg'
@@ -49,7 +49,7 @@ function Footer() {
                             <div className="contact_pin_icon">
                                 <img src={pin_icon} alt="pin"/>
                             </div>
-                            <p>Google Developer Students Club <br/><span>IIITA,Prayagraj, Uttar Pradesh, 211015</span></p>
+                            <p>Google Developer Students Club <br/><span>IIITA, Prayagraj, Uttar Pradesh, 211015</span></p>
                         </div>
                     </div>
                     <div className="contact_sec_2">

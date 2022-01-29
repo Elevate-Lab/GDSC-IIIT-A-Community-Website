@@ -22,7 +22,7 @@ function EventCard(props) {
     const { event } = props;
     const context = useContext(apiContext);
     const { removeData, previousCardData, removeEvent, getAttribute } = context;
-    const [admin, setAdmin] = useState(true);
+    const [admin, setAdmin] = useState(false);
     const [upcoming, setUpcoming] = useState(props.upcoming);
     const handleClick = () => {
         getAttribute(event);
@@ -114,9 +114,34 @@ function EventCard(props) {
                                 fontWeight: '600',
                             }}
                             href={event.eventLink}
+                            target="_blank"
                         >
                             <RSVPsvg className={styles.RSVPsvg} />
                             RSVP Here
+                        </Button>
+                    </CardActions>
+                )}
+
+                {!upcoming && (
+                    <CardActions className={styles.buttons} style={{ padding: '5px 20px', width: '100%' }}>
+                        <Button
+                            className={styles.RSVPbtn}
+                            // size="small"
+                            variant="contained"
+                            disableElevation
+                            style={{
+                                backgroundColor: '#0F9D58',
+                                width: '100%',
+                                padding: '8px 0',
+                                fontFamily: 'Open Sans,sans-serif',
+                                fontSize: 14,
+                                fontWeight: '600',
+                            }}
+                            href={event.eventLink}
+                            target="_blank"
+                        >
+                            <RSVPsvg className={styles.RSVPsvg} />
+                            View Event
                         </Button>
                     </CardActions>
                 )}

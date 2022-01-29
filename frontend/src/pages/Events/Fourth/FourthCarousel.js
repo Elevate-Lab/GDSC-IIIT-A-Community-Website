@@ -38,7 +38,7 @@ function FouthCarousel() {
             // textAlign: 'center',
             // justifyContent: 'center',
             fontSize: '.000002rem',
-            height: '87vh',
+            height: '88vh',
             direction: 'left'
         },
         textUs: {
@@ -46,17 +46,23 @@ function FouthCarousel() {
             textAlign: "center",
             display: 'flex',
             flexDirection: 'column',
-            backgroundColor: '#3F3F3E',
+            backgroundColor: '#fff',
             justifyContent: 'center',
-            alignItems: 'center'
+            alignItems: 'center',
+            // background: '#fff',  /* fallback for old browsers */
+            // background: '-webkit-linear-gradient(to right, #FFF8E1, #fff)',  /* Chrome 10-25, Safari 5.1-6 */
+            background: 'linear-gradient(to left, #fff, #FFD54F)', /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
         },
+        //#FFF8E1
+        //#fff
         combined: {
             display: 'flex',
             flexDirection: width > 900 ? 'row' : 'column'
         },
         designtext: {
-            color: '#ffffff',
-            fontFamily: 'Open Sans,Poppins,sans serif',
+            color: '#3F3F3E',
+            fontFamily: 'Poppins,sans serif',
             fontWeight: '400',
             width: '86%',
             marginTop: '2vh',
@@ -96,9 +102,11 @@ function FouthCarousel() {
                             "delay": 2500,
                             "disableOnInteraction": false
                         }}
-                        pagination={{
-                            "clickable": true
-                        }} navigation={true} className={Classes.mySwiper} >
+                        // pagination={{
+                        //     "clickable": true,
+                        //     "display": false
+                        // }} 
+                        navigation={false} className={Classes.mySwiper} >
                            
                         <SwiperSlide style={{ backgroundImage: `url(${Images[0].img})`, height: "100%", width: "100%", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover", justifyContent: 'center', marginRight: 0 }} >
                             Slide 1
@@ -106,8 +114,8 @@ function FouthCarousel() {
                         <SwiperSlide style={{ backgroundImage: `url(${Images[1].img})`, height: "100%", width: "100%", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover", justifyContent: 'center', marginRight: 0 }}>
                             Slide 2</SwiperSlide>
                         <SwiperSlide style={{ backgroundImage: `url(${Images[2].img})`, height: "100%", width: "100%", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover", justifyContent: 'center', marginRight: 0 }}>Slide 3</SwiperSlide>
-                        <SwiperSlide style={{ backgroundImage: `url(${Images[0].img})`, height: "100%", width: "100%", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover", justifyContent: 'center', marginRight: 0 }}>Slide 4</SwiperSlide>
-                        <SwiperSlide style={{ backgroundImage: `url(${Images[1].img})`, height: "100%", width: "100%", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover", justifyContent: 'center', marginRight: 0 }} >Slide 5</SwiperSlide>
+                        <SwiperSlide style={{ backgroundImage: `url(${Images[3].img})`, height: "100%", width: "100%", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover", justifyContent: 'center', marginRight: 0 }}>Slide 4</SwiperSlide>
+                        <SwiperSlide style={{ backgroundImage: `url(${Images[4].img})`, height: "100%", width: "100%", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover", justifyContent: 'center', marginRight: 0 }} >Slide 5</SwiperSlide>
 
                     </Swiper>
                 </div>

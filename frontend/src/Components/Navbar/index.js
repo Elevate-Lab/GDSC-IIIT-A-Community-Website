@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import Navbar_logo from "../../Assets/DSC-IIITA-Light-Horizontal.png";
 
-const navbarContent = ["About", "Events", "Team", "Projects", "Blogs"];
+const navbarContent = ["Home", "Events", "Team", "Projects", "Blogs"];
 
 function Navbar() {
 	const [width, setWidth] = useState(window.innerWidth);

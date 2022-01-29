@@ -24,16 +24,16 @@ function Projects() {
 			<Headings
 				LargeHeading="Projects"
 				SmallHeading="Checkout our Projects..."
-				Text="Here at GDSC IIIT A we have developed and still working on projects that solve some
-				 social problem or on that ease day-to-day things.
-				 We are also open to project collaboration and new ideas!"
+				Text="Making things which help in solving real life problems and finding solution to a 
+				problem statement is also what makes us special. 
+				Being in global top 50 for Google solutions challenge we are open to ideas and collaborations."
 				PageIllustration={project_illustration}
 			/>
 			<div className="heading_plusBtn">
 				<h2 style={{ fontWeight: "bold", color: "#1b2733" }} className="heading">
 					Featured Projects
 				</h2>
-				<Fab color="primary" aria-label="add">
+				{/* <Fab color="primary" aria-label="add">
 					<Link
 						to="../projects/new_project"
 						style={{
@@ -47,7 +47,7 @@ function Projects() {
 					>
 						<AddIcon />
 					</Link>
-				</Fab>
+				</Fab> */}
 			</div>
 			<div
 				style={{

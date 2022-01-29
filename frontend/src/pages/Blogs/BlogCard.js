@@ -18,7 +18,7 @@ import { Images } from './BlogData.js';
 import React, { useContext } from 'react';
 import apiContext from '../../ContextApi/ApiContext';
 function BlogCard(props) {
-    const [admin, setAdmin] = useState(true);
+    const [admin, setAdmin] = useState(false);
     const context = useContext(apiContext);
     const { removeData, previousCardData, removeBlog, getAttribute } = context;
     const { blogs } = props;
@@ -34,21 +34,21 @@ function BlogCard(props) {
     }
     return (
         <>
-            <div style={{ width: '320px', height: 'max-content', display: 'flex', flexDirection: 'column' }}>
+            <div className={styles.mainCard} style={{ width: '320px', height: 'max-content', display: 'flex', flexDirection: 'column',marginTop: '50px' }}>
                 <div style={{ zIndex: '0', background: '#FAFAFA', borderRadius: '20px 20px 0 0' }}>
-                    <img src={blogs.image} style={{ width: '320px', height: '220px' }} alt="img" />
+                    <img src={blogs.image} style={{ width: '320px', height: '220px', objectFit: 'cover'}} alt="img" />
                 </div>
-                <div style={{ zIndex: '5', paddingBottom: '20px' }}>
+                <div style={{ zIndex: '5',marginTop: '-20px' }}>
                     <Box className={styles.card} sx={{ background: '#FAFAFA', overflow: 'hidden' }}>
                         <Card variant="outlined" sx={{ paddingBottom: '10px' }}>
-                            <CardContent style={{ padding: '5px 20px 30px 20px' }}>
+                            <CardContent style={{ padding: '5px 20px 15px 20px' }}>
                                 <div
                                     style={{
                                         paddingTop: '20px',
                                         color: '#1B2733',
                                         fontWeight: '600',
                                         textAlign: 'left',
-                                        fontSize: 24,
+                                        fontSize: 18,
                                         fontFamily: 'Open Sans,sans-serif',
                                     }}
                                 >
@@ -72,7 +72,9 @@ function BlogCard(props) {
 
                                 <div className={styles.container} style={{ marginTop: '20px' }}>
                                     <div className={styles.img} style={{ marginBottom: '-0.5rem' }}>
-                                        <Avatar src={image1} sx={{ width: 40, height: 40 }} />
+                                        {/* <Avatar src={image1} sx={{ width: 40, height: 40 }} /> */}
+                                        {/* <i class="fa fa-user-o fa-lg" aria-hidden="true" ></i> */}
+                                        <img src="https://img.icons8.com/pastel-glyph/64/000000/person-male--v2.png" style={{ width: '30px', height: '30px'}}/>
                                     </div>
                                     <div className={styles.name}>
                                         <Typography
@@ -87,7 +89,7 @@ function BlogCard(props) {
                                             color="#435156"
                                             gutterBottom
                                         >
-                                            {blogs.author}
+                                         {blogs.author}
                                         </Typography>
                                         <Typography
                                             sx={{
@@ -122,6 +124,7 @@ function BlogCard(props) {
                                         fontWeight: '600',
                                     }}
                                     href={blogs.bloglink}
+                                    target="_blank"
                                 >
                                     <ViewProject
                                         className={styles.svg}

@@ -1,7 +1,7 @@
 .container {
 	display: flex;
 	flex-direction: row;
-	border-radius: 20px;
+	border-radius: 10px;
 	/* align-items: center;
 	justify-content: center; */
 	/* padding-bottom: 1.5%; */
@@ -44,7 +44,16 @@
 }
 .btn {
 	width: 100%;
+	font-size: 12px;
+	line-height: 18px;
 }
+
+.btn:hover{
+	color: #fff;
+	font-size: 14px !important;
+	transition: 0.25s;
+}
+
 .greenBtn {
 	color: #08ad5d;
 	background-color: #08ad5d;
@@ -56,6 +65,7 @@
 	margin: 5vh 0;
 	width: 450px;
 	transition: 0.75s;
+
 }
 
 .svg {
@@ -68,9 +78,12 @@
 .card:hover {
 	border-radius: 20px;
 	/* box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 16px; */
-	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	/*box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;*/
 	/* border: solid grey 1px; */
 	/* transition: 1s; */
+	box-shadow: rgb(129, 199, 132, 0.7) 4px 4px 16px 4px;
+	overflow: hidden;
+	transition: 0.75s;
 }
 @media only screen and (max-width: 450px) {
 	.svg {

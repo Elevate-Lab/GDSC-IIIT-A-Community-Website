@@ -18,7 +18,7 @@ let eventsArr = Array.from(pastEvents)
 	return (
 		<div
 			style={{
-				padding: "9vh 7vw",
+				padding: "2vh 7vw",
 				display: "flex",
 				flexDirection: "row",
 				flexWrap: "wrap",

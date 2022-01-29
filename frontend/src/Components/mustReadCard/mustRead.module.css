@@ -11,6 +11,7 @@
 .mustReadCard:hover{
 	box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 16px;
 }
+
 .content {
 	display: flex;
 	flex-direction: column;
@@ -38,6 +39,7 @@
 	justify-content: space-between;
 	display: flex;
 	flex-direction: row;
+	padding-bottom: 30px;
 }
 .text {
 	margin-bottom: 4vh;
@@ -49,6 +51,11 @@
 .btn {
 	padding: 10px;
 }
+.btn:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
 .writer {
 	display: flex;
 	flex-direction: row;

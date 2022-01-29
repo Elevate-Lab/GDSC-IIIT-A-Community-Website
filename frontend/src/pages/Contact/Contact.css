@@ -1,6 +1,6 @@
 .Contact_section{
-    padding-top: 10.88vh;
-    padding-bottom: 12vh;
+    padding-top: 5vh;
+    padding-bottom: 10vh;
 }
 .Contact_form_n_image{
     display: flex;
@@ -178,7 +178,7 @@ form input, form textarea, form button{
 @media only screen and (max-width: 900px) {
     .Contact_section{
         align-items: center;
-        padding-top: 12vh;
+        padding-top: 5vh;
     }
     .Contact_form_n_image{
         width:80%;

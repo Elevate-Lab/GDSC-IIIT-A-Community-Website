@@ -41,11 +41,12 @@ function MustReadCard(props) {
 						</Typography>
 					</div>
 				</CardContent>
-				<div className={` ${styles.row2}`}>
+				<div className={` ${styles.row2}`} >
 					<div className={`${styles.writer} ${styles.row}`}>
 						<div className={styles.img}>
-							<Avatar sx={{ width: 56, height: 56 }} />
-						</div>
+							{/* <Avatar sx={{ width: 56, height: 56 }} /> */}
+							 <img src="https://img.icons8.com/pastel-glyph/64/000000/person-male--v2.png" style={{ width: '50px', height: '50px'}}/>
+						</div> 
 						<div>
 							<p style={{fontSize: 14, fontFamily:"Open Sans,sans-serif", fontWeight: "500", color: "#435156"}}>Tanushree</p>
 							<p style={{fontSize: 14, fontFamily:"Open Sans,sans-serif", fontWeight: "500", color: "#435156"}}>OCT 21, 2021</p>

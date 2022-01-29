@@ -15,6 +15,19 @@ function EventCards(props) {
 		getAllEventData();
 	}, [parameter])
 	let eventsArr = Array.from(upcomingEvents)
+
+	async function compare( a, b ) {
+		if ( a.startDate < b.startDate ){
+		  return -1;
+		}
+		if ( a.startDate > b.startDate ){
+		  return 1;
+		}
+		return 0;
+	  }
+	console.log(eventsArr[0]);
+	eventsArr.sort(compare);
+
 	return (
 		<div
 			style={{
@@ -23,7 +36,7 @@ function EventCards(props) {
 				flexDirection: "row",
 				flexWrap: "wrap",
 				justifyContent: "space-around",
-				alignItems: "center",
+				alignItems: "flex-start",
 				zIndex: '0'
 			}}
 		>

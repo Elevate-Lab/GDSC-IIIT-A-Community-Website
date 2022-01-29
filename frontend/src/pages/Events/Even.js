@@ -53,7 +53,7 @@ function Content() {
             
             {/* <h1 className={Classes.eventHeading}>Events</h1> */}
 
-            <div style={{ display: 'flex', justifyContent: 'center', direction: 'row' }}>
+            {/* <div style={{ display: 'flex', justifyContent: 'center', direction: 'row' }}>
                 <div style={{ backgroundColor: '#156EFF', width: `calc(100vw/4)`, height: '1vh' }}>
 
                 </div>
@@ -66,7 +66,7 @@ function Content() {
                 <div style={{ backgroundColor: '#0F9D58', width: `calc(100vw/4)`, height: '1vh' }}>
 
                 </div>
-            </div>
+            </div> */}
 
 
 

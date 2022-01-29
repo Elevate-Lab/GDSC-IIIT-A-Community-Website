@@ -3,12 +3,19 @@
     flex-direction: row;
     justify-content: space-evenly;
     border-radius: 20px;
+    margin-top: -60px;
 }
 .card {
     margin: 5vh 0;
     width: 450px;
     border-radius: 20px;
     transition: 0.75s;
+}
+.card>div>div{
+    background-image:url('../../Assets/Images/Card-2.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .container {
     display: flex;
@@ -20,7 +27,7 @@
 .img {
     padding-right: 3%;
     transition: 0.75s;
-    filter: grayscale(100%);
+    /* filter: grayscale(100%); */
 }
 .name {
     display: flex;
@@ -44,9 +51,9 @@
 .card:hover {
     box-shadow: 0px 4px 16px 0 rgba(0, 0, 0, 0.2);
 }
-.card:hover .container > .img {    
+/* .card:hover .container > .img {    
     filter: grayscale(0%);
-}
+} */
 
 @media only screen and (max-width: 900px) {
     .cards_container {

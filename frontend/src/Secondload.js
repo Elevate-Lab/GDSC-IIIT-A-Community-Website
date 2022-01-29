@@ -13,7 +13,7 @@ function Secondload() {
 		//   </div>
 		// </div>
 		<div class="newLoader">
-			<img SRC={gifLoader} alt="Loader" />
+			<img SRC={gifLoader} alt="Loader" class="loaderimg"/>
 			{/* kuku */}
 		</div>
 	);

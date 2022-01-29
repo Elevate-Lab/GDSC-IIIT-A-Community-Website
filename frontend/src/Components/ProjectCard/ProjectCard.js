@@ -19,7 +19,7 @@ function ProjectCard(props) {
     const context = useContext(apiContext);
     const { removeData, previousCardData, removeProject, getAttribute } = context;
     const { project } = props;
-    const [admin, setAdmin] = useState(true);
+    const [admin, setAdmin] = useState(false);
     const handleClick = () => {
         getAttribute(project);
         removeProject(project._id);
@@ -51,7 +51,7 @@ function ProjectCard(props) {
                             >
                                 {project.projectname}
                             </Typography>
-                            <Typography
+                            {/* <Typography
                                 sx={{
                                     fontSize: 15,
                                     fontWeight: '500',
@@ -62,7 +62,7 @@ function ProjectCard(props) {
                                 gutterBottom
                             >
                                 Jobs for all
-                            </Typography>
+                            </Typography> */}
                         </div>
                     </div>
 
@@ -81,7 +81,7 @@ function ProjectCard(props) {
                         </Typography>
                     </div>
                 </CardContent>
-                <CardActions className={styles.buttons} style={{ padding: '5px 20px' }}>
+                <CardActions className={styles.buttons} style={{ padding: '20px 20px' }}>
                     <Button
                         className={styles.btn}
                         size="small"
@@ -95,9 +95,10 @@ function ProjectCard(props) {
                             fontWeight: '600',
                         }}
                         href={project.githubLink}
+                        target="_blank"
                     >
                         <Github className={styles.svg} />
-                        Github Link
+                        View on Github
                     </Button>
 
                     <Button
@@ -109,13 +110,15 @@ function ProjectCard(props) {
                             backgroundColor: '#0F9D58',
                             fontFamily: 'Open Sans,Poppins,sans-serif',
                             padding: '12px 0',
-                            fontSize: 12,
                             fontWeight: '600',
+                            
                         }}
                         href={project.projectLink}
+                        target="_blank"
+                        
                     >
                         <ViewProject className={styles.svg} />
-                        View Project
+                        Try it out!
                     </Button>
                 </CardActions>
                 {admin && (
