@@ -81,7 +81,7 @@ function FouthCarousel() {
                     <h4
                         className={Classes.designtext}
                         style={{fontSize:'3.4vh', marginTop: '1vh'}}
-                    >DSC Provides:</h4>
+                    >GDSC Provides:</h4>
                     <h4  style={{fontSize: '2.6vh', marginTop: '2vh'}}  sx={{fontSize:'0.4rem'}}
                         className={Classes.designtext}>1. Oppurtunities to Enhance their technical knowledge.</h4>
                     <h4 style={{fontSize: '2.6vh', marginTop: '0'}} sx={{fontSize:'4vh'}}

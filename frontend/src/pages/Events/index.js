@@ -30,7 +30,7 @@ function Events() {
 			<Headings
 				LargeHeading="Events"
 				SmallHeading="Whats happening..."
-				Text="Here at DSC IIIT Allahabad we put the fun in functions and events. Attend Study Jams/ Hackathons/ Developer Conferences to learn more about the latest technologies."
+				Text="Here at GDSC IIIT Allahabad we put the fun in functions and events. Attend Study Jams/ Hackathons/ Developer Conferences to learn more about the latest technologies."
 				PageIllustration={event_illustration}
 			/>
 			<div className="heading_plusBtn">

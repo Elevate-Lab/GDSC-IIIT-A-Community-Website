@@ -38,10 +38,10 @@ function About() {
 			<div className="About_DSC About">
 				<img src={aboutdsc} alt="aboutdsc.jpg" style={{ boxShadow: "0px 0px 0px #ffe" }} />
 				<div>
-					<p className="Abt_Heading">About DSC</p>
+					<p className="Abt_Heading">About GDSC</p>
 					<p className="Abt_Content">
 						Google collaborates with university students who are passionate about growing developer
-						communities. DSC is one of the communities of Google where they provide resources to empower
+						communities. GDSC is one of the communities of Google where they provide resources to empower
 						students and developers to understand technologies and build solutions for real-world problems.
 						Here one can organize various Workshops, Hackathons, Study jam sessions, Bootcamps,
 						Project-Building activities etc. you can hone your skills by helping the local community resolve
@@ -58,7 +58,7 @@ function About() {
 			<div className="About About_DSC_IIITA">
 				<img src={dsciiita} alt="dsciiita.jpg" />
 				<div>
-					<p className="Abt_Heading">About DSC IIITA</p>
+					<p className="Abt_Heading">About GDSC IIITA</p>
 					<p className="Abt_Content">
 						Google Developer Students Club IIITA is a community for the students of Indian Institute of
 						Information Technology, Allahabad to help fine-tune their skills and build applications that solve
@@ -76,7 +76,7 @@ function About() {
 			</div>
 
 			<div className="What_we_do">
-				<p className="What_we_do_heading">What DSC IIITA does?</p>
+				<p className="What_we_do_heading">What GDSC IIITA does?</p>
 				<div className="What_we_do_cards">
 					<div className="What_we_do_card1">
 						<div className="What_we_do_card_img">
