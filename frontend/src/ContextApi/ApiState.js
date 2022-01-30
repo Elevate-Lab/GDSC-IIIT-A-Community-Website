@@ -186,6 +186,19 @@ const addProjectCard = async (values) => {
         let eventDate = new Date(`${Date2}`)
         if(currentDate.getTime() <= eventDate.getTime()) return e;
       })
+      upcomingEvent.sort((a,b) =>{ 
+        let Date1 = moment(`${a.startDate}`).format("YYYY,MM,DD");
+        let Date2 = moment(`${b.startDate}`).format("YYYY,MM,DD");
+        let firstDate = new Date(`${Date1}`);
+        let secondDate = new Date(`${Date2}`)
+        if ( firstDate.getTime() > secondDate.getTime() ){
+          return -1;
+        }
+        if ( firstDate.getTime()< secondDate.getTime() ){
+          return 1;
+        }
+        return 0;
+      });
       setUpcomingEvents(upcomingEvent);
     }
     if (allDatas) {
@@ -197,6 +210,19 @@ const addProjectCard = async (values) => {
         let eventDate = new Date(`${Date2}`)
         if(currentDate.getTime() > eventDate.getTime()) return e;
       })
+      pastEvent.sort((a,b) =>{ 
+        let Date1 = moment(`${a.startDate}`).format("YYYY,MM,DD");
+        let Date2 = moment(`${b.startDate}`).format("YYYY,MM,DD");
+        let firstDate = new Date(`${Date1}`);
+        let secondDate = new Date(`${Date2}`)
+        if ( firstDate.getTime() > secondDate.getTime() ){
+          return -1;
+        }
+        if ( firstDate.getTime()< secondDate.getTime() ){
+          return 1;
+        }
+        return 0;
+      });
       setPastEvents(pastEvent);
     }
   }
