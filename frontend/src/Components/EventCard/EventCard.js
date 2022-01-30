@@ -22,7 +22,7 @@ function EventCard(props) {
     const { event } = props;
     const context = useContext(apiContext);
     const { removeData, previousCardData, removeEvent, getAttribute } = context;
-    const [admin, setAdmin] = useState(false);
+    const [admin, setAdmin] = useState(true);
     const [upcoming, setUpcoming] = useState(props.upcoming);
     const handleClick = () => {
         getAttribute(event);

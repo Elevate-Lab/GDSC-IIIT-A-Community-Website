@@ -25,6 +25,7 @@ import NewMember from './pages/Team/newMember';
 import LoginPage from "./pages/Projects/loginPage"
 import ViewportProvider from "./viewport";
 import ApiState from './ContextApi/ApiState';
+import ScrollToTop from "./scrollToTop";
 
 // import Loader from "../src/Loader";
 import { useState, useEffect } from 'react';
@@ -56,6 +57,7 @@ loading?
 <ApiState>
     <ViewportProvider>
       <Router>
+      <ScrollToTop />
         <Navbar />
         <Switch>
           <Route exact path="/">

@@ -18,7 +18,7 @@ import { Images } from './BlogData.js';
 import React, { useContext } from 'react';
 import apiContext from '../../ContextApi/ApiContext';
 function BlogCard(props) {
-    const [admin, setAdmin] = useState(false);
+    const [admin, setAdmin] = useState(true);
     const context = useContext(apiContext);
     const { removeData, previousCardData, removeBlog, getAttribute } = context;
     const { blogs } = props;
