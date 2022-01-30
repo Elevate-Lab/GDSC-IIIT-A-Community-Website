@@ -50,10 +50,13 @@
 }
 .btn {
 	padding: 10px;
+	font-size: 13;
 }
+
 .btn:hover {
 	color: #fff;
-	text-decoration: none;
+	font-size: 15px !important;
+	transition: 0.15s;
 }
 
 .writer {

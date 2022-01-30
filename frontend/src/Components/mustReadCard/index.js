@@ -59,7 +59,7 @@ function MustReadCard(props) {
 								// size="small"
 								variant="contained"
 								disableElevation
-								style={{ backgroundColor: "#0F9D58", width: "100%", padding: "10px 16px",fontSize: 13, fontFamily:"Open Sans,sans-serif", fontWeight: "600",}}
+								style={{ backgroundColor: "#0F9D58", width: "100%", padding: "10px 16px", fontFamily:"Open Sans,sans-serif", fontWeight: "600",}}
 								target="_blank"
 								href="https://medium.com/developer-student-clubs-iiit-allahabad/coroutines-in-kotlin-44d6578ff08d"
 							>
