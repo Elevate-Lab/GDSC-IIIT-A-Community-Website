@@ -50,7 +50,7 @@
     top: calc(50% - 20.5rem);
     left: calc(50% - 20.5rem);
     opacity: 0.8;
-    /* color: wheat; */
+    cursor: pointer;
 }
 .animatedArrow:last-child {
     top: calc(100% - 5rem);
@@ -59,7 +59,7 @@
     bottom: 0;
     width: 4rem;
     height: 4rem;
-    background: transparent;
+    /* background: transparent; */
     animation: arrow 1.5s ease-in-out infinite;
 }
 .hero-section-main .hero-join-us a {
@@ -175,8 +175,8 @@
         margin-top: 50%;
     }
     .hero-section-center .hero-join-us a {
-        font-size: 2.8vw;
-        padding: 2vw 4vw;
+        font-size: 0.7em;
+        padding: 0.8rem 1.6rem;
     }
     .hero-explore p {
         font-size: 2vw;
