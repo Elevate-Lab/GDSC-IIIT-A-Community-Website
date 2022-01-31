@@ -19,7 +19,6 @@ function HeadingButton({ LargeHeading, SmallHeading, bg }) {
 			</div> */}
             <div className="Button" style={{ background: '#EFF' }}>
                 <Link to="/contact" style={{ textDecoration: 'none' }}>
-                    {/* help */}
                     <img src={bg} alt="Youtube" />
                 </Link>
             </div>
