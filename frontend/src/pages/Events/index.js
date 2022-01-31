@@ -12,6 +12,7 @@ import LeaderBoard from "../../Components/LeaderBoard/LeaderBoard";
 import Even from "./Even";
 import styles from "./EventPage.module.css";
 import EventCards2 from "../../Components/EventCard/index copy";
+import GetInTouch from "../../Assets/GetInTouch.png";
 function Events() {
 	return (
 		<section
@@ -34,7 +35,10 @@ function Events() {
 				PageIllustration={event_illustration}
 			/>
 			<div className="heading_plusBtn">
-				<h2 style={{ fontWeight: "600", fontFamily: "Open Sans,Poppins,sans-serif", color: "#1b2733" }} className="heading">
+				<h2
+					style={{ fontWeight: "600", fontFamily: "Open Sans,Poppins,sans-serif", color: "#1b2733" }}
+					className="heading"
+				>
 					Upcoming Events
 				</h2>
 				{/* <Fab color="primary" aria-label="add">
@@ -57,10 +61,13 @@ function Events() {
 			<HeadingButton
 				LargeHeading="Interested in being a Speaker at one of our events?"
 				SmallHeading="Just drop us your Proposal."
-				ButtonText="Get In Touch"
+				bg={GetInTouch}
 			/>
 			<div className="heading_plusBtn">
-				<h2 style={{ fontWeight: "600", fontFamily: "Open Sans,Poppins,sans-serif", color: "#1b2733" }} className="heading">
+				<h2
+					style={{ fontWeight: "600", fontFamily: "Open Sans,Poppins,sans-serif", color: "#1b2733" }}
+					className="heading"
+				>
 					Past Events
 				</h2>
 				{/* <Fab color="primary" aria-label="add">

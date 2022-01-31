@@ -1,6 +1,7 @@
 .Headings_Button_Container {
 	display: flex;
 	flex-direction: row;
+	justify-content: space-around;
 	width: 100%;
 	padding-bottom: 2vw;
 }
@@ -15,7 +16,7 @@
 .Headings_Button_Container .Section_Headings > p {
 	margin: 0;
 	padding: 0;
-	font-family: "Open Sans","Poppins",sans-serif;
+	font-family: "Open Sans", "Poppins", sans-serif;
 }
 .Headings_Button_Container .Section_Headings .large_heading {
 	width: max-content;
@@ -35,40 +36,41 @@
 	/* height: 100%; */
 	flex: 1;
 	display: flex;
+	padding-left: 9.02%;
 	/* justify-content: center; */
 	align-items: center;
 	/* background-color: #637282; */
 }
-.Headings_Button_Container .Button > a{
+.Headings_Button_Container .Button > a {
 	text-decoration: none;
-    font-size: 1.3vw;
-    font-weight: 500;
-    padding: 1vw 3.2vw;
-    background:#156EFF;
-    color:#ffffff;
-    border-radius: 0.6vh;
-    cursor: pointer;
-    transition: 0.75s;
-    z-index: 1;
+	font-size: 1.3vw;
+	font-weight: 500;
+	padding: 1vw 3.2vw;
+	background: #156eff;
+	color: #ffffff;
+	border-radius: 0.6vh;
+	cursor: pointer;
+	transition: 0.75s;
+	z-index: 1;
 	font-family: "Open Sans";
 }
 
-.Headings_Button_Container .Button > a:hover{
-    background:#3f88ff;
-    box-shadow: 0px 1px 12px 0 rgba(0, 0, 0, 0.3);
+.Headings_Button_Container .Button > a:hover {
+	background: #3f88ff;
+	box-shadow: 0px 1px 12px 0 rgba(0, 0, 0, 0.3);
 }
 @media only screen and (max-width: 900px) {
 	.Headings_Button_Container {
 		flex-direction: column;
 		gap: 4vh;
-		width:80%;
+		width: 80%;
 	}
 	.Headings_Button_Container .Section_Headings {
 		width: 100%;
 		padding-left: 0;
 		text-align: center;
-		gap:2vh;
-	}	
+		gap: 2vh;
+	}
 	.Headings_Button_Container .Section_Headings .large_heading {
 		font-size: 4vh;
 		line-height: 120%;
@@ -76,18 +78,18 @@
 		text-align: left;
 	}
 	.Headings_Button_Container .Section_Headings .small_heading {
-		text-align: left;	
+		text-align: left;
 		width: 100%;
 		font-size: 3vh;
 		line-height: 150%;
 	}
-	.Headings_Button_Container .Button{
+	.Headings_Button_Container .Button {
 		display: flex;
-		justify-content:center;
+		justify-content: center;
 	}
-	.Headings_Button_Container .Button a{
+	.Headings_Button_Container .Button a {
 		font-size: 2.4vw;
-        padding: 1.8vw 3vw;
+		padding: 1.8vw 3vw;
 	}
 }
 @media only screen and (max-width: 450px) {
@@ -97,8 +99,13 @@
 	.Headings_Button_Container .Section_Headings .small_heading {
 		font-size: 16px;
 	}
-	.Headings_Button_Container .Button a{
+	.Headings_Button_Container .Button a {
 		font-size: 4vw;
-        padding: 2.4vw 3.6vw;
+		padding: 2.4vw 3.6vw;
 	}
+}
+.Headings_Button_Container > .Button,
+.Headings_Button_Container > .Button > img,
+.Headings_Button_Container > .Button > a {
+	padding: 0;
 }
