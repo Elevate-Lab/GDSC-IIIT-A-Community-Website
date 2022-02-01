@@ -62,6 +62,7 @@ function Events() {
 				LargeHeading="Interested in being a Speaker at one of our events?"
 				SmallHeading="Just drop us your Proposal."
 				bg={GetInTouch}
+				formLink="https://docs.google.com/forms/d/e/1FAIpQLSc9zo00sylbNGIfLKprXnYOy-F_giR2FD4vKw2GxJHnzTwHWw/viewform"
 			/>
 			<div className="heading_plusBtn">
 				<h2

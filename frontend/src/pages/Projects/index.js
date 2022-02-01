@@ -72,6 +72,7 @@ function Projects() {
 				SmallHeading="Just drop us your Proposal."
 				// ButtonText="Submit Project"
 				bg={SubmitProject}
+				formLink="https://docs.google.com/forms/d/e/1FAIpQLScXVEYXIzzghozeE_rc5rshVs4iEKdSgIOvH8Z8E0u76AwnXQ/viewform"
 			/>
 		</div>
 	);

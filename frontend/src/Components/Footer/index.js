@@ -38,7 +38,7 @@ function Footer() {
 								<img src={mail_icon} alt="mail" />
 							</div>
 							<p>
-								<a href="mailto:gdsc@iiita.ac.in">gdsc@iiita.ac.in</a>
+								<a href="mailto:gdsc@iiita.ac.in" target="_blank">gdsc@iiita.ac.in</a>
 							</p>
 						</div>
 						<div className="contact_address">
@@ -46,7 +46,7 @@ function Footer() {
 								<img src={join_us_icon} alt="join us" />
 							</div>
 							<p>
-								<a href="https://gdsc.community.dev/indian-institute-of-information-technology-allahabad-prayagraj/">
+								<a href="https://gdsc.community.dev/indian-institute-of-information-technology-allahabad-prayagraj/" target="_blank">
 									Join Us!
 								</a>
 								{/* <Link src="https://gdsc.community.dev/indian-institute-of-information-technology-allahabad-prayagraj/">
