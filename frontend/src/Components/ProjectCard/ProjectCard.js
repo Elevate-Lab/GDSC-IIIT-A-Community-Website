@@ -90,9 +90,8 @@ function ProjectCard(props) {
                             color: '#0F9D58',
                             border: '2px solid #0F9D58',
                             fontFamily: 'Open Sans,Poppins,sans-serif',
-                            padding: '10px 0',
-                            fontSize: 12,
-                            fontWeight: '600',
+                            padding: '12px 0',
+                            fontWeight: '500',
                         }}
                         href={project.githubLink}
                         target="_blank"

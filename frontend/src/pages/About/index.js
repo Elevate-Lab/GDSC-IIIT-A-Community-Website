@@ -55,7 +55,7 @@ function About() {
 					</button>
 				</div>
 			</div>
-			<div className="About About_DSC_IIITA">
+			<div className="About About_DSC_IIITA" >
 				<img src={dsciiita} alt="dsciiita.jpg" target="_blank" />
 				<div>
 					<p className="Abt_Heading">About GDSC IIITA</p>

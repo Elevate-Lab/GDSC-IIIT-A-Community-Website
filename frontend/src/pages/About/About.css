@@ -88,6 +88,24 @@
 .About_DSC_IIITA {
 	flex-direction: row;
 }
+@media only screen and (max-width: 900px) {
+	.About_DSC_IIITA{
+		margin-top: -8vh;
+	}
+	.What_we_do{
+		margin-top: -8vh;
+	}
+}
+
+@media only screen and (max-width: 450px) {
+	.About_DSC_IIITA{
+		margin-top: -12vh;
+	}
+	.What_we_do{
+		margin-top: -12vh;
+	}
+}
+
 .Abt_btn_txt {
 	text-decoration: none;
 	color: #ffffff;

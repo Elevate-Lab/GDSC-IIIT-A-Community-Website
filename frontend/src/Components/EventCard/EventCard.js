@@ -43,7 +43,7 @@ function EventCard(props) {
         // <Box className="card" sx={{ minWidth: 275 }}>
         <Card
             variant="outlined"
-            styles={{ padding: '0', borderRadius: '20px', overflow: 'hidden' }}
+            styles={{ padding: '0', borderRadius: '20px', overflow: 'hidden' ,paddingBottom: '10px'}}
             className={styles.eventCard}
         >
             {/* <CardMedia component="img" height="140" image="../Assets/About_DSC_Image.png" alt="project image" /> */}
@@ -58,7 +58,7 @@ function EventCard(props) {
             <div className={styles.imgContainer}>
                 <img className={styles.img} src={event.image} alt="img" />
             </div>
-            <div className={styles.content}>
+            <div className={styles.content} style={{background: '#FAFAFA', overflow: 'hidden' }}>
                 <CardContent>
                     <div className={styles.container}>
                         <div className={styles.name}>

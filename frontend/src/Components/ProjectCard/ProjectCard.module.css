@@ -87,6 +87,7 @@
 	overflow: hidden;
 	transition: 0.75s;
 }
+
 @media only screen and (max-width: 450px) {
 	.svg {
 		height: 16px;
@@ -99,4 +100,23 @@
 	.buttonsAdmin {
 		gap: 8px;
 	}
+	.btn{
+		font-size: 8px;
+	}
+	.btn:hover{
+		color: #fff;
+		font-size: 10px !important;
+		transition: 0.25s;
+	}
 }
+@media only screen and (max-width: 340px) {
+	.btn{
+		font-size:6px;
+	}
+	.btn:hover{
+		color: #fff;
+		font-size: 8px !important;
+		transition: 0.25s;
+	}
+}
+
