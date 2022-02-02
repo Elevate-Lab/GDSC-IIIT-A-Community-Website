@@ -27,7 +27,8 @@
 .footer_contact {
 	display: flex;
 	justify-content: space-between;
-	/* flex-wrap: wrap; */
+	align-items: center;
+	flex-wrap: wrap;
 	width: 44vw;
 }
 .contact_sec_1 {

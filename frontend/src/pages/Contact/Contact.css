@@ -1,268 +1,273 @@
-.Contact_section{
-    padding-top: 5vh;
-    padding-bottom: 10vh;
+.Contact_section {
+	padding-top: 5vh;
+	padding-bottom: 10vh;
 }
-.Contact_form_n_image{
-    display: flex;
-    padding: 0 9.02%;
-    justify-content: space-between;
-}
-
-.form_container{
-    width:50%;
+.Contact_form_n_image {
+	display: flex;
+	padding: 0 9.02%;
+	justify-content: space-between;
 }
 
-.contact_form{
-    width:100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.form_container {
+	width: 50%;
 }
-.contact_form > div{
-    display: flex;
+
+.contact_form {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
-.form_name_inp,.form_email_inp {
-    width: 49%;
+.contact_form > div {
+	display: flex;
 }
-.form_email_inp{
-    float: right;
+.form_name_inp,
+.form_email_inp {
+	width: 49%;
 }
-.form_message_inp{
-    width: 100%;
+.form_email_inp {
+	float: right;
 }
-form input, form textarea, form button{
-    background:rgba(255,255,255,0.4);
-    font-family: 'Open Sans', sans-serif;
-    border: 0.1vh solid #637282;
-    border-radius:0.6vh;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 2.6vh;
-    line-height: 100%;
-    color: #637282;
-    padding: 2.4vh;
-    position: relative;
+.form_message_inp {
+	width: 100%;
+}
+form input,
+form textarea,
+form button {
+	background: rgba(255, 255, 255, 0.4);
+	font-family: "Open Sans", sans-serif;
+	border: 0.1vh solid #637282;
+	border-radius: 0.6vh;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 2.6vh;
+	line-height: 100%;
+	color: #637282;
+	padding: 2.4vh;
+	position: relative;
 }
 .contact_form > div > input:focus,
-.contact_form > div > textarea:focus{ 
-    border: 0.2vh solid #1B2733;
-    outline:none;
-    color: #1B2733;
+.contact_form > div > textarea:focus {
+	border: 0.2vh solid #1b2733;
+	outline: none;
+	color: #1b2733;
 }
 
-.Name_input, .Email_input{
-    height:7.4vh;
-    width:100%;
+.Name_input,
+.Email_input {
+	height: 7.4vh;
+	width: 100%;
 }
-.contact_form > div > span{
-    position: relative;
-    margin-left: -100%;
-    z-index: 0;
-}
-.Name_inp::before ,
-.Email_inp::before {
-    color: #637282;
-    position: absolute;
-    top: 1.9vh;
-    left: 1.9vh;
-    padding: 0.4vh;
-    width:max-content;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 2.6vh;
-    line-height: 100%;
-    z-index: 0;
-    transition: all 0.3s ease-in-out;
+.contact_form > div > span {
+	position: relative;
+	margin-left: -100%;
+	z-index: 0;
 }
 .Name_inp::before,
-.name_filled::before{
-    content: "Name";
-    font-family: "Open Sans";
+.Email_inp::before {
+	color: #637282;
+	position: absolute;
+	top: 1.9vh;
+	left: 1.9vh;
+	padding: 0.4vh;
+	width: max-content;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 2.6vh;
+	line-height: 100%;
+	z-index: 0;
+	transition: all 0.3s ease-in-out;
+}
+.Name_inp::before,
+.name_filled::before {
+	content: "Name";
+	font-family: "Open Sans";
 }
 .Email_inp::before,
-.email_filled::before{
-    content: "E-mail";
-    font-family: "Open Sans";
+.email_filled::before {
+	content: "E-mail";
+	font-family: "Open Sans";
 }
 .Message_inp::before,
-.message_filled::before{
-    content: "Message";
-    font-family: "Open Sans";
-}
-.contact_form > div > input:focus + .Name_inp::before ,
-.contact_form > div > input:focus + .Email_inp::before ,
-.name_filled::before ,
-.email_filled::before {
-    position: absolute;
-    color: #1B2733;
-    background:#ffffff;
-    top: -1.6vh;
-    left: 1.4vh;
-    padding: 0.4vh;
-    font-size: 2vh;
-    line-height: 100%;
-    font-weight:500;
-    width:max-content;
-    transition: all 0.3s ease-in-out;
-}
-.Message_inp::before{
-    color: #637282;
-    top: 3.6vh;
-    left: 1.9vh;
-    padding: 0.4vh;
-    position: absolute;
-    width:max-content;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 2.6vh;
-    line-height: 100%;
-    z-index: 0;
-    transition: all 0.3s ease-in-out;
-}
-.contact_form > div > textarea:focus ~ .Message_inp::before ,
 .message_filled::before {
-    position: absolute;
-    color: #1B2733;
-    background:#ffffff;
-    top: 0.6vh;
-    left: 1.4vh;
-    padding: 0.4vh;
-    font-size: 2vh;
-    line-height: 100%;
-    font-weight:500;
-    width:max-content;
-    transition: all 0.3s ease-in-out;
+	content: "Message";
+	font-family: "Open Sans";
 }
-.Message_input{
-    height:25vh;
-    width: 100%;
-    resize:vertical;
-    min-height: 20vh;
-    max-height: 30vh;
-    margin-top: 2vh;
-    font-family: "Open Sans";
+.contact_form > div > input:focus + .Name_inp::before,
+.contact_form > div > input:focus + .Email_inp::before,
+.name_filled::before,
+.email_filled::before {
+	position: absolute;
+	color: #1b2733;
+	background: #ffffff;
+	top: -1.6vh;
+	left: 1.4vh;
+	padding: 0.4vh;
+	font-size: 2vh;
+	line-height: 100%;
+	font-weight: 500;
+	width: max-content;
+	transition: all 0.3s ease-in-out;
+}
+.Message_inp::before {
+	color: #637282;
+	top: 3.6vh;
+	left: 1.9vh;
+	padding: 0.4vh;
+	position: absolute;
+	width: max-content;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 2.6vh;
+	line-height: 100%;
+	z-index: 0;
+	transition: all 0.3s ease-in-out;
+}
+.contact_form > div > textarea:focus ~ .Message_inp::before,
+.message_filled::before {
+	position: absolute;
+	color: #1b2733;
+	background: #ffffff;
+	top: 0.6vh;
+	left: 1.4vh;
+	padding: 0.4vh;
+	font-size: 2vh;
+	line-height: 100%;
+	font-weight: 500;
+	width: max-content;
+	transition: all 0.3s ease-in-out;
+}
+.Message_input {
+	height: 25vh;
+	width: 100%;
+	resize: vertical;
+	min-height: 20vh;
+	max-height: 30vh;
+	margin-top: 2vh;
+	font-family: "Open Sans";
 }
 
-.Send_btn{
-    background:#156EFF;
-    font-weight: 600;
-    font-size: 2.4vh;
-    line-height: 1.5vh;
-    transition:0.75s;
-    color: #FFFFFF;
-    /* height: 50px;
+.Send_btn {
+	background: #156eff;
+	font-weight: 600;
+	font-size: 2.4vh;
+	line-height: 1.5vh;
+	transition: 0.75s;
+	color: #ffffff;
+	/* height: 50px;
     width: 150px; */
-    font-family: "Open Sans";
-    border:none;
-    margin-top: 8vh;
-    padding: 2vh 4vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap:2vh;
-    cursor: pointer;
+	font-family: "Open Sans";
+	border: none;
+	margin-top: 8vh;
+	padding: 2vh 4vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 2vh;
+	cursor: pointer;
 }
-.Send_btn img{
-    height: 4vh;
-    width: 4vh;
+.sendIcon {
+	height: 4vh;
+	width: 4vh;
 }
-.Send_btn:hover{
-    background:#3f88ff;
-    box-shadow: 0px 1px 12px 0 rgba(0, 0, 0, 0.3);
+.Send_btn:hover {
+	background: #3f88ff;
+	box-shadow: 0px 1px 12px 0 rgba(0, 0, 0, 0.3);
 }
-.Contact_image{
-    display: flex;
-    align-items:flex-end;
+.Contact_image {
+	display: flex;
+	align-items: flex-end;
 }
 .Contact_image > img {
-    height: 23.93vw;
-    width: 21.73vw;
+	height: 23.93vw;
+	width: 21.73vw;
 }
 
 @media only screen and (max-width: 900px) {
-    .Contact_section{
-        align-items: center;
-        padding-top: 5vh;
-    }
-    .Contact_form_n_image{
-        width:80%;
-        padding:0;
-    }
-    .Contact_image > img{
-        height: 50vw;
-        width:auto;
-        margin-left:-10vw;
-    }
-    .form_container{
-        width:60vw;
-    }
-    .contact_form{
-        width:60vw;
-        flex-direction: column;
-    }
-    .contact_form>div{
-        width:60vw;
-    }
-    .contact_form > div > span{
-        position: relative;
-        margin-left: -100%;
-        z-index: 0;
-    }
-    .Name_input, .Email_input{
-        height:40px;
-        width:100%;
-        margin: 0;        
-        margin-bottom: 14px;
-        float:none;
-        padding: 8px;
-    }
-    .Message_input{
-        height:120px;
-        width:100%;
-        max-height: 160px;
-    }
-    .Send_btn{
-        width:max-content;
-        padding: 12px 16px;
-        font-size:12px;
-    }
-    .Send_btn img{
-        height: 14px;
-        width: 14px;
-    }
-    .Name_inp::before ,
-    .Email_inp::before {
-        font-size: 14px;
-        line-height: 20px;
-        top: 8px;
-        left: 8px;
-    }
-    .contact_form > div > input:focus + .Name_inp::before ,
-    .contact_form > div > input:focus + .Email_inp::before ,
-    .name_filled::before ,
-    .email_filled::before {
-        font-size: 10px;
-        line-height: 13px;    
-        top: -9px;
-        left: 8px;
-    }
-    .Message_inp::before{
-        font-size: 14px;
-        line-height: 20px;
-        top: 16px;
-        left: 8px;
-    }
-    .contact_form > div > textarea:focus ~ .Message_inp::before ,
-    .message_filled::before {
-        font-size: 10px;
-        line-height: 13px;
-        top: 2px;
-        left: 8px;
-    }
+	.Contact_section {
+		align-items: center;
+		padding-top: 5vh;
+	}
+	.Contact_form_n_image {
+		width: 80%;
+		padding: 0;
+	}
+	.Contact_image > img {
+		height: 45vh;
+		width: auto;
+		margin-left: -8vh;
+	}
+	.form_container {
+		width: 60vw;
+	}
+	.contact_form {
+		width: 60vw;
+		flex-direction: column;
+	}
+	.contact_form > div {
+		width: 60vw;
+	}
+	.contact_form > div > span {
+		position: relative;
+		margin-left: -100%;
+		z-index: 0;
+	}
+	.Name_input,
+	.Email_input {
+		height: 7.4vh;
+		width: 100%;
+		margin: 0;
+		margin-bottom: 14px;
+		float: none;
+	}
+	.Message_input {
+		height: 20vh;
+		width: 100%;
+	}
+	.Send_btn {
+		width: max-content;
+		padding: 2vh 5vh;
+		font-size: 3vh;
+	}
 }
 @media only screen and (max-width: 450px) {
-    
-    .Name_input, .Email_input{
-        margin-bottom: 18px;
-    }
+	.Name_input,
+	.Email_input {
+		margin-bottom: 18px;
+	}
+	.Name_inp::before,
+	.Email_inp::before {
+		font-size: 16px;
+		line-height: 2.6vh;
+	}
+	.contact_form > div > input:focus + .Name_inp::before,
+	.contact_form > div > input:focus + .Email_inp::before,
+	.name_filled::before,
+	.email_filled::before {
+		font-size: 10px;
+		line-height: 2vh;
+	}
+	.Message_inp::before {
+		font-size: 16px;
+		line-height: 1.6vh;
+	}
+	.contact_form > div > textarea:focus ~ .Message_inp::before,
+	.message_filled::before {
+		font-size: 10px;
+		line-height: 2vh;
+	}
+	form input,
+	form textarea,
+	form button {
+		font-size: 16px;
+		line-height: 2.6vh;
+	}
+	.Send_btn {
+		font-size: 2vh;
+		padding: 1vh 2vh;
+	}
+	.sendIcon {
+		height: 3vh;
+		width: 3vh;
+	}
 }
