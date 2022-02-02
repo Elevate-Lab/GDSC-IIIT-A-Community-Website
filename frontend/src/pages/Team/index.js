@@ -49,7 +49,7 @@ const FieldPages = [
 function Team() {
     const [showField, setshowField] = useState('CoreTeam');
     const [showFieldIdx, setshowFieldIdx] = useState(0);
-
+    const [admin,setAdmin] = useState(false)
     useEffect(() => {}, [showField]);
 
     const UpdateField = e => {
@@ -131,7 +131,7 @@ function Team() {
                      With our incredible team we aim to solve numerous problems in day-to-day life, and explore new heights in Technology!"
                     PageIllustration={team_illustration}
                 />
-                <Fab style={{ alignSelf: 'flex-end', marginRight: '7vw' }} color="primary" aria-label="add">
+               {admin&& <Fab style={{ alignSelf: 'flex-end', marginRight: '7vw' }} color="primary" aria-label="add">
                     <Link
                         to="../team/new_member"
                         style={{
@@ -145,7 +145,7 @@ function Team() {
                     >
                         <AddIcon />
                     </Link>
-                </Fab>
+                </Fab>}
                 <div>
                     <TeamSpecialCard />
                 </div>
