@@ -19,7 +19,7 @@ function ProjectCard(props) {
     const context = useContext(apiContext);
     const { removeData, previousCardData, removeProject, getAttribute } = context;
     const { project } = props;
-    const [admin, setAdmin] = useState(true);
+    const [admin, setAdmin] = useState(false);
     const handleClick = () => {
         getAttribute(project);
         removeProject(project._id);

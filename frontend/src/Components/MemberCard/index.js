@@ -10,7 +10,7 @@ function MemberCard(props) {
     const { team } = props;
     const context = useContext(apiContext);
     const { removeData, previousCardData, removeTeam, getAttribute } = context;
-    const [admin, setAdmin] = useState(true);
+    const [admin, setAdmin] = useState(false);
     const handleClick = () => {
         getAttribute(team);
         removeTeam(team._id);
