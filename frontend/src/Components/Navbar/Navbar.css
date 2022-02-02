@@ -1,5 +1,6 @@
 .Navbar {
     height: 12vh;
+    min-height: 60px;
     background: #ffffff;
     display: flex;
     justify-content: space-between;
@@ -126,18 +127,18 @@
     height: 2px;
 }
 
-.navbar_Drawer input:checked ~ .navbar_drawer_icon {
+.navbar_Drawer .nav-checked ~ .navbar_drawer_icon {
     background: rgba(0, 0, 0, 0.1);
 }
-.navbar_Drawer input:checked ~ .navbar_drawer_icon > .drawer_line_1 {
+.navbar_Drawer .nav-checked ~ .navbar_drawer_icon > .drawer_line_1 {
     transform: rotate(45deg);
     left: 9px;
     top: 8px;
 }
-.navbar_Drawer input:checked ~ .navbar_drawer_icon > .drawer_line_2 {
+.navbar_Drawer .nav-checked ~ .navbar_drawer_icon > .drawer_line_2 {
     transform: scale(0);
 }
-.navbar_Drawer input:checked ~ .navbar_drawer_icon > .drawer_line_3 {
+.navbar_Drawer .nav-checked ~ .navbar_drawer_icon > .drawer_line_3 {
     transform: rotate(-45deg);
     left: 9px;
     top: 30px;

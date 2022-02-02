@@ -86,13 +86,14 @@
 }
 @media only screen and (max-width: 450px) {
 	.Section_Headings .large_heading {
-		font-size: 32px;
+		font-size: 26px;
 	}
 	.Section_Headings .small_heading {
-		font-size: 20px;
+		font-size: 16px;
+		line-height:130%;
 	}
 	.Section_Headings .Heading_text {
-		font-size: 14px;
+		font-size: 12px;
 	}
 	.Page_Image{
 		height: 5vw;

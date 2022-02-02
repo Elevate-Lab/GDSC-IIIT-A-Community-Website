@@ -162,6 +162,10 @@ form input, form textarea, form button{
     gap:2vh;
     cursor: pointer;
 }
+.Send_btn img{
+    height: 4vh;
+    width: 4vh;
+}
 .Send_btn:hover{
     background:#3f88ff;
     box-shadow: 0px 1px 12px 0 rgba(0, 0, 0, 0.3);
@@ -185,9 +189,9 @@ form input, form textarea, form button{
         padding:0;
     }
     .Contact_image > img{
-        height: 45vh;
+        height: 50vw;
         width:auto;
-        margin-left:-8vh;
+        margin-left:-10vw;
     }
     .form_container{
         width:60vw;
@@ -205,51 +209,60 @@ form input, form textarea, form button{
         z-index: 0;
     }
     .Name_input, .Email_input{
-        height:7.4vh;
+        height:40px;
         width:100%;
         margin: 0;        
         margin-bottom: 14px;
         float:none;
+        padding: 8px;
     }
     .Message_input{
-        height:20vh;
+        height:120px;
         width:100%;
+        max-height: 160px;
     }
     .Send_btn{
         width:max-content;
-        padding: 2vh 5vh;
-        font-size:3vh;
+        padding: 12px 16px;
+        font-size:12px;
     }
-
-}
-@media only screen and (max-width: 450px) {
-    
-    .Name_input, .Email_input{
-        margin-bottom: 18px;
+    .Send_btn img{
+        height: 14px;
+        width: 14px;
     }
     .Name_inp::before ,
     .Email_inp::before {
-        font-size: 16px;
-        line-height: 2.6vh;
+        font-size: 14px;
+        line-height: 20px;
+        top: 8px;
+        left: 8px;
     }
     .contact_form > div > input:focus + .Name_inp::before ,
     .contact_form > div > input:focus + .Email_inp::before ,
     .name_filled::before ,
     .email_filled::before {
         font-size: 10px;
-        line-height: 2vh;
+        line-height: 13px;    
+        top: -9px;
+        left: 8px;
     }
     .Message_inp::before{
-        font-size: 16px;
-        line-height: 1.6vh;
+        font-size: 14px;
+        line-height: 20px;
+        top: 16px;
+        left: 8px;
     }
     .contact_form > div > textarea:focus ~ .Message_inp::before ,
     .message_filled::before {
         font-size: 10px;
-        line-height: 2vh;
+        line-height: 13px;
+        top: 2px;
+        left: 8px;
     }
-    form input, form textarea, form button{
-        font-size: 16px;
-        line-height: 2.6vh;
+}
+@media only screen and (max-width: 450px) {
+    
+    .Name_input, .Email_input{
+        margin-bottom: 18px;
     }
 }
