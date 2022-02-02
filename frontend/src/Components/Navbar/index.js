@@ -9,6 +9,7 @@ const navbarContent = ["Home", "Events", "Team", "Projects", "Blogs"];
 function Navbar() {
 	const [width, setWidth] = useState(window.innerWidth);
 	const [Drawer, setDrawer] = useState("none");
+	const [navCheck, setnavCheck] = useState("nav-unchecked");
 
 	const handleWindowResize = () => {
 		setWidth(window.innerWidth);
@@ -22,8 +23,19 @@ function Navbar() {
 	const ExpandMenu = () => {
 		if (Drawer === "none") {
 			setDrawer("flex");
+			setnavCheck("nav-checked");
 		} else {
+			setnavCheck("nav-unchecked");
 			setDrawer("none");
+		}
+	};
+	const CollapseMenu = () => {
+		if (Drawer === "flex") {
+			setDrawer("none");
+			setnavCheck("nav-unchecked");
+		} else {
+			setDrawer("flex");
+			setnavCheck("nav-checked");
 		}
 	};
 	const UpdateActivePage = (e) => {
@@ -56,7 +68,7 @@ function Navbar() {
 					<img src={Navbar_logo} alt="logo" />
 				</NavLink>
 				<div className="navbar_Drawer">
-					<input type="checkbox" value="drawer" onChange={ExpandMenu} unchecked />
+					<input type="checkbox" className={navCheck} value="drawer" onClick={ExpandMenu}/>
 					<div className="navbar_drawer_icon">
 						<p className="drawer_line_1"></p>
 						<p className="drawer_line_2"></p>
@@ -65,11 +77,11 @@ function Navbar() {
 				</div>
 				<div className="navbar_drawer_links" style={{ display: `${Drawer}` }}>
 					{navbarContent.map((item, index) => (
-						<NavLink activeClassName="active_nav_link" className="navbar_link" key={index} to={`../${item.toLowerCase()}`}>
+						<NavLink activeClassName="active_nav_link" className="navbar_link" key={index} to={`../${item.toLowerCase()}`} onClick={CollapseMenu}>
 							<p className="navbar_link_txt">{item}</p>
 						</NavLink>
 					))}
-					<NavLink activeClassName="active_contact_link" className="navbar_link" to="../contact">
+					<NavLink activeClassName="active_contact_link" className="navbar_link" to="../contact" onClick={CollapseMenu}>
 						<p className="navbar_link_txt navbar_contact">Contact</p>
 					</NavLink>
 				</div>

@@ -92,11 +92,7 @@ function Contact() {
                         </div>
                         <button type="submit" className="Send_btn" onClick={(event)=>handleRequest(event)}>
                             Send
-                            <img src={Send_icon} alt="Send"
-                                style={{
-                                    height: '4vh',
-                                    width: '4vh',
-                                }} />
+                            <img src={Send_icon} alt="Send"/>
                         </button>
                     </form>
                 </div>
