@@ -12,7 +12,7 @@ import LeaderBoard from "../../Components/LeaderBoard/LeaderBoard";
 import Even from "./Even";
 import styles from "./EventPage.module.css";
 import EventCards2 from "../../Components/EventCard/index copy";
-import GetInTouch from "../../Assets/GetInTouch.png";
+import FormBtnBg from "../../Assets/Form_btns_bg.png";
 
 
 
@@ -67,7 +67,8 @@ function Events() {
 			<HeadingButton
 				LargeHeading="Interested in being a Speaker at one of our events?"
 				SmallHeading="Just drop us your Proposal."
-				bg={GetInTouch}
+				bg={FormBtnBg}
+				btnText="Get in Touch"
 				formLink="https://docs.google.com/forms/d/e/1FAIpQLSc9zo00sylbNGIfLKprXnYOy-F_giR2FD4vKw2GxJHnzTwHWw/viewform"
 			/>
 			<div className="heading_plusBtn">

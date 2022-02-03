@@ -1,9 +1,10 @@
 .Headings_Button_Container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
     padding-bottom: 2vw;
+    padding-right: 9.02%;
 }
 .Headings_Button_Container .Section_Headings {
     display: flex;
@@ -33,43 +34,41 @@
     color: #637282;
 }
 .Headings_Button_Container .Button {
-    /* height: 100%; */
-    flex: 1;
-    display: flex;
-    padding-right: 9.02%;
-    /* justify-content: center; */
-    align-items: center;
-    /* background-color: #637282; */
+    height: max-content;
+	width: max-content;
+	transition: 0.75s;
+	display: grid;
+	place-items: center;
+	outline: none;
+	border: none;
+	border-radius: 0.6vh;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
 }
 .Headings_Button_Container .Button > a {
-    text-decoration: none;
-    font-size: 1.3vw;
-    font-weight: 500;
-    padding: 1vw 3.2vw;
-    background: #156eff;
-    color: #ffffff;
-    border-radius: 0.6vh;
-    cursor: pointer;
-    transition: 0.75s;
-    z-index: 1;
-    font-family: 'Open Sans';
+    margin: 0;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 150%;
+	padding: 12px 28px;
+    width: 100%;
+	letter-spacing: 0.02em;
+	z-index: 1;
+	font-family: "Open Sans";
 }
 .Headings_Button_Container .Button > img {
-    text-decoration: none;
-    font-size: 1.3vw;
-    font-weight: 500;
-    padding: 1vw 3.2vw;
-    background: red;
-    color: #ffffff;
-    border-radius: 0.6vh;
-    cursor: pointer;
-    transition: 0.75s;
-    z-index: 1;
-    font-family: 'Open Sans';
+    height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+    object-fit: cover;
 }
-.Headings_Button_Container .Button > a:hover {
-    /* background: red; */
-    box-shadow: 0px 4px 20px 0 rgba(213, 198, 198, 0.3);
+.Headings_Button_Container .Button:hover {
+	box-shadow: 0px 1px 12px 0 rgba(0, 0, 0, 0.4);
 }
 @media only screen and (max-width: 900px) {
     .Headings_Button_Container {
@@ -100,8 +99,8 @@
         justify-content: center;
     }
     .Headings_Button_Container .Button a {
-        font-size: 2.4vw;
-        padding: 1.8vw 3vw;
+        font-size: 11px;
+		padding: 10px 18px;
     }
 }
 @media only screen and (max-width: 450px) {
@@ -112,12 +111,7 @@
         font-size: 16px;
     }
     .Headings_Button_Container .Button a {
-        font-size: 4vw;
-        padding: 2.4vw 3.6vw;
+        font-size: 11px;
+		padding: 10px 18px;
     }
-}
-.Headings_Button_Container > .Button,
-.Headings_Button_Container > .Button > img,
-.Headings_Button_Container > .Button > a {
-    padding: 0;
 }
