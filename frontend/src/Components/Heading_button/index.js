@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import './Headings_button.css';
 
-function HeadingButton({ LargeHeading, SmallHeading, bg,formLink }) {
+function HeadingButton({ LargeHeading, SmallHeading, bg,formLink, btnText }) {
     return (
         <div className="Headings_Button_Container">
             <div className="Section_Headings">
@@ -17,9 +17,10 @@ function HeadingButton({ LargeHeading, SmallHeading, bg,formLink }) {
 					{ButtonText}
 				</Link>
 			</div> */}
-            <div className="Button" style={{ background: '#EFF' }}>
-                <a href={formLink} style={{ textDecoration: 'none' }} target="_blank">
-                    <img src={bg} alt="Youtube" />
+            <div className="Button">
+                <img src={bg} alt="GDSC IIITA" />
+                <a href={formLink} style={{ textDecoration: 'none'}} rel="noreferrer" target="_blank">
+                    {btnText}
                 </a>
             </div>
         </div>

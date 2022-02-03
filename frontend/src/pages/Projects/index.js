@@ -8,7 +8,7 @@ import Fab from "@mui/material/Fab";
 import AddIcon from "@mui/icons-material/Add";
 import styles from "./Projects.module.css";
 import HeadingButton from "../../Components/Heading_button";
-import SubmitProject from "../../Assets/submitProject.png";
+import FormBtnBg from "../../Assets/Form_btns_bg.png";
 
 function Projects() {
 	const context = useContext(apiContext);
@@ -70,8 +70,8 @@ function Projects() {
 			<HeadingButton
 				LargeHeading="Want to get your Project featured under us?"
 				SmallHeading="Just drop us your Proposal."
-				// ButtonText="Submit Project"
-				bg={SubmitProject}
+				btnText="Submit Project"
+				bg={FormBtnBg}
 				formLink="https://docs.google.com/forms/d/e/1FAIpQLScXVEYXIzzghozeE_rc5rshVs4iEKdSgIOvH8Z8E0u76AwnXQ/viewform"
 			/>
 		</div>
