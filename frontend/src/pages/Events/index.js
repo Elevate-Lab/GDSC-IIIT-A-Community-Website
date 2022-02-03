@@ -13,7 +13,13 @@ import Even from "./Even";
 import styles from "./EventPage.module.css";
 import EventCards2 from "../../Components/EventCard/index copy";
 import GetInTouch from "../../Assets/GetInTouch.png";
+
+
+
 function Events() {
+
+
+
 	return (
 		<section
 			className="Events_section"
@@ -28,7 +34,7 @@ function Events() {
 			}}
 		>
 			<Even />
-			<Headings
+			<Headings  
 				LargeHeading="Events"
 				SmallHeading="Whats happening..."
 				Text="GDSC IIITA also provides with Events, Workshops, Seminars. May it be Android Study Jams or Google Cloud Month we have it all..."
