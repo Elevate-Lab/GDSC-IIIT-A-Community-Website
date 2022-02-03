@@ -45,8 +45,11 @@
 	place-items: center;
 	height: 7vh;
 	width: 7vh;
-	background: rgba(255, 255, 255, 0.15);
+	/*background: rgba(255, 255, 255, 0.15);*/
 	border-radius: 50%;
+}
+.contact_sec_1 > div > div:hover {
+	background: rgba(255, 255, 255, 0.15);
 }
 .contact_sec_1 > div > div > img {
 	height: 4vh;
@@ -89,7 +92,7 @@
 .contact_links > div {
 	height: 6.4vh;
 	width: 6.4vh;
-	background: rgba(255, 255, 255, 0.15);
+	/*background: rgba(255, 255, 255, 0.15);*/
 	display: grid;
 	place-items: center;
 	border-radius: 1vh;
