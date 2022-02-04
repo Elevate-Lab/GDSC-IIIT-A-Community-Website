@@ -7,19 +7,13 @@ import EventCards from "../../Components/EventCard/index.js";
 import event_illustration from "../../Assets/Events_page_illustration.svg";
 import Fab from "@mui/material/Fab";
 import AddIcon from "@mui/icons-material/Add";
-import "./Events.css";
 import LeaderBoard from "../../Components/LeaderBoard/LeaderBoard";
-import Even from "./Even";
+import CarouselComponent from "./Events";
 import styles from "./EventPage.module.css";
 import EventCards2 from "../../Components/EventCard/index copy";
 import FormBtnBg from "../../Assets/Form_btns_bg.png";
 
-
-
 function Events() {
-
-
-
 	return (
 		<section
 			className="Events_section"
@@ -33,7 +27,7 @@ function Events() {
 				paddingBottom: "6vh",
 			}}
 		>
-			<Even />
+			<CarouselComponent />
 			<Headings  
 				LargeHeading="Events"
 				SmallHeading="Whats happening..."
