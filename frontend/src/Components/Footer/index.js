@@ -34,17 +34,19 @@ function Footer() {
 				<div className="footer_contact">
 					<div className="contact_sec_1">
 						<div className="contact_mail">
-							<div className="contact_mail_icon">
+							<a className="contact_mail_icon" href="mailto:gdsc@iiita.ac.in" target="_blank">
 								<img src={mail_icon} alt="mail" />
-							</div>
+							</a>
 							<p>
-								<a href="mailto:gdsc@iiita.ac.in" target="_blank">gdsc@iiita.ac.in</a>
+								<a href="mailto:gdsc@iiita.ac.in" target="_blank">
+									gdsc@iiita.ac.in
+								</a>
 							</p>
 						</div>
 						<div className="contact_address">
-							<div className="contact_pin_icon">
+							<a className="contact_pin_icon" href="https://gdsc.community.dev/indian-institute-of-information-technology-allahabad-prayagraj/" target="_blank">
 								<img src={join_us_icon} alt="join us" />
-							</div>
+							</a>
 							<p>
 								<a href="https://gdsc.community.dev/indian-institute-of-information-technology-allahabad-prayagraj/" target="_blank">
 									Join Us!

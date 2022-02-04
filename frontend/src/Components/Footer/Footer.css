@@ -40,15 +40,19 @@
 	align-items: center;
 	margin-bottom: 2vh;
 }
-.contact_sec_1 > div > div {
+.contact_sec_1 > div > a {
 	display: grid;
 	place-items: center;
 	height: 7vh;
 	width: 7vh;
-	background: rgba(255, 255, 255, 0.15);
 	border-radius: 50%;
+	text-decoration: none;
+	transition: all 0.25s ease-in-out;
 }
-.contact_sec_1 > div > div > img {
+.contact_sec_1 > div > a:hover {
+	background: rgba(255, 255, 255, 0.15);
+}
+.contact_sec_1 > div > a > img {
 	height: 4vh;
 	width: 4vh;
 }
@@ -89,14 +93,14 @@
 .contact_links > div {
 	height: 6.4vh;
 	width: 6.4vh;
-	background: rgba(255, 255, 255, 0.15);
 	display: grid;
 	place-items: center;
-	border-radius: 1vh;
+	border-radius: 50%;
 	overflow: hidden;
+	transition: all 0.25s ease-in-out;
 }
 .contact_icon:hover {
-	background: rgba(255, 255, 255, 0.4);
+	background: rgba(255, 255, 255, 0.15);
 }
 .contact_links > div > a {
 	display: flex;
@@ -105,6 +109,7 @@
 	margin: 0%;
 	/* height: 100%;
 	width: 100%; */
+	padding: 20%;
 }
 
 .contact_links > div > a > img {
@@ -221,11 +226,11 @@
 	.footer_bot {
 		align-items: center;
 	}
-	.contact_sec_1 > div > div {
+	.contact_sec_1 > div > a {
 		height: 48px;
 		width: 48px;
 	}
-	.contact_sec_1 > div > div > img {
+	.contact_sec_1 > div > a > img {
 		height: 36px;
 		width: 36px;
 	}
