@@ -8,7 +8,7 @@ import HeroRight from './HeroRight';
 
 const move = () => {
     window.scrollTo({
-        top: window.innerHeight,
+        top: window.innerHeight-40,
         behavior: 'smooth',
     });
 };
