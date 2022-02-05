@@ -62,6 +62,7 @@ form button {
 	position: relative;
 	margin-left: -100%;
 	z-index: 0;
+	pointer-events: none;
 }
 .Name_inp::before,
 .Email_inp::before {
