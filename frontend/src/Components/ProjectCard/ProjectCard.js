@@ -91,13 +91,13 @@ function ProjectCard(props) {
                             border: '2px solid #0F9D58',
                             fontFamily: 'Open Sans,Poppins,sans-serif',
                             padding: '12px 0',
-                            fontWeight: '500',
+                            fontWeight: '600',
                         }}
                         href={project.githubLink}
                         target="_blank"
                     >
                         <Github className={styles.svg} />
-                        View on Github
+                        Github
                     </Button>
 
                     <Button

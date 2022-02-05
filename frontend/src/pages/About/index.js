@@ -48,7 +48,7 @@ function About() {
 						
 					</p>
 					<button>
-						<a href="https://developers.google.com/community/gdsc">
+						<a href="https://developers.google.com/community/gdsc" target="_blank">
 							<img src={KnowMore_icon} alt="Know More" />
 							Know More
 						</a>
@@ -120,7 +120,7 @@ function About() {
 			</div>
 
 			<div className="Join_the_convo">
-				<p className="Join_the_convo_heading">Join the Conversation</p>
+				<p className="Join_the_convo_heading" style={{textAlign: 'center'}}>Join the Conversation</p>
 				<div className="Join_the_convo_cards">
 					<div className="Join_youtube_card">
 						<p>Subscribe our Youtube channel for regular updates regarding Events and Speaker Sessions... </p>

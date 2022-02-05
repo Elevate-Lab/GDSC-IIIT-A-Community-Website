@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
   Link
@@ -56,7 +56,7 @@ loading?
 :
 <ApiState>
     <ViewportProvider>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
       <ScrollToTop />
         <Navbar />
         <Switch>

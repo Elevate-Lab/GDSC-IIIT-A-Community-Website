@@ -1,5 +1,5 @@
 .Navbar {
-    height: 12vh;
+    height: 11vh;
     min-height: 60px;
     background: #ffffff;
     display: flex;
@@ -21,7 +21,7 @@
     margin: 1vh 0 0 0;
 }
 .navbar_logo > img {
-    width: 100%;
+    width: 90%;
     height: auto;
 }
 
@@ -39,7 +39,7 @@
 .navbar_link_txt {
     margin: 0;
     color: #4e4e4e;
-    font-size: 1.11vw;
+    font-size: 1vw;
 	font-family: 'Open Sans','Poppins',sans-serif;
     font-weight: 600;
 }
@@ -149,7 +149,7 @@
     background: #ffffff;
     width: 100%;
     left: 0;
-    top: 11.9vh;
+    top: 10vh;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -37,7 +37,7 @@ function FouthCarousel() {
             // textAlign: 'center',
             // justifyContent: 'center',
             fontSize: '.000002rem',
-            height: '88vh',
+            height: '90vh',
             direction: 'left'
         },
         textUs: {
