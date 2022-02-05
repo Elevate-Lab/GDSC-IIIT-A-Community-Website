@@ -51,7 +51,7 @@
 .eventCard {
 	flex-basis: 100%;
 	width: 300px;
-	margin: 5vh 0;
+	margin: 5vh 1rem;
 	/*border-radius: 20px !important ;*/
 	padding: 0;
 	max-width: 300px;
