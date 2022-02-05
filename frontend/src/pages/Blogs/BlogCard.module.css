@@ -9,6 +9,7 @@
 
 .img {
 	padding-right: 3%;
+	/* box-shadow: rgba(0, 0, 0, 0.22) 0px -5px 4px 0px; */
 }
 .text {
 	width: 100%;
@@ -73,6 +74,7 @@
 
 .mainCard {
 	margin-bottom: 24px;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 	/* padding-bottom: -5px; */
 }
 .mainCard:hover {
