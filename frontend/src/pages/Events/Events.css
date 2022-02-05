@@ -1,9 +1,8 @@
-* { min-height: 0; min-width: 0; } 
-
 .carousel_container{
 	display: flex;
 	flex: wrap;
 	margin-bottom: 5vw;
+	/* display: none; */
 }
 .carousel_info{
 	font-family: 'Montserrat';
