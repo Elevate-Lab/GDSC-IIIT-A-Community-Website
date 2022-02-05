@@ -2,7 +2,7 @@
 	display: flex;
 	flex-direction: column;
 	padding-bottom: 1.5%;
-	background:#FAFAFA;
+	background: #fafafa;
 }
 
 .img {
@@ -19,7 +19,8 @@
 	overflow: hidden;
 }
 .text {
-	width: 20vw;
+	width: 100%;
+	/* width: 25vw; */
 	min-width: 250px;
 }
 
@@ -41,7 +42,7 @@
 .RSVPbtn {
 	width: 100%;
 }
-.RSVPbtn:hover{
+.RSVPbtn:hover {
 	color: #fff;
 	font-size: 16px !important;
 }
@@ -52,6 +53,7 @@
 	max-width: 300px;
 	/* border: 1px solid transparent; */
 	transition: 0.75s;
+	background-color: #fafafa !important;
 }
 .eventCard:hover {
 	box-shadow: rgb(144, 202, 249, 0.75) 4px 4px 16px 4px;
@@ -60,7 +62,7 @@
 	/* border: solid grey 1px; */
 	/* transition: 1s; */
 }
-.content:hover{
+.content:hover {
 	/*box-shadow: rgb(225, 225, 130, 1) 0px 4px 16px;*/
 }
 .svg {
@@ -74,12 +76,14 @@
 .content {
 	/* border: solid grey 1px; */
 	border-radius: 18px;
-	box-shadow: rgba(0, 0, 0, 0.25) 0px -2px 4px;
-	
+	/* box-shadow: rgba(0, 0, 0, 0.25) 0px -2px 4px; */
+	box-shadow: rgba(0, 0, 0, 0.22) 0px -5px 4px 0px;
+
 	/* margin-top: -15px; */
 	position: relative;
 	z-index: 5;
 	background-color: #fafafa;
 	transform: translate(0px, -10px);
+	/* background-color: aqua; */
+	/* padding-bottom: 1.5%; */
 }
-
