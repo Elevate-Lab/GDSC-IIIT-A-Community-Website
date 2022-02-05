@@ -3,6 +3,9 @@
 	flex-direction: column;
 	padding-bottom: 1.5%;
 	background:#FAFAFA;
+	width: 80vh;
+	/* align-items: center; */
+	/* width: 0; */
 }
 
 .img {
@@ -46,6 +49,8 @@
 	font-size: 16px !important;
 }
 .eventCard {
+	flex-basis: 100%;
+	width: 300px;
 	margin: 5vh 0;
 	/*border-radius: 20px !important ;*/
 	padding: 0;
