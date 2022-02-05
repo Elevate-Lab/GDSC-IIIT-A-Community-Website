@@ -50,9 +50,9 @@ function Content() {
                 <h2>What we Teach in Workshops</h2>
                 <p>Google collabrates with University Students through Student Clubs to grow Google Communities
 GDSC Provides:
-1. Oppurtunities to Enhance their technical knowledge.
-2. Gain Industrial experience by solving Problems using Technology.
-3. Display prototypes & Solutions for industries and Organizations.</p>
+<ol><li>Oppurtunities to Enhance their technical knowledge.</li>
+<li>Gain Industrial experience by solving Problems using Technology.</li>
+<li>Display prototypes & Solutions for industries and Organizations.</li></ol></p>
             </div>      
             <div className="carousel_the_real_deal" >
                 <EventsCarousel />
