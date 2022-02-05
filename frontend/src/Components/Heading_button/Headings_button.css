@@ -5,6 +5,7 @@
     width: 100%;
     padding-bottom: 2vw;
     padding-right: 9.02%;
+    
 }
 .Headings_Button_Container .Section_Headings {
     display: flex;
@@ -74,7 +75,9 @@
     .Headings_Button_Container {
         flex-direction: column;
         gap: 4vh;
-        width: 80%;
+        width: 90%;
+        padding-left: 5vw;
+        padding-right: 5vw;
     }
     .Headings_Button_Container .Section_Headings {
         width: 100%;
