@@ -24,7 +24,8 @@ let eventsArr = Array.from(pastEvents)
 				flexWrap: "wrap",
 				justifyContent: "space-around",
 				alignItems: "center",
-				zIndex:'0'
+				zIndex:'0',
+				// flex: '1 1 0px'
 			}}
 		>
 			{eventsArr && eventsArr.map((event)=>{

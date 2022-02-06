@@ -29,7 +29,7 @@ function EventCards(props) {
 	eventsArr.sort(compare);
 
 	return (
-		<div
+		<div className='cards_container'
 			style={{
 				padding: "2vh 7vw 9vh 7vw",
 				display: "flex",
@@ -37,7 +37,10 @@ function EventCards(props) {
 				flexWrap: "wrap",
 				justifyContent: "space-around",
 				alignItems: "flex-start",
-				zIndex: '0'
+				zIndex: '0',
+				width: '80vh',
+				alignItems: 'center'
+
 			}}
 		>
 			{eventsArr && eventsArr.map((event) => {
