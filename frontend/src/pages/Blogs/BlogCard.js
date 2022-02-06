@@ -59,6 +59,7 @@ function BlogCard(props) {
 										textAlign: "left",
 										fontSize: 18,
 										fontFamily: "Open Sans,sans-serif",
+										width: "100%",
 									}}
 								>
 									{blogs.title}
