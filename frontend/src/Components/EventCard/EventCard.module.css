@@ -1,13 +1,13 @@
-.name{
-	width:58%;
+.name {
+	width: 58%;
 	/* padding-right: 5px; */
 }
 .container {
 	display: flex;
 	flex-direction: column;
 	padding-bottom: 1.5%;
-	background:#FAFAFA;
-	width: 80vh;
+	background: #fafafa;
+	/* width: 80vh; */
 	/* align-items: center; */
 	/* width: 0; */
 }
@@ -97,14 +97,14 @@
 	/* padding-bottom: 1.5%; */
 }
 
-@media (max-width: 900px) { 
-	.name{
+@media (max-width: 900px) {
+	.name {
 		margin: 5px;
 		width: 40%;
 	}
 }
-@media (max-width: 600px) { 
-	.name{
+@media (max-width: 600px) {
+	.name {
 		/* margin: 5px; */
 		width: 50vw;
 	}

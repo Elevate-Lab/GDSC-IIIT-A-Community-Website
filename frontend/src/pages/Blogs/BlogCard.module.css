@@ -13,6 +13,9 @@
 .text {
 	width: 100%;
 	margin: 0;
+	height: 71px;
+	overflow: hidden;
+	/* background-color: aqua; */
 }
 .name {
 	display: flex;
