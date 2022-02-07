@@ -41,10 +41,14 @@ function Contact() {
 					header: { "Content-type": "application/json" },
 				})
 				.then(res => {
-					alert("email sent successfully");
+					alert("Message sent successfully! We'll get back to you very soon!");
 					//setLoading(false)
-					console.log(res);
-					window.location.reload();
+					setEmail("");
+					setMessage("");
+					setName("");
+
+					//console.log(res);
+					//window.location.reload();
 				})
 				.catch(err => {
 					console.log("error: ");
