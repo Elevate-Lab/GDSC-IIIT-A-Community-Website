@@ -26,7 +26,7 @@ function TeamSpecialCard() {
                         <div className={styles.container}>
                             <div className={styles.img}>
                                 <Avatar
-                                    src="https://media-exp1.licdn.com/dms/image/C5103AQHRo5EX0T9unQ/profile-displayphoto-shrink_400_400/0/1583138193142?e=1648684800&v=beta&t=HcTJZAuE0F2duMOnxWcW4SkJzcg8U5npYTRRM92bOxw"
+                                    src="https://drive.google.com/uc?export=view&id=15ISeltKaJeJKmUBq9Ie3fo2WvqHa6JRS"
                                     sx={{ width: 140, height: 140 }}
                                 />
                             </div>
