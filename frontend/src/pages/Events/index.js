@@ -59,13 +59,6 @@ function Events() {
 				</Fab> */}
 			</div>
 			<EventCards upcoming={true} />
-			<HeadingButton
-				LargeHeading="Interested in being a Speaker at one of our events?"
-				SmallHeading="Just drop us your Proposal."
-				bg={FormBtnBg}
-				btnText="Get in Touch"
-				formLink="https://docs.google.com/forms/d/e/1FAIpQLSc9zo00sylbNGIfLKprXnYOy-F_giR2FD4vKw2GxJHnzTwHWw/viewform"
-			/>
 			<div className="heading_plusBtn">
 				<h2
 					style={{ fontWeight: "600", fontFamily: "Open Sans,Poppins,sans-serif", color: "#1b2733" }}
@@ -90,6 +83,13 @@ function Events() {
 				</Fab> */}
 			</div>
 			<EventCards2 upcoming={false} />
+			<HeadingButton
+				LargeHeading="Interested in being a Speaker at one of our events?"
+				SmallHeading="Just drop us your Proposal."
+				bg={FormBtnBg}
+				btnText="Get in Touch"
+				formLink="https://docs.google.com/forms/d/e/1FAIpQLSc9zo00sylbNGIfLKprXnYOy-F_giR2FD4vKw2GxJHnzTwHWw/viewform"
+			/>
 		</section>
 	);
 }

@@ -97,15 +97,27 @@
 	/* padding-bottom: 1.5%; */
 }
 
+@media (max-width: 1500px) { 
+	.name{
+		margin: 5px;
+		width: 62%;
+	}
+}
+@media (max-width: 1500px) { 
+	.name{
+		margin: 5px;
+		width: 58%;
+	}
+}
 @media (max-width: 900px) { 
 	.name{
 		margin: 5px;
-		width: 40%;
+		width: 53%;
 	}
 }
 @media (max-width: 600px) { 
 	.name{
 		/* margin: 5px; */
-		width: 50vw;
+		width: 50%;
 	}
 }
