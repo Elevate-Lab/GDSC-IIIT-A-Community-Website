@@ -36,10 +36,10 @@ function EventCards(props) {
 				flexDirection: "row",
 				flexWrap: "wrap",
 				justifyContent: "space-around",
+				alignContent: "flex-start",
 				alignItems: "flex-start",
 				zIndex: '0',
 				width: '80vh',
-				alignItems: 'center'
 
 			}}
 		>

@@ -63,7 +63,7 @@ function EventCard(props) {
 					<div className={styles.container}>
 						<div className={styles.name}>
 							<Typography
-								sx={{ fontSize: 18, fontFamily: "Open Sans,sans-serif", fontWeight: "600" }}
+								sx={{ fontSize: 18, fontFamily: "Open Sans,sans-serif", fontWeight: "600", width:"60%" }}
 								color="#1B2733"
 								gutterBottom
 							>
