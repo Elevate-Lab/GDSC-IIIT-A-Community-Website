@@ -57,6 +57,11 @@ function Events() {
 					</Link>
 				</Fab> */}
 			</div>
+			<div className="heading_plusBtn">
+				<h2 style={{fontSize:'23px', fontWeight: "400", fontFamily: "Open Sans,Poppins,sans-serif", color: "#484848", marginTop: '0vh' }} className="heading">
+				There are no upcoming events at the moment. Please check again soon.
+				</h2>
+			</div>
 			<EventCards upcoming={true} />
 			<div className="heading_plusBtn">
 				<h2
