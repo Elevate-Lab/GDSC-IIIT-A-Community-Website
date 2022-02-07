@@ -1,5 +1,6 @@
 .name{
-	width:60%;
+	width:58%;
+	/* padding-right: 5px; */
 }
 .container {
 	display: flex;
@@ -104,7 +105,7 @@
 }
 @media (max-width: 600px) { 
 	.name{
-		margin: 5px;
+		/* margin: 5px; */
 		width: 50vw;
 	}
 }
