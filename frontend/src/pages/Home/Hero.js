@@ -7,10 +7,21 @@ import HeroLeft from "./HeroLeft";
 import HeroRight from "./HeroRight";
 
 const move = () => {
-	window.scrollTo({
-		top: window.innerHeight,
-		behavior: "smooth",
-	});
+	// window.scrollTo({
+	// 	top: window.innerHeight - 20,
+	// 	behavior: "smooth",
+	// });
+	if (window.innerWidth > 1000) {
+		window.scrollTo({
+			top: window.innerHeight - 40,
+			behavior: "smooth",
+		});
+	} else {
+		window.scrollTo({
+			top: window.innerHeight,
+			behavior: "smooth",
+		});
+	}
 };
 
 function Hero() {
