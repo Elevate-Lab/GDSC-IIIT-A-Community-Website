@@ -1,3 +1,7 @@
+.name{
+	width:58%;
+	/* padding-right: 5px; */
+}
 .container {
 	display: flex;
 	flex-direction: column;
@@ -91,4 +95,17 @@
 	transform: translate(0px, -10px);
 	/* background-color: aqua; */
 	/* padding-bottom: 1.5%; */
+}
+
+@media (max-width: 900px) { 
+	.name{
+		margin: 5px;
+		width: 40%;
+	}
+}
+@media (max-width: 600px) { 
+	.name{
+		/* margin: 5px; */
+		width: 50vw;
+	}
 }
