@@ -23,7 +23,7 @@ let eventsArr = Array.from(pastEvents)
 				flexDirection: "row",
 				flexWrap: "wrap",
 				justifyContent: "space-around",
-				alignItems: "center",
+				alignItems: "flex-start",
 				zIndex:'0',
 				// flex: '1 1 0px'
 			}}
