@@ -100,7 +100,7 @@
 @media (max-width: 900px) { 
 	.name{
 		margin: 5px;
-		width: 40vw;
+		width: 40%;
 	}
 }
 @media (max-width: 600px) { 

@@ -50,6 +50,15 @@
 		font-size: 1.1rem;
 	}
 }
+@media (max-width: 400px) { 
+	.carousel_info>h2{
+		font-size: 2rem !important;
+	}
+	
+	.carousel_info>p{
+		font-size: 1rem;
+	}
+}
 @media (min-width: 1400px) {
 	.carousel_info{
 		width: 60vw;
