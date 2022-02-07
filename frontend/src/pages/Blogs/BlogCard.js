@@ -42,15 +42,16 @@ function BlogCard(props) {
 					display: "flex",
 					flexDirection: "column",
 					marginTop: "50px",
+					maxWidth: "80vw",
 				}}
 			>
 				<div style={{ zIndex: "0", borderRadius: "20px 20px 0 0" }}>
-					<img src={blogs.image} style={{ width: "320px", height: "220px", objectFit: "cover" }} alt="img" />
+					<img src={blogs.image} style={{ width: "100%", height: "220px", objectFit: "cover" }} alt="img" />
 				</div>
 				<div style={{ zIndex: "5", marginTop: "-20px" }}>
-					<Box className={styles.card} sx={{ overflow: "hidden" }}>
-						<Card variant="outlined" sx={{ paddingBottom: "10px" }}>
-							<CardContent style={{ padding: "5px 20px 15px 20px" }}>
+					<Box className={styles.card} sx={{ overflow: "hidden", width: "100%" }}>
+						<Card variant="outlined" sx={{ paddingBottom: "10px", width: "100%" }}>
+							<CardContent style={{ padding: "5px 20px 15px 20px", width: "100%" }}>
 								<div
 									style={{
 										paddingTop: "20px",
