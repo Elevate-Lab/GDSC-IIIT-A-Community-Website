@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
+import api from "../../api/baseApi";
 // import {Typography} from '@material-ui/core'
 import Headings from "../../Components/Page_headings";
 import Send_icon from "../../Assets/Send_icon.svg";
@@ -36,7 +36,7 @@ function Contact() {
 			};
 			console.log(body);
 
-			await axios
+			await api
 				.post("/mail", body, {
 					header: { "Content-type": "application/json" },
 				})
