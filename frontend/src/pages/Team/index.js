@@ -11,24 +11,11 @@ import AppTeam from './Teams_field/AppTeam';
 import ManagementTeam from './Teams_field/ManagementTeam';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import Slider from 'react-slick';
-import leftArrow from '../../Assets/Group 66.svg';
-import rightArrow from '../../Assets/Group 65.svg';
 import tempImg from '../../Assets/Images/img_teams.jpg';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import './carousel.css';
 import TeamSpecialCard from '../../Components/TeamSpecialCard/TeamSpecialCard';
-// import { Swiper, SwiperSlide } from "swiper/react";
-// // import "swiper/css";
-// // import "swiper/css/navigation"
-// import SwiperCore, {
-//     Navigation
-// } from 'swiper';
-
-// SwiperCore.use([Navigation]);
-
-// import {Typography} from '@material-ui/core'
 import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
 import './Team.css';
