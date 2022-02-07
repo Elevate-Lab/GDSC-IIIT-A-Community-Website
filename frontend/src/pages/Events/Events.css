@@ -54,24 +54,7 @@
 	.carousel_info>h2{
 		font-size: 2rem !important;
 	}
-	
 	.carousel_info>p{
 		font-size: 1rem;
-	}
-}
-@media (min-width: 1400px) {
-	.carousel_info{
-		width: 60vw;
-	} 
-	.carousel_the_real_deal{
-		width: 40vw;
-	}
-}
-@media (min-width: 1500px) {
-	.carousel_info{
-		width: 65vw;
-	} 
-	.carousel_the_real_deal{
-		width: 35vw;
 	}
 }
