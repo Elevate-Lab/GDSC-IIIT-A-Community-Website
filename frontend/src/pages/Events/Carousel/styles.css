@@ -7,6 +7,9 @@
   width:89vh;
 }
 @media (max-width: 900px) { 
+  .slicky_boi{
+    width:100vw;
+  }
 	.carousel_image{
 	height: 100vw;
   /* height: auto; */
