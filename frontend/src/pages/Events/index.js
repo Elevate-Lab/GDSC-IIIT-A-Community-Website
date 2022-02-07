@@ -25,10 +25,11 @@ function Events() {
 				justifyContent: "center",
 				// alignItems: "center",
 				paddingBottom: "6vh",
+				paddingTop: "9vh",
 			}}
 		>
-			<CarouselComponent />
-			<Headings  
+			{/* <CarouselComponent /> */}
+			<Headings
 				LargeHeading="Events"
 				SmallHeading="Whats happening..."
 				Text="GDSC IIITA also provides with Events, Workshops, Seminars. May it be Android Study Jams or Google Cloud Month we have it all..."
