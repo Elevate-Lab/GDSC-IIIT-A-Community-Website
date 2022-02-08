@@ -25,10 +25,10 @@ function Events() {
 				justifyContent: "center",
 				// alignItems: "center",
 				paddingBottom: "6vh",
-				paddingTop: "9vh",
+				// paddingTop: "9vh",
 			}}
 		>
-			{/* <CarouselComponent /> */}
+			<CarouselComponent />
 			<Headings
 				LargeHeading="Events"
 				SmallHeading="Whats happening..."
