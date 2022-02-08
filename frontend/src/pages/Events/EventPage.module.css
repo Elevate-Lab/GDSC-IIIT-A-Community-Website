@@ -12,6 +12,9 @@
 .heading {
 	padding-left: 9.02%;
 }
+.heading_upcoming {
+	padding-left: 9.5%;
+}
 
 .heading_plusBtn {
 	display: flex;
@@ -28,5 +31,11 @@
 	.heading_plusBtn {
 		flex-direction: column;
 		align-items: center;
+	}
+}
+@media only screen and (max-width: 900px) {
+	.heading_upcoming{
+		text-align: center;
+		padding-left: 10px;
 	}
 }

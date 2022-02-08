@@ -58,8 +58,8 @@ function Events() {
 					</Link>
 				</Fab> */}
 			</div>
-			<div className="heading_plusBtn">
-				<h2 style={{fontSize:'23px', fontWeight: "400", fontFamily: "Open Sans,Poppins,sans-serif", color: "#484848", marginTop: '0vh' }} className="heading">
+			<div className={styles.heading_plusBtn}>
+				<h2 style={{fontSize:'23px', fontWeight: "400", fontFamily: "Open Sans,Poppins,sans-serif", color: "#484848", marginTop: '0vh' }} className={styles.heading_upcoming}>
 				There are no upcoming events at the moment. Please check again soon.
 				</h2>
 			</div>
