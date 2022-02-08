@@ -48,11 +48,13 @@ function Content() {
         <div className="carousel_container">
             <div className="carousel_info">
                 <h2>What we Teach in Workshops</h2>
-                <p>Google collabrates with University Students through Student Clubs to grow Google Communities
-                GDSC Provides:
-                <ol><li>Oppurtunities to Enhance their technical knowledge.</li>
-                <li>Gain Industrial experience by solving Problems using Technology.</li>
-                <li>Display prototypes & Solutions for industries and Organizations.</li></ol></p>
+                <p>We provide students with the necessary skills and tools needed to build scalable and impactful applications. GDSC Provides:
+                    <ol>
+                        <li>Excellent mentors, who have experience building lasting applications.</li>
+                        <li>Tools, which make everything from development to deployment a fun learning experience.</li>
+                        <li>Endless oppurtunities for teamwork, by getting an chance to connect with like minded peers, there's no limits to what you might be able to pull off!</li>
+                    </ol>
+                </p>
             </div>      
             <div className="carousel_the_real_deal" >
                 <EventsCarousel />
