@@ -1,0 +1,124 @@
+.name {
+	width: 58%;
+	/* padding-right: 5px; */
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 1.5%;
+	background: #fafafa;
+	width: 35vw;
+	min-width: 300px;
+	/* align-items: center; */
+	/* width: 0; */
+}
+
+.img {
+	object-fit: cover;
+	/* padding-right: 3%; */
+	height: 169px;
+	width: 300px;
+	/* width */
+}
+.imgContainer {
+	z-index: 1;
+	position: relative;
+	/*border-radius: 20px;*/
+	overflow: hidden;
+}
+.text {
+	width: 100%;
+	/* width: 25vw; */
+	/* min-width: 250px; */
+}
+
+.buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: flex-end;
+}
+.buttonsAdmin {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+.btn {
+	width: 100%;
+}
+.RSVPbtn {
+	width: 100%;
+}
+.RSVPbtn:hover {
+	color: #fff;
+	font-size: 16px !important;
+}
+.eventCard {
+	flex-basis: 100%;
+	width: 300px;
+	margin: 5vh 1rem;
+	/*border-radius: 20px !important ;*/
+	padding: 0;
+	max-width: 300px;
+	/* border: 1px solid transparent; */
+	transition: 0.75s;
+	background-color: #fafafa !important;
+}
+.eventCard:hover {
+	box-shadow: rgb(144, 202, 249, 0.75) 4px 4px 16px 4px;
+	overflow: hidden;
+	transition: 0.75s;
+	/* border: solid grey 1px; */
+	/* transition: 1s; */
+}
+.content:hover {
+	/*box-shadow: rgb(225, 225, 130, 1) 0px 4px 16px;*/
+}
+.svg {
+	/* padding-right: 5px; */
+	margin-right: 5px;
+}
+.RSVPsvg {
+	padding-right: 5px;
+	margin-right: 5px;
+}
+.content {
+	/* border: solid grey 1px; */
+	border-radius: 18px;
+	/* box-shadow: rgba(0, 0, 0, 0.25) 0px -2px 4px; */
+	box-shadow: rgba(0, 0, 0, 0.22) 0px -5px 4px 0px;
+
+	/* margin-top: -15px; */
+	position: relative;
+	z-index: 5;
+	background-color: #fafafa;
+	transform: translate(0px, -10px);
+	/* background-color: aqua; */
+	/* padding-bottom: 1.5%; */
+}
+
+@media (max-width: 1500px) {
+	.name {
+		margin: 5px;
+		width: 62%;
+	}
+}
+@media (max-width: 1500px) {
+	.name {
+		margin: 5px;
+		width: 58%;
+	}
+}
+@media (max-width: 900px) {
+	.name {
+		margin: 5px;
+		width: 53%;
+	}
+}
+@media (max-width: 600px) {
+	.name {
+		/* margin: 5px; */
+		width: 50%;
+	}
+}
