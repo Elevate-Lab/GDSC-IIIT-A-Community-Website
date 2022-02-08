@@ -1,4 +1,4 @@
-import React,{useEffect,useContext} from "react";
+import React, { useEffect, useContext } from "react";
 import apiContext from "../../ContextApi/ApiContext";
 import { Link } from "react-router-dom";
 import DSBlogCard from "../../Components/DSBlogCard";
@@ -22,19 +22,20 @@ import styles from "./BlogCard.module.css";
 import image1 from "../../Assets/Images/img1.png";
 import { useState } from "react";
 import { ReactComponent as ViewProject } from "../../Assets/svg_link.svg";
+import HeadingButton from "../../Components/Heading_button";
+import FormBtnBg from "../../Assets/Form_btns_bg.png";
 
 import MustReadCard from "../../Components/mustReadCard";
 
-
 function Blogs() {
-	const context = useContext(apiContext)
-	const { data, getAllData, getAttribute ,blogs,getAllBlogData,addBlogCard,parameter} = context
+	const context = useContext(apiContext);
+	const { data, getAllData, getAttribute, blogs, getAllBlogData, addBlogCard, parameter } = context;
 	let attribute = "blogs";
 	useEffect(() => {
 		//getAllData(attribute);
 		getAllBlogData();
 		getAttribute(null);
-	}, [parameter])
+	}, [parameter]);
 	console.log(parameter);
 	const [admin, setAdmin] = useState(true);
 	return (
@@ -153,7 +154,15 @@ function Blogs() {
 			</div> */}
 
 			<div className="heading_plusBtn">
-				<h2 style={{fontWeight: "600", fontFamily: "Open Sans,Poppins,sans-serif", color: "#1b2733", marginTop: '-10vh' }} className="heading">
+				<h2
+					style={{
+						fontWeight: "600",
+						fontFamily: "Open Sans,Poppins,sans-serif",
+						color: "#1b2733",
+						marginTop: "-10vh",
+					}}
+					className="heading"
+				>
 					Must Read
 				</h2>
 				{/* <Fab color="primary" aria-label="add">
@@ -173,21 +182,40 @@ function Blogs() {
 				</Fab> */}
 			</div>
 			<MustReadCard />
-
+			<div className="heading_plusBtn">
+				<h2
+					style={{
+						fontWeight: "600",
+						fontFamily: "Open Sans,Poppins,sans-serif",
+						color: "#1b2733",
+						marginTop: "2vh",
+					}}
+					className="heading"
+				>
+					All Blogs
+				</h2>
+			</div>
 			<div
 				style={{
-					padding: "2vh 5vw 9vh 5vw",
+					padding: "0vh 5vw 0vh 5vw",
 					display: "flex",
 					flexDirection: "row",
 					flexWrap: "wrap",
 					justifyContent: "space-around",
 				}}
 			>
-				{blogs && blogs.map((blog) => {
-							return <BlogCard key={blog._id} blogs={blog} />
-						})}
+				{blogs &&
+					blogs.map(blog => {
+						return <BlogCard key={blog._id} blogs={blog} />;
+					})}
 			</div>
-
+			<HeadingButton
+				LargeHeading="Interested in submitting your blog?"
+				SmallHeading="Just drop us your Proposal."
+				bg={FormBtnBg}
+				btnText="Submit Blog"
+				formLink="https://docs.google.com/forms/d/e/1FAIpQLSdInkvrM-KeM4P3m26wi-x73ftRT8Q32-632aL4yIWBYjfyYw/viewform?usp=sf_link"
+			/>
 			{/* <Grid
 					style={{
 						display: "flex",
@@ -400,9 +428,6 @@ function Blogs() {
 						/>
 					</Grid>
 				</Grid> */}
-
-
-
 		</section>
 	);
 }
