@@ -1,10 +1,15 @@
 .carousel_image{
   height: 89vh;
+  width:89vh;
 }
 .slicky_boi{
   /* max-width: 150vw; */
+  width:89vh;
 }
 @media (max-width: 900px) { 
+  .slicky_boi{
+    width:100vw;
+  }
 	.carousel_image{
 	height: 100vw;
   /* height: auto; */
