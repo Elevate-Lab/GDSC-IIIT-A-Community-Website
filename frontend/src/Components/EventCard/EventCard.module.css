@@ -7,7 +7,8 @@
 	flex-direction: column;
 	padding-bottom: 1.5%;
 	background: #fafafa;
-	/* width: 80vh; */
+	width: 35vw;
+	min-width: 300px;
 	/* align-items: center; */
 	/* width: 0; */
 }
@@ -28,7 +29,7 @@
 .text {
 	width: 100%;
 	/* width: 25vw; */
-	min-width: 250px;
+	/* min-width: 250px; */
 }
 
 .buttons {
@@ -97,12 +98,12 @@
 	/* padding-bottom: 1.5%; */
 }
 
-@media (max-width: 1500px) {
+/* @media (max-width: 1500px) {
 	.name {
 		margin: 5px;
 		width: 62%;
 	}
-}
+} */
 @media (max-width: 1500px) {
 	.name {
 		margin: 5px;

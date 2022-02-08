@@ -22,6 +22,8 @@ import styles from "./BlogCard.module.css";
 import image1 from "../../Assets/Images/img1.png";
 import { useState } from "react";
 import { ReactComponent as ViewProject } from "../../Assets/svg_link.svg";
+import HeadingButton from "../../Components/Heading_button";
+import FormBtnBg from "../../Assets/Form_btns_bg.png";
 
 import MustReadCard from "../../Components/mustReadCard";
 
@@ -207,7 +209,13 @@ function Blogs() {
 						return <BlogCard key={blog._id} blogs={blog} />;
 					})}
 			</div>
-
+			<HeadingButton
+				LargeHeading="Interested in submitting your blog?"
+				SmallHeading="Just drop us your Proposal."
+				bg={FormBtnBg}
+				btnText="Submit Blog"
+				formLink="https://docs.google.com/forms/d/e/1FAIpQLSdInkvrM-KeM4P3m26wi-x73ftRT8Q32-632aL4yIWBYjfyYw/viewform?usp=sf_link"
+			/>
 			{/* <Grid
 					style={{
 						display: "flex",
