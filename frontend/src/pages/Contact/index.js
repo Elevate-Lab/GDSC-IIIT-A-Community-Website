@@ -5,11 +5,13 @@ import Headings from "../../Components/Page_headings";
 import Send_icon from "../../Assets/Send_icon.svg";
 import Contact_image from "../../Assets/Contact_image.png";
 import "./Contact.css";
+import CircularProgress from '@mui/material/CircularProgress';
 
 function Contact() {
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [message, setMessage] = useState("");
+	const [loading, setLoading] = useState(false);
 
 	const handleNameChange = event => {
 		setName(event.target.value);
@@ -35,18 +37,25 @@ function Contact() {
 				message: message,
 			};
 			console.log(body);
-
+			setLoading(true)
 			await api
 				.post("/mail", body, {
 					header: { "Content-type": "application/json" },
 				})
 				.then(res => {
-					alert("email sent successfully");
+					setLoading(false)
+					alert("Message sent successfully! We'll get back to you very soon!");
 					//setLoading(false)
-					console.log(res);
-					window.location.reload();
+					setEmail("");
+					setMessage("");
+					setName("");
+
+					//console.log(res);
+					//window.location.reload();
 				})
 				.catch(err => {
+					setLoading(false)
+					alert("There was an error while sending this message, please mail us at gdsc@iiita.ac.in!");
 					console.log("error: ");
 					console.log(err);
 					//setLoading(false)
@@ -86,6 +95,7 @@ function Contact() {
 								onChange={event => {
 									handleNameChange(event);
 								}}
+								value={name}
 								id="name"
 								name="name"
 							/>
@@ -98,6 +108,7 @@ function Contact() {
 								onChange={event => {
 									handleEmailChange(event);
 								}}
+								value={email}
 								id="email"
 								name="email"
 							/>
@@ -110,14 +121,24 @@ function Contact() {
 								onChange={event => {
 									handleMessageChange(event);
 								}}
+								value={message}
 								id="message"
 								name="message"
 							/>
 							<span className={`${message === "" ? "Message_inp" : "message_filled"}`}></span>
 						</div>
+						
 						<button type="submit" className="Send_btn" onClick={event => handleRequest(event)}>
-							Send
-							<img src={Send_icon} alt="Send" className="sendIcon" />
+							{loading ? (<CircularProgress size="2rem" sx={{color:'white',}} />) : (
+								<>
+									Send
+									<img src={Send_icon} alt="Send" className="sendIcon" />
+								</>
+								
+								)}
+							
+							
+							
 						</button>
 					</form>
 				</div>
