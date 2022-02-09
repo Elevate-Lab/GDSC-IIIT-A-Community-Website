@@ -61,14 +61,12 @@ function EventCard(props) {
 			<div className={styles.content} style={{ overflow: "hidden" }}>
 				<CardContent>
 					<div className={styles.container}>
-						<div className={styles.name}>
-							<Typography
-								sx={{ fontSize: 18, fontFamily: "Open Sans,sans-serif", fontWeight: "600" }}
-								color="#1B2733"
-								gutterBottom
+						{/* <div > */}
+							<p
+								className={styles.name}
 							>
 								{event.name}
-							</Typography>
+							</p>
 							<Typography
 								sx={{ fontSize: 14, fontFamily: "Open Sans,sans-serif" }}
 								color="#637282"
@@ -79,7 +77,7 @@ function EventCard(props) {
 							</Typography>
 
 							<Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom></Typography>
-						</div>
+						{/* </div> */}
 					</div>
 					{/* <Headings LargeHeading="Project Name" SmallHeading="tagline" /> */}
 
