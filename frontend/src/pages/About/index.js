@@ -37,15 +37,15 @@ function About() {
 
 			<div className="About_DSC About">
 				<img src={aboutdsc} alt="aboutdsc.jpg" style={{ boxShadow: "0px 0px 0px #ffe" }} />
+
 				<div>
 					<p className="Abt_Heading">What's GDSC?</p>
 					<p className="Abt_Content">
 						Google collaborates with university students who are passionate about growing developer
-						communities. GDSC is an Organisation for university students who want to bring about a
-						 change through technology. We are focused upon building technical and non-technical skills,
-						  which would help students to build a better community.<br></br><br></br>
-							# Lets Learn, Grow and Innovate together.
-						
+						communities. GDSC is an Organisation for university students who want to bring about a change
+						through technology. We are focused upon building technical and non-technical skills, which would
+						help students to build a better community.<br></br>
+						<br></br># Lets Learn, Grow and Innovate together.
 					</p>
 					<button>
 						<a href="https://developers.google.com/community/gdsc" target="_blank">
@@ -55,14 +55,14 @@ function About() {
 					</button>
 				</div>
 			</div>
-			<div className="About About_DSC_IIITA" >
+			<div className="About About_DSC_IIITA">
 				<img src={dsciiita} alt="dsciiita.jpg" target="_blank" />
 				<div>
 					<p className="Abt_Heading">About GDSC IIITA</p>
 					<p className="Abt_Content">
-					GDSC's primary aim lies in empowering students with development skills and other technical 
-					abilities for growth and advancement. We believe in innovation and evolution. 
-					For students to grow their skills to tackle problems and to bring about change. <br></br>
+						GDSC's primary aim lies in empowering students with development skills and other technical
+						abilities for growth and advancement. We believe in innovation and evolution. For students to grow
+						their skills to tackle problems and to bring about change. <br></br>
 						<br></br>
 						The club is intended as a space for students to try out new ideas and collaborate to solve mobile,
 						web development problems and as well as discover new heights in AI, ML, Designing and much more.
@@ -120,7 +120,9 @@ function About() {
 			</div>
 
 			<div className="Join_the_convo">
-				<p className="Join_the_convo_heading" style={{textAlign: 'center'}}>Join the Conversation</p>
+				<p className="Join_the_convo_heading" style={{ textAlign: "center" }}>
+					Join the Conversation
+				</p>
 				<div className="Join_the_convo_cards">
 					<div className="Join_youtube_card">
 						<p>Subscribe our Youtube channel for regular updates regarding Events and Speaker Sessions... </p>
