@@ -14,6 +14,7 @@ const ApiState = (props) => {
   const [coreTeam, setCoreTeam] = useState("")
   const [upcomingEvents, setUpcomingEvents] = useState('');
   const [pastEvents, setPastEvents] = useState('');
+  const [pastTeams, setPastTeams] = useState('');
   const getAttribute = (attribute) => {
     setParameter(attribute);
   }
@@ -69,6 +70,19 @@ const ApiState = (props) => {
         return value._id === _id ? { ...response.data } : value
       })
     )
+  }
+
+  //pastTeams
+  const retrievePastTeamData = async () => {
+    const headers = {
+      'Content-Type': 'application/json'
+    }
+    const response = await api.get(`/pastTeams`, { headers })
+    return response.data;
+  }
+  const getAllPastTeamData = async () => {
+    const allDatas = await retrievePastTeamData();
+    setPastTeams(allDatas);
   }
 
   //BLogs      
@@ -262,7 +276,7 @@ const addEventCard = async (values) => {
 
 
 return (
-  <ApiContext.Provider value={{ coreTeam, data,  previousData, previousCardData,getAllBlogData,addBlogCard,blogs,removeBlog,updateBlog,getAllProjectData,addProjectCard,projects,updateProject,removeProject ,getAllEventData,addEventCard,events,updateEvent,removeEvent,getAllTeamData,addTeamCard,teams,updateTeam,removeTeam,parameter,getAttribute,upcomingEvents,pastEvents}}>
+  <ApiContext.Provider value={{ coreTeam, data,  previousData, previousCardData,getAllBlogData,addBlogCard,blogs,removeBlog,updateBlog,getAllProjectData,addProjectCard,projects,updateProject,removeProject ,getAllEventData,addEventCard,events,updateEvent,removeEvent,getAllTeamData,addTeamCard,teams,updateTeam,removeTeam,parameter,getAttribute,upcomingEvents,pastEvents,pastTeams,setPastTeams,getAllPastTeamData}}>
     {props.children}
   </ApiContext.Provider>
 )

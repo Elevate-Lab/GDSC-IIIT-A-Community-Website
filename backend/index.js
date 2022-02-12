@@ -13,6 +13,7 @@ const blogRoutes = require('./routes/blogs')
 const teamRoutes = require('./routes/teams');
 const projectRoutes = require('./routes/projects');
 const adminRoutes = require('./routes/user')
+const pastTeamRoutes = require('./routes/pastTeams')
 
 
 const app = express();
@@ -46,6 +47,7 @@ app.use("/blogs",blogRoutes);
 app.use("/teams",teamRoutes);
 app.use("/projects",projectRoutes);
 app.use("/admin",adminRoutes);
+app.use("/pastTeams",pastTeamRoutes);
 
 /*
 For testing contact section paste the below lines in env file with correct email and its password ensure that 
