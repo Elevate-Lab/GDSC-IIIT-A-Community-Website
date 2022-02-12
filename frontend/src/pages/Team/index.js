@@ -19,6 +19,7 @@ import TeamSpecialCard from '../../Components/TeamSpecialCard/TeamSpecialCard';
 import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
 import './Team.css';
+import PastTeam from './Teams_field/PastTeam';
 
 const slider_img = [tempImg, tempImg];
 

@@ -1,12 +1,13 @@
 const express = require('express');
 const router = express.Router();
 const Team = require('../models/team');
-
+const PastTeam = require('../models/pastTeam')
 
 //get all team cards
 router.get('/',async (req,res)=>{
     try {
         const teams = await Team.find({});
+        const pastTeams = await PastTeam.find({})
         // res.render("teams/index",{teams});
         res.json(teams)
     } catch (error) {
@@ -24,6 +25,7 @@ router.post('/',async(req,res)=>{
         console.log(error)
     }
 })
+
 //add a member page
 
 router.get("/new",(req,res)=>{
