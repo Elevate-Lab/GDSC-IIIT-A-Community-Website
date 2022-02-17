@@ -1,0 +1,93 @@
+.MemberCard_container {
+	width: 229px;
+	min-height: 300px;
+	background: #fafafa;
+	transition: 0.75s;
+	/* box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.12); */
+	/* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+	/* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; */
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 12px -2px;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.MemberCard_container:hover {
+	/*box-shadow: rgba(144, 202, 249, 1) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;*/
+	box-shadow: rgb(129, 199, 132, 0.7) 4px 4px 16px 4px;
+	overflow: hidden;
+	transition: 0.75s;
+}
+.img-fluid {
+	border-radius: 50%;
+	height: 110px;
+	width: 110px;
+	margin: 10px 0;
+}
+
+.name {
+	text-align: center;
+	color: #1b2733;
+	font-size: 20px;
+	font-family: "Open Sans", "Poppins", sans-serif;
+	font-weight: 700;
+}
+.title {
+	text-align: center;
+	font-family: "Open Sans", "Poppins", sans-serif;
+	color: #637282;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.social {
+	/* background-color: rgb(52, 72, 90); */
+	padding: 20px 0;
+	width: 150px;
+	height: 25px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+.fa,
+.social > a {
+	font-size: 28px;
+	cursor: pointer;
+	transition: 0.75s;
+	color: rgba(0, 0, 0, 0.4);
+}
+.fa > svg > path {
+	transition: 0.75s;
+	fill: black;
+	fill-opacity: 0.4;
+}
+.fa:hover {
+	text-decoration: none;
+	color: rgba(0, 0, 0, 0.8);
+}
+.fa:hover > svg > path {
+	fill: black;
+	fill-opacity: 0.8;
+}
+
+.buttonsAdmin {
+	display: flex;
+	flex-direction: column;
+	padding: 16px;
+	/* margin: 7px; */
+}
+.btn {
+	width: 120px;
+	margin: 5px !important;
+	border: solid 12px;
+}
+.greenBtn {
+	color: #08ad5d;
+	background-color: #08ad5d;
+	width: 150px;
+}
+.team-content {
+	padding: 7px 0;
+}
