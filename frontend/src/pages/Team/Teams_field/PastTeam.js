@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import PastMemberCard from "../../../Components/PastMemberCard/index";
+import PastMemberCard from "../../../Components/MemberCard/index";
 import apiContext from "../../../ContextApi/ApiContext";
 
 function PastTeam() {
