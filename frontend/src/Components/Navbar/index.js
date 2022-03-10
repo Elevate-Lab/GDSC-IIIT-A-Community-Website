@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import Navbar_logo from "../../Assets/DSC-IIITA-Light-Horizontal.png";
 
-const navbarContent = ["Home", "Events", "Team", "Projects", "Blogs"];
+const navbarContent = ["Home", "Events", "Team", "Projects", "Blogs", "Campaigns"];
 
 function Navbar() {
 	const [width, setWidth] = useState(window.innerWidth);
@@ -38,8 +38,8 @@ function Navbar() {
 			setnavCheck("nav-checked");
 		}
 	};
-	const UpdateActivePage = (e) => {
-		console.log(e.target.innerText)
+	const UpdateActivePage = e => {
+		console.log(e.target.innerText);
 		// setActivePage("about");
 	};
 
@@ -51,7 +51,13 @@ function Navbar() {
 				</NavLink>
 				<div className="navbar_links">
 					{navbarContent.map((item, index) => (
-						<NavLink activeClassName="active_nav_link" className="navbar_link" key={index} to={`../${item.toLowerCase()}`} onClick={UpdateActivePage}>
+						<NavLink
+							activeClassName="active_nav_link"
+							className="navbar_link"
+							key={index}
+							to={`../${item.toLowerCase()}`}
+							onClick={UpdateActivePage}
+						>
 							<p className="navbar_link_txt">{item}</p>
 						</NavLink>
 					))}
@@ -68,7 +74,7 @@ function Navbar() {
 					<img src={Navbar_logo} alt="logo" />
 				</NavLink>
 				<div className="navbar_Drawer">
-					<input type="checkbox" className={navCheck} value="drawer" onClick={ExpandMenu}/>
+					<input type="checkbox" className={navCheck} value="drawer" onClick={ExpandMenu} />
 					<div className="navbar_drawer_icon">
 						<p className="drawer_line_1"></p>
 						<p className="drawer_line_2"></p>
@@ -77,11 +83,22 @@ function Navbar() {
 				</div>
 				<div className="navbar_drawer_links" style={{ display: `${Drawer}` }}>
 					{navbarContent.map((item, index) => (
-						<NavLink activeClassName="active_nav_link" className="navbar_link" key={index} to={`../${item.toLowerCase()}`} onClick={CollapseMenu}>
+						<NavLink
+							activeClassName="active_nav_link"
+							className="navbar_link"
+							key={index}
+							to={`../${item.toLowerCase()}`}
+							onClick={CollapseMenu}
+						>
 							<p className="navbar_link_txt">{item}</p>
 						</NavLink>
 					))}
-					<NavLink activeClassName="active_contact_link" className="navbar_link" to="../contact" onClick={CollapseMenu}>
+					<NavLink
+						activeClassName="active_contact_link"
+						className="navbar_link"
+						to="../contact"
+						onClick={CollapseMenu}
+					>
 						<p className="navbar_link_txt navbar_contact">Contact</p>
 					</NavLink>
 				</div>
