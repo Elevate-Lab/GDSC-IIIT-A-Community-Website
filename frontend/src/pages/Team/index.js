@@ -153,12 +153,11 @@ function Team() {
 						))}
 					</ul>
 				</div>
-				<div className="Past-Member">
-					<PastTeam />
-				</div>
+				
 
 				<div className="Member_cards_container">{FieldPages[showFieldIdx]}</div>
 			</section>
+		
 		</div>
 	);
 }
