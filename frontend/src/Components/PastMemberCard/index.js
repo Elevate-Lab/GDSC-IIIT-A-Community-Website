@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import apiContext from "../../ContextApi/ApiContext";
 import { useState } from "react";
-import "./MemberCard.css";
+import "./PastMemberCard.css";
 import { ReactComponent as Github } from "../../Assets/greyGithub.svg";
 import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
@@ -9,11 +9,11 @@ import Button from "@mui/material/Button";
 function MemberCard(props) {
 	const { team } = props;
 	const context = useContext(apiContext);
-	const { removeData, previousCardData, removeTeam, getAttribute } = context;
+	const { removeData, previousCardData, removePastTeam, getAttribute } = context;
 	const [admin, setAdmin] = useState(false);
 	const handleClick = () => {
 		getAttribute(team);
-		removeTeam(team._id);
+		removePastTeam(team._id);
 	};
 	return (
 		<div className="MemberCard_container">
