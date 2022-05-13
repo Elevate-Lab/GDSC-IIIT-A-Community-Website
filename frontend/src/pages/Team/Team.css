@@ -64,12 +64,9 @@
 .Field_view > *{
     flex:none;
 }
-.Past-Member > h3{
-    margin-top: 20px;
-  font-weight: 700;
-  margin-left: 2rem;
+.Past-Member h1{
+    margin-left: 147px;
 }
-
 @media only screen and (max-width: 900px) {
     .Team_section{
         align-items: center;
@@ -91,6 +88,9 @@
         gap: 4vw;
         justify-content: center;
     }
+    .Past-Member h1{
+        margin-left: 10px;
+    }
 }
 @media only screen and (max-width: 450px) {
     .Member-field{
@@ -106,9 +106,5 @@
     }
     .Field_view{
         gap: 6vh;
-    }
-    .Past-Member > h3{
-      margin: 4rem;
-      font-size: 25px;
     }
 }

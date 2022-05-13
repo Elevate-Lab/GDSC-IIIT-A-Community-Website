@@ -1,8 +1,8 @@
 import React, { useContext, useEffect,useState } from 'react'
 import MemberCard from '../../../Components/MemberCard/index'
 import apiContext from '../../../ContextApi/ApiContext'
-import PastTeam from './PastTeam'
-import '../Team.css';
+
+
 
 function CoreTeam() {
     const context = useContext(apiContext)
@@ -25,7 +25,6 @@ function CoreTeam() {
         return e.designation === 'Core Team';
     })
     return (
-        <>
             <div id="CoreTeam" className="Field_view">
             {coreTeam &&
                 coreTeam.map((teams) => {
@@ -36,11 +35,6 @@ function CoreTeam() {
                 })
             }
         </div>
-        	<div className="Past-Member">
-            <h3>Past Team Members</h3>
-                <PastTeam />
-            </div>
-            </>
     )}
 
 export default CoreTeam
